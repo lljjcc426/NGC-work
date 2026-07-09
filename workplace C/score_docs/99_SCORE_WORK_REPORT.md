@@ -76,8 +76,8 @@ The accepted change keeps the verified motif-copy rule but replaces scale-2 and 
 
 Checkpoint commit created and pushed to `origin/main`:
 
-- commit: `9d898e9`
-- message: `C score improvement aggressive checkpoint`
-- pushed: yes, `b6543f4..9d898e9 main -> main`
+- commit: `c62c95f`
+- message: `Add task158 accepted resize stamp improvement`
+- pushed: yes, `5d65954..c62c95f main -> main`
 
-Large ONNX surgery probe artifacts remain ignored by `.gitignore`; only lightweight CSV/MD summaries were committed.
+The accepted ONNX artifact remains local and ignored by `.gitignore`; lightweight scripts, reports, debug examples, and score docs were committed.
