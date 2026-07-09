@@ -55,4 +55,10 @@ Generated: 2026-07-09T15:58:38
 
 ## Git
 
-Git checkpoint attempted after this report generation; see final assistant summary for commit status.
+Checkpoint commit created and pushed to `origin/main`:
+
+- commit: `9d898e9`
+- message: `C score improvement aggressive checkpoint`
+- pushed: yes, `b6543f4..9d898e9 main -> main`
+
+Large ONNX surgery probe artifacts remain ignored by `.gitignore`; only lightweight CSV/MD summaries were committed.
