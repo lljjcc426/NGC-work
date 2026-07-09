@@ -33,6 +33,12 @@ This folder contains one B-task-only submission candidate. It starts from our lo
 - Expected local gain: `+1.336384`
 - Expected local total: `7251.464808`
 
+## Kaggle Verification
+
+- Submission ref: `54488042`
+- Public score: `7251.58`
+- Status: positive versus the old local 7250.25 base, but not competitive with the later 2026-07-09 public notebook baseline score `7267.31`.
+
 | task | local gain | cost change |
 | --- | ---: | ---: |
 | task368 | +0.354450 | 5130 -> 3599 |
@@ -65,7 +71,7 @@ This folder contains one B-task-only submission candidate. It starts from our lo
 
 - This is a donor-ONNX graft from a real public Kaggle notebook, not a train-example lookup rewrite.
 - We previously saw a hidden-score failure from an exact lookup style experiment, so LB verification is still required before treating this as final.
-- Our current online best may already include some small task-level improvements not present in the local `7250.128424` base, so the online delta can be smaller than the local `+1.336384` estimate.
+- Our current online best has moved above this candidate, so this folder should be treated as a B-task evidence package and replacement source, not as the final best submission.
 
 ## Next B-only Targets
 

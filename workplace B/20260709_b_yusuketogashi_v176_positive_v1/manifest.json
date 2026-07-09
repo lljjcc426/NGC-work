@@ -24,5 +24,7 @@
     "expected_local_total":  7251.4648080605921,
     "submission_zip":  "submission.zip",
     "submission_sha256":  "570180b360bf5acea00d08abc556423c327319cae71a980dbb6dd3d450381a47",
+    "kaggle_submission_ref":  "54488042",
+    "kaggle_public_score":  7251.58,
     "notes":  "Only positive B-owner task replacements were grafted; all non-B tasks are unchanged from the local 7250.25 baseline."
 }

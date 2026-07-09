@@ -22,6 +22,9 @@ Expected local improvement:
 - Base: `7250.128424`
 - Gain: `+1.336384`
 - Expected total: `7251.464808`
+- Kaggle ref: `54488042`
+- Kaggle public score: `7251.58`
+- Status: useful B-task evidence, but behind the later public notebook baseline `7267.31`.
 
 Changed B tasks:
 
