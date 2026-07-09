@@ -1,0 +1,12 @@
+﻿git : ERROR: Permission to lljjcc426/NGC-work.git denied to whzy3185.
+At line:2 char:1
++ git push origin main 2>&1 | Tee-Object -FilePath workplace_C\neurogol ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Permissi...ed to whzy3185.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
