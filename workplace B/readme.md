@@ -40,3 +40,35 @@ Important files:
 Next direction:
 
 Focus on B high-cost tasks still not materially improved by blending: `task018`, `task285`, `task101`, `task350`, `task255`, `task023`, then `task209`, `task205`, `task377`, `task212`, `task228`, `task344`. Prefer hidden-safe rule-equivalent ONNX rewrites over train-example lookup tables.
+
+## 2026-07-09: yusuke V176 active-base B improvements
+
+Folder: `20260709_b_yusuke_v176_t023ext_t255qmm_v1`
+
+Active baseline changed:
+
+- We now use yusuketogashi V176 as the working baseline.
+- Kaggle public baseline observed: `7267.31`.
+- Local scorer baseline: `7267.145162`.
+
+Current B-only positive changes:
+
+- `task023`: historical `aggr7162_ext7000_t023_merge` override, `+0.327464`, cost `8222 -> 5926`.
+- `task255`: new uint8 `QLinearMatMul` tail rewrite, `+0.168126`, cost `8911 -> 7532`.
+
+Combined local gain:
+
+- Gain: `+0.495590`
+- Expected local total: `7267.640752`
+- Status: not submitted yet because it is below the `+1.0` direct-submit threshold.
+
+Important files:
+
+- `20260709_b_yusuke_v176_t023ext_t255qmm_v1/submission.zip`: full candidate, only `task023` and `task255` changed.
+- `20260709_b_yusuke_v176_t023ext_t255qmm_v1/overrides/`: accepted ONNX replacements.
+- `20260709_b_yusuke_v176_t023ext_t255qmm_v1/scripts/`: accepted task255 rewrite and robust scorer.
+- `20260709_b_yusuke_v176_t023ext_t255qmm_v1/reports/`: evidence from candidate-pool and selected-variant rescoring.
+
+Next direction:
+
+Continue accumulating B-only verified gains until the package exceeds `+1.0`, then submit. The most important remaining targets are `task018`, `task285`, `task101`, `task076`, `task350`, `task209`, and `task328`.

@@ -1,0 +1,18 @@
+{
+  "variant": "b_yusuke_v176_t023ext_t255qmm_v1",
+  "base": "yusuketogashi_v176_full",
+  "changed": [
+    "task023",
+    "task255"
+  ],
+  "gain": 0.4955898971599897,
+  "task023_gain": 0.3274640393243118,
+  "task255_gain": 0.1681258578356779,
+  "base_total": 7267.145161878391,
+  "expected_total": 7267.6407517755515,
+  "task023_cost": "8222->5926",
+  "task255_cost": "8911->7532",
+  "zip": "D:\\golf\\public_probe_variants\\b_yusuke_v176_t023ext_t255qmm_v1\\submission.zip",
+  "zip_bytes": 458494,
+  "zip_sha256": "e35fdd96244aaa6d2494b645faa91fe2c2b1d9ffac875effce1814b9fe355f6f"
+}

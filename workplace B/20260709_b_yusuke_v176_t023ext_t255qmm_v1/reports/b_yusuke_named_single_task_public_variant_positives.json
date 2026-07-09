@@ -1,0 +1,32 @@
+[
+  {
+    "task": 23,
+    "label": "aggr7162_ext7000_t023_merge",
+    "path": "D:\\golf\\public_probe_variants\\aggr7162_ext7000_t023_merge\\submission\\task023.onnx",
+    "bytes": 8875,
+    "valid": true,
+    "memory": 2878,
+    "params": 3048,
+    "cost": 5926,
+    "points": 16.312895271866488,
+    "error": "",
+    "base_points": 15.985431232542176,
+    "base_cost": 8222,
+    "gain": 0.3274640393243118
+  },
+  {
+    "task": 255,
+    "label": "b_yusuke_v176_task255_qmatmul_v1",
+    "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task255_qmatmul_v1\\submission\\task255.onnx",
+    "bytes": 11557,
+    "valid": true,
+    "memory": 7185,
+    "params": 347,
+    "cost": 7532,
+    "points": 16.073084110222958,
+    "error": "",
+    "base_points": 15.90495825238728,
+    "base_cost": 8911,
+    "gain": 0.1681258578356779
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task255_u8_qmatmul_tail_20260709",
+  "min_points": 15.85,
+  "max_points": 15.95,
+  "selected_tasks": [
+    80,
+    350,
+    255,
+    338,
+    216,
+    219,
+    324
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.1681258578356779,
+  "positives": [
+    {
+      "task": 255,
+      "label": "optimize_task255_u8_matmul_tail_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task255_u8_qmatmul_tail_20260709\\optimize_task255_u8_matmul_tail_yusuke\\task255.onnx",
+      "bytes": 11557,
+      "valid": true,
+      "memory": 7185,
+      "params": 347,
+      "cost": 7532,
+      "points": 16.073084110222958,
+      "error": "",
+      "base_points": 15.90495825238728,
+      "base_cost": 8911,
+      "gain": 0.1681258578356779,
+      "module": "src\\optimize_task255_u8_matmul_tail_yusuke.py",
+      "stats": {
+        "cast_matmul_inputs_u8": 2,
+        "qlinear_matmul_u8": 1,
+        "greater_zero_u8": 1,
+        "dead_nodes": 0,
+        "initializers": 1
+      },
+      "equivalence_note": ""
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task255_u8_matmul_tail_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.1681258578356779,
+      "positives": [
+        {
+          "task": 255,
+          "label": "optimize_task255_u8_matmul_tail_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task255_u8_qmatmul_tail_20260709\\optimize_task255_u8_matmul_tail_yusuke\\task255.onnx",
+          "bytes": 11557,
+          "valid": true,
+          "memory": 7185,
+          "params": 347,
+          "cost": 7532,
+          "points": 16.073084110222958,
+          "error": "",
+          "base_points": 15.90495825238728,
+          "base_cost": 8911,
+          "gain": 0.1681258578356779,
+          "module": "src\\optimize_task255_u8_matmul_tail_yusuke.py",
+          "stats": {
+            "cast_matmul_inputs_u8": 2,
+            "qlinear_matmul_u8": 1,
+            "greater_zero_u8": 1,
+            "dead_nodes": 0,
+            "initializers": 1
+          },
+          "equivalence_note": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
