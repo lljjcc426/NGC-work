@@ -1,0 +1,75 @@
+# C Score Priority Table
+
+Generated: 2026-07-09T15:34:05
+
+Scoring uses current local task scoreboard when available, otherwise assignment cost/points.
+
+| rank | task | priority | current_cost | current_points | shape | color | quick_win_score | first_action |
+| ---: | --- | --- | ---: | ---: | --- | --- | ---: | --- |
+| 1 | task158 | P0_lt16 | 28483.0 | 14.742937 | same_shape/same_size | input_palette_only | 79.078723 | artifact_cost_scan_then_full_validate |
+| 2 | task286 | P0_lt16 | 26909.0 | 14.799784 | same_shape/same_size | input_palette_only | 78.444791 | artifact_cost_scan_then_full_validate |
+| 3 | task054 | P0_lt16 | 25394.0 | 14.857732 | same_shape/same_size | input_palette_only | 77.813581 | artifact_cost_scan_then_full_validate |
+| 4 | task349 | P0_lt16 | 14892.0 | 15.391421 | same_shape/same_size | new_output_colors | 70.200109 | artifact_cost_scan_then_full_validate |
+| 5 | task364 | P0_lt16 | 14642.0 | 15.408351 | same_shape/same_size | new_output_colors | 70.073671 | artifact_cost_scan_then_full_validate |
+| 6 | task077 | P0_lt16 | 7657.0 | 16.056624 | same_shape/same_size | new_output_colors | 65.762137 | artifact_cost_scan_then_full_validate |
+| 7 | task009 | P1_16_16p7 | 6694.0 | 16.191033 | same_shape/same_size | input_palette_only | 56.617789 | artifact_cost_scan_then_full_validate |
+| 8 | task383 | P1_16_16p7 | 5830.0 | 16.329228 | same_shape/same_size | input_palette_only | 55.740533 | artifact_cost_scan_then_full_validate |
+| 9 | task382 | P1_16_16p7 | 5695.0 | 16.352656 | same_shape/same_size | input_palette_only | 55.595862 | artifact_cost_scan_then_full_validate |
+| 10 | task096 | P1_16_16p7 | 7678.0 | 16.053886 | shape_change/shrink | input_palette_only | 54.318003 | artifact_cost_scan_then_full_validate |
+| 11 | task165 | P1_16_16p7 | 4544.0 | 16.578437 | same_shape/same_size | input_palette_only | 54.258138 | artifact_cost_scan_then_full_validate |
+| 12 | task132 | P1_16_16p7 | 3652.0 | 16.79697 | same_shape/same_size | input_palette_only | 53.053556 | artifact_cost_scan_then_full_validate |
+| 13 | task278 | P1_16_16p7 | 4505.0 | 16.587057 | same_shape/same_size | new_output_colors | 52.866623 | artifact_cost_scan_then_full_validate |
+| 14 | task378 | P1_16_16p7 | 3091.0 | 16.96375 | same_shape/same_size | input_palette_only | 52.188144 | artifact_cost_scan_then_full_validate |
+| 15 | task284 | P2_16p7_17p5 | 3089.0 | 16.964397 | same_shape/same_size | input_palette_only | 42.18487 | defer_until_p0p1_done |
+| 16 | task069 | P2_16p7_17p5 | 2949.0 | 17.010779 | same_shape/same_size | input_palette_only | 41.951959 | defer_until_p0p1_done |
+| 17 | task190 | P2_16p7_17p5 | 2427.0 | 17.205589 | same_shape/same_size | input_palette_only | 41.007928 | defer_until_p0p1_done |
+| 18 | task094 | P2_16p7_17p5 | 2677.0 | 17.107548 | same_shape/same_size | new_output_colors | 40.44148 | defer_until_p0p1_done |
+| 19 | task201 | P2_16p7_17p5 | 3046.0 | 16.978415 | shape_change/shrink | input_palette_only | 40.090478 | defer_until_p0p1_done |
+| 20 | task224 | P2_16p7_17p5 | 1886.0 | 17.457787 | same_shape/same_size | input_palette_only | 39.861518 | defer_until_p0p1_done |
+| 21 | task237 | P2_16p7_17p5 | 1836.0 | 17.484655 | same_shape/same_size | input_palette_only | 39.744032 | defer_until_p0p1_done |
+| 22 | task091 | P2_16p7_17p5 | 2764.0 | 17.075566 | shape_change/shrink | input_palette_only | 39.704277 | defer_until_p0p1_done |
+| 23 | task392 | P2_16p7_17p5 | 1941.0 | 17.429041 | same_shape/same_size | new_output_colors | 39.107028 | defer_until_p0p1_done |
+| 24 | task381 | P2_16p7_17p5 | 1753.0 | 17.530916 | same_shape/same_size | new_output_colors | 38.706364 | defer_until_p0p1_done |
+| 25 | task046 | P2_16p7_17p5 | 2085.0 | 17.357476 | shape_change/shrink | input_palette_only | 38.63358 | defer_until_p0p1_done |
+| 26 | task335 | P2_16p7_17p5 | 1380.0 | 17.770161 | same_shape/same_size | new_output_colors | 37.803029 | defer_until_p0p1_done |
+| 27 | task388 | P2_16p7_17p5 | 1829.0 | 17.488475 | shape_change/grow | new_output_colors | 37.589058 | defer_until_p0p1_done |
+| 28 | task061 | P3_ge17p5 | 1668.0 | 17.580619 | same_shape/same_size | input_palette_only | 29.331288 | defer_until_p0p1_done |
+| 29 | task075 | P3_ge17p5 | 1487.0 | 17.695484 | same_shape/same_size | input_palette_only | 28.850812 | defer_until_p0p1_done |
+| 30 | task302 | P3_ge17p5 | 1774.0 | 17.519008 | same_shape/same_size | new_output_colors | 28.752683 | defer_until_p0p1_done |
+| 31 | task141 | P3_ge17p5 | 1383.0 | 17.76799 | same_shape/same_size | input_palette_only | 28.554779 | defer_until_p0p1_done |
+| 32 | task356 | P3_ge17p5 | 1319.0 | 17.815371 | same_shape/same_size | input_palette_only | 28.364243 | defer_until_p0p1_done |
+| 33 | task301 | P3_ge17p5 | 1141.0 | 17.96034 | same_shape/same_size | input_palette_only | 27.794977 | defer_until_p0p1_done |
+| 34 | task159 | P3_ge17p5 | 1568.0 | 17.642444 | shape_change/shrink | input_palette_only | 27.618964 | defer_until_p0p1_done |
+| 35 | task225 | P3_ge17p5 | 1031.0 | 18.061716 | same_shape/same_size | input_palette_only | 27.40858 | defer_until_p0p1_done |
+| 36 | task193 | P3_ge17p5 | 910.0 | 18.186555 | same_shape/same_size | input_palette_only | 26.945172 | defer_until_p0p1_done |
+| 37 | task351 | P3_ge17p5 | 1229.0 | 17.886044 | shape_change/shrink | input_palette_only | 26.798766 | defer_until_p0p1_done |
+| 38 | task304 | P3_ge17p5 | 1320.0 | 17.814613 | shape_change/grow | new_output_colors | 26.550682 | defer_until_p0p1_done |
+| 39 | task015 | P3_ge17p5 | 900.0 | 18.197605 | same_shape/same_size | new_output_colors | 26.30479 | defer_until_p0p1_done |
+| 40 | task230 | P3_ge17p5 | 900.0 | 18.197605 | same_shape/same_size | new_output_colors | 26.30479 | defer_until_p0p1_done |
+| 41 | task194 | P3_ge17p5 | 949.0 | 18.144591 | shape_change/grow | input_palette_only | 25.969913 | defer_until_p0p1_done |
+| 42 | task221 | P3_ge17p5 | 805.0 | 18.309158 | shape_change/grow | input_palette_only | 25.462336 | defer_until_p0p1_done |
+| 43 | task178 | P3_ge17p5 | 762.0 | 18.364053 | shape_change/shrink | input_palette_only | 25.296212 | defer_until_p0p1_done |
+| 44 | task372 | P3_ge17p5 | 710.0 | 18.434735 | shape_change/shrink | input_palette_only | 25.084557 | defer_until_p0p1_done |
+| 45 | task362 | P3_ge17p5 | 521.0 | 18.74425 | same_shape/same_size | input_palette_only | 25.022297 | defer_until_p0p1_done |
+| 46 | task332 | P3_ge17p5 | 561.0 | 18.670279 | same_shape/same_size | new_output_colors | 24.791131 | defer_until_p0p1_done |
+| 47 | task065 | P3_ge17p5 | 638.0 | 18.541662 | shape_change/shrink | input_palette_only | 24.768978 | defer_until_p0p1_done |
+| 48 | task081 | P3_ge17p5 | 464.0 | 18.860115 | same_shape/same_size | new_output_colors | 24.218428 | defer_until_p0p1_done |
+| 49 | task203 | P3_ge17p5 | 355.0 | 19.127882 | same_shape/same_size | input_palette_only | 23.816794 | defer_until_p0p1_done |
+| 50 | task072 | P3_ge17p5 | 421.0 | 18.957367 | shape_change/shrink | new_output_colors | 23.316363 | defer_until_p0p1_done |
+| 51 | task121 | P3_ge17p5 | 326.0 | 19.213103 | shape_change/shrink | input_palette_only | 22.897863 | defer_until_p0p1_done |
+| 52 | task108 | P3_ge17p5 | 300.0 | 19.296218 | shape_change/grow | input_palette_only | 22.677736 | defer_until_p0p1_done |
+| 53 | task146 | P3_ge17p5 | 265.0 | 19.42027 | shape_change/shrink | input_palette_only | 22.35324 | defer_until_p0p1_done |
+| 54 | task315 | P3_ge17p5 | 230.0 | 19.561921 | shape_change/grow | input_palette_only | 21.988314 | defer_until_p0p1_done |
+| 55 | task052 | P3_ge17p5 | 194.0 | 19.732142 | same_shape/same_size | new_output_colors | 21.789271 | defer_until_p0p1_done |
+| 56 | task180 | P3_ge17p5 | 210.0 | 19.652892 | shape_change/shrink | input_palette_only | 21.756916 | defer_until_p0p1_done |
+| 57 | task252 | P3_ge17p5 | 180.0 | 19.807043 | same_shape/same_size | new_output_colors | 21.59339 | defer_until_p0p1_done |
+| 58 | task298 | P3_ge17p5 | 135.0 | 20.094725 | same_shape/same_size | input_palette_only | 21.088634 | defer_until_p0p1_done |
+| 59 | task391 | P3_ge17p5 | 159.0 | 19.931096 | shape_change/shrink | input_palette_only | 21.062507 | defer_until_p0p1_done |
+| 60 | task347 | P3_ge17p5 | 143.0 | 20.037155 | shape_change/shrink | new_output_colors | 20.643185 | defer_until_p0p1_done |
+| 61 | task144 | P3_ge17p5 | 104.0 | 20.355609 | shape_change/shrink | new_output_colors | 19.900664 | defer_until_p0p1_done |
+| 62 | task142 | P3_ge17p5 | 90.0 | 20.50019 | shape_change/grow | input_palette_only | 19.69532 | defer_until_p0p1_done |
+| 63 | task373 | P3_ge17p5 | 60.0 | 20.905655 | same_shape/same_size | input_palette_only | 19.040745 | defer_until_p0p1_done |
+| 64 | task113 | P3_ge17p5 | 30.0 | 21.598803 | same_shape/same_size | input_palette_only | 17.40489 | defer_until_p0p1_done |
+| 65 | task311 | P3_ge17p5 | 30.0 | 21.598803 | shape_change/grow | input_palette_only | 17.204058 | defer_until_p0p1_done |
+| 66 | task276 | P3_ge17p5 | 10.0 | 22.697415 | same_shape/same_size | new_output_colors | 14.889775 | defer_until_p0p1_done |
+| 67 | task307 | P3_ge17p5 | 5.0 | 23.390562 | shape_change/grow | input_palette_only | 13.382854 | defer_until_p0p1_done |

@@ -1,0 +1,2 @@
+candidate_id,created_at,included_tasks,expected_delta_cost,validation_status,file_count_400,missing_task_count,artifact_path,public_lb,notes
+GOLF_20260709_101_prvsiyan_7266_72_repro,2026-07-09,400 baseline tasks,0 from this C run,STRUCTURE_400; examples_passed=1197; known task148 structural warning in local validator,400,0,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx,7266.72,Current external baseline; no C accepted replacement generated in this run.

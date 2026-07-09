@@ -1,0 +1,7 @@
+*.onnx
+*.zip
+kaggle.json
+.kaggle/
+*access_token*
+*.cookie
+*.cookies
