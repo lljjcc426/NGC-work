@@ -11,7 +11,11 @@ Each of the six members has exactly 67 assignment slots. The unique task count i
 
 Record source, validation evidence, and Kaggle A/B results for all adopted changes. File deletions must be explicitly documented.
 
-Workspace C artifacts are under [`workplace_C/`](workplace_C/).
+Workspace C artifacts are under [`workplace C/`](workplace%20C/).
+
+The complete downloaded NeuroGolf task mirror is under
+[`neurogolf_400_tasks/`](neurogolf_400_tasks/). It contains `task001.json`
+through `task400.json`, a task index, and a local browser viewer.
 
 具体分配如下，来源是 [task_assignment_400.csv](F:/kaggle/NGC-work/assignments/task_assignment_400.csv)。每人 67 个任务槽；E/F 各有 1 个 `shared_review` 协作任务。
 

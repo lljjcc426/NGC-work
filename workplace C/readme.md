@@ -1,2 +1,72 @@
-C
-task009, task015, task046, task052, task054, task061, task065, task069, task072, task075, task077, task081, task091, task094, task096, task108, task113, task121, task132, task141, task142, task144, task146, task158, task159, task165, task178, task180, task190, task193, task194, task201, task203, task221, task224, task225, task230, task237, task252, task276, task278, task284, task286, task298, task301, task302, task304, task307, task311, task315, task332, task335, task347, task349, task351, task356, task362, task364, task372, task373, task378, task381, task382, task383, task388, task391, task392
+# Workplace C
+
+Owner track: `onnx_equiv_compression`
+
+This is the canonical C-group workspace. The earlier duplicate
+`workplace_C/` directory has been merged here.
+
+## Scope
+
+- Assignment source: `../assignments/task_assignment_400.csv`
+- Assigned owner: `C`
+- Assignment type: `primary`
+- Task count: 67
+- Full task mirror for all teams: `../neurogolf_400_tasks/`
+
+## C Task Files
+
+- `tasks/task009.json` ... `tasks/task392.json`: complete downloaded JSON
+  files for the 67 C primary tasks.
+- `task_index_C.csv`: C task file checksums, example counts, assignment
+  priority, cost, and score metadata.
+- `task_viewer_C.html`: local browser viewer for the 67 C tasks.
+
+Start the C task viewer:
+
+```powershell
+python -m http.server 8771 --bind 127.0.0.1 --directory "E:\kongming\NGC-work\workplace C"
+```
+
+Then open `http://127.0.0.1:8771/task_viewer_C.html`.
+
+## Progress Dashboard
+
+- `dashboard/index.html`: C task progress dashboard exported from the local
+  NeuroGolf task table.
+- `dashboard/task_progress_C.csv`: machine-readable C progress table.
+- `dashboard/task_progress_C.md`: C progress summary.
+- `dashboard/source_task_scoreboard_all_tasks.csv`: all-task score table used
+  for the C export.
+
+Start the dashboard:
+
+```powershell
+cd "E:\kongming\NGC-work\workplace C\dashboard"
+.\serve_dashboard.ps1
+```
+
+Then open `http://127.0.0.1:8766/index.html`.
+
+Regenerate it from `E:\kagglegolf`:
+
+```powershell
+cd "E:\kongming\NGC-work\workplace C\dashboard"
+.\refresh_from_kagglegolf.ps1
+```
+
+## Reports
+
+- `reports/task_visibility_and_sources.md`: evidence that the Kaggle data
+  package exposes all 400 task JSON files.
+- `reports/onnx_visualization_sources.md`: Kaggle discussion evidence for
+  ONNX/task visualization tooling.
+
+## Engineering Workspace
+
+- `neurogolf-2026-work/`: Kaggle/NVIDIA skill research scaffold and local
+  baseline project.
+- `cleanup_log.md`: cleanup record for setup-only directories.
+
+The project scaffold still requires `KAGGLE_API_TOKEN` before running Kaggle
+API/CLI workflows. The task JSONs, C task viewer, and dashboard do not require
+Kaggle credentials.

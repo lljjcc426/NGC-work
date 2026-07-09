@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuroGolf 2026 Task Viewer</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#1f2937;background:#f8fafc;}
+body{margin:0;padding:18px;}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+h1{font-size:20px;margin:0 16px 0 0;}
+select,input,button{font:inherit;padding:7px 9px;border:1px solid #cbd5e1;border-radius:6px;background:white;}
+button{cursor:pointer;}
+.meta{font-size:13px;color:#475569;margin-bottom:12px;}
+.examples{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+.example{background:white;border:1px solid #d7dee8;border-radius:8px;padding:10px;}
+.example h2{font-size:14px;margin:0 0 8px;color:#334155;}
+.pair{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;}
+.grid-wrap{display:flex;flex-direction:column;gap:5px;}
+.grid-title{font-size:12px;color:#64748b;}
+.grid{display:grid;gap:1px;background:#94a3b8;border:1px solid #94a3b8;max-width:100%;overflow:auto;}
+.cell{width:14px;height:14px;box-sizing:border-box;}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f172a;color:#e2e8f0;padding:10px;border-radius:8px;max-height:260px;overflow:auto;}
+</style>
+</head>
+<body>
+<header>
+  <h1>NeuroGolf 2026 Task Viewer</h1>
+  <label>Task <select id="taskSelect"></select></label>
+  <input id="taskSearch" placeholder="task number, e.g. 009" size="18">
+  <button id="loadBtn">Load</button>
+  <button id="rawBtn">Raw JSON</button>
+</header>
+<div id="meta" class="meta"></div>
+<div id="content" class="examples"></div>
+<script>
+const tasks = Array.from({length:400}, (_,i)=>`task${String(i+1).padStart(3,'0')}`);
+const palette = ['#000000','#0074D9','#FF4136','#2ECC40','#FFDC00','#AAAAAA','#F012BE','#FF851B','#7FDBFF','#870C25'];
+const select = document.getElementById('taskSelect');
+for (const t of tasks) { const o=document.createElement('option'); o.value=t; o.textContent=t; select.appendChild(o); }
+function shape(g){return Array.isArray(g)&&g.length?`${g.length}x${Array.isArray(g[0])?g[0].length:0}`:'empty'}
+function gridEl(grid){
+  const div=document.createElement('div'); div.className='grid';
+  if(!Array.isArray(grid)||!grid.length){div.textContent='empty';return div;}
+  const cols=Array.isArray(grid[0])?grid[0].length:0; div.style.gridTemplateColumns=`repeat(${cols},14px)`;
+  for(const row of grid){ for(const v of row){ const c=document.createElement('div'); c.className='cell'; c.style.background=palette[Number(v)] ?? '#ffffff'; div.appendChild(c); }}
+  return div;
+}
+function gridWrap(title, grid){ const w=document.createElement('div'); w.className='grid-wrap'; const t=document.createElement('div'); t.className='grid-title'; t.textContent=`${title} ${shape(grid)}`; w.append(t, gridEl(grid)); return w; }
+function exampleEl(kind, i, ex){ const card=document.createElement('section'); card.className='example'; const h=document.createElement('h2'); h.textContent=`${kind} ${i+1}`; const pair=document.createElement('div'); pair.className='pair'; pair.append(gridWrap('input', ex.input), gridWrap('output', ex.output)); card.append(h,pair); return card; }
+async function loadTask(task){
+  const res=await fetch(`tasks/${task}.json`, {cache:'no-store'}); if(!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+  const data=await res.json();
+  document.getElementById('meta').textContent = `${task}: train=${(data.train||[]).length}, arc-gen=${(data['arc-gen']||[]).length}, test=${(data.test||[]).length}`;
+  const content=document.getElementById('content'); content.innerHTML='';
+  for(const [kind, list] of [['train',data.train||[]], ['arc-gen',data['arc-gen']||[]], ['test',data.test||[]]]) list.forEach((ex,i)=>content.appendChild(exampleEl(kind,i,ex)));
+}
+document.getElementById('loadBtn').onclick=()=>loadTask(select.value).catch(e=>alert(e.message));
+document.getElementById('rawBtn').onclick=()=>window.open(`tasks/${select.value}.json`, '_blank');
+document.getElementById('taskSearch').addEventListener('keydown', e=>{ if(e.key==='Enter'){ const n=e.target.value.match(/\d+/)?.[0]; if(n){ select.value=`task${String(Number(n)).padStart(3,'0')}`; loadTask(select.value).catch(err=>alert(err.message)); } }});
+select.onchange=()=>loadTask(select.value).catch(e=>alert(e.message));
+loadTask('task001');
+</script>
+</body>
+</html>
