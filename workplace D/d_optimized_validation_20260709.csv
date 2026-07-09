@@ -1,7 +1,7 @@
 task,base_cost,base_points,optimized_path,valid,cost,score,delta_cost,delta_points,reason
 task029,5288,16.426805,workplace D/optimized_onnx/task029.onnx,True,5284,16.427561334357783,-4,0.0007563343577814408,
 task055,3141,16.947704,workplace D/optimized_onnx/task055.onnx,True,1856,17.473821086653853,-1285,0.5261170866538514,
-task105,2941,17.013495,workplace D/optimized_onnx/task105.onnx,True,2866,17.039327391611884,-75,0.02583239161188544,
+task105,2941,17.013495,workplace D/optimized_onnx/task105.onnx,True,2849,17.045276665502094,-92,0.031781665502094825,
 task115,1043,18.050144,workplace D/optimized_onnx/task115.onnx,True,1014,18.078341815848873,-29,0.028197815848873375,
 task200,753,18.375935,workplace D/optimized_onnx/task200.onnx,True,623,18.565453481212547,-130,0.18951848121254855,
 task256,2251,17.28087,workplace D/optimized_onnx/task256.onnx,True,2114,17.343662833569816,-137,0.0627928335698158,

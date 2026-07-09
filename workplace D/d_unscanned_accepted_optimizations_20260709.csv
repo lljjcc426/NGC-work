@@ -1,0 +1,2 @@
+task,priority,base_cost,base_points,candidate_cost,candidate_points,delta_cost,delta_points,source,source_kind,source_member,sha256,bytes,optimized_path
+task105,P2_16p7_17p5,2941,17.013495,2849,17.045276665502094,-92,0.031781665502094825,work/final-v170-anas-on-v169/task105.onnx,file,,f5f6649540db2dc038e9d55f79abf829e00071e1da06fc661d63988e947a2686,2898,workplace D/optimized_onnx/task105.onnx

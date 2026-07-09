@@ -51,4 +51,16 @@ Accepted replacements after deep scan:
 - Validation CSV: `workplace D/d_optimized_validation_20260709.csv`.
 - Optimized folder: `workplace D/optimized_onnx`.
 - Valid optimized ONNX files: 8 / 8.
-- Aggregate validated delta: cost -2,823, points +1.686903354.
+- Aggregate validated delta before unscanned sweep: cost -2,823, points +1.686903354.
+
+## 2026-07-09 Unscanned candidate sweep
+
+- Follow-up report: `workplace D/d_unscanned_scan_report_20260709.md`.
+- Full sweep CSV: `workplace D/d_unscanned_candidate_scan_20260709.csv`.
+- Incremental accepted CSV: `workplace D/d_unscanned_accepted_optimizations_20260709.csv`.
+- Final cumulative accepted CSV: `workplace D/d_final_accepted_optimizations_20260709.csv`.
+- Unscanned candidates evaluated: 337.
+- Valid candidates: 121; timeout / heavy candidates: 16.
+- New accepted replacement: `task105`, cost 2866 -> 2849 versus the previous optimized file.
+- Final optimized ONNX validation: 8 / 8 valid.
+- Final aggregate validated delta: cost -2,840, points +1.692852628.
