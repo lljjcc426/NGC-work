@@ -1,0 +1,40 @@
+{
+  "variant": "b_only_yusuketogashi_v176_positive_v1",
+  "changed": [
+    8,
+    76,
+    90,
+    131,
+    161,
+    170,
+    208,
+    245,
+    247,
+    270,
+    277,
+    280,
+    328,
+    368
+  ],
+  "positive_tasks": [
+    368,
+    280,
+    170,
+    161,
+    8,
+    277,
+    328,
+    245,
+    270,
+    131,
+    247,
+    76,
+    90,
+    208
+  ],
+  "gain": 1.336384065519061,
+  "base_total": 7250.128423995073,
+  "expected_total": 7251.464808060592,
+  "zip": "D:\\golf\\public_probe_variants\\b_only_yusuketogashi_v176_positive_v1\\submission.zip",
+  "zip_bytes": 450571
+}
