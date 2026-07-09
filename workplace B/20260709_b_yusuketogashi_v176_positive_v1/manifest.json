@@ -1,0 +1,28 @@
+﻿{
+    "variant":  "b_only_yusuketogashi_v176_positive_v1",
+    "created_at":  "2026-07-09 Asia/Shanghai",
+    "scope":  "B tasks only",
+    "source":  "kaggle:yusuketogashi/2026-neurogolf-baseline embedded V176 submission.zip",
+    "base":  "public_probe_variants/aggr7250_25_jack_direct_v1/submission",
+    "changed_tasks":  [
+                          "task008",
+                          "task076",
+                          "task090",
+                          "task131",
+                          "task161",
+                          "task170",
+                          "task208",
+                          "task245",
+                          "task247",
+                          "task270",
+                          "task277",
+                          "task280",
+                          "task328",
+                          "task368"
+                      ],
+    "expected_local_gain":  1.3363840655190611,
+    "expected_local_total":  7251.4648080605921,
+    "submission_zip":  "submission.zip",
+    "submission_sha256":  "570180b360bf5acea00d08abc556423c327319cae71a980dbb6dd3d450381a47",
+    "notes":  "Only positive B-owner task replacements were grafted; all non-B tasks are unchanged from the local 7250.25 baseline."
+}
