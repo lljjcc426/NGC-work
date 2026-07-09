@@ -1,0 +1,20 @@
+{
+  "submission_description": "E public7266 union 21 tasks local +4.931 sha 0bccf7d2",
+  "submitted_file": "F:/kaggle/neurogolf-2026/submissions/submission.zip",
+  "candidate_archive": "F:/kaggle/neurogolf-2026/submissions/submission_e_public7266_union_20260709.zip",
+  "sha256": "0bccf7d2cdf8184f293703ff6b074a1db8cfb441b1c1a6bc71c7061a6b9f1f83",
+  "selected_task_count": 21,
+  "released_local_delta_points": 4.931264,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_score": 7255.20,
+  "previous_best_public_score": 7250.28,
+  "public_score_delta": 4.92,
+  "kaggle_timestamp_utc": "2026-07-09 04:59:51.290000",
+  "source_used_for_selected_tasks": "franksunp/7266-72-lb-compact-onnx-artifact-starter",
+  "source_is_private": false,
+  "notes": [
+    "First submit using nonstandard archive filename returned HTTP 400.",
+    "Second submit using standard filename submission.zip succeeded.",
+    "External downloaded notebook outputs are stored locally under F:/kaggle/neurogolf-2026/external/source_review_20260709_e and are not committed."
+  ]
+}
