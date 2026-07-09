@@ -1,0 +1,2 @@
+task,priority,base_cost,base_points,candidate_cost,candidate_points,delta_cost,delta_points,source,source_kind,source_member,sha256,bytes,optimized_path
+task029,P1_16_16p7,5288,16.426805,5284,16.427561334357783,-4,0.0007563343577814408,work/final-v157-stable-plus-task286-on-v154/task029.onnx,file,,9ceba2b29239999b047e47ac3f2c934af74bd7678676ff0d5a8ae96f6a2edb63,2328,workplace D/optimized_onnx/task029.onnx
