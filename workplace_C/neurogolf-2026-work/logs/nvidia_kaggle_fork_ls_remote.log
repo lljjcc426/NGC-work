@@ -1,0 +1,12 @@
+﻿git : ERROR: Repository not found.
+At line:2 char:1
++ git ls-remote git@github.com:whzy3185/nvidia-kaggle.git HEAD 2>&1 | T ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Repository not found.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+

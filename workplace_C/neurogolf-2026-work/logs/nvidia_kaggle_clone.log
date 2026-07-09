@@ -1,0 +1,9 @@
+﻿git : Cloning into 'external/nvidia-kaggle'...
+At line:2 char:1
++ git clone https://github.com/NVIDIA/nvidia-kaggle.git external/nvidia ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into 'external/nvidia-kaggle'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+fatal: unable to access 'https://github.com/NVIDIA/nvidia-kaggle.git/': Recv failure: Connection was reset
+

@@ -1,0 +1,8 @@
+﻿git : Cloning into 'external/nvidia-kaggle'...
+At line:11 char:3
++   git clone git@github.com:NVIDIA/nvidia-kaggle.git external/nvidia-k ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into 'external/nvidia-kaggle'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

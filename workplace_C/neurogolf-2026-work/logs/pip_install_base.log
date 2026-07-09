@@ -1,0 +1,185 @@
+﻿Requirement already satisfied: pip in e:\anaconda\lib\site-packages (25.3)
+Collecting pip
+  Downloading pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: pandas in e:\anaconda\lib\site-packages (2.3.3)
+Collecting pandas
+  Downloading pandas-3.0.3-cp313-cp313-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy in e:\anaconda\lib\site-packages (2.1.3)
+Collecting numpy
+  Downloading numpy-2.5.1-cp313-cp313-win_amd64.whl.metadata (6.6 kB)
+Requirement already satisfied: scikit-learn in e:\anaconda\lib\site-packages (1.7.2)
+Collecting scikit-learn
+  Downloading scikit_learn-1.9.0-cp313-cp313-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: matplotlib in e:\anaconda\lib\site-packages (3.10.7)
+Collecting matplotlib
+  Downloading matplotlib-3.11.0-cp313-cp313-win_amd64.whl.metadata (80 kB)
+Requirement already satisfied: tqdm in e:\anaconda\lib\site-packages (4.67.1)
+Collecting tqdm
+  Downloading tqdm-4.68.4-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: pyarrow in e:\anaconda\lib\site-packages (22.0.0)
+Collecting pyarrow
+  Downloading pyarrow-24.0.0-cp313-cp313-win_amd64.whl.metadata (3.0 kB)
+Requirement already satisfied: kaggle in e:\anaconda\lib\site-packages (2.2.0)
+Collecting kaggle
+  Downloading kaggle-2.2.3-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: httpx in e:\anaconda\lib\site-packages (0.28.1)
+Requirement already satisfied: kagglesdk in e:\anaconda\lib\site-packages (0.1.27)
+Collecting kagglesdk
+  Downloading kagglesdk-0.1.33-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: nbformat in e:\anaconda\lib\site-packages (5.10.4)
+Requirement already satisfied: pydantic in e:\anaconda\lib\site-packages (2.11.7)
+Collecting pydantic
+  Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+Requirement already satisfied: python-dotenv in e:\anaconda\lib\site-packages (1.1.0)
+Collecting python-dotenv
+  Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Requirement already satisfied: rich in e:\anaconda\lib\site-packages (13.9.4)
+Collecting rich
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in e:\anaconda\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: tzdata in e:\anaconda\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.10.0 in e:\anaconda\lib\site-packages (from scikit-learn) (1.16.3)
+Requirement already satisfied: joblib>=1.4.0 in e:\anaconda\lib\site-packages (from scikit-learn) (1.4.2)
+Collecting narwhals>=2.0.1 (from scikit-learn)
+  Downloading narwhals-2.23.0-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: threadpoolctl>=3.5.0 in e:\anaconda\lib\site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: contourpy>=1.0.1 in e:\anaconda\lib\site-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in e:\anaconda\lib\site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in e:\anaconda\lib\site-packages (from matplotlib) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in e:\anaconda\lib\site-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in e:\anaconda\lib\site-packages (from matplotlib) (24.2)
+Requirement already satisfied: pillow>=9 in e:\anaconda\lib\site-packages (from matplotlib) (11.1.0)
+Requirement already satisfied: pyparsing>=3 in e:\anaconda\lib\site-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: colorama in e:\anaconda\lib\site-packages (from tqdm) (0.4.6)
+Requirement already satisfied: bleach in e:\anaconda\lib\site-packages (from kaggle) (6.3.0)
+Requirement already satisfied: jupytext in e:\anaconda\lib\site-packages (from kaggle) (1.19.3)
+Requirement already satisfied: protobuf in e:\anaconda\lib\site-packages (from kaggle) (6.33.0)
+Requirement already satisfied: python-slugify in e:\anaconda\lib\site-packages (from kaggle) (8.0.4)
+Requirement already satisfied: requests in e:\anaconda\lib\site-packages (from kaggle) (2.32.3)
+Requirement already satisfied: urllib3>=1.15.1 in e:\anaconda\lib\site-packages (from kaggle) (2.3.0)
+Requirement already satisfied: anyio in e:\anaconda\lib\site-packages (from httpx) (4.14.0)
+Requirement already satisfied: certifi in e:\anaconda\lib\site-packages (from httpx) (2025.10.5)
+Requirement already satisfied: httpcore==1.* in e:\anaconda\lib\site-packages (from httpx) (1.0.9)
+Requirement already satisfied: idna in e:\anaconda\lib\site-packages (from httpx) (3.7)
+Requirement already satisfied: h11>=0.16 in e:\anaconda\lib\site-packages (from httpcore==1.*->httpx) (0.16.0)
+Requirement already satisfied: fastjsonschema>=2.15 in e:\anaconda\lib\site-packages (from nbformat) (2.20.0)
+Requirement already satisfied: jsonschema>=2.6 in e:\anaconda\lib\site-packages (from nbformat) (4.23.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in e:\anaconda\lib\site-packages (from nbformat) (5.7.2)
+Requirement already satisfied: traitlets>=5.1 in e:\anaconda\lib\site-packages (from nbformat) (5.14.3)
+Requirement already satisfied: annotated-types>=0.6.0 in e:\anaconda\lib\site-packages (from pydantic) (0.6.0)
+Collecting pydantic-core==2.46.4 (from pydantic)
+  Downloading pydantic_core-2.46.4-cp313-cp313-win_amd64.whl.metadata (6.7 kB)
+Requirement already satisfied: typing-extensions>=4.14.1 in e:\anaconda\lib\site-packages (from pydantic) (4.15.0)
+Collecting typing-inspection>=0.4.2 (from pydantic)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in e:\anaconda\lib\site-packages (from rich) (2.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in e:\anaconda\lib\site-packages (from rich) (2.19.1)
+Requirement already satisfied: attrs>=22.2.0 in e:\anaconda\lib\site-packages (from jsonschema>=2.6->nbformat) (24.3.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in e:\anaconda\lib\site-packages (from jsonschema>=2.6->nbformat) (2023.7.1)
+Requirement already satisfied: referencing>=0.28.4 in e:\anaconda\lib\site-packages (from jsonschema>=2.6->nbformat) (0.30.2)
+Requirement already satisfied: rpds-py>=0.7.1 in e:\anaconda\lib\site-packages (from jsonschema>=2.6->nbformat) (0.22.3)
+Requirement already satisfied: platformdirs>=2.5 in e:\anaconda\lib\site-packages (from jupyter-core!=5.0.*,>=4.12->nbformat) (4.3.7)
+Requirement already satisfied: pywin32>=300 in e:\anaconda\lib\site-packages (from jupyter-core!=5.0.*,>=4.12->nbformat) (308)
+Requirement already satisfied: mdurl~=0.1 in e:\anaconda\lib\site-packages (from markdown-it-py>=2.2.0->rich) (0.1.0)
+Requirement already satisfied: six>=1.5 in e:\anaconda\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: webencodings in e:\anaconda\lib\site-packages (from bleach->kaggle) (0.5.1)
+Requirement already satisfied: mdit-py-plugins in e:\anaconda\lib\site-packages (from jupytext->kaggle) (0.6.1)
+Requirement already satisfied: pyyaml in e:\anaconda\lib\site-packages (from jupytext->kaggle) (6.0.2)
+Requirement already satisfied: text-unidecode>=1.3 in e:\anaconda\lib\site-packages (from python-slugify->kaggle) (1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in e:\anaconda\lib\site-packages (from requests->kaggle) (3.3.2)
+Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+   ---------------------------------------- 1.8/1.8 MB 2.2 MB/s  0:00:01
+Downloading pandas-3.0.3-cp313-cp313-win_amd64.whl (9.8 MB)
+   ---------------------------------------- 9.8/9.8 MB 4.5 MB/s  0:00:02
+Downloading numpy-2.5.1-cp313-cp313-win_amd64.whl (12.4 MB)
+   ---------------------------------------- 12.4/12.4 MB 5.5 MB/s  0:00:02
+Downloading scikit_learn-1.9.0-cp313-cp313-win_amd64.whl (8.2 MB)
+   ---------------------------------------- 8.2/8.2 MB 5.3 MB/s  0:00:01
+Downloading matplotlib-3.11.0-cp313-cp313-win_amd64.whl (9.3 MB)
+   ---------------------------------------- 9.3/9.3 MB 4.9 MB/s  0:00:01
+Downloading tqdm-4.68.4-py3-none-any.whl (676 kB)
+   ---------------------------------------- 676.6/676.6 kB 6.6 MB/s  0:00:00
+Downloading pyarrow-24.0.0-cp313-cp313-win_amd64.whl (27.3 MB)
+   ---------------------------------------- 27.3/27.3 MB 5.4 MB/s  0:00:05
+Downloading kaggle-2.2.3-py3-none-any.whl (111 kB)
+Downloading kagglesdk-0.1.33-py3-none-any.whl (243 kB)
+Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.4-cp313-cp313-win_amd64.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 6.3 MB/s  0:00:00
+Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading narwhals-2.23.0-py3-none-any.whl (458 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Installing collected packages: typing-inspection, tqdm, python-dotenv, pydantic-core, pyarrow, pip, numpy, narwhals, rich, pydantic, pandas, kagglesdk, scikit-learn, matplotlib, kaggle
+  Attempting uninstall: typing-inspection
+    Found existing installation: typing-inspection 0.4.0
+    Uninstalling typing-inspection-0.4.0:
+      Successfully uninstalled typing-inspection-0.4.0
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.67.1
+    Uninstalling tqdm-4.67.1:
+      Successfully uninstalled tqdm-4.67.1
+  Attempting uninstall: python-dotenv
+    Found existing installation: python-dotenv 1.1.0
+    Uninstalling python-dotenv-1.1.0:
+      Successfully uninstalled python-dotenv-1.1.0
+  Attempting uninstall: pydantic-core
+    Found existing installation: pydantic_core 2.33.2
+    Uninstalling pydantic_core-2.33.2:
+      Successfully uninstalled pydantic_core-2.33.2
+  Attempting uninstall: pyarrow
+    Found existing installation: pyarrow 22.0.0
+    Uninstalling pyarrow-22.0.0:
+      Successfully uninstalled pyarrow-22.0.0
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.1.3
+    Uninstalling numpy-2.1.3:
+      Successfully uninstalled numpy-2.1.3
+  Attempting uninstall: rich
+    Found existing installation: rich 13.9.4
+    Uninstalling rich-13.9.4:
+      Successfully uninstalled rich-13.9.4
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 2.11.7
+    Uninstalling pydantic-2.11.7:
+      Successfully uninstalled pydantic-2.11.7
+  Attempting uninstall: pandas
+    Found existing installation: pandas 2.3.3
+    Uninstalling pandas-2.3.3:
+      Successfully uninstalled pandas-2.3.3
+  Attempting uninstall: kagglesdk
+    Found existing installation: kagglesdk 0.1.27
+    Uninstalling kagglesdk-0.1.27:
+      Successfully uninstalled kagglesdk-0.1.27
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.7.2
+    Uninstalling scikit-learn-1.7.2:
+      Successfully uninstalled scikit-learn-1.7.2
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.10.7
+    Uninstalling matplotlib-3.10.7:
+      Successfully uninstalled matplotlib-3.10.7
+  Attempting uninstall: kaggle
+    Found existing installation: kaggle 2.2.0
+    Uninstalling kaggle-2.2.0:
+      Successfully uninstalled kaggle-2.2.0
+
+python : ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. Thi
+s behaviour is the source of the following dependency conflicts.
+At line:2 char:1
++ python -m pip install -U pip pandas numpy scikit-learn matplotlib tqd ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: pip's de...ency conflicts.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+kaggle-environments 1.30.1 requires gymnax==0.0.8, which is not installed.
+kaggle-environments 1.30.1 requires litellm>=1.86.1, which is not installed.
+kaggle-environments 1.30.1 requires transformers>=4.33.1, which is not installed.
+opencv-python 4.12.0.88 requires numpy<2.3.0,>=2; python_version >= "3.9", but you have numpy 2.5.1 which is incompatib
+le.
+Successfully installed kaggle-2.2.3 kagglesdk-0.1.33 matplotlib-3.11.0 narwhals-2.23.0 numpy-2.5.1 pandas-3.0.3 pip-26.1.2 pyarrow-24.0.0 pydantic-2.13.4 pydantic-core-2.46.4 python-dotenv-1.2.2 rich-15.0.0 scikit-learn-1.9.0 tqdm-4.68.4 typing-inspection-0.4.2
+

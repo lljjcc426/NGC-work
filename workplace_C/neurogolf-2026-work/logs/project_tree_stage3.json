@@ -1,0 +1,179 @@
+﻿[
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\data",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\kaggle_kernel",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\notebooks",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\reports",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\scripts",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\src",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\submissions",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\data\\interim",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\data\\processed",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\data\\raw",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\.agents",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\.claude-plugin",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\.codex-plugin",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\demo",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\skills",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\tests",
+        "Length":  null
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\BENCHMARK.md",
+        "Length":  2129
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\CLA.md",
+        "Length":  8226
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\CONTRIBUTING.md",
+        "Length":  2378
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\LICENSE",
+        "Length":  1103
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\pyproject.toml",
+        "Length":  1246
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\README.md",
+        "Length":  10870
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\SECURITY.md",
+        "Length":  1941
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\external\\nvidia-kaggle\\THIRD_PARTY_NOTICES.md",
+        "Length":  3254
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\codex_plugin_marketplace_add.log",
+        "Length":  312
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\external_dir_before_fork.log",
+        "Length":  6
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\github_ssh_check.log",
+        "Length":  844
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_clone.log",
+        "Length":  986
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_clone_head.log",
+        "Length":  20
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_fork_ls_remote.log",
+        "Length":  974
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_skills_dir.log",
+        "Length":  526
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_ssh_clone.log",
+        "Length":  772
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_ssh_ls_remote.log",
+        "Length":  96
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\nvidia_kaggle_tree_head.log",
+        "Length":  2182
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\pip_install_base.log",
+        "Length":  25288
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\pip_version.log",
+        "Length":  132
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\project_tree_stage3.json",
+        "Length":  0
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\python_version.log",
+        "Length":  32
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\token_status.log",
+        "Length":  110
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\logs\\uv_version.log",
+        "Length":  30
+    },
+    {
+        "FullName":  "E:\\kongming\\NGC-work\\neurogolf-2026-work\\src\\__init__.py",
+        "Length":  0
+    }
+]
+

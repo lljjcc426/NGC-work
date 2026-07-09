@@ -1,0 +1,8 @@
+﻿ssh : Hi whzy3185! You've successfully authenticated, but GitHub does not provide shell access.
+At line:2 char:1
++ ssh -o BatchMode=yes -o ConnectTimeout=15 -T git@github.com 2>&1 | Te ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Hi whzy3185! Yo...e shell access.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

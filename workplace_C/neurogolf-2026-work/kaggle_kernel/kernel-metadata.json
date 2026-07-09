@@ -1,0 +1,15 @@
+{
+  "id": "whzy3185/neurogolf-2026-baseline",
+  "title": "neurogolf-2026 baseline",
+  "code_file": "neurogolf_2026_baseline.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [
+    "neurogolf-2026"
+  ],
+  "kernel_sources": []
+}

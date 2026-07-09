@@ -1,0 +1,17 @@
+{
+  "raw_dir": "data/raw",
+  "file_count": 0,
+  "roles": {
+    "sample_submission_files": [],
+    "train_files": [],
+    "test_files": [],
+    "id_columns": [],
+    "target_columns": [],
+    "submission_prediction_columns": [],
+    "uncertain": [
+      "No sample_submission table was found.",
+      "Train/test table pair was not found or could not be loaded."
+    ]
+  },
+  "files": []
+}

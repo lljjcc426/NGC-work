@@ -11,6 +11,8 @@ Each of the six members has exactly 67 assignment slots. The unique task count i
 
 Record source, validation evidence, and Kaggle A/B results for all adopted changes. File deletions must be explicitly documented.
 
+Workspace C artifacts are under [`workplace_C/`](workplace_C/).
+
 具体分配如下，来源是 [task_assignment_400.csv](F:/kaggle/NGC-work/assignments/task_assignment_400.csv)。每人 67 个任务槽；E/F 各有 1 个 `shared_review` 协作任务。
 
 凌成：

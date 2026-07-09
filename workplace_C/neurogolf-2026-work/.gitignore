@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# External reference checkout; clone locally when needed.
+external/nvidia-kaggle/
+
+# Kaggle data and large generated artifacts.
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+submissions/*
+!submissions/.gitkeep
+
+# Keep logs generated for this setup pass, but ignore future transient caches.
+*.sqlite
+*.db
+*.zip

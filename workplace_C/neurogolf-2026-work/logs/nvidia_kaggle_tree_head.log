@@ -1,0 +1,26 @@
+﻿
+
+    目录: E:\kongming\NGC-work\neurogolf-2026-work\external\nvidia-kaggle
+
+
+Mode          LastWriteTime Length Name                  
+----          ------------- ------ ----                  
+d-----   2026/7/9     12:42        .agents               
+d-----   2026/7/9     12:42        .claude-plugin        
+d-----   2026/7/9     12:42        .codex-plugin         
+d--h--   2026/7/9     12:42        .git                  
+d-----   2026/7/9     12:42        demo                  
+d-----   2026/7/9     12:42        skills                
+d-----   2026/7/9     12:42        tests                 
+-a----   2026/7/9     12:42   2129 BENCHMARK.md          
+-a----   2026/7/9     12:42   8226 CLA.md                
+-a----   2026/7/9     12:42   2378 CONTRIBUTING.md       
+-a----   2026/7/9     12:42   1103 LICENSE               
+-a----   2026/7/9     12:42   1246 pyproject.toml        
+-a----   2026/7/9     12:42  10870 README.md             
+-a----   2026/7/9     12:42   1941 SECURITY.md           
+-a----   2026/7/9     12:42   3254 THIRD_PARTY_NOTICES.md
+
+
+
+
