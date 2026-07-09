@@ -1,0 +1,2 @@
+task,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,local_valid,examples_checked,artifact_path,accepted,notes
+task286,26909,26909,0,14.799783917876258,14.799783917876258,0.0,true,265,E:/kagglegolf/submissions/candidates/GOLF_20260709_101_prvsiyan_7266_72_repro/onnx/task286.onnx,false,"Baseline self-check only. Sparse-initializer ONNX probes failed checker/type inference before candidate validation."

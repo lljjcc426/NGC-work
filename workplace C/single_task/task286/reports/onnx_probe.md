@@ -1,0 +1,12 @@
+# task286 ONNX Probe
+
+Probe target: sparse initializer conversion for task286 constants.
+
+| profile | status | saved_params_if_supported | sparse_initializers | error |
+| --- | --- | ---: | --- | --- |
+| sparse_all | checker_failed | 419 | `em d_Wci pk_w0 pk_w1 pk_w2 pk_w3 v147_pads_2396_47` | InferenceError: [ShapeInferenceError] (op_type:Conv): W typestr: T, has unsupported type: sparse_tensor(float) |
+| sparse_no_conv | checker_failed | 389 | `em pk_w0 pk_w1 pk_w2 pk_w3 v147_pads_2396_47` | InferenceError: [ShapeInferenceError] (op_type:Where, node name: n4681): condition typestr: B, has unsupported type: sparse_tensor(bool) |
+| sparse_pack_pad | checker_failed | 77 | `pk_w0 pk_w1 pk_w2 pk_w3 v147_pads_2396_47` | InferenceError: [ShapeInferenceError] (op_type:Pad, node name: n4688): pads typestr: tensor(int64), has unsupported type: sparse_tensor(int64) |
+| sparse_pack_only | checker_failed | 75 | `pk_w0 pk_w1 pk_w2 pk_w3` | InferenceError: [ShapeInferenceError] Inference error(s): (op_type:MatMulInteger): [TypeInferenceError] inputs are expected to have tensor type and output type should not be null. (op_type:MatMulInteger): [TypeInferenceError] inputs are expected to have tensor type and output type should not be null. (op_type:MatMulInteger): [TypeInferenceError] inputs are expected to have tensor type and output type should not be null. (op_type:MatMulInteger): [TypeInferenceError] inputs are expected to have te |
+
+Conclusion: no sparse-initializer candidate is accepted by ONNX checker/type inference for the relevant task286 operators. A lower-cost ONNX likely requires rewriting the flood-fill bitset graph itself, not only constants.

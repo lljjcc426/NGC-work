@@ -30,33 +30,36 @@ Generated: 2026-07-09T15:34:05
 
 ## Pattern Understanding
 
-- Same-shape task. Prioritize mask/color logic compression and removal of redundant full-grid branches.
-- Output palette is input-contained; unused color creation branches are likely removable.
+- Same-shape maze/corridor propagation task.
+- Verified rule: `8` is wall, `0` is unfilled corridor, the two non `{0,8}` colors are marker colors.
+- Output fills only the passable connected component containing markers, alternating marker colors by 4-neighbor graph distance.
+- Python rule solver passes `265/265` examples: train `2/2`, test `1/1`, arc-gen `262/262`.
 
 ## ONNX Compression Opportunities
 
-- Run artifact scan against all local public and candidate ONNX sources.
-- Fully validate any lower-cost artifact on train + test + arc-gen before accepting.
-- Compare official memory/params split to locate whether memory graph or constants dominate.
-- Try same-shape fast path: simplify masks, color comparisons, and identity-preserving branches.
-- Exploit input-palette-only constraint; remove unused output color branches and redundant compares.
+- Baseline ONNX is already a task-specific bitset flood-fill graph.
+- Current official split: `memory=26064`, `params=845`, `cost=26909`.
+- Constant-only sparse initializer surgery was attempted and rejected by ONNX checker/type inference for `Conv`, `Where`, `Pad`, and `MatMulInteger`.
+- Next real opportunity is a lower-memory rewrite of the flood-fill bitset graph, not artifact scan or constant-only edits.
 
 ## Concrete Next Experiments
 
-1. `python "workplace C/neurogolf-2026-work/scripts/c_score_scan_artifacts.py" --tasks task286 --score-top-n 8 --full-validate`
-2. Inspect best lower-size artifacts in `workplace C/score_docs/artifact_scans/` and compare memory/params split for `task286`.
-3. If a lower-cost artifact validates, register it with `c_cost_diff_runner.py --task task286 --old-artifact <current> --new-artifact <candidate> --accept-if-better`.
+1. Build a custom row-bitset flood-fill ONNX from `workplace C/single_task/task286/scripts/solve_task286_rule.py`.
+2. Preserve the verified rule but reduce scalar bitwise intermediates below the current `2393` node graph.
+3. Use final checkerboard coloring from marker colors after reachability mask construction; avoid per-color propagation branches.
 
 ## Cost Diff
 
 | attempt | old_cost | new_cost | delta_cost | local_valid | accepted | artifact_path |
 | --- | ---: | ---: | ---: | --- | --- | --- |
-| pending |  |  |  |  |  |  |
+| task286_20260709T224049 | 26909 | 26909 | 0 | True | False | `E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task286.onnx` |
 
 ## Attempts
 
-- No accepted C-local attempt recorded yet.
+- Python rule solver: accepted as rule model, full local example validation `265/265`.
+- Sparse initializer ONNX probe: no accepted candidate; checker/type inference rejects sparse constants for relevant ops.
+- Baseline self-check: `26909 -> 26909`, valid, not accepted.
 
 ## Next Best Action
 
-- Run artifact scan and accept the first full-validation lower-cost artifact.
+- Write a new lower-memory bitset flood-fill ONNX builder; do not repeat artifact scan, onnxsim, or sparse-constant surgery.

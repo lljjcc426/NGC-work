@@ -121,3 +121,4 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task132 | surgery_optimizer_sim | onnxoptimizer/onnxsim_full_validate | 3652 | 3652 | 0 | True | False | `E:\kongming\NGC-work\workplace C\artifacts\surgery_probes\20260709_155105\optimizer_sim\task132.onnx` |
 | task158 | task158_20260709T205240 | baseline_check | 28483 | 28483 | 0 | True | False | `E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task158.onnx` |
 | task158 | task158_20260709T205621 | task158_resize_stamp_builder | 28483 | 28023 | 460 | True | True | `workplace C\single_task\task158\onnx\task158_candidate.onnx` |
+| task286 | task286_20260709T224049 | task286_baseline_check | 26909 | 26909 | 0 | True | False | `E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task286.onnx` |
