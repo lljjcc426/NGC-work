@@ -30,34 +30,34 @@ Generated: 2026-07-09T15:34:05
 
 ## Pattern Understanding
 
-- Same-shape task. Prioritize mask/color logic compression and removal of redundant full-grid branches.
-- Output palette is input-contained; unused color creation branches are likely removable.
+- Same-shape sparse overlay task.
+- Verified rule: detect dominant background, find a 3x3 motif with two opposite-corner endpoint colors and one fill color, then overlay rotated/reflected/scaled motif fill masks between compatible square marker-color pairs.
+- Python rule solver passes `266/266` examples: train `3/3`, test `1/1`, arc-gen `262/262`.
+- Output palette is input-contained; only sparse fill-mask construction needs modification.
 
 ## ONNX Compression Opportunities
 
-- Run artifact scan against all local public and candidate ONNX sources.
-- Fully validate any lower-cost artifact on train + test + arc-gen before accepting.
-- Compare official memory/params split to locate whether memory graph or constants dominate.
-- Try same-shape fast path: simplify masks, color comparisons, and identity-preserving branches.
-- Exploit input-palette-only constraint; remove unused output color branches and redundant compares.
-- Changed-cell ratio is low; test sparse mask overlay instead of full-grid recompute.
+- Baseline ONNX is task-specific and already implements motif anchor detection plus scale 1/2/3 square marker-pair stamping.
+- Accepted compression: replace scale-2 and scale-3 expanded stamp `Gather` index tensors with nearest `Resize` from the scale-1 orientable stamp mask.
+- This preserves rule behavior and removes `460` counted params.
 
 ## Concrete Next Experiments
 
-1. `python "workplace C/neurogolf-2026-work/scripts/c_score_scan_artifacts.py" --tasks task158 --score-top-n 8 --full-validate`
-2. Inspect best lower-size artifacts in `workplace C/score_docs/artifact_scans/` and compare memory/params split for `task158`.
-3. If a lower-cost artifact validates, register it with `c_cost_diff_runner.py --task task158 --old-artifact <current> --new-artifact <candidate> --accept-if-better`.
+1. Build a 400-file candidate package from current best artifacts and replace only `task158.onnx`.
+2. Validate `file_count=400`, `missing_task_count=0`, and run local package checks before any Kaggle submission.
+3. Try the same `expanded stamp Gather -> Resize` rewrite on other C motif/stamp tasks, starting with `task286` and `task054`.
 
 ## Cost Diff
 
 | attempt | old_cost | new_cost | delta_cost | local_valid | accepted | artifact_path |
 | --- | ---: | ---: | ---: | --- | --- | --- |
-| pending |  |  |  |  |  |  |
+| task158_20260709T205621 | 28483 | 28023 | 460 | True | True | `workplace C\single_task\task158\onnx\task158_candidate.onnx` |
 
 ## Attempts
 
-- No accepted C-local attempt recorded yet.
+- `task158_resize_stamp_builder`: accepted. Full local validation passed on `266/266` examples.
+- Baseline self-check: `28483 -> 28483`, valid, not accepted.
 
 ## Next Best Action
 
-- Run artifact scan and accept the first full-validation lower-cost artifact.
+- Package the accepted `task158` replacement into a full candidate zip after checking all 400 task files.

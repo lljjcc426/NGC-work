@@ -1,6 +1,23 @@
 # Score Work Report
 
-Generated: 2026-07-09T15:58:38
+Generated: 2026-07-09T20:56:21
+
+## Latest Single-Task Accepted Improvement
+
+- task: `task158`
+- mode: single-task rule + task-specific ONNX surgery
+- Python rule validation: `266/266` examples passed
+- old_cost: `28483`
+- new_cost: `28023`
+- delta_cost: `460`
+- old_points: `14.742937302942996`
+- new_points: `14.759219119459042`
+- delta_points: `0.01628181651604521`
+- accepted: `true`
+- artifact: `workplace C\single_task\task158\onnx\task158_candidate.onnx`
+- builder: `workplace C\single_task\task158\scripts\build_task158_onnx.py`
+
+The accepted change keeps the verified motif-copy rule but replaces scale-2 and scale-3 expanded stamp `Gather` index tensors with nearest-neighbor `Resize` from the scale-1 orientable stamp mask. This removes `460` counted params while preserving full train/test/arc-gen validation.
 
 ## Modes
 
@@ -16,6 +33,7 @@ Generated: 2026-07-09T15:58:38
 - Artifact rows full-scored: `73`; accepted: `0`.
 - Surgery rows full-scored: `56`; accepted: `0`.
 - Generic optimizer/simplifier passes did not reduce official cost; several files became larger on disk but cost stayed identical.
+- Single-task task158 rule/surgery: `1` accepted replacement, `28483 -> 28023`.
 
 ## Cost Results
 
@@ -23,6 +41,7 @@ Generated: 2026-07-09T15:58:38
 | --- | ---: | ---: | ---: |
 | artifact_scan_top5 | 73 | 0 | 0 |
 | onnx_surgery_probe | 56 | 0 | 0 |
+| task158_resize_stamp_builder | 1 | 1 | 460 |
 
 ## Quick-Win Top 10
 
@@ -41,17 +60,17 @@ Generated: 2026-07-09T15:58:38
 
 ## Next 5 Experiments
 
-1. Dedicated compact builder for `task158` motif-copy/fill.
-2. Dedicated compact builder for `task286` repeated propagation.
-3. Dedicated compact builder for `task054` marker-driven cross/line overwrite.
-4. Dedicated compact component-shape classifier for `task364`.
-5. Mine prvsiyan visualizations and KaggLoop 7266.48 for task-level graph differences before more generic surgery.
+1. Build a full 400-file candidate package replacing only `task158.onnx`, then validate `file_count=400` and `missing_task_count=0`.
+2. Apply the same expanded-stamp `Gather -> Resize` rewrite to `task286` if its ONNX has scale-expanded stamp tensors.
+3. Apply the same rewrite to `task054` if its marker-driven cross/line graph uses repeated stamp indices.
+4. Mine prvsiyan visualizations and KaggLoop 7266.48 for more stamp-upscale or motif-copy graphs.
+5. Only after packaging and quota check, submit the task158 replacement candidate if the user explicitly confirms.
 
 ## Blockers
 
-- No accepted lower-cost artifact found in local public artifact pool for C P0/P1.
-- Existing current graphs are already optimizer-stable for official cost; generic simplification is not enough.
-- Real score improvement now needs task-specific ONNX construction, not more template documentation.
+- No full 400-file candidate package has been built yet for the accepted task158 replacement.
+- Kaggle submission still requires explicit user confirmation.
+- Generic simplification remains ineffective; task-specific graph rewrites are the productive path.
 
 ## Git
 

@@ -1,0 +1,2 @@
+task,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,local_valid,examples_checked,artifact_path,accepted,notes
+task158,28483,28023,460,14.742937302942996,14.759219119459042,0.01628181651604521,true,266,workplace C/single_task/task158/onnx/task158_candidate.onnx,true,"Replaced scale-2/scale-3 expanded stamp Gather index tensors with nearest Resize from scale-1 stamp mask."
