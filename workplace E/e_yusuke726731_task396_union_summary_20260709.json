@@ -1,0 +1,21 @@
+{
+  "base_zip": "F:\\kaggle\\neurogolf-2026\\external\\source_review_20260709_e\\yusuketogashi_baseline_7267_31\\output\\submission.zip",
+  "source_zip": "F:\\kaggle\\neurogolf-2026\\external\\source_review_20260709_e\\franksunp_7266_72\\output\\submission.zip",
+  "output_zip": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_yusuke726731_e_task396_20260709.zip",
+  "output_sha256": "02b3d922f85f7c280e6f2cdf76405dbe3eea29f53d66603b7b4e8fec501a7a69",
+  "entry_count": 400,
+  "missing_tasks": [],
+  "extra_entries": [],
+  "testzip": null,
+  "swaps": [
+    {
+      "task": "task396",
+      "base_cost": 3566,
+      "candidate_cost": 3562,
+      "delta_cost": 4,
+      "delta_points": 0.0011223345734769907,
+      "source": "franksunp/7266-72-lb-compact-onnx-artifact-starter",
+      "verified_all_released": true
+    }
+  ]
+}

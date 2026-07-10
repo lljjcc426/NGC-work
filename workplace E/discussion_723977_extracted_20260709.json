@@ -1,0 +1,30 @@
+{
+  "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/723977",
+  "topic_id": 723977,
+  "title": "Sharing a Tool That Keeps ChatGPT WebUI Running for NeuroGolf Tasks",
+  "author_user_name": "bianfu",
+  "author_display_name": "bianfu",
+  "post_date": "2026-07-08T23:52:59.453595600Z",
+  "votes": 5,
+  "first_message_id": 3494009,
+  "raw_length": 1106,
+  "links": [
+    "https://github.com/OLmatter/chatgpt-bridge"
+  ],
+  "summary": [
+    "Public discussion describes a ChatGPT WebUI Bridge for long-running NeuroGolf agent work.",
+    "Architecture described in the post: local backend plus Tampermonkey userscript connected to logged-in ChatGPT WebUI sessions.",
+    "Use case: keep long-running search/experimentation loops moving without manually monitoring many ChatGPT windows.",
+    "Direct score impact: no ONNX model, submission zip, task-specific rule, or dataset link was provided in the discussion content fetched here.",
+    "E-team use: record as workflow/automation idea only; do not treat it as a model source for scoring."
+  ],
+  "comment_count": 1,
+  "comment_summaries": [
+    {
+      "id": 3494124,
+      "post_date": "2026-07-09T07:58:54.927Z",
+      "raw_length": 260,
+      "summary": "Comment asks whether this WebUI automation could be restricted by GPT anti-abuse mechanisms."
+    }
+  ]
+}

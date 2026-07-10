@@ -47,3 +47,39 @@
   - publicScore: `7255.20`
   - Previous best in submission list: `7250.28`
   - Verified leaderboard delta: `+4.92`
+
+## 2026-07-10 E scoreboard loop
+
+- Pulled latest `lljjcc426/NGC-work` main branch to `af72da5`; observed B/C/D teammate updates, while `workplace F` still only contained `readme.md` locally.
+- Kaggle submissions checked:
+  - Current account best visible in the submission list: `7270.18`, timestamp `2026-07-10 07:41:44.663000`, description `v81 F 20plus task006 306 local +1.186266 sha 1dbac62b`.
+  - Local search under `F:/kaggle` did not find a zip whose SHA256 starts with `1dbac62b`, so the exact F package is not locally reproducible from this checkout.
+- Established the E-team score loop requested by the team:
+  - Score all 67 E assignment slots from the current local `submission.zip`.
+  - Optimize the lowest-ranked E task.
+  - If a candidate verifies on all released examples and lowers cost, update the scoreboard and re-sort.
+  - Continue with the new lowest-ranked task.
+- Current local E scoreboard:
+  - Source zip: `F:/kaggle/neurogolf-2026/submissions/submission.zip`
+  - SHA256: `02b3d922f85f7c280e6f2cdf76405dbe3eea29f53d66603b7b4e8fec501a7a69`
+  - Output files: `e_scoreboard_20260710.csv`, `e_scoreboard_summary_20260710.json`
+  - 67/67 E tasks scored successfully.
+  - 8/67 E tasks are above 20 points.
+  - Lowest E task: `task233`, cost `31938`, points `14.628448198`.
+  - Cost target for >20 points is `148` or lower.
+- `task233` source review:
+  - Existing local zip/source scan (`e_local_source_scan_20260709.csv`) found no valid lower-cost `task233` replacement versus the yusuke 7267.31 base.
+  - Historical experiment scan (`e_task233_experiment_score_20260710.csv`) scored 46 local `task233.onnx` files; 33 verified, but the best verified historical cost was `35021`, worse than current `31938`.
+  - Focused yusuke-base optimization scan (`e_task233_yusuke_opt_scan_20260710.csv`) tested conservative onnxoptimizer, patch branch drops, and gate bypasses.
+  - Result: `ok_improved=0`. Lower-cost candidates existed but failed validation: best lower-cost rows were `31577 sample_wrong`, `31901 full_wrong`, `31918 sample_wrong`, so no scoreboard update was made for `task233`.
+- `task233` rule analysis:
+  - Public local rule text in `external/datasets/logic-for-each-arc-task/files/arc_explanations.csv` claims a crop-only rule, but this does not match the released examples.
+  - `e_task233_rule_components_20260710.csv` shows `crop_matches_output=0/266`.
+  - Every external component found in train/test examples is a `3x3` patch; each patch corresponds to 9 changed cells inside the main crop.
+  - Example evidence: train 0 has 5 external components and 45 changed cells; train 1 has 2 external components and 18 changed cells; train 2 has 1 external component and 9 changed cells; test 0 has 4 external components and 36 changed cells.
+- A primary-owner branch check:
+  - Remote branch inspected: `origin/workplaceA-update-20260709`.
+  - It contains `workplaceA/task233.onnx` with Git blob size `20139`.
+  - Exported and scored it as a temporary probe; output file `e_task233_A_branch_probe_score_20260710.csv`.
+  - Result: verified `ok`, cost `32011`, points about `14.626`; this is worse than current E scoreboard cost `31938`, so no replacement was accepted.
+  - Deleted temporary probe files after scoring: `workplace E/task233_from_A_branch_probe.onnx`, `workplace E/probes/task233_A_branch`, and empty `workplace E/probes`.

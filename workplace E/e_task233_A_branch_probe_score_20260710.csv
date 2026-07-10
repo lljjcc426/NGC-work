@@ -1,0 +1,2 @@
+task,path,status,arc_agi_pass,arc_agi_fail,arc_gen_pass,arc_gen_fail,memory,params,cost,points,filesize,error
+233,F:\kaggle\NGC-work\workplace E\probes\task233_A_branch\task233.onnx,ok,4,0,262,0,31272,739,32011,14.626165127286631,20139,

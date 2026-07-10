@@ -1,0 +1,2 @@
+candidate_source,kaggle_ref,task,base_cost,candidate_cost,delta_cost,base_points,candidate_points,delta_points,status,zip_sha256,zip_path,improved
+franksunp_7266_72,franksunp/7266-72-lb-compact-onnx-artifact-starter,task396,3566,3562,4,16.820800201576915,16.821922536150392,0.0011223345734769907,ok,3e41f9a65144aa0f5d13d43d2df48ac09c451073d9c1ede4f25cc3b2deff3872,F:\kaggle\neurogolf-2026\external\source_review_20260709_e\franksunp_7266_72\output\submission.zip,True
