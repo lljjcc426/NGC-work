@@ -1,0 +1,46 @@
+{
+  "variant": "b_yusuke_v176_task205_377_fp16tail_online_probe_20260710",
+  "date": "2026-07-10",
+  "purpose": "online hidden-safety probe for task205/task377 fp16 final-tail rewrites",
+  "base": "yusuketogashi_v176_full",
+  "base_local_total": 7267.145161878391,
+  "combined_gain": 0.28108892485123604,
+  "expected_local_total": 7267.4262508032425,
+  "changed_tasks": [
+    {
+      "task": 205,
+      "label": "b_yusuke_v176_task205_377_fp16tail_online_probe_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task205_377_fp16tail_online_probe_20260710\\submission\\task205.onnx",
+      "bytes": 5687,
+      "valid": true,
+      "memory": 4206,
+      "params": 45,
+      "cost": 4251,
+      "points": 16.64509047164121,
+      "error": "",
+      "base_cost": 4891,
+      "base_points": 16.504847939460642,
+      "gain": 0.1402425321805687,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task205_fp16_tail_20260709\\optimize_task205_fp16_tail_yusuke\\task205.onnx"
+    },
+    {
+      "task": 377,
+      "label": "b_yusuke_v176_task205_377_fp16tail_online_probe_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task205_377_fp16tail_online_probe_20260710\\submission\\task377.onnx",
+      "bytes": 5470,
+      "valid": true,
+      "memory": 2952,
+      "params": 1015,
+      "cost": 3967,
+      "points": 16.71423457948567,
+      "error": "",
+      "base_cost": 4567,
+      "base_points": 16.573388186815002,
+      "gain": 0.14084639267066734,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task377_fp16_tail_20260709\\optimize_task377_fp16_tail_yusuke\\task377.onnx"
+    }
+  ],
+  "zip_path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task205_377_fp16tail_online_probe_20260710\\submission.zip",
+  "zip_sha256": "74e6aa825e8579bc384307a1aad404e836861d8baf51d8ddcce30f95cdc0e4a7",
+  "zip_size": 454027
+}

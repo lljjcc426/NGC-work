@@ -1,0 +1,31 @@
+{
+  "variant": "b_yusuke_v176_task277_only_online_probe_20260710",
+  "date": "2026-07-10",
+  "purpose": "online hidden-safety probe for task277 iteration prune",
+  "base": "yusuketogashi_v176_full",
+  "base_local_total": 7267.145161878391,
+  "combined_gain": 0.11990392722551846,
+  "expected_local_total": 7267.265065805616,
+  "changed_tasks": [
+    {
+      "task": 277,
+      "label": "b_yusuke_v176_task277_only_online_probe_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task277_only_online_probe_20260710\\submission\\task277.onnx",
+      "bytes": 1519,
+      "valid": true,
+      "memory": 3101,
+      "params": 39,
+      "cost": 3140,
+      "points": 16.9480219210977,
+      "error": "",
+      "base_cost": 3540,
+      "base_points": 16.82811799387218,
+      "gain": 0.11990392722551846,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task277_prune_iters_20260709\\optimize_task277_prune_iters_yusuke\\task277.onnx"
+    }
+  ],
+  "zip_path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task277_only_online_probe_20260710\\submission.zip",
+  "zip_sha256": "3b1ab6bf3dde8e9fc7669d0b90cfcebf9ed967d6c801aa00c4fc0c34f2ce8a0c",
+  "zip_size": 453920,
+  "risk": "official local examples pass; random equivalence stress found mismatch"
+}

@@ -1,0 +1,4 @@
+﻿task,label,path,bytes,valid,memory,params,cost,points,error,base_cost,base_points,gain
+23,b_yusuke_v176_b_core_no_u8topk_debug,D:\golf\public_probe_variants\b_yusuke_v176_b_core_no_u8topk_debug\submission\task023.onnx,8875,True,2878,3048,5926,16.312895271866488,,8222,15.985431232542176,0.3274640393243118
+255,b_yusuke_v176_b_core_no_u8topk_debug,D:\golf\public_probe_variants\b_yusuke_v176_b_core_no_u8topk_debug\submission\task255.onnx,11557,True,7185,347,7532,16.073084110222958,,8911,15.90495825238728,0.1681258578356779
+277,b_yusuke_v176_b_core_no_u8topk_debug,D:\golf\public_probe_variants\b_yusuke_v176_b_core_no_u8topk_debug\submission\task277.onnx,1519,True,3101,39,3140,16.9480219210977,,3540,16.82811799387218,0.11990392722551846

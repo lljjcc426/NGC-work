@@ -1,0 +1,30 @@
+{
+  "variant": "b_yusuke_v176_task255_only_online_probe_20260710",
+  "date": "2026-07-10",
+  "purpose": "online hidden-safety probe for task255 QLinearMatMul tail",
+  "base": "yusuketogashi_v176_full",
+  "base_local_total": 7267.145161878391,
+  "combined_gain": 0.1681258578356779,
+  "expected_local_total": 7267.313287736227,
+  "changed_tasks": [
+    {
+      "task": 255,
+      "label": "b_yusuke_v176_task255_only_online_probe_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task255_only_online_probe_20260710\\submission\\task255.onnx",
+      "bytes": 11557,
+      "valid": true,
+      "memory": 7185,
+      "params": 347,
+      "cost": 7532,
+      "points": 16.073084110222958,
+      "error": "",
+      "base_cost": 8911,
+      "base_points": 15.90495825238728,
+      "gain": 0.1681258578356779,
+      "override_source": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task255_qmatmul_v1\\submission\\task255.onnx"
+    }
+  ],
+  "zip_path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task255_only_online_probe_20260710\\submission.zip",
+  "zip_sha256": "9b40ceb4f07f2a053da5e825cf7af6d5377f5fdd8115d22341f8e51d9fa642ee",
+  "zip_size": 453995
+}

@@ -1,0 +1,59 @@
+{
+  "variant": "b_yusuke_v176_b_core_no_u8topk_debug",
+  "date": "2026-07-10",
+  "purpose": "debug remove uint8 TopK candidates task076/task285",
+  "base": "yusuketogashi_v176_full",
+  "base_local_total": 7267.145161878391,
+  "combined_gain": 0.6154938243855081,
+  "expected_local_total": 7267.760655702777,
+  "changed_tasks": [
+    {
+      "task": 23,
+      "label": "b_yusuke_v176_b_core_no_u8topk_debug",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_core_no_u8topk_debug\\submission\\task023.onnx",
+      "bytes": 8875,
+      "valid": true,
+      "memory": 2878,
+      "params": 3048,
+      "cost": 5926,
+      "points": 16.312895271866488,
+      "error": "",
+      "base_cost": 8222,
+      "base_points": 15.985431232542176,
+      "gain": 0.3274640393243118
+    },
+    {
+      "task": 255,
+      "label": "b_yusuke_v176_b_core_no_u8topk_debug",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_core_no_u8topk_debug\\submission\\task255.onnx",
+      "bytes": 11557,
+      "valid": true,
+      "memory": 7185,
+      "params": 347,
+      "cost": 7532,
+      "points": 16.073084110222958,
+      "error": "",
+      "base_cost": 8911,
+      "base_points": 15.90495825238728,
+      "gain": 0.1681258578356779
+    },
+    {
+      "task": 277,
+      "label": "b_yusuke_v176_b_core_no_u8topk_debug",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_core_no_u8topk_debug\\submission\\task277.onnx",
+      "bytes": 1519,
+      "valid": true,
+      "memory": 3101,
+      "params": 39,
+      "cost": 3140,
+      "points": 16.9480219210977,
+      "error": "",
+      "base_cost": 3540,
+      "base_points": 16.82811799387218,
+      "gain": 0.11990392722551846
+    }
+  ],
+  "zip_path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_core_no_u8topk_debug\\submission.zip",
+  "zip_sha256": "580b5f0959adc004a4be6cbf98b07e3345991a37bf640dbba90a570024dddfbc",
+  "zip_size": 458471
+}

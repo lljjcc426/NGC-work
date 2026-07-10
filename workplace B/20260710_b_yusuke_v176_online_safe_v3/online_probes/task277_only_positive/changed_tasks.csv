@@ -1,0 +1,2 @@
+﻿task,label,path,bytes,valid,memory,params,cost,points,error,base_cost,base_points,gain,override_source
+277,b_yusuke_v176_task277_only_online_probe_20260710,D:\golf\public_probe_variants\b_yusuke_v176_task277_only_online_probe_20260710\submission\task277.onnx,1519,True,3101,39,3140,16.9480219210977,,3540,16.82811799387218,0.11990392722551846,D:\golf\reconstruction_candidates\b_yusuke_task277_prune_iters_20260709\optimize_task277_prune_iters_yusuke\task277.onnx

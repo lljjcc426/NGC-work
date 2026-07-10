@@ -1,0 +1,32 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task277_prune_iters_20260709",
+  "min_points": 16.8,
+  "max_points": 16.85,
+  "selected_tasks": [
+    368,
+    107,
+    396,
+    277,
+    162,
+    234
+  ],
+  "positive_count": 0,
+  "raw_total_gain": 0,
+  "positives": [],
+  "reports": [
+    {
+      "module": "src\\optimize_task277_prune_iters_yusuke.py",
+      "changed": 1,
+      "positive": 0,
+      "total_gain": 0,
+      "positives": [],
+      "errors": [
+        {
+          "task": 277,
+          "error": "equivalence:threshold mismatch at input 340"
+        }
+      ]
+    }
+  ]
+}

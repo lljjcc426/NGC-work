@@ -1,0 +1,95 @@
+{
+  "variant": "b_yusuke_v176_b_online_safe_v3_20260710",
+  "date": "2026-07-10",
+  "purpose": "B-only online-safe combination after probes",
+  "base": "yusuketogashi_v176_full",
+  "base_online_score": 7267.31,
+  "base_local_total": 7267.145161878391,
+  "combined_gain": 0.5691187099124324,
+  "expected_local_total": 7267.714280588304,
+  "changed_tasks": [
+    {
+      "task": 205,
+      "label": "b_yusuke_v176_b_online_safe_v3_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v3_20260710\\submission\\task205.onnx",
+      "bytes": 5687,
+      "valid": true,
+      "memory": 4206,
+      "params": 45,
+      "cost": 4251,
+      "points": 16.64509047164121,
+      "error": "",
+      "base_cost": 4891,
+      "base_points": 16.504847939460642,
+      "gain": 0.1402425321805687,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task205_fp16_tail_20260709\\optimize_task205_fp16_tail_yusuke\\task205.onnx"
+    },
+    {
+      "task": 255,
+      "label": "b_yusuke_v176_b_online_safe_v3_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v3_20260710\\submission\\task255.onnx",
+      "bytes": 11557,
+      "valid": true,
+      "memory": 7185,
+      "params": 347,
+      "cost": 7532,
+      "points": 16.073084110222958,
+      "error": "",
+      "base_cost": 8911,
+      "base_points": 15.90495825238728,
+      "gain": 0.1681258578356779,
+      "override_source": "D:\\golf\\public_probe_variants\\b_yusuke_v176_task255_qmatmul_v1\\submission\\task255.onnx"
+    },
+    {
+      "task": 277,
+      "label": "b_yusuke_v176_b_online_safe_v3_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v3_20260710\\submission\\task277.onnx",
+      "bytes": 1519,
+      "valid": true,
+      "memory": 3101,
+      "params": 39,
+      "cost": 3140,
+      "points": 16.9480219210977,
+      "error": "",
+      "base_cost": 3540,
+      "base_points": 16.82811799387218,
+      "gain": 0.11990392722551846,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task277_prune_iters_20260709\\optimize_task277_prune_iters_yusuke\\task277.onnx"
+    },
+    {
+      "task": 377,
+      "label": "b_yusuke_v176_b_online_safe_v3_20260710",
+      "path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v3_20260710\\submission\\task377.onnx",
+      "bytes": 5470,
+      "valid": true,
+      "memory": 2952,
+      "params": 1015,
+      "cost": 3967,
+      "points": 16.71423457948567,
+      "error": "",
+      "base_cost": 4567,
+      "base_points": 16.573388186815002,
+      "gain": 0.14084639267066734,
+      "override_source": "D:\\golf\\reconstruction_candidates\\b_yusuke_task377_fp16_tail_20260709\\optimize_task377_fp16_tail_yusuke\\task377.onnx"
+    }
+  ],
+  "excluded_after_online_probe": {
+    "task023": "hidden unsafe: core package scored 7251.58",
+    "task076": "uint8 TopK caused Kaggle ERROR when combined",
+    "task285": "uint8 TopK caused Kaggle ERROR when combined"
+  },
+  "online_probe_refs": {
+    "task255_only": "54517673 score 7267.45",
+    "task277_only": "54517695 score 7267.40",
+    "task205_377": "54517745 score 7267.56"
+  },
+  "online_result": {
+    "ref": "54517873",
+    "status": "COMPLETE",
+    "public_score": 7267.85,
+    "online_gain_vs_base_public": 0.54
+  },
+  "zip_path": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v3_20260710\\submission.zip",
+  "zip_sha256": "febafe5f6a6cf84640b35ce811c5cd6589a4e2fedfe4d15f9b9aac95176a1273",
+  "zip_size": 454056
+}

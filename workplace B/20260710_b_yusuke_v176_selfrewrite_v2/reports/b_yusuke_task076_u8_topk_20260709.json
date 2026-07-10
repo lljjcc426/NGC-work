@@ -1,0 +1,73 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task076_u8_topk_20260709",
+  "min_points": 15.45,
+  "max_points": 15.6,
+  "selected_tasks": [
+    101,
+    243,
+    173,
+    145,
+    76,
+    118
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.05522014901060146,
+  "positives": [
+    {
+      "task": 76,
+      "label": "optimize_task076_u8_topk_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task076_u8_topk_20260709\\optimize_task076_u8_topk_yusuke\\task076.onnx",
+      "bytes": 9771,
+      "valid": true,
+      "memory": 12049,
+      "params": 87,
+      "cost": 12136,
+      "points": 15.596068478971631,
+      "error": "",
+      "base_points": 15.54084832996103,
+      "base_cost": 12825,
+      "gain": 0.05522014901060146,
+      "module": "src\\optimize_task076_u8_topk_yusuke.py",
+      "stats": {
+        "mask_cast_u8": 3,
+        "dead_nodes": 0,
+        "initializers": 0
+      },
+      "equivalence_note": "skipped 22 reference-failing random inputs"
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task076_u8_topk_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.05522014901060146,
+      "positives": [
+        {
+          "task": 76,
+          "label": "optimize_task076_u8_topk_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task076_u8_topk_20260709\\optimize_task076_u8_topk_yusuke\\task076.onnx",
+          "bytes": 9771,
+          "valid": true,
+          "memory": 12049,
+          "params": 87,
+          "cost": 12136,
+          "points": 15.596068478971631,
+          "error": "",
+          "base_points": 15.54084832996103,
+          "base_cost": 12825,
+          "gain": 0.05522014901060146,
+          "module": "src\\optimize_task076_u8_topk_yusuke.py",
+          "stats": {
+            "mask_cast_u8": 3,
+            "dead_nodes": 0,
+            "initializers": 0
+          },
+          "equivalence_note": "skipped 22 reference-failing random inputs"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

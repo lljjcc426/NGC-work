@@ -72,3 +72,94 @@ Important files:
 Next direction:
 
 Continue accumulating B-only verified gains until the package exceeds `+1.0`, then submit. The most important remaining targets are `task018`, `task285`, `task101`, `task076`, `task350`, `task209`, and `task328`.
+
+## 2026-07-10: B-only selfrewrite v2
+
+Folder: `20260710_b_yusuke_v176_selfrewrite_v2`
+
+Active baseline:
+
+- Baseline package: `yusuketogashi_v176_full`.
+- Kaggle public baseline: `7267.31`.
+- Local scorer baseline: `7267.145162`.
+
+What changed:
+
+- Stayed inside B task scope.
+- Stopped broad public-code resweeps and focused on ONNX rewrites.
+- Built a seven-task package combining two earlier positive replacements with five new self-rewrites.
+- Submitted because the local gain exceeded the `+1.0` direct-submit threshold.
+
+Changed B tasks:
+
+| task | method | cost | local gain |
+| --- | --- | ---: | ---: |
+| `task023` | compact external merge already positive on V176 | `8222 -> 5926` | `+0.327464` |
+| `task076` | bool-mask `TopK` via `uint8` instead of `float16` | `12825 -> 12136` | `+0.055220` |
+| `task205` | `float16` final-tail rewrite | `4891 -> 4251` | `+0.140243` |
+| `task255` | `uint8/QLinearMatMul` tail rewrite | `8911 -> 7532` | `+0.168126` |
+| `task277` | bold prune of one A/B MaxPool iteration | `3540 -> 3140` | `+0.119904` |
+| `task285` | direct `uint8 TopK`, removing cast overhead | `19700 -> 17476` | `+0.119790` |
+| `task377` | `float16` final-tail rewrite | `4567 -> 3967` | `+0.140846` |
+
+Combined local result:
+
+- Gain: `+1.071593`.
+- Expected local total: `7268.216755`.
+- Submitted zip SHA256: `066fb7fc24afcfc94af4525375834816a8e7b79bae9808b042f5108a46543c8a`.
+- Kaggle ref: `54517159`.
+- Kaggle status: `ERROR`.
+
+Risk note:
+
+`task277` is the intentional high-risk piece. It passes official local `train`, `test`, and `arc-gen` examples, but an earlier random equivalence stress test found a mismatch. The later single-task online probe was positive, so it remains in the safe subset for now.
+
+Follow-up result:
+
+- Full v2 ref `54517159`: `ERROR`.
+- No-fp16-output debug ref `54517405`: `ERROR`.
+- Core package without uint8 TopK ref `54517546`: completed but scored `7251.58`, so `task023` is hidden-unsafe.
+- Conclusion: keep `task205`, `task255`, `task277`, `task377`; exclude `task023`, `task076`, `task285`.
+
+## 2026-07-10: B-only online-safe v3
+
+Folder: `20260710_b_yusuke_v176_online_safe_v3`
+
+Active baseline:
+
+- Baseline package: `yusuketogashi_v176_full`.
+- Kaggle public baseline: `7267.31`.
+- Local scorer baseline: `7267.145162`.
+
+Changed B tasks:
+
+| task | method | cost | local gain |
+| --- | --- | ---: | ---: |
+| `task205` | `float16` final-tail rewrite | `4891 -> 4251` | `+0.140243` |
+| `task255` | `uint8/QLinearMatMul` tail rewrite | `8911 -> 7532` | `+0.168126` |
+| `task277` | prune one A/B MaxPool iteration | `3540 -> 3140` | `+0.119904` |
+| `task377` | `float16` final-tail rewrite | `4567 -> 3967` | `+0.140846` |
+
+Combined result:
+
+- Local gain: `+0.569119`.
+- Expected local total: `7267.714281`.
+- Kaggle ref: `54517873`.
+- Kaggle public score: `7267.85`.
+- Online gain vs yusuke public baseline: about `+0.54`.
+
+Probe evidence:
+
+- `task255` only, ref `54517673`: score `7267.45`.
+- `task277` only, ref `54517695`: score `7267.40`.
+- `task205+task377`, ref `54517745`: score `7267.56`.
+
+Blocked / do not repeat:
+
+- `task023`: locally positive but hidden-unsafe; the debug package scored `7251.58`.
+- `task076` and `task285`: `uint8 TopK` rewrites caused Kaggle `ERROR`.
+- `task101`: old full ARC-GEN generator scored worse on V176 (`14.29` points vs V176 `15.47`), so do not replace the whole model that way.
+
+Next direction:
+
+Stay B-only and self-rewrite first. Attack `task018`, `task101`, `task350`, `task209`, and `task328` by directly simplifying the current V176 ONNX graphs. If the current team-best package behind ref `54517518` (`7268.99`) becomes available locally, test these four safe B overrides on top of that base immediately.

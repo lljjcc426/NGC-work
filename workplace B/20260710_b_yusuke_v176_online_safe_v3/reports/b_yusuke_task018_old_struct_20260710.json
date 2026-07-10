@@ -1,0 +1,39 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task018_old_struct_20260710",
+  "min_points": 14.8,
+  "max_points": 15.0,
+  "selected_tasks": [
+    54,
+    18
+  ],
+  "positive_count": 0,
+  "raw_total_gain": 0,
+  "positives": [],
+  "reports": [
+    {
+      "module": "src\\optimize_task018_equal_mid_current.py",
+      "changed": 0,
+      "positive": 0,
+      "total_gain": 0,
+      "positives": [],
+      "errors": []
+    },
+    {
+      "module": "src\\optimize_task018_gather_crop_current.py",
+      "changed": 0,
+      "positive": 0,
+      "total_gain": 0,
+      "positives": [],
+      "errors": []
+    },
+    {
+      "module": "src\\optimize_task018_label_convtranspose_current.py",
+      "changed": 0,
+      "positive": 0,
+      "total_gain": 0,
+      "positives": [],
+      "errors": []
+    }
+  ]
+}

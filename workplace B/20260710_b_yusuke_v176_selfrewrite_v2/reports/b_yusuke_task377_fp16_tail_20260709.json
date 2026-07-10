@@ -1,0 +1,80 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task377_fp16_tail_20260709",
+  "min_points": 16.5,
+  "max_points": 16.6,
+  "selected_tasks": [
+    205,
+    148,
+    4,
+    280,
+    361,
+    377,
+    165,
+    196,
+    251,
+    278,
+    202
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.14084639267066734,
+  "positives": [
+    {
+      "task": 377,
+      "label": "optimize_task377_fp16_tail_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task377_fp16_tail_20260709\\optimize_task377_fp16_tail_yusuke\\task377.onnx",
+      "bytes": 5470,
+      "valid": true,
+      "memory": 2952,
+      "params": 1015,
+      "cost": 3967,
+      "points": 16.71423457948567,
+      "error": "",
+      "base_points": 16.573388186815002,
+      "base_cost": 4567,
+      "gain": 0.14084639267066734,
+      "module": "src\\optimize_task377_fp16_tail_yusuke.py",
+      "stats": {
+        "tail_cast_f16": 2,
+        "sk_f16": 1,
+        "dead_nodes": 0,
+        "initializers": 1
+      },
+      "equivalence_note": ""
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task377_fp16_tail_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.14084639267066734,
+      "positives": [
+        {
+          "task": 377,
+          "label": "optimize_task377_fp16_tail_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task377_fp16_tail_20260709\\optimize_task377_fp16_tail_yusuke\\task377.onnx",
+          "bytes": 5470,
+          "valid": true,
+          "memory": 2952,
+          "params": 1015,
+          "cost": 3967,
+          "points": 16.71423457948567,
+          "error": "",
+          "base_points": 16.573388186815002,
+          "base_cost": 4567,
+          "gain": 0.14084639267066734,
+          "module": "src\\optimize_task377_fp16_tail_yusuke.py",
+          "stats": {
+            "tail_cast_f16": 2,
+            "sk_f16": 1,
+            "dead_nodes": 0,
+            "initializers": 1
+          },
+          "equivalence_note": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

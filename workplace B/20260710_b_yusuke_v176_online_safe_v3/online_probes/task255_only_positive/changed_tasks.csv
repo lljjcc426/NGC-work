@@ -1,0 +1,2 @@
+﻿task,label,path,bytes,valid,memory,params,cost,points,error,base_cost,base_points,gain,override_source
+255,b_yusuke_v176_task255_only_online_probe_20260710,D:\golf\public_probe_variants\b_yusuke_v176_task255_only_online_probe_20260710\submission\task255.onnx,11557,True,7185,347,7532,16.073084110222958,,8911,15.90495825238728,0.1681258578356779,D:\golf\public_probe_variants\b_yusuke_v176_task255_qmatmul_v1\submission\task255.onnx

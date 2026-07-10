@@ -1,0 +1,77 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task205_fp16_tail_20260709",
+  "min_points": 16.45,
+  "max_points": 16.55,
+  "selected_tasks": [
+    205,
+    148,
+    4,
+    280
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.1402425321805687,
+  "positives": [
+    {
+      "task": 205,
+      "label": "optimize_task205_fp16_tail_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task205_fp16_tail_20260709\\optimize_task205_fp16_tail_yusuke\\task205.onnx",
+      "bytes": 5687,
+      "valid": true,
+      "memory": 4206,
+      "params": 45,
+      "cost": 4251,
+      "points": 16.64509047164121,
+      "error": "",
+      "base_points": 16.504847939460642,
+      "base_cost": 4891,
+      "gain": 0.1402425321805687,
+      "module": "src\\optimize_task205_fp16_tail_yusuke.py",
+      "stats": {
+        "local_cast_f16": 4,
+        "tail_mask_cast_f16": 2,
+        "tail_mul_f16": 2,
+        "tail_unsqueeze_f16": 2,
+        "dead_nodes": 0,
+        "initializers": 0
+      },
+      "equivalence_note": ""
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task205_fp16_tail_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.1402425321805687,
+      "positives": [
+        {
+          "task": 205,
+          "label": "optimize_task205_fp16_tail_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task205_fp16_tail_20260709\\optimize_task205_fp16_tail_yusuke\\task205.onnx",
+          "bytes": 5687,
+          "valid": true,
+          "memory": 4206,
+          "params": 45,
+          "cost": 4251,
+          "points": 16.64509047164121,
+          "error": "",
+          "base_points": 16.504847939460642,
+          "base_cost": 4891,
+          "gain": 0.1402425321805687,
+          "module": "src\\optimize_task205_fp16_tail_yusuke.py",
+          "stats": {
+            "local_cast_f16": 4,
+            "tail_mask_cast_f16": 2,
+            "tail_mul_f16": 2,
+            "tail_unsqueeze_f16": 2,
+            "dead_nodes": 0,
+            "initializers": 0
+          },
+          "equivalence_note": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
