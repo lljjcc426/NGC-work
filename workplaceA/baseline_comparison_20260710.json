@@ -8,6 +8,23 @@
     "compared_task_count":  11,
     "selected_from_previous":  9,
     "selected_from_current":  2,
+    "merged_into_submission_at":  "2026-07-10T23:29:58+08:00",
+    "merged_task_count":  9,
+    "merged_gain_vs_imported_baseline":  0.768461757723378,
+    "merged_submission_sha256":  "c5e37ee1888e70f769a22d44772cd509ae2c34bb65aa9058119ad3fd9c23830a",
+    "merged_submission_bytes":  458624,
+    "workA_tasks_matching_submission":  67,
+    "merged_tasks":  [
+                         "task005.onnx",
+                         "task017.onnx",
+                         "task086.onnx",
+                         "task187.onnx",
+                         "task222.onnx",
+                         "task319.onnx",
+                         "task367.onnx",
+                         "task379.onnx",
+                         "task398.onnx"
+                     ],
     "updated_repository_files":  [
                                      "task014.onnx",
                                      "task017.onnx",

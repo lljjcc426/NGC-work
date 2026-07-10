@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-07-10T23:13:52+08:00",
-  "source": "best fully validated WorkA model selected per task from the previous and current local baselines",
-  "submission_sha256": "1dbac62bd53e8549be27f51264da8124398272532121656f89847781af352025",
+  "updated_at": "2026-07-10T23:29:58+08:00",
+  "source": "current submission.zip synchronized to the best fully validated WorkA model per task from the previous and imported baselines",
+  "submission_sha256": "c5e37ee1888e70f769a22d44772cd509ae2c34bb65aa9058119ad3fd9c23830a",
   "previous_submission_sha256": "2ad46e4cdddff3d724b3474372087cd727f4e7fe1c39755d58efec2755cf9f95",
+  "comparison_current_submission_sha256": "1dbac62bd53e8549be27f51264da8124398272532121656f89847781af352025",
   "workA_model_set_sha256": "167de5c6813a966f4437e1124970108a4da8100e1272b3a9b6f3bcffa3062863",
   "workplace": "A",
   "task_count": 67,
@@ -76,14 +77,14 @@
     "task393.onnx",
     "task398.onnx"
   ],
-  "last_update": "2026-07-10 23:13:52",
-  "last_update_type": "baseline_comparison_sync",
-  "last_optimizer": "best_of_previous_and_current_baseline",
-  "last_task": null,
-  "last_delta": null,
-  "last_task_points": null,
-  "last_task_memory": null,
-  "last_task_params": null,
+  "last_update": "2026-07-10 23:29:58",
+  "last_update_type": "baseline_comparison_merge",
+  "last_optimizer": "baseline_compare_best_of_two",
+  "last_task": "task086.onnx",
+  "last_delta": 0.0043025053960121795,
+  "last_task_points": 16.988644890838714,
+  "last_task_memory": 2857,
+  "last_task_params": 158,
   "baseline_comparison_report": "baseline_comparison_20260710.json",
   "baseline_comparison": {
     "compared_tasks": 11,
@@ -103,6 +104,11 @@
       "task367.onnx",
       "task379.onnx",
       "task398.onnx"
-    ]
+    ],
+    "merged_into_submission": true,
+    "merged_task_count": 9,
+    "merged_gain_vs_imported_baseline": 0.768461757723378,
+    "submission_bytes": 458624,
+    "workA_tasks_matching_submission": 67
   }
 }

@@ -10,3 +10,6 @@ The WorkA model set is selected per task from the previous and current local
 baselines. A model is selected only after full `train + test + arc-gen`
 validation, using the higher local points score. See
 `baseline_comparison_20260710.json` for the latest comparison.
+
+The selected WorkA set is now synchronized into the current local
+`submission.zip`; all 67 WorkA task models match the package.
