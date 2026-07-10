@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-07-09T19:51:39+08:00",
   "source": "current local submission.zip, restricted to screenshot WorkA task scope",
-  "submission_sha256": "42b37a90a2cb5dc35731988330418183bce4857ee4af669a7475dc02101cc9c9",
+  "submission_sha256": "2ad46e4cdddff3d724b3474372087cd727f4e7fe1c39755d58efec2755cf9f95",
   "workplace": "A",
   "task_count": 67,
   "optimization_scope": "Only these WorkA tasks should be used for future optimization runs.",
@@ -73,5 +73,12 @@
     "task380.onnx",
     "task393.onnx",
     "task398.onnx"
-  ]
+  ],
+  "last_update": "2026-07-10 18:09:40",
+  "last_optimizer": "selected_vector_extents",
+  "last_task": "task319.onnx",
+  "last_delta": 0.06290782680824236,
+  "last_task_points": 16.689585005811708,
+  "last_task_memory": 3898,
+  "last_task_params": 168
 }
