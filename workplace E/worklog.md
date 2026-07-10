@@ -83,3 +83,25 @@
   - Exported and scored it as a temporary probe; output file `e_task233_A_branch_probe_score_20260710.csv`.
   - Result: verified `ok`, cost `32011`, points about `14.626`; this is worse than current E scoreboard cost `31938`, so no replacement was accepted.
   - Deleted temporary probe files after scoring: `workplace E/task233_from_A_branch_probe.onnx`, `workplace E/probes/task233_A_branch`, and empty `workplace E/probes`.
+
+## 2026-07-10 task233 external ONNX audit
+
+- Partial external ONNX scan output: `e_task233_external_onnx_score_20260710.csv`.
+- Rows recorded: 63.
+- Best verified external candidate found in this partial scan had cost `34400`, worse than the current E scoreboard cost `31938`.
+- No `task233` replacement was accepted, and the scoreboard was not updated.
+- The long-running Python scoring process left by the timed-out scan was stopped manually after confirming the partial CSV had been written.
+
+## 2026-07-10 task233 additional loop probes
+
+- Added `e_task233_dtype_sweep_20260710.py` to test single-Cast dtype substitutions against the current local `submission.zip`.
+- Output scan: `e_task233_dtype_sweep_20260710.csv`.
+  - Candidates checked: 168.
+  - Result: 168 `score_error`, 0 verified improvements.
+  - No candidate model was written under `optimized_onnx/task233_dtype_20260710`.
+- Fetched remote branches and checked for branch-owned `task233.onnx` files.
+  - Remote branch `origin/workplaceA-update-20260709` updated to commit `22e7a0e6544504b10bcf575c6324d81d5e00a980`.
+  - Only remote branch path found for this task: `workplaceA/task233.onnx`.
+  - Output scan: `e_task233_remote_branch_scan_20260710.csv`.
+  - Result: verified `ok`, cost `32011`, still worse than the current E scoreboard cost `31938`.
+- No `task233` replacement was accepted, and the scoreboard remains unchanged: `task233`, cost `31938`, points `14.628448198`.
