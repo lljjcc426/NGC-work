@@ -140,3 +140,43 @@
   - Status: `COMPLETE`.
   - Public score: `7237.15`, up from `7237.11` on the same local base (`+0.04`).
   - Team best remains `7270.18`; the exact teammate v81 package is not available in the shared checkout and could not be downloaded with this team member's Kaggle API credentials.
+
+## 2026-07-10 team-high baseline correction and task233 loop
+
+- Live Kaggle team submission inventory was rechecked before further optimization.
+  - Current team best: ref `54519973`, public score `7270.18`, UTC `2026-07-10 07:41:44.663000`, bytes `458278`.
+  - Description: `v81 F 20plus task006 306 local +1.186266 sha 1dbac62b`.
+  - Immediate lineage: v78 ref `54500407` scored `7267.61`; v79 ref `54517518` scored `7268.99`; v81 ref `54519973` scored `7270.18`.
+- Retrieved the exact team notebook ancestor output from `blacklions/2026-neurogolf-baseline` without copying notebook source into GitHub.
+  - Local artifact: `F:/kaggle/neurogolf-2026/external/team_blacklions_baseline_v1/submission.zip`.
+  - This matches ref `54485638`: public score `7267.31`, bytes `453733`.
+  - SHA256: `31c36b9157c228f8cf6886d8c02cfca27a0a9f51a46884be9cb7da5d4bd0ca87`.
+  - Integrity: 400 ONNX entries, canonical task001-task400 layout, CRC clean.
+- The exact v81 package could not be obtained from the shared repository or Kaggle submission API.
+  - GitHub main and all remote branches contain no `1dbac62b` package or F build artifact.
+  - Kaggle `GetSubmission` exposes metadata but no team-member download method; the raw submission file remains restricted to the submitter.
+  - Therefore no Kaggle submission was made from the 7267.31 ancestor. This avoids repeating the earlier low-base submission mistake.
+- New E scoreboards preserve the previous 7237.15 records instead of overwriting them.
+  - `e_scoreboard_team_base_7267_31_20260710.csv` and `e_scoreboard_team_base_7267_31_summary_20260710.json`: 67/67 E tasks scored; 8 above 20; task233 is lowest at cost `31938`, points `14.628448198`.
+  - `e_scoreboard_team_base726731_plus_task233_20260710.csv` and `e_scoreboard_team_base726731_plus_task233_summary_20260710.json`: scatter-removal candidate applied; task233 remains lowest at cost `30710`.
+  - `e_scoreboard_team_base726731_plus_task233_masked_topk_20260710.csv` and `e_scoreboard_team_base726731_plus_task233_masked_topk_summary_20260710.json`: latest accepted candidate applied; task233 remains lowest at cost `30384`.
+- Added a non-destructive package builder: `e_build_override_package_20260710.py`.
+  - It requires a full base zip plus explicit `taskNNN=PATH` overrides.
+  - It validates ONNX files, canonical 400-task inventory, embedded hashes, and ZIP CRC.
+  - It never overwrites `F:/kaggle/neurogolf-2026/submissions/submission.zip`.
+- Accepted the next task233 rewrite.
+  - Script: `e_optimize_task233_masked_topk_20260710.py`.
+  - Model: `optimized_onnx/task233_masked_topk_20260710/task233.onnx`.
+  - SHA256: `95d7bc0568f23deca46bca05d8eda03dc113259e71d1d169cd087b3165bea958`.
+  - Rewrite: replace the 324-element descending rank initializer with a masked float16 TopK over exact pattern matches, while preserving the first-two-match behavior.
+  - Full validation: ARC-AGI `4/4`, ARC-GEN `262/262`.
+  - Cost: `30710 -> 30384` (`-326`); cumulative from the team ancestor task233 is `31938 -> 30384` (`-1554`).
+  - Points: `14.667656387 -> 14.678328567` (`+0.010672180`); cumulative delta is `+0.049880369`.
+- Independent validation package:
+  - `F:/kaggle/neurogolf-2026/submissions/submission_team_base726731_e_task233_masked_topk_20260710.zip`.
+  - SHA256: `9ac10724e17c78b1d74a889baa625f77fe915b80648dc9fe4629fced0f8d00b4`.
+  - 400 entries and CRC clean; this is an ancestor-based validation artifact, not a claimed v81 reconstruction.
+- Cleanup performed and disclosed:
+  - Deleted generated `F:/kaggle/NGC-work/workplace E/__pycache__/`.
+  - Deleted empty `.gitkeep` markers from the three new external download directories after real files were present.
+  - No ONNX, CSV, JSON, ZIP, notebook output, or experiment log was deleted.

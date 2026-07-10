@@ -1,0 +1,13 @@
+{
+  "submission_zip": "F:\\kaggle\\neurogolf-2026\\external\\team_blacklions_baseline_v1\\submission.zip",
+  "submission_sha256": "31c36b9157c228f8cf6886d8c02cfca27a0a9f51a46884be9cb7da5d4bd0ca87",
+  "scoreboard_csv": "workplace E\\e_scoreboard_team_base_7267_31_20260710.csv",
+  "task_count": 67,
+  "scored_ok": 67,
+  "above_20_count": 8,
+  "target_20_cost": 148,
+  "lowest_task": "task233",
+  "lowest_cost": 31938,
+  "lowest_points": "14.628448198",
+  "loop_rule": "Optimize the lowest-ranked E task, update this scoreboard after a verified replacement, then re-sort and continue."
+}

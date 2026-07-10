@@ -1,0 +1,2 @@
+task,candidate,status,verified_all,base_cost,candidate_cost,delta_cost,base_points,candidate_points,delta_points,nodes,initializers,output
+task233,masked_topk,ok_improved,True,30710,30384,326,14.667656387,14.678328567,0.010672180,224,48,F:\kaggle\NGC-work\workplace E\optimized_onnx\task233_masked_topk_20260710\task233.onnx
