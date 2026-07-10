@@ -1,0 +1,2 @@
+task,candidate,status,arc_agi_pass,arc_gen_pass,base_cost,candidate_cost,delta_cost,base_points,candidate_points,delta_points,nodes,initializers
+task233,scatter_remove_external_patches,ok_improved,4,262,31938,30710,1228,14.628448198,14.667656387,0.039208189,224,51

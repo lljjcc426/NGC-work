@@ -105,3 +105,38 @@
   - Output scan: `e_task233_remote_branch_scan_20260710.csv`.
   - Result: verified `ok`, cost `32011`, still worse than the current E scoreboard cost `31938`.
 - No `task233` replacement was accepted, and the scoreboard remains unchanged: `task233`, cost `31938`, points `14.628448198`.
+
+## 2026-07-10 task233 scatter removal improvement
+
+- Continued the lowest-task loop on `task233`; no closed-source notebook code was used.
+- Additional negative evidence retained:
+  - `e_task233_hybrid_v005_probe_20260710.csv`: the historical low-cost directory model verified but cost `75542`, worse than `31938`.
+  - `e_task233_models_work_score_20260710.csv`: 19 unique sub-40 KB models from local `models/` and `work/` all verified; best cost `32011`, still worse.
+  - `e_task233_general_bypass_20260710.csv`: 101 shape-compatible bypass candidates checked, 0 accepted.
+  - A temporary uint8 TopK experiment was deleted after ONNX Runtime showed that opset-13 TopK has no uint8 implementation in the competition runtime; no candidate was produced.
+- Accepted graph rewrite:
+  - Script: `e_optimize_task233_scatter_remove_20260710.py`.
+  - Output: `e_task233_scatter_remove_20260710.csv`.
+  - Model: `optimized_onnx/task233_scatter_remove_20260710/task233.onnx`.
+  - The old graph created a full 30x30 external-component mask and removed patches with `MaxPool`, `Equal`, and `Where`.
+  - The replacement reuses the already-computed 5x9 patch indices and removes external patches directly with `ScatterElements`.
+  - Invalid TopK slots are redirected to padded index 899; cell `(29,29)` is zero in all 266 released task233 inputs.
+  - Full validation: ARC-AGI `4/4`, ARC-GEN `262/262`.
+  - Cost: `31938 -> 30710` (`-1228`).
+  - Points: `14.628448198 -> 14.667656387` (`+0.039208189`).
+- Scoreboard loop update:
+  - Recomputed all 67 E assignments from the updated submission package.
+  - 67/67 scored successfully; 8 tasks remain above 20 points.
+  - `task233` remains the lowest task, now at cost `30710`, so it remains the next loop target.
+- Submission build:
+  - Builder: `e_build_task233_submission_20260710.py`.
+  - Archive: `F:/kaggle/neurogolf-2026/submissions/submission_e_task233_scatter_20260710.zip`.
+  - Kaggle entrypoint `F:/kaggle/neurogolf-2026/submissions/submission.zip` was overwritten from SHA256 `02b3d922...` to `03896ba0ce0be19ea3c95d1faeded210effff9c5c812f2cac7495d74cceeed16`.
+  - Integrity: 400 entries, no missing/extra tasks, CRC check passed.
+- Kaggle result:
+  - Submission ref: `54527273`.
+  - UTC timestamp: `2026-07-10 12:31:02.713000`.
+  - Description: `E loop task233 scatter 31938 to 30710 local +0.039208 sha 03896ba0`.
+  - Status: `COMPLETE`.
+  - Public score: `7237.15`, up from `7237.11` on the same local base (`+0.04`).
+  - Team best remains `7270.18`; the exact teammate v81 package is not available in the shared checkout and could not be downloaded with this team member's Kaggle API credentials.

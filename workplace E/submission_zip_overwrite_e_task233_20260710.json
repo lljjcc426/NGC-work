@@ -1,0 +1,23 @@
+{
+  "base_entrypoint": "F:\\kaggle\\neurogolf-2026\\submissions\\submission.zip",
+  "base_sha256_before": "02b3d922f85f7c280e6f2cdf76405dbe3eea29f53d66603b7b4e8fec501a7a69",
+  "replacement_task": "task233",
+  "replacement_onnx": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_scatter_remove_20260710\\task233.onnx",
+  "replacement_sha256": "67425d2d9116b7decd3dfcb61d80e493618063545e9ab2f4be085295171b0aa9",
+  "replacement_cost_before": 31938,
+  "replacement_cost_after": 30710,
+  "replacement_points_before": "14.628448198",
+  "replacement_points_after": "14.667656387",
+  "archive": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_e_task233_scatter_20260710.zip",
+  "archive_sha256": "03896ba0ce0be19ea3c95d1faeded210effff9c5c812f2cac7495d74cceeed16",
+  "entrypoint_sha256_after": "03896ba0ce0be19ea3c95d1faeded210effff9c5c812f2cac7495d74cceeed16",
+  "zip_entries": 400,
+  "zip_test": null,
+  "kaggle_submission_ref": 54527273,
+  "kaggle_submission_time_utc": "2026-07-10 12:31:02.713000",
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_score": "7237.15",
+  "previous_same_base_public_score": "7237.11",
+  "online_delta": "+0.04",
+  "team_best_after_submission": "7270.18"
+}

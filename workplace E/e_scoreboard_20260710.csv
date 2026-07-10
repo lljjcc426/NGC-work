@@ -1,5 +1,5 @@
 rank,task,assignment_type,shape_class,priority_band,status,cost,points,above_20,cost_to_20_or_better,error
-1,task233,shared_review,shape_change,P0_lt16,ok,31938,14.628448198,False,31790,
+1,task233,shared_review,shape_change,P0_lt16,ok,30710,14.667656387,False,30562,
 2,task118,primary,same_shape,P0_lt16,ok,12282,15.584109945,False,12134,
 3,task138,primary,shape_change,P0_lt16,ok,12042,15.603844182,False,11894,
 4,task198,primary,same_shape,P0_lt16,ok,11410,15.657754557,False,11262,
