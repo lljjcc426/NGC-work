@@ -65,6 +65,9 @@ cd "E:\kongming\NGC-work\workplace C\dashboard"
 
 - `neurogolf-2026-work/`: Kaggle/NVIDIA skill research scaffold and local
   baseline project.
+- `score_docs/34_FULL_RETROSPECTIVE_AND_NEXT_BUILD_PLAN_20260711.md`: current
+  score state, accepted/rejected experiments, rebase evidence, quota policy,
+  and the next three-track build plan.
 - `cleanup_log.md`: cleanup record for setup-only directories.
 
 The project scaffold still requires `KAGGLE_API_TOKEN` before running Kaggle

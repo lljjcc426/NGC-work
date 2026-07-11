@@ -1,0 +1,10 @@
+task,artifact_path,examples_checked,examples_passed,examples_failed,memory,params,cost,points,target_met,error
+task113,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task113.onnx,265,265,0,0,30,30,21.598802618337846,True,
+task142,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task142.onnx,266,266,0,0,90,90,20.500190329669735,True,
+task144,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task144.onnx,267,267,0,0,104,104,20.35560910085863,True,
+task276,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task276.onnx,266,266,0,0,10,10,22.697414907005953,True,
+task298,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task298.onnx,267,267,0,120,15,135,20.09472522156157,True,
+task307,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task307.onnx,266,266,0,0,5,5,23.3905620875659,True,
+task311,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task311.onnx,266,266,0,0,30,30,21.598802618337846,True,
+task347,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task347.onnx,269,269,0,117,26,143,20.03715536974009,True,
+task373,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task373.onnx,75,75,0,0,60,60,20.9056554377779,True,

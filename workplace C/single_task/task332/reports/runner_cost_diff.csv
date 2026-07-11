@@ -1,0 +1,2 @@
+task,old_artifact,new_artifact,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_checked,examples_failed,local_valid,target_cost,target_met,error
+task332,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task332.onnx,E:\kongming\NGC-work\workplace C\single_task\task332\onnx\task332_candidate.onnx,561,6150,-5589,18.670279094477305,16.275792639199437,-2.3944864552778675,267,0,True,148,False,

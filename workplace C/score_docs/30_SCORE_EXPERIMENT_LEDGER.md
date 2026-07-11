@@ -122,3 +122,15 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task158 | task158_20260709T205240 | baseline_check | 28483 | 28483 | 0 | True | False | `E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task158.onnx` |
 | task158 | task158_20260709T205621 | task158_resize_stamp_builder | 28483 | 28023 | 460 | True | True | `workplace C\single_task\task158\onnx\task158_candidate.onnx` |
 | task286 | task286_20260709T224049 | task286_baseline_check | 26909 | 26909 | 0 | True | False | `E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task286.onnx` |
+| task391 | task391_onehot_maxpool_probe | task391_onehot_maxpool_probe | 159 |  |  | False | False | `workplace C\single_task\task391\debug\onehot_maxpool.onnx` |
+| task015 | task015_20260710T215553 | sparse_initializer_exact | 900 |  |  | False | False | `workplace C\single_task\task015\onnx\task015_sparse_probe.onnx` |
+| task193 | task193_20260711_parallel_v1 | exact_conv_factor_memory_probe | 910 | 82912 | -82002 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task193\onnx\task193_candidate.onnx` |
+| task372 | task372_20260711_parallel_v1 | cropped_group_conv_memory_probe | 710 | 7135 | -6425 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task372\onnx\task372_candidate.onnx` |
+| task332 | task332_20260711_parallel_v1 | dynamic_parity_direct_memory_probe | 561 | 6150 | -5589 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task332\onnx\task332_candidate.onnx` |
+| task349 | task349_20260711T170339 | task349_debug_rescore | 14892 | 10362 | 4530 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task349 | task349_20260711T171533 | task349_two_channel_quadratic_halo | 14892 | 11494 | 3398 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task349 | task349_20260711T175034 | task349_three_channel_polynomial_halo | 14892 | 12628 | 2264 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task349 | task349_20260711T175616 | task349_four_channel_exact_halo | 14892 | 13760 | 1132 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task077 | task077_20260711_k5x3 | task077_k5x3_full_valid | 7657 | 7657 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task077\debug\schedule_probes\k5x3.onnx` |
+| task009 | task009_20260711_uint8_einsum | task009_uint8_einsum | 6694 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task009\onnx\task009_uint8_einsum.onnx` |
+| task349 | task349_20260711_v93_rebase | v93_rebase_task349 | 14892 | 14887 | 5 | True | True | `E:\kagglegolf\submissions\candidates\GOLF_20260711_093_v92_plus_task349_k11\onnx\task349.onnx` |

@@ -1,0 +1,5 @@
+candidate,local_valid,examples_passed,examples_checked,examples_failed,memory,params,cost,points,delta_cost_vs_old,notes
+baseline,true,266,266,0,25201,193,25394,14.857731795370263,0,baseline prvsiyan 7266.72 task054
+fusion_scatter_none,false,0,266,266,23761,193,23954,14.916109396492548,-1440,lower cost but invalid; direct ScatterElements overwrite does not preserve OR-mask semantics
+fusion_scatter_max,false,10,266,256,23761,193,23954,14.916109396492548,-1440,lower cost but invalid; reduction=max keeps some duplicates but fails when overwrite color/order differs
+index32_overlay,false,0,0,0,,,,,official ORT rejects int32 GatherND indices in this graph
