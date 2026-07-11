@@ -17,3 +17,5 @@ The selected WorkA set is now synchronized into the current local
 Latest verified optimization: `task148.onnx` reuses `zero_rows_b` for the
 all-False middle block, reducing params from 252 to 108 with +0.0299087714
 local points. See `worklog_task148_20260711.md`.
+
+Latest verified optimization: `task215.onnx` converts constant `ReduceSum`/`Slice` inputs to opset-9 attributes, reducing params from 98 to 91 with +0.011191164 local points. See `worklog_task215_20260711.md`.

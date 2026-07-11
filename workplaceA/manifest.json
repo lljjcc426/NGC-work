@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-07-11T12:58:49+08:00",
   "source": "current submission.zip synchronized to WorkA best models plus verified task148 parameter reduction",
-  "submission_sha256": "76f7e4d40c82652c81a4d0ed4ce9662eec08ce9c9ff9d096f3fb5b75f913dfc4",
+  "submission_sha256": "e3a1f1a19be7fbf83315897cbc6435b61cd415309db17cd62e1a6ad8e138c75c",
   "previous_submission_sha256": "2ad46e4cdddff3d724b3474372087cd727f4e7fe1c39755d58efec2755cf9f95",
   "comparison_current_submission_sha256": "1dbac62bd53e8549be27f51264da8124398272532121656f89847781af352025",
   "workA_model_set_sha256": "10810898a86467091e840d83e4e7fc9ce00e5c7723d271b42c9b56b10e347dcf",
@@ -77,14 +77,14 @@
     "task393.onnx",
     "task398.onnx"
   ],
-  "last_update": "2026-07-11 12:58:49",
+  "last_update": "2026-07-11 16:22:51",
   "last_update_type": "baseline_comparison_merge",
-  "last_optimizer": "reuse_zero_rows_false_mid",
-  "last_task": "task148.onnx",
-  "last_delta": 0.029908771392616273,
-  "last_task_points": 16.535574874122418,
-  "last_task_memory": 4635,
-  "last_task_params": 108,
+  "last_optimizer": "epoch_plus1_task215_opset9_attrs",
+  "last_task": "task215.onnx",
+  "last_delta": 0.011191163961260742,
+  "last_task_points": 18.56705990726082,
+  "last_task_memory": 531,
+  "last_task_params": 91,
   "baseline_comparison_report": "baseline_comparison_20260710.json",
   "baseline_comparison": {
     "compared_tasks": 11,
@@ -123,5 +123,23 @@
       "report": "runs/merge_task148_20260711_125847.json",
       "log": "worklog_task148_20260711.md"
     }
-  ]
+  ],
+  "optimizer": "epoch_plus1_task215_opset9_attrs",
+  "report": "F:\\Kaggle\\golf\\runs\\epoch_plus1_20260711\\after_task215_workplaceA_rescore.json",
+  "local_delta": 0.011191163961260742,
+  "positive_tasks": [
+    {
+      "task": 215,
+      "delta": 0.011191163961260742,
+      "base_points": 18.55586874329956,
+      "candidate_points": 18.56705990726082,
+      "candidate_sha256": "b465c22aeeb518bccdc671e130f29bd7063e1ffcf343ebe14e37709d4c6df542",
+      "memory_before": 531,
+      "memory_after": 531,
+      "params_before": 98,
+      "params_after": 91
+    }
+  ],
+  "workA_total_after": 1213.5154425643664,
+  "workA_ok_count_after": 67
 }
