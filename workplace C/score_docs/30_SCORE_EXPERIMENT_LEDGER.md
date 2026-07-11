@@ -134,3 +134,23 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task077 | task077_20260711_k5x3 | task077_k5x3_full_valid | 7657 | 7657 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task077\debug\schedule_probes\k5x3.onnx` |
 | task009 | task009_20260711_uint8_einsum | task009_uint8_einsum | 6694 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task009\onnx\task009_uint8_einsum.onnx` |
 | task349 | task349_20260711_v93_rebase | v93_rebase_task349 | 14892 | 14887 | 5 | True | True | `E:\kagglegolf\submissions\candidates\GOLF_20260711_093_v92_plus_task349_k11\onnx\task349.onnx` |
+| task009 | task009_20260711_outside_sentinel | task009_outside_sentinel | 6694 |  |  | False | False | `workplace C\single_task\task009\onnx\task009_outside_sentinel.onnx` |
+| task009 | task009_20260711_outside_sentinel_v2 | task009_outside_sentinel_v2 | 6694 | 6595 | 99 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task009\onnx\task009_outside_sentinel.onnx` |
+| task364 | task364_20260711_three_round | task364_three_round_masked_propagation | 14642 | 14642 | 0 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task364\onnx\task364_three_round_probe.onnx` |
+| task096 | task096_20260711_presence_reduce_max | task096_presence_reduce_max | 7678 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task096\onnx\task096_presence_reduce_max.onnx` |
+| task096 | task096_20260711_presence_reduce_max_v2 | task096_presence_reduce_max_v2 | 7678 | 7678 | 0 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task096\onnx\task096_presence_reduce_max.onnx` |
+| task383 | task383_20260711_conv_crop_collapse | task383_conv_crop_collapse | 5830 | 5800 | 30 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task383\onnx\task383_conv_crop_collapse.onnx` |
+| task382 | task382_20260711_compact_pad_axes | task382_compact_pad_axes | 5666 | 5640 | 26 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task382\onnx\task382_compact_pad_axes.onnx` |
+| task278 | task278_20260711_fused_halo | task278_fused_halo_probe | 4503 | 4195 | 308 | False | False | `E:\kongming\NGC-work\workplace C\single_task\task278\onnx\task278_fused_halo_probe.onnx` |
+| task165 | task165_20260711_compact_pad_axes | task165_compact_pad_axes | 4532 | 4528 | 4 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task165\onnx\task165_compact_pad_axes.onnx` |
+| task378 | task378_20260711_compact_pad_axes | task378_compact_pad_axes | 3089 | 3087 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task378\onnx\task378_compact_pad_axes.onnx` |
+| task077 | task077_20260711_compact_pad_axes | task077_compact_pad_axes | 7657 | 7655 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task077\onnx\task077_compact_pad_axes.onnx` |
+| task364 | task364_20260711_compact_pad_axes | task364_compact_pad_axes | 14642 | 14640 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task364\onnx\task364_compact_pad_axes.onnx` |
+| task094 | task094_20260711_compact_pad_axes | task094_compact_pad_axes | 2677 | 2671 | 6 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task094\onnx\task094_compact_pad_axes.onnx` |
+| task381 | task381_20260711_compact_pad_axes | task381_compact_pad_axes | 1752 | 1750 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task381\onnx\task381_compact_pad_axes.onnx` |
+| task190 | task190_20260711_compact_pad_axes | task190_compact_pad_axes | 2427 | 2425 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task190\onnx\task190_compact_pad_axes.onnx` |
+| task392 | task392_20260711_compact_pad_axes | task392_compact_pad_axes | 1705 | 1703 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task392\onnx\task392_compact_pad_axes.onnx` |
+| task201 | task201_20260711_compact_pad_axes | task201_compact_pad_axes | 3045 | 3043 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task201\onnx\task201_compact_pad_axes.onnx` |
+| task388 | task388_20260711_compact_pad_axes | task388_compact_pad_axes | 1827 | 1822 | 5 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task388\onnx\task388_compact_pad_axes.onnx` |
+| task069 | task069_20260711_compact_pad_axes | task069_compact_pad_axes | 2948 | 2946 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_compact_pad_axes.onnx` |
+| task224 | task224_20260711_compact_pad_axes | task224_compact_pad_axes | 1886 | 1876 | 10 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task224\onnx\task224_compact_pad_axes.onnx` |

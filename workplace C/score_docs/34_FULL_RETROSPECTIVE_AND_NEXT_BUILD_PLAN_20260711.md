@@ -109,6 +109,21 @@ It has 400 ONNX files and SHA256
 Per the latest user instruction, no v93 kernel has been built and no v93
 submission has been made.
 
+### task009: local-positive, not yet submitted
+
+After the initial retrospective was written, task009 received a full-valid
+outside-sentinel rewrite. A Conv bias encodes padded cells as color index 10,
+allowing one `10x10` uint8 `Where` output to be removed.
+
+| field | result |
+| --- | ---: |
+| public examples | 266/266 |
+| parent cost | 6694 |
+| candidate cost | 6595 |
+| delta cost | 99 |
+| expected delta points | +0.0148998166 |
+| status | local accepted, not online verified |
+
 ## 4. Validation Caveat
 
 The raw package validator reports `validation_ok=false` because unchanged
