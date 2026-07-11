@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-10T23:29:58+08:00",
-  "source": "current submission.zip synchronized to the best fully validated WorkA model per task from the previous and imported baselines",
-  "submission_sha256": "c5e37ee1888e70f769a22d44772cd509ae2c34bb65aa9058119ad3fd9c23830a",
+  "updated_at": "2026-07-11T12:58:49+08:00",
+  "source": "current submission.zip synchronized to WorkA best models plus verified task148 parameter reduction",
+  "submission_sha256": "76f7e4d40c82652c81a4d0ed4ce9662eec08ce9c9ff9d096f3fb5b75f913dfc4",
   "previous_submission_sha256": "2ad46e4cdddff3d724b3474372087cd727f4e7fe1c39755d58efec2755cf9f95",
   "comparison_current_submission_sha256": "1dbac62bd53e8549be27f51264da8124398272532121656f89847781af352025",
-  "workA_model_set_sha256": "167de5c6813a966f4437e1124970108a4da8100e1272b3a9b6f3bcffa3062863",
+  "workA_model_set_sha256": "10810898a86467091e840d83e4e7fc9ce00e5c7723d271b42c9b56b10e347dcf",
   "workplace": "A",
   "task_count": 67,
   "optimization_scope": "Only these WorkA tasks should be used for future optimization runs.",
@@ -77,14 +77,14 @@
     "task393.onnx",
     "task398.onnx"
   ],
-  "last_update": "2026-07-10 23:29:58",
+  "last_update": "2026-07-11 12:58:49",
   "last_update_type": "baseline_comparison_merge",
-  "last_optimizer": "baseline_compare_best_of_two",
-  "last_task": "task086.onnx",
-  "last_delta": 0.0043025053960121795,
-  "last_task_points": 16.988644890838714,
-  "last_task_memory": 2857,
-  "last_task_params": 158,
+  "last_optimizer": "reuse_zero_rows_false_mid",
+  "last_task": "task148.onnx",
+  "last_delta": 0.029908771392616273,
+  "last_task_points": 16.535574874122418,
+  "last_task_memory": 4635,
+  "last_task_params": 108,
   "baseline_comparison_report": "baseline_comparison_20260710.json",
   "baseline_comparison": {
     "compared_tasks": 11,
@@ -108,7 +108,20 @@
     "merged_into_submission": true,
     "merged_task_count": 9,
     "merged_gain_vs_imported_baseline": 0.768461757723378,
-    "submission_bytes": 458624,
+    "submission_bytes": 458602,
     "workA_tasks_matching_submission": 67
-  }
+  },
+  "post_comparison_optimizations": [
+    {
+      "task": "task148.onnx",
+      "label": "reuse_zero_rows_false_mid",
+      "delta": 0.029908771392616273,
+      "points": 16.535574874122418,
+      "memory": 4635,
+      "params": 108,
+      "model_sha256": "d4d4c526d610ae593aa89f3fa66c589641cd6666a0507be87d499311e7dd9ab4",
+      "report": "runs/merge_task148_20260711_125847.json",
+      "log": "worklog_task148_20260711.md"
+    }
+  ]
 }

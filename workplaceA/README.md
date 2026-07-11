@@ -13,3 +13,7 @@ validation, using the higher local points score. See
 
 The selected WorkA set is now synchronized into the current local
 `submission.zip`; all 67 WorkA task models match the package.
+
+Latest verified optimization: `task148.onnx` reuses `zero_rows_b` for the
+all-False middle block, reducing params from 252 to 108 with +0.0299087714
+local points. See `worklog_task148_20260711.md`.
