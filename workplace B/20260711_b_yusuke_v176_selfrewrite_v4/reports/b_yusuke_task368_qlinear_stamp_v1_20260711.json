@@ -1,0 +1,71 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task368_qlinear_stamp_v1_20260711",
+  "min_points": 16.81,
+  "max_points": 16.82,
+  "selected_tasks": [
+    368,
+    107
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.274159029336591,
+  "positives": [
+    {
+      "task": 368,
+      "label": "optimize_task368_qlinear_stamp_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task368_qlinear_stamp_v1_20260711\\optimize_task368_qlinear_stamp_yusuke\\task368.onnx",
+      "bytes": 2443,
+      "valid": true,
+      "memory": 2629,
+      "params": 107,
+      "cost": 2736,
+      "points": 17.085747721257558,
+      "error": "",
+      "base_points": 16.811588691920967,
+      "base_cost": 3599,
+      "gain": 0.274159029336591,
+      "module": "src\\optimize_task368_qlinear_stamp_yusuke.py",
+      "stats": {
+        "task368_qlinear_corners": 1,
+        "task368_qlinear_stamp": 1,
+        "dead_nodes": 0,
+        "initializers": 3
+      },
+      "equivalence_note": "skipped 1 reference-failing random inputs"
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task368_qlinear_stamp_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.274159029336591,
+      "positives": [
+        {
+          "task": 368,
+          "label": "optimize_task368_qlinear_stamp_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task368_qlinear_stamp_v1_20260711\\optimize_task368_qlinear_stamp_yusuke\\task368.onnx",
+          "bytes": 2443,
+          "valid": true,
+          "memory": 2629,
+          "params": 107,
+          "cost": 2736,
+          "points": 17.085747721257558,
+          "error": "",
+          "base_points": 16.811588691920967,
+          "base_cost": 3599,
+          "gain": 0.274159029336591,
+          "module": "src\\optimize_task368_qlinear_stamp_yusuke.py",
+          "stats": {
+            "task368_qlinear_corners": 1,
+            "task368_qlinear_stamp": 1,
+            "dead_nodes": 0,
+            "initializers": 3
+          },
+          "equivalence_note": "skipped 1 reference-failing random inputs"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

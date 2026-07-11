@@ -163,3 +163,41 @@ Blocked / do not repeat:
 Next direction:
 
 Stay B-only and self-rewrite first. Attack `task018`, `task101`, `task350`, `task209`, and `task328` by directly simplifying the current V176 ONNX graphs. If the current team-best package behind ref `54517518` (`7268.99`) becomes available locally, test these four safe B overrides on top of that base immediately.
+
+## 2026-07-11: B-only online-safe v5
+
+Folder: `20260711_b_yusuke_v176_online_safe_v5`
+
+This pass continued with self-written, task-level ONNX rewrites only. The final
+package changes seven B tasks and leaves every non-B task untouched.
+
+Result:
+
+- Local gain over yusuketogashi V176: `+1.030562`.
+- Expected local total: `7268.175724`.
+- Kaggle ref: `54568534`.
+- Kaggle public score: `7268.31`.
+- Online gain over the V176 public score `7267.31`: `+1.00`.
+
+New verified rewrites in this pass:
+
+- `task209`: one-pad template stack, `+0.018695` local.
+- `task328`: algebraic corner-distance split, `+0.092680` local.
+- `task368`: dual `QLinearConv` stamp and direct bbox mask, `+0.350068` local.
+
+The main breakthrough is `task368`, whose cost fell from `3599` to `2536`.
+It passed 2048 random equivalence checks, 5000 fresh exact-generator examples,
+and an isolated online probe before inclusion in v5.
+
+New blocked rule:
+
+Do not use uint8 `TopK` in `task018`, `task076`, or `task285`. All three pass
+local ONNX Runtime checks but return Kaggle `ERROR`, including versions with
+explicit repaired shape metadata. The rejected candidates are retained only as
+negative evidence in the v5 `experiments/` folder.
+
+Integration note:
+
+The team also had a newer non-B aggregate scoring `7271.93`. Use the seven ONNX
+files in `20260711_b_yusuke_v176_online_safe_v5/overrides/` as a B-task overlay
+on that newer full package.

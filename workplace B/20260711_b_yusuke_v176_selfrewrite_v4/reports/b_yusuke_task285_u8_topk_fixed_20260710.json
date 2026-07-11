@@ -1,0 +1,83 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task285_u8_topk_fixed_20260710",
+  "min_points": 15.0,
+  "max_points": 15.2,
+  "selected_tasks": [
+    133,
+    285
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.11979012465475236,
+  "positives": [
+    {
+      "task": 285,
+      "label": "optimize_task285_u8_topk_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task285_u8_topk_fixed_20260710\\optimize_task285_u8_topk_yusuke\\task285.onnx",
+      "bytes": 5158,
+      "valid": true,
+      "memory": 17056,
+      "params": 420,
+      "cost": 17476,
+      "points": 15.231416209928673,
+      "error": "",
+      "base_points": 15.11162608527392,
+      "base_cost": 19700,
+      "gain": 0.11979012465475236,
+      "module": "src\\optimize_task285_u8_topk_yusuke.py",
+      "stats": {
+        "drop_g_to_f16": 1,
+        "topk_g_u8": 1,
+        "drop_tv_to_c": 1,
+        "drop_score_to_f16": 1,
+        "topk_score_u8": 1,
+        "greater_u8_zero": 2,
+        "drop_mflat_to_f16": 1,
+        "topk_mflat_u8": 1,
+        "dead_nodes": 0,
+        "initializers": 0
+      },
+      "equivalence_note": "skipped 2 reference-failing random inputs"
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task285_u8_topk_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.11979012465475236,
+      "positives": [
+        {
+          "task": 285,
+          "label": "optimize_task285_u8_topk_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task285_u8_topk_fixed_20260710\\optimize_task285_u8_topk_yusuke\\task285.onnx",
+          "bytes": 5158,
+          "valid": true,
+          "memory": 17056,
+          "params": 420,
+          "cost": 17476,
+          "points": 15.231416209928673,
+          "error": "",
+          "base_points": 15.11162608527392,
+          "base_cost": 19700,
+          "gain": 0.11979012465475236,
+          "module": "src\\optimize_task285_u8_topk_yusuke.py",
+          "stats": {
+            "drop_g_to_f16": 1,
+            "topk_g_u8": 1,
+            "drop_tv_to_c": 1,
+            "drop_score_to_f16": 1,
+            "topk_score_u8": 1,
+            "greater_u8_zero": 2,
+            "drop_mflat_to_f16": 1,
+            "topk_mflat_u8": 1,
+            "dead_nodes": 0,
+            "initializers": 0
+          },
+          "equivalence_note": "skipped 2 reference-failing random inputs"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

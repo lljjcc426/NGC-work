@@ -1,0 +1,72 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task328_corner_distance_v2_20260710",
+  "min_points": 16.2,
+  "max_points": 16.3,
+  "selected_tasks": [
+    370,
+    92,
+    17,
+    328,
+    182
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.09268039199848133,
+  "positives": [
+    {
+      "task": 328,
+      "label": "optimize_task328_corner_distance_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task328_corner_distance_v2_20260710\\optimize_task328_corner_distance_yusuke\\task328.onnx",
+      "bytes": 3363,
+      "valid": true,
+      "memory": 5623,
+      "params": 123,
+      "cost": 5746,
+      "points": 16.343740760460765,
+      "error": "",
+      "base_points": 16.251060368462284,
+      "base_cost": 6304,
+      "gain": 0.09268039199848133,
+      "module": "src\\optimize_task328_corner_distance_yusuke.py",
+      "stats": {
+        "task328_corner_distance": 1,
+        "dead_nodes": 0,
+        "initializers": 0
+      },
+      "equivalence_note": ""
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task328_corner_distance_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.09268039199848133,
+      "positives": [
+        {
+          "task": 328,
+          "label": "optimize_task328_corner_distance_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task328_corner_distance_v2_20260710\\optimize_task328_corner_distance_yusuke\\task328.onnx",
+          "bytes": 3363,
+          "valid": true,
+          "memory": 5623,
+          "params": 123,
+          "cost": 5746,
+          "points": 16.343740760460765,
+          "error": "",
+          "base_points": 16.251060368462284,
+          "base_cost": 6304,
+          "gain": 0.09268039199848133,
+          "module": "src\\optimize_task328_corner_distance_yusuke.py",
+          "stats": {
+            "task328_corner_distance": 1,
+            "dead_nodes": 0,
+            "initializers": 0
+          },
+          "equivalence_note": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

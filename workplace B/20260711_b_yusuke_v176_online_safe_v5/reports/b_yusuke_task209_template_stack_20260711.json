@@ -1,0 +1,71 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b_yusuke_task209_template_stack_20260711",
+  "min_points": 16.0,
+  "max_points": 16.1,
+  "selected_tasks": [
+    209,
+    379,
+    96,
+    77
+  ],
+  "positive_count": 1,
+  "raw_total_gain": 0.018694559757797435,
+  "positives": [
+    {
+      "task": 209,
+      "label": "optimize_task209_template_stack_yusuke",
+      "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task209_template_stack_20260711\\optimize_task209_template_stack_yusuke\\task209.onnx",
+      "bytes": 6801,
+      "valid": true,
+      "memory": 7363,
+      "params": 268,
+      "cost": 7631,
+      "points": 16.060025822710365,
+      "error": "",
+      "base_points": 16.041331262952568,
+      "base_cost": 7775,
+      "gain": 0.018694559757797435,
+      "module": "src\\optimize_task209_template_stack_yusuke.py",
+      "stats": {
+        "task209_template_stack": 1,
+        "dead_nodes": 0,
+        "initializers": 2
+      },
+      "equivalence_note": ""
+    }
+  ],
+  "reports": [
+    {
+      "module": "src\\optimize_task209_template_stack_yusuke.py",
+      "changed": 1,
+      "positive": 1,
+      "total_gain": 0.018694559757797435,
+      "positives": [
+        {
+          "task": 209,
+          "label": "optimize_task209_template_stack_yusuke",
+          "path": "D:\\golf\\reconstruction_candidates\\b_yusuke_task209_template_stack_20260711\\optimize_task209_template_stack_yusuke\\task209.onnx",
+          "bytes": 6801,
+          "valid": true,
+          "memory": 7363,
+          "params": 268,
+          "cost": 7631,
+          "points": 16.060025822710365,
+          "error": "",
+          "base_points": 16.041331262952568,
+          "base_cost": 7775,
+          "gain": 0.018694559757797435,
+          "module": "src\\optimize_task209_template_stack_yusuke.py",
+          "stats": {
+            "task209_template_stack": 1,
+            "dead_nodes": 0,
+            "initializers": 2
+          },
+          "equivalence_note": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

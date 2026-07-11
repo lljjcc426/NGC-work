@@ -1,0 +1,8 @@
+﻿task,cost,points,base_cost,base_points,gain,override_source
+205,4251,16.64509047164121,4891,16.504847939460642,0.1402425321805687,D:\golf\reconstruction_candidates\b_yusuke_task205_fp16_tail_20260709\optimize_task205_fp16_tail_yusuke\task205.onnx
+209,7631,16.060025822710365,7775,16.041331262952568,0.018694559757797435,D:\golf\reconstruction_candidates\b_yusuke_task209_template_stack_20260711\optimize_task209_template_stack_yusuke\task209.onnx
+255,7532,16.073084110222958,8911,15.90495825238728,0.1681258578356779,D:\golf\public_probe_variants\b_yusuke_v176_task255_qmatmul_v1\submission\task255.onnx
+277,3140,16.9480219210977,3540,16.82811799387218,0.11990392722551846,D:\golf\reconstruction_candidates\b_yusuke_task277_prune_iters_20260709\optimize_task277_prune_iters_yusuke\task277.onnx
+328,5746,16.343740760460765,6304,16.251060368462284,0.09268039199848133,D:\golf\reconstruction_candidates\b_yusuke_task328_corner_distance_v2_20260710\optimize_task328_corner_distance_yusuke\task328.onnx
+368,2536,17.16165668444288,3599,16.811588691920967,0.35006799252191456,D:\golf\reconstruction_candidates\b_yusuke_task368_qlinear_stamp_v2_20260711\optimize_task368_qlinear_stamp_yusuke\task368.onnx
+377,3967,16.71423457948567,4567,16.573388186815002,0.14084639267066734,D:\golf\reconstruction_candidates\b_yusuke_task377_fp16_tail_20260709\optimize_task377_fp16_tail_yusuke\task377.onnx
