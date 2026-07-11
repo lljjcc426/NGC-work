@@ -180,3 +180,30 @@
   - Deleted generated `F:/kaggle/NGC-work/workplace E/__pycache__/`.
   - Deleted empty `.gitkeep` markers from the three new external download directories after real files were present.
   - No ONNX, CSV, JSON, ZIP, notebook output, or experiment log was deleted.
+
+## 2026-07-11 practical-ROI loop and task085 improvement
+
+- Changed the E loop from lowest-score-first to practical score ROI: prefer a meaningful measured point gain that can be implemented and fully validated quickly.
+- Rechecked live Kaggle team metadata before optimizing.
+  - Current team best: ref `54557194`, public score `7271.93`, UTC `2026-07-11 02:15:21.407000`.
+  - Description: `v90 compact Pad axes 21 tasks local +0.033332 sha 02f7787e`.
+  - The exact v90 raw package remains unavailable to this Kaggle account, so no ancestor-based package was submitted.
+- Recorded rejected high-ROI probes in `e_opportunity_loop_20260711.csv`.
+  - task294 sparse Constant nodes passed `265/265` but cost increased `910 -> 3660` because Constant outputs count as intermediate memory.
+  - task294 graph sparse initializers were rejected by ONNX full shape inference for Conv weights.
+  - task084 row-offset broadcasting was rejected at runtime because ScatterElements requires indices and updates to match on the channel dimension.
+- Accepted task085 signed-Pad rewrite.
+  - Script: `e_optimize_task085_signed_pad_20260711.py`.
+  - Model: `optimized_onnx/task085_signed_pad_20260711/task085.onnx`.
+  - Model SHA256: `c3a1e929b776cee03f21e032b11748d3c4d805c4efbd517e730a7e11b07f3078`.
+  - Replaced four Slice+Pad pairs with four signed Pad nodes using `[1,-1]` and `[-1,1]` on axis 2.
+  - Removed four Slice nodes and seven now-unused initializers.
+  - Full validation: train `2/2`, test `1/1`, ARC-GEN `262/262` (`265/265`).
+  - Cost: `2845 -> 2597` (`-248`).
+  - Points: `17.046681653 -> 17.137887788` (`+0.091206135`).
+- Independent validation package:
+  - `F:/kaggle/neurogolf-2026/submissions/submission_team_base726731_e_task233_masked_topk_task085_signed_pad_20260711.zip`.
+  - SHA256: `0cf72dba19ba2946451f7e4124cfd8783b8d5df3dad913153b42d627bb927581`.
+  - Exact 400-task inventory, ZIP CRC, and both override hashes passed.
+- Recomputed scoreboard: `e_scoreboard_roi_task085_20260711.csv` and `e_scoreboard_roi_task085_summary_20260711.json`; all `67/67` E tasks scored successfully.
+- Cleanup: deleted generated `F:/kaggle/NGC-work/workplace E/__pycache__/`; no ONNX, CSV, JSON, ZIP manifest, script, or experiment result was deleted.

@@ -1,0 +1,5 @@
+order,task,method,status,measured_base_cost,measured_candidate_cost,measured_delta_points,validation,decision
+1,task085,signed Pad replaces four Slice+Pad pairs,accepted,2845,2597,0.091206135,265/265,Best measured practical ROI; saved model and rebuilt scoreboard
+2,task294,sparse Constant nodes,rejected,910,3660,-1.391970345,265/265,Constant outputs add scored intermediate memory
+3,task294,graph sparse initializers,rejected,910,,,ONNX full checker rejected sparse Conv weights
+4,task084,broadcast row offsets,rejected,2038,,,Runtime rejected ScatterElements indices channel dimension 1 versus updates dimension 5

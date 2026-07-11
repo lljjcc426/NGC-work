@@ -1,0 +1,2 @@
+task,method,base_cost,candidate_cost,delta_cost,base_points,candidate_points,delta_points,train,test,arc_gen,verified_all,removed_nodes,removed_initializers,model_sha256
+task085,signed_pad_replaces_slice_pad,2845,2597,248,17.046681653,17.137887788,0.091206135,2/2,1/1,262/262,True,4,s1;s0;sW;sWm;ax2;padTop;padBot,c3a1e929b776cee03f21e032b11748d3c4d805c4efbd517e730a7e11b07f3078

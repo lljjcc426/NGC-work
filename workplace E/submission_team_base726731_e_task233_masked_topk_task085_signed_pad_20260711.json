@@ -1,0 +1,23 @@
+{
+  "base": "F:\\kaggle\\neurogolf-2026\\external\\team_blacklions_baseline_v1\\submission.zip",
+  "base_sha256": "31c36b9157c228f8cf6886d8c02cfca27a0a9f51a46884be9cb7da5d4bd0ca87",
+  "output": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_team_base726731_e_task233_masked_topk_task085_signed_pad_20260711.zip",
+  "output_sha256": "0cf72dba19ba2946451f7e4124cfd8783b8d5df3dad913153b42d627bb927581",
+  "output_bytes": 453202,
+  "zip_entries": 400,
+  "zip_test": null,
+  "overrides": [
+    {
+      "task": "task085.onnx",
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task085_signed_pad_20260711\\task085.onnx",
+      "sha256": "c3a1e929b776cee03f21e032b11748d3c4d805c4efbd517e730a7e11b07f3078",
+      "bytes": 1724
+    },
+    {
+      "task": "task233.onnx",
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_masked_topk_20260710\\task233.onnx",
+      "sha256": "95d7bc0568f23deca46bca05d8eda03dc113259e71d1d169cd087b3165bea958",
+      "bytes": 27098
+    }
+  ]
+}

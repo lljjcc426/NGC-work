@@ -176,7 +176,11 @@ def main() -> int:
         "lowest_task": None if lowest is None else lowest["task"],
         "lowest_cost": None if lowest is None else lowest["cost"],
         "lowest_points": None if lowest is None else lowest["points"],
-        "loop_rule": "Optimize the lowest-ranked E task, update this scoreboard after a verified replacement, then re-sort and continue.",
+        "loop_rule": (
+            "Rank E tasks by practical score ROI: meaningful expected point gain divided by "
+            "implementation and full-validation time. Optimize the best verified opportunity, "
+            "update the scoreboard, then rescan and continue."
+        ),
     }
     args.json.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, indent=2))

@@ -1,0 +1,13 @@
+{
+  "submission_zip": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_team_base726731_e_task233_masked_topk_task085_signed_pad_20260711.zip",
+  "submission_sha256": "0cf72dba19ba2946451f7e4124cfd8783b8d5df3dad913153b42d627bb927581",
+  "scoreboard_csv": "workplace E\\e_scoreboard_roi_task085_20260711.csv",
+  "task_count": 67,
+  "scored_ok": 67,
+  "above_20_count": 8,
+  "target_20_cost": 148,
+  "lowest_task": "task233",
+  "lowest_cost": 30384,
+  "lowest_points": "14.678328567",
+  "loop_rule": "Rank E tasks by practical score ROI: meaningful expected point gain divided by implementation and full-validation time. Optimize the best verified opportunity, update the scoreboard, then rescan and continue."
+}
