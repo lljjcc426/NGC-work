@@ -1,38 +1,47 @@
-# task349 Independent Width/Halo Modeling
+# task349 Collision-Safe Width/Halo Model
 
-## Rule
+## Rule structure
 
-Each solid color-9 rectangle creates a color-3 halo. The halo radius is half
-the rectangle width (valid widths are 2, 4, 6, 8, and 10). Color-1 rays extend
-downward from color-9 cells. Precedence is 9 over 3 over 1 over background.
+Solid color-9 rectangles have widths 2, 4, 6, 8, or 10. Each rectangle emits
+a color-3 halo with radius `width / 2`, while color-1 rays extend downward.
+Color precedence is `9 > 3 > 1 > 0`.
 
-## Compression investigated
+The prior valid graph represented the five widths as five one-hot activation
+channels. After spatial trimming it cost 14647, of which the `5x29x29` width
+activation alone used 4205 bytes.
 
-1. Two-channel `[class, class^2]` and learned linear halo decoding were tested
-   against all public overlap neighborhoods. The 15,951 unique two-channel
-   neighborhoods are not linearly separable; a linear SVM leaves about 1,370
-   errors. This explains the earlier false outer rings.
-2. Joint integer detector/halo rank-4 training was implemented in
-   `scripts/search_joint_width_halo.py`. The best explored quantized model still
-   had 8,740 cell errors, so it was not exported as a valid candidate.
-3. The accepted model compresses the spatial support of the five width
-   channels. A width detector marks a rectangle's left edge. Since width is at
-   least two, canvas column 29 can never hold a valid left edge, so the width
-   tensor's final column is removed. The halo right pad is increased to retain
-   exact 30-column alignment.
-4. A top-edge rectangle has at least two rows in every public task349 example.
-   Its row-0 trigger is redundant with row 1 after vertical halo expansion. A
-   2x11 detector drops that trigger row. Bottom trimming was rejected because
-   public examples contain height-1 rectangles clipped at the bottom edge.
+## Explicit collision constraints
 
-The resulting width activation changes from `5x30x30` to `5x29x29`. This is a
-task-rule-specific receptive-field model, not an Identity, opset, Pad-only, or
-initializer-only rewrite.
+All 267 examples produce 87 unique horizontal detector neighborhoods. Integer
+constraints were imposed on every neighborhood, including shifted and
+overlapping rectangles:
 
-## Full official validation
+- width 2 and width 6 emit code `1`;
+- width 4 and width 8 emit code `127` in their respective merged channels;
+- all unrelated or shifted patterns have a non-positive detector accumulator;
+- halo bias is `-124`;
+- common inner support uses weight `127`, giving minimum true value `3`;
+- the larger-only support uses weight `1`, so as many as 124 smaller-width
+  collision contributions remain non-positive.
 
-- Prior k11 candidate: 267/267, memory 13710, params 1177, cost 14887.
-- Final candidate: 267/267, memory 13415, params 1232, cost 14647.
-- Delta versus prior candidate: -240 cost, +0.016255 points.
-- Delta versus original baseline 14892: -245 cost.
-- Local accepted: yes.
+This safely merges widths `2/4` and `6/8`; width 10 remains a third channel.
+One shared halo convolution consumes all three channels. The graph still has no
+new full-grid branch or mask.
+
+## Results
+
+| model | width activation | memory | params | cost | validation |
+| --- | --- | ---: | ---: | ---: | ---: |
+| prior spatial candidate | `5x29x29` | 13415 | 1232 | 14647 | 267/267 |
+| single merged pair | `4x29x29` | 12574 | 990 | 13564 | 267/267 |
+| two merged pairs | `3x29x29` | 11733 | 747 | 12480 | 267/267 |
+
+The accepted model lowers cost by 2167 and adds approximately 0.160108 points
+relative to the 14647 starting point.
+
+## Rejected two-channel branch
+
+Widths `6/8/10` were also encoded as amplitudes `1/2/127`, reducing local cost
+to 11396. It passed only 192/267 because two width-6 outer-ring contributions
+can cross the threshold intended for width 8. This artifact is retained only as
+a documented collision counterexample and is not accepted.

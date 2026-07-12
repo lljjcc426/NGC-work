@@ -126,3 +126,16 @@ submissions. Work therefore focused only on official local task cost.
 All eight artifacts were rescored together with the official local utility and
 passed every public train/test/arc-gen example. Full details and rejected
 hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.
+
+## 2026-07-12 Local Continuation And Verification
+
+- task077 accepted: `7655 -> 7234`, 266/266, `+0.056567` points.
+- task096 accepted: `7678 -> 6850`, 266/266, `+0.114110` points.
+- task349 accepted: `14647 -> 12480`, 267/267, `+0.160108` points.
+- additional local expected gain: `+0.3307855132791033`.
+- cumulative gain across the two local passes: `+3.438034154714824`.
+- one explicitly requested combination was rebased on the user-provided
+  `submission (4).zip`; Kaggle ref `54604279` completed at `7276.61`, matching
+  the local expectation from parent score `7273.50`.
+- submission management stopped immediately after that result; subsequent work
+  returned to the local task list.

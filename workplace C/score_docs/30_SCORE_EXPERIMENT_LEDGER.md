@@ -178,3 +178,13 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 
 Total local expected points gain: `+3.107248641435721`. No parent package,
 kernel, or Kaggle submission was built in this pass.
+
+## 2026-07-12 Continuation
+
+| task | method | old cost | new cost | saved cost | delta points | validation |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| task077 | binary vertical threshold fusion | 7655 | 7234 | 421 | +0.056567 | 266/266 |
+| task096 | compact 19x19 projection Conv | 7678 | 6850 | 828 | +0.114110 | 266/266 |
+| task349 | collision-safe three-channel halo | 14647 | 12480 | 2167 | +0.160108 | 267/267 |
+
+Additional local expected gain: `+0.3307855132791033`.

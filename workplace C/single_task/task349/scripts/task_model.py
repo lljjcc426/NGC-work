@@ -85,36 +85,7 @@ def _replace_initializer(model: onnx.ModelProto, name: str, value: np.ndarray) -
 
 
 def build_onnx(output_path: Path) -> Path:
-    """Build a validated baseline-equivalent compressed ONNX.
+    """Build the accepted three-channel collision-safe width/halo model."""
+    from build_double_collision_merge import build
 
-    The two/four-channel halo encodings reduce cost more aggressively, but the
-    public arc-gen set contains overlapping small rectangles that create false
-    positives after channel packing. This build keeps the proven five-channel
-    rule and removes the unused width-10 right-boundary check from the
-    horizontal detector. Width 10 is the maximum task width, so the shortened
-    11-wide detector is equivalent on the full public set and saves 5 params.
-    """
-    if not BASELINE.exists():
-        raise FileNotFoundError(f"task349 baseline not found: {BASELINE}")
-    model = onnx.load(str(BASELINE))
-    nodes = list(model.graph.node)
-    horizontal = next(node for node in nodes if node.output == ["h_pos_u8"])
-
-    base_kernel = next(
-        numpy_helper.to_array(initializer)
-        for initializer in model.graph.initializer
-        if initializer.name == "h_kernel_combined_i8"
-    )
-    horizontal_kernel = base_kernel[:, :, :, :11].copy()
-    _replace_initializer(model, "h_kernel_combined_i8", horizontal_kernel)
-    for attr in horizontal.attribute:
-        if attr.name == "kernel_shape":
-            attr.ints[:] = [1, 11]
-        elif attr.name == "pads":
-            attr.ints[:] = [0, 1, 0, 9]
-
-    output_path = Path(output_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    onnx.checker.check_model(model, full_check=True)
-    onnx.save(model, str(output_path))
-    return output_path
+    return build(Path(output_path))

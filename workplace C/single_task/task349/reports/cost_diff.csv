@@ -1,3 +1,2 @@
-task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
-task349,width29_height29_halo_support,14892,14647,-245,267,267,true,true,workplace C/single_task/task349/onnx/task349_candidate.onnx
-task349,width29_height29_halo_support_vs_k11,14887,14647,-240,267,267,true,true,workplace C/single_task/task349/onnx/task349_candidate.onnx
+task,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,old_memory,new_memory,old_params,new_params,examples_checked,examples_passed,local_valid,accepted,artifact_path,sha256
+task349,14647,12480,-2167,15.408009184681692,15.56811735807658,0.1601081733948888,13415,11733,1232,747,267,267,True,True,E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx,eba8b72bb8ab3374554fe8f6a8f2957a84cf2fe02f7c6821d43ecc27500eb5dc

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task096,compact_projection_conv,7678,6850,-828,16.053885624439257,16.16799606874373,0.11411044430447248,266,266,true,true,E:\kongming\NGC-work\workplace C\single_task\task096\debug\task096_compact_projection_conv.onnx,
