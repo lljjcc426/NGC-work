@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task391,direct_onehot,159,275,116,19.93109579777977,19.38322890233343,-0.5478668954463402,267,267,true,false,E:\kongming\NGC-work\workplace C\single_task\task391\onnx\task391_direct_onehot.onnx

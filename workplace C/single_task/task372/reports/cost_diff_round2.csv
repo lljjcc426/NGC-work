@@ -1,0 +1,2 @@
+task,attempt_id,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task372,task372_group2_lp,public_exact_group2_conv,710,360,-350,18.43473502996464,19.113895968549844,0.6791609385852044,266,266,true,true,workplace C/single_task/task372/onnx/task372_candidate.onnx

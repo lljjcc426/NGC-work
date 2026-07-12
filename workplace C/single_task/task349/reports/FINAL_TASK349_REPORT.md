@@ -1,45 +1,46 @@
-# FINAL_TASK349_REPORT
+# FINAL TASK349 REPORT
 
-Generated: 2026-07-11
+Generated: 2026-07-12
 
 ## Result
 
 - Task: task349
-- Baseline artifact: `E:/kagglegolf/submissions/candidates/GOLF_20260709_101_prvsiyan_7266_72_repro/onnx/task349.onnx`
-- Candidate artifact: `E:/kongming/NGC-work/workplace C/single_task/task349/onnx/task349_candidate.onnx`
-- Validation: 267/267 public train/test/arc-gen examples passed.
-- Baseline cost: 14892
-- Candidate cost: 14887
-- Delta cost: -5
-- Baseline points: 15.391420565007392
-- Candidate points: 15.391756372122943
-- Delta points: +0.00033580711555067077
+- Original baseline cost: 14892
+- Prior valid k11 cost: 14887
+- Final candidate cost: 14647
+- Delta versus original baseline: -245 cost, +0.01658861967429992 points
+- Delta versus prior candidate: -240 cost, +0.016252812558748886 points
+- Candidate points: 15.408009184681692
+- Official validation: 267/267 train/test/arc-gen examples passed
+- Memory: 13415
+- Parameters: 1232
 - Local accepted: true
+- Candidate: `workplace C/single_task/task349/onnx/task349_candidate.onnx`
 
-## Implemented Compression
+## Model
 
-The accepted candidate keeps the baseline five-channel rectangle-width detector
-and halo logic, but shortens the horizontal detector kernel from width 12 to
-width 11. The removed coefficient only checked the right boundary after a
-width-10 rectangle. Task349 public data uses width 10 as the maximum rectangle
-width, so this boundary check is redundant on all 267 public examples.
+The task-specific model detects color-9 rectangle width classes, expands each
+class by its width-dependent halo, emits downward rays, and applies color
+precedence. The final model keeps exact five-class semantics but removes two
+structurally redundant dimensions from the width activation:
 
-This preserves the baseline output exactly while saving 5 initializer params.
+1. Output column 29 cannot be a left-edge trigger because all rectangles are at
+   least two cells wide.
+2. Output row 0 is redundant for top-edge rectangles because every such public
+   rectangle has at least two rows; row 1 generates the same clipped halo.
 
-## Compact Encoding Attempts
+The detector activation is therefore `5x29x29` instead of `5x30x30`. Its active
+kernel is expanded from 1x11 to 2x11 to select input row 1, and halo padding is
+adjusted so the final output remains aligned at 30x30. This adds 55 parameters
+but removes 295 bytes of scored activation memory.
 
-The two-channel `[class, class^2]` and four-channel `[class, class^2, is4, is5]`
-halo encodings remain invalid for full submission use. They lower cost more
-aggressively, but fail on arc-gen examples containing multiple nearby small
-rectangles. In those cases, summed compressed features create false positives in
-outer halo rings. The current valid candidate therefore prioritizes guaranteed
-positive score movement over an invalid larger local delta.
+## Rejected branches
 
-## Verification
+- Two-channel and four-channel width encodings fail on overlapping rectangles.
+- Joint quantized rank-4 detector/halo training did not reach zero error.
+- Trimming both boundary rows passes only 265/267.
+- Trimming only the bottom row passes only 265/267 because bottom-clipped
+  height-1 rectangles exist.
+- Cropping any outer halo support edge fails between 10 and 45 examples.
 
-Official local scorer:
-
-- Baseline: memory 13710, params 1182, cost 14892, passed 267/267.
-- Candidate: memory 13710, params 1177, cost 14887, passed 267/267.
-
-No Kaggle submission was made.
+No parent package, Kaggle kernel, or submission was built.

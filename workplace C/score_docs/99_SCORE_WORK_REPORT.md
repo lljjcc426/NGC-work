@@ -107,3 +107,22 @@ The accepted ONNX artifact remains local and ignored by `.gitignore`; lightweigh
 - Submitted candidate: `GOLF_20260712_099_v93_plus_task298`, ref `54595725`.
 - Public result: `7273.42`, observed delta `+0.05`; online verification passed.
 - Detailed report: `35_DEEP_MODELING_CAMPAIGN_20260712.md`.
+
+## 2026-07-12 Local-Only High-Yield Continuation
+
+The current instruction explicitly excluded parent packages, kernels, and
+submissions. Work therefore focused only on official local task cost.
+
+- accepted local replacements: 8
+- full-validation failures among accepted artifacts: 0
+- combined expected local points gain: `+3.107248641435721`
+- largest result: task193 `910 -> 170`, `266/266`, `+1.677646`
+- second: task372 `710 -> 360`, `266/266`, `+0.679161`
+- third: task230 `900 -> 460`, `266/266`, `+0.671168`
+- no parent rebase performed
+- no kernel built
+- no Kaggle submission performed
+
+All eight artifacts were rescored together with the official local utility and
+passed every public train/test/arc-gen example. Full details and rejected
+hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.

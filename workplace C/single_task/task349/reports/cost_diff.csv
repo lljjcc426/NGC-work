@@ -1,2 +1,3 @@
 task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
-task349,five_channel_width11_detector,14892,14887,-5,267,267,true,true,workplace C/single_task/task349/onnx/task349_candidate.onnx
+task349,width29_height29_halo_support,14892,14647,-245,267,267,true,true,workplace C/single_task/task349/onnx/task349_candidate.onnx
+task349,width29_height29_halo_support_vs_k11,14887,14647,-240,267,267,true,true,workplace C/single_task/task349/onnx/task349_candidate.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task069,compact_pad_plus_conv_crop,2946,2916,-30,17.011796402977424,17.02203190687145,0.01023550389402672,264,264,true,true,E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_compact_pad_axes_conv_crop.onnx

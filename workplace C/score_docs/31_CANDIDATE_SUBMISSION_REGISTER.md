@@ -36,3 +36,19 @@ Newest accepted replacement:
 
 The candidate remains local. Kernel construction is deferred until Kaggle
 quota is near the previously specified five-percent reserve threshold.
+
+## 2026-07-12 Local Replacements Only
+
+Per the current instruction, these are independent local artifacts only. They
+have not been rebased, packaged, or submitted.
+
+| task | old cost | new cost | delta points | validation | artifact |
+| --- | ---: | ---: | ---: | ---: | --- |
+| task193 | 910 | 170 | +1.677646 | 266/266 | `workplace C/single_task/task193/onnx/task193_candidate.onnx` |
+| task230 | 900 | 460 | +0.671168 | 266/266 | `workplace C/single_task/task230/onnx/task230_candidate.onnx` |
+| task372 | 710 | 360 | +0.679161 | 266/266 | `workplace C/single_task/task372/onnx/task372_candidate.onnx` |
+| task349 | 14892 | 14647 | +0.016589 | 267/267 | `workplace C/single_task/task349/onnx/task349_candidate.onnx` |
+| task335 | 1380 | 1324 | +0.041426 | 266/266 | `workplace C/single_task/task335/onnx/task335_exact_rank4_template.onnx` |
+| task286 | 26909 | 26879 | +0.001115 | 265/265 | `workplace C/single_task/task286/onnx/task286_conv_support_crop.onnx` |
+| task069 | 2946 | 2916 | +0.010236 | 264/264 | `workplace C/single_task/task069/onnx/task069_compact_pad_axes_conv_crop.onnx` |
+| task201 | 3043 | 3013 | +0.009908 | 266/266 | `workplace C/single_task/task201/onnx/task201_compact_pad_axes_conv_crop.onnx` |

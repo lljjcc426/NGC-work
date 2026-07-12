@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import gc
 import hashlib
 import importlib.util
 import json
@@ -247,6 +248,11 @@ def score_onnx(task: str, onnx_path: Path, validate_all: bool = True, max_exampl
                         break
             trace = session.end_profiling()
             memory, params = utils.score_network(sanitized, trace)
+            # ORT can retain the profiling JSON handle on Windows until the
+            # session is finalized, which makes TemporaryDirectory cleanup
+            # fail even after end_profiling() returned successfully.
+            del session
+            gc.collect()
         if memory is not None and params is not None:
             cost = int(memory + params)
         ok = checked > 0 and failed == 0 and cost is not None

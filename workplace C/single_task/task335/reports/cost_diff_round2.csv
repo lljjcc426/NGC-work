@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task335,exact_rank4_template,1380,1324,-56,17.77016122184875,17.811587263503046,0.04142604165429731,266,266,true,true,E:\kongming\NGC-work\workplace C\single_task\task335\onnx\task335_exact_rank4_template.onnx

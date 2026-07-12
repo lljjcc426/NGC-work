@@ -162,3 +162,19 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task237 | task237_20260711_float32_fraction_path_v2 | task237_float32_fraction_path_v2 | 1836 | 1836 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task237\onnx\task237_float32_fraction_path.onnx` |
 | task302 | task302_20260711_scalar_quant_params | task302_scalar_quant_params | 1774 | 1774 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task302\onnx\task302_scalar_quant_params.onnx` |
 | task061 | task061_20260711_mul_outer_product | task061_mul_outer_product | 1668 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task061\onnx\task061_mul_outer_product.onnx` |
+
+## 2026-07-12 Local-Only High-Yield Pass
+
+| task | method | old cost | new cost | saved cost | delta points | validation | accepted |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| task193 | 4x4 depthwise hard-margin Conv | 910 | 170 | 740 | +1.677646 | 266/266 | true |
+| task230 | 3x3 group=2 hard-margin Conv | 900 | 460 | 440 | +0.671168 | 266/266 | true |
+| task372 | 7x1 group=2 hard-margin Conv | 710 | 360 | 350 | +0.679161 | 266/266 | true |
+| task349 | 29x29 detector/halo activation crop | 14892 | 14647 | 245 | +0.016589 | 267/267 | true |
+| task335 | exact rank-4 template factor | 1380 | 1324 | 56 | +0.041426 | 266/266 | true |
+| task286 | Conv support crop | 26909 | 26879 | 30 | +0.001115 | 265/265 | true |
+| task069 | compact Pad plus Conv support crop | 2946 | 2916 | 30 | +0.010236 | 264/264 | true |
+| task201 | compact Pad plus Conv support crop | 3043 | 3013 | 30 | +0.009908 | 266/266 | true |
+
+Total local expected points gain: `+3.107248641435721`. No parent package,
+kernel, or Kaggle submission was built in this pass.

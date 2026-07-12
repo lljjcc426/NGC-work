@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task286,conv_support_crop,26909,26879,-30,14.799783917876258,14.800899408435892,0.0011154905596342246,265,265,true,true,E:\kongming\NGC-work\workplace C\single_task\task286\onnx\task286_conv_support_crop.onnx

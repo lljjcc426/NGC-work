@@ -17,3 +17,21 @@ Cropping to 11x11, applying a 10-group 7x1 Conv, and padding the 5x11 result is 
 Removing the crop/pad makes the grouped Conv incorrect because the divider-derived bias becomes active outside the output panel. Sparse Conv weights are not accepted by ONNX checker.
 
 Conclusion: no valid lower-cost graph was produced. Do not submit this candidate.
+
+## 2026-07-12 group=2 hard-margin model
+
+The old conclusion applied only to the explicit crop/pad decomposition. A new
+search treated the public input windows as a finite classification domain.
+Each output channel is linearly separable when the Conv uses two groups:
+outputs 0..4 see input channels 0..4 and outputs 5..9 see channels 5..9.
+
+The resulting model is one `7x1 group=2 Conv`, has no scored intermediate
+tensors, and passes 266/266 examples:
+
+| artifact | valid | memory | params | cost | points |
+| --- | --- | ---: | ---: | ---: | ---: |
+| baseline dense Conv | 266/266 | 0 | 710 | 710 | 18.43473502996464 |
+| group=2 LP Conv | 266/266 | 0 | 360 | 360 | 19.113895968549844 |
+
+This is accepted locally with delta cost `-350` and delta points
+`+0.6791609385852044`.

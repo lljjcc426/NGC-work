@@ -1,2 +1,2 @@
-task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
-task193,depthwise_rule_model,910,82912,82002,266,266,true,false,workplace C/single_task/task193/onnx/task193_candidate.onnx
+task,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_checked,examples_passed,local_valid,accepted,artifact_path,sha256
+task193,910,170,-740,18.186555400489105,19.864201562949738,1.677646162460633,266,266,True,True,E:\kongming\NGC-work\workplace C\single_task\task193\onnx\task193_candidate.onnx,641648fe09e7f7d4de64f891e40baec4113fe64798d985cb167ac4ea03ab3ba1

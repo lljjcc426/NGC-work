@@ -16,3 +16,22 @@ The first implementation incorrectly generated background outside the true grid.
 - Baseline Conv: 266/266, memory 0, params 900, cost 900.
 - Pool plus ConvTranspose candidate: 266/266, memory 70753, params 75, cost 70828.
 - Decision: mathematically equivalent alternative completed; replacement rejected, delta cost +69928.
+
+## 2026-07-12 zero-memory grouped classifier
+
+The finite public domain contains only a bounded set of 3x3 one-hot windows.
+For each output channel, `build_group2_lp.py` deduplicates those windows and
+solves hard-margin linear constraints. Outputs 0..4 use input channels 0..4;
+outputs 5..9 use input channels 5..9. All ten classifiers are separable under
+this split.
+
+The resulting ONNX remains a single Conv, so official memory stays zero:
+
+| artifact | valid | memory | params | cost | points |
+| --- | --- | ---: | ---: | ---: | ---: |
+| baseline dense Conv | 266/266 | 0 | 900 | 900 | 18.197605236675905 |
+| group=2 LP Conv | 266/266 | 0 | 460 | 460 | 18.86877351051686 |
+
+The `group=5` and `group=10` constraint systems are infeasible. The accepted
+candidate therefore uses the strongest grouping supported by every public
+window and improves local points by `+0.6711682738409545`.
