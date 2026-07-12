@@ -1,0 +1,32 @@
+{
+  "input": {
+    "file": "submission (1).zip",
+    "sha256": "FD3F94D7B7B38ACD0151F00A83AE041FA23F5A418CFD6AAA5E0FCF17D9173AB5",
+    "files": 400,
+    "valid_tasks": 400,
+    "local_score": 7276.472340685418,
+    "kaggle_ref": 54604279,
+    "kaggle_score": 7276.61
+  },
+  "overrides": [
+    {"task": 205, "old_cost": 4251, "new_cost": 2691, "gain": 0.457241377631882},
+    {"task": 266, "old_cost": 311, "new_cost": 170, "gain": 0.603994475128971}
+  ],
+  "combined_local_gain": 1.061235852760853,
+  "integrated_local_score": 7277.533576538179,
+  "changed_files": ["task205.onnx", "task266.onnx"],
+  "unchanged_files": 398,
+  "output": {
+    "zip": "submission/submission.zip",
+    "bytes": 450735,
+    "sha256": "663720CD8B022F6541C9AFCE0F0AA477E0ED77CC68E225A775AE5D1EBDC19146"
+  },
+  "submission": {
+    "ref": 54605141,
+    "status": "COMPLETE",
+    "public_score": 7277.67,
+    "base_public_score": 7276.61,
+    "online_gain": 1.06,
+    "online_minus_local": 0.136423461821
+  }
+}

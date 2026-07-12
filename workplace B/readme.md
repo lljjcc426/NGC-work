@@ -259,3 +259,17 @@ B-only gain is about `+1.061236`, crossing the team threshold for an immediate
 online probe. The 400-model package changes only task205 and task266; Kaggle
 submission ref `54604712` completed at `7269.46`, an online gain of `+1.07`
 over the `7268.39` base and a close match to the local `+1.061236` estimate.
+
+## 2026-07-12: B rewrites integrated into team submission (1)
+
+Folder: `20260712_b20_team_integration_v1`
+
+The provided 400-task package was fully audited at `7276.472341` local and
+corresponds to Kaggle ref `54604279` scoring `7276.61`. Its task205 and task266
+were still the old cost-4251 and cost-311 models, so the accepted B v8/v2
+overrides were applied without changing the other 398 hashes.
+
+- Combined local gain: `+1.061236`.
+- Integrated local score: `7277.533577`.
+- Kaggle ref: `54605141`, public score `7277.67` (`COMPLETE`).
+- Online gain over the provided package: `+1.06`.
