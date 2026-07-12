@@ -1,0 +1,21 @@
+{
+  "previous_baseline": {
+    "kaggle_ref": "54605141",
+    "score": 7277.67
+  },
+  "task293_isolated": {
+    "kaggle_ref": "54613658",
+    "score": 7280.93,
+    "online_gain": 3.26,
+    "status": "COMPLETE"
+  },
+  "task293_plus_task056_task104_task205": {
+    "kaggle_ref": "54613833",
+    "score": 7282.01,
+    "online_gain_over_previous_probe": 1.08,
+    "online_gain_over_baseline": 4.34,
+    "status": "COMPLETE",
+    "zip_sha256": "29ADB658AA9160326D1B74F5CDA5042090F228A9F934FDF73A0B2FE091DDCD11"
+  }
+}
+

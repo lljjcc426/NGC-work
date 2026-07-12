@@ -1,0 +1,37 @@
+{
+  "source": "zealous9230/neurogolf7300",
+  "dataset_file_count": 399,
+  "missing_task": "task173",
+  "completed_local_total": 7371.8550696565335,
+  "baseline_online_score": 7277.67,
+  "local_positive_gain_total": 18.44929588096005,
+  "accepted_online_score": 7282.01,
+  "tasks": [
+    {"task": "task293", "old_cost": 1043, "new_cost": 40, "gain": 3.260977, "new_points": 21.311121, "decision": "accepted_online"},
+    {"task": "task350", "old_cost": 9036, "new_cost": 428, "gain": 3.049849, "new_points": 18.940877, "decision": "needs_hidden_safety_audit"},
+    {"task": "task161", "old_cost": 1779, "new_cost": 275, "gain": 1.867036, "new_points": 19.383229, "decision": "next_reverse_engineering_target"},
+    {"task": "task163", "old_cost": 1791, "new_cost": 310, "gain": 1.753957, "new_points": 19.263428, "decision": "next_reverse_engineering_target"},
+    {"task": "task212", "old_cost": 2249, "new_cost": 412, "gain": 1.697218, "new_points": 18.978977, "decision": "next_reverse_engineering_target"},
+    {"task": "task244", "old_cost": 1179, "new_cost": 452, "gain": 0.958740, "decision": "pending"},
+    {"task": "task377", "old_cost": 3967, "new_cost": 1731, "gain": 0.829311, "decision": "pending"},
+    {"task": "task245", "old_cost": 2625, "new_cost": 1297, "gain": 0.705027, "decision": "pending"},
+    {"task": "task104", "old_cost": 238, "new_cost": 118, "gain": 0.701586, "new_points": 20.229315, "decision": "accepted_online"},
+    {"task": "task024", "old_cost": 110, "new_cost": 56, "gain": 0.675129, "decision": "pending"},
+    {"task": "task291", "old_cost": 66, "new_cost": 40, "gain": 0.500775, "decision": "pending"},
+    {"task": "task369", "old_cost": 1393, "new_cost": 872, "gain": 0.468426, "decision": "pending"},
+    {"task": "task368", "old_cost": 2536, "new_cost": 1611, "gain": 0.453733, "decision": "pending"},
+    {"task": "task001", "old_cost": 286, "new_cost": 190, "gain": 0.408968, "decision": "pending"},
+    {"task": "task344", "old_cost": 910, "new_cost": 692, "gain": 0.273859, "decision": "pending"},
+    {"task": "task205", "old_cost": 2691, "new_cost": 2084, "gain": 0.255624, "decision": "accepted_online"},
+    {"task": "task255", "old_cost": 7532, "new_cost": 5976, "gain": 0.231409, "decision": "pending"},
+    {"task": "task056", "old_cost": 34, "new_cost": 30, "gain": 0.125163, "decision": "accepted_online"},
+    {"task": "task313", "old_cost": 188, "new_cost": 174, "gain": 0.077387, "decision": "pending"},
+    {"task": "task143", "old_cost": 837, "new_cost": 776, "gain": 0.075672, "decision": "pending"},
+    {"task": "task285", "old_cost": 19700, "new_cost": 18674, "gain": 0.053486, "decision": "rejected_hidden_unsafe", "reason": "no-Pad shortcut fails fresh ARC-GEN input at Gather index 924"},
+    {"task": "task242", "old_cost": 431, "new_cost": 422, "gain": 0.021103, "decision": "pending"},
+    {"task": "task209", "gain": 0.002887, "decision": "pending_low_value"},
+    {"task": "task101", "gain": 0.001021, "decision": "pending_low_value"},
+    {"task": "task208", "gain": 0.000956, "decision": "pending_low_value"}
+  ]
+}
+

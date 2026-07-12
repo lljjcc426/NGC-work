@@ -297,3 +297,26 @@ This gain is retained for the next aggregate because it is below the `+1.0`
 direct-submit threshold. The same folder records strict negative evidence for
 task395 sparse/legacy attempts and structural audits of tasks083, 261, 001,
 and 360, so those exact failed representations are not repeated.
+
+## 2026-07-12: neurogolf7300+ B-task audit and online integration
+
+Folder: `20260712_b20_zealous7300_audit_v1`
+
+The `zealous9230/neurogolf7300` dataset contains 399 ONNX models, no generator
+code, and omits task173. After filling the missing file only for scoring, its
+local total is `7371.855070`; this is treated as a candidate mine rather than a
+trusted submission because at least task285 contains a known hidden-unsafe
+shortcut.
+
+Four B models have now passed task-level checks and online probes:
+
+- task293: cost `1043 -> 40`, local gain `+3.260977`.
+- task056: cost `34 -> 30`, local gain `+0.125163`.
+- task104: cost `238 -> 118`, local gain `+0.701586`, now `20.229315` points.
+- task205: cost `2691 -> 2084`, local gain `+0.255624`.
+
+Kaggle ref `54613658` proved task293 in isolation at `7280.93` (`+3.26`). Ref
+`54613833` then accepted task056/task104/task205 at `7282.01` (`+1.08`), giving
+a total online improvement of `+4.34` from the `7277.67` baseline. The B group
+now has 11 tasks at or above 20 points. Full comparison, risks, accepted models,
+and the exact submission artifacts are retained in the audit folder.
