@@ -1,0 +1,11 @@
+{
+  "base_kaggle_score": 7277.67,
+  "base_local_score": 7277.533576538179,
+  "b_task_count": 67,
+  "b_tasks_at_or_above_20_before_task104": 9,
+  "b_tasks_below_20_before_task104": 58,
+  "task104_gain": 0.3970968584376493,
+  "candidate_local_score": 7277.930673396617,
+  "candidate_online_estimate": 7278.067096858438,
+  "submission_status": "not submitted; accumulated new gain is below 1.0"
+}

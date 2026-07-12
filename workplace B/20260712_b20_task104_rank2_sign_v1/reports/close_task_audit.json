@@ -1,0 +1,49 @@
+{
+  "scope": "B tasks below 20, processed one task at a time",
+  "accepted": [
+    {
+      "task": 104,
+      "method": "rank-2 indefinite sign factorization",
+      "cost": "238 -> 160",
+      "gain": 0.3970968584376493,
+      "status": "accepted but still 12 cost units above the 20-point boundary"
+    }
+  ],
+  "rejected_or_blocked": [
+    {
+      "task": 395,
+      "baseline_cost": 165,
+      "target_cost": 148,
+      "attempts": [
+        "Move Slice and Pad constants to Constant nodes: valid but cost rises to 333 because constants count as both parameters and activations.",
+        "Two-nonzero sparse offset Conv: theoretical cost 100, rejected by official ONNX full checker because Conv does not accept sparse_tensor(float) as W.",
+        "Legacy Slice attributes: Slice-9 works, but Pad-9 does not support bool and ai.onnx cannot be imported as a separate versioned standard domain."
+      ],
+      "status": "no legal cross-20 representation found"
+    },
+    {
+      "task": 83,
+      "baseline_cost": 210,
+      "finding": "The final zero-activation Einsum uses minimal row rank 3 and column rank 4. Explicit 9x9 construction already exceeds the 148 budget.",
+      "status": "blocked under dense standard-tensor factors"
+    },
+    {
+      "task": 261,
+      "baseline_cost": 200,
+      "finding": "A grouped Conv reduces identity weights but cannot route input channel 8 to output channels 0 and 2. Sparse Conv is rejected by full checker.",
+      "status": "blocked under one-output standard Conv"
+    },
+    {
+      "task": 1,
+      "baseline_cost": 286,
+      "finding": "The previous quantized outer product has order (ab,xy), not required Kronecker order (ax,by). Correcting it with explicit transpose/reshape tensors costs more than the baseline; a one-channel dynamic ConvTranspose cannot express the background OR condition.",
+      "status": "no accepted replacement in this round"
+    },
+    {
+      "task": 360,
+      "baseline_cost": 340,
+      "finding": "The model has zero activation cost and factorizes a fixed four-way spatial fold plus a channel conflict suppressor. Dropping the channel factor is known to fail all 266 examples; explicit fold operators create full-grid activations.",
+      "status": "no accepted replacement in this round"
+    }
+  ]
+}

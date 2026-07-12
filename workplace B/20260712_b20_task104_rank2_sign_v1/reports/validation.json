@@ -1,0 +1,26 @@
+{
+  "task": 104,
+  "baseline": {
+    "cost": 238,
+    "points": 19.527729326328526
+  },
+  "candidate": {
+    "model": "model/task104.onnx",
+    "memory": 16,
+    "params": 144,
+    "cost": 160,
+    "points": 19.924826184766175,
+    "gain": 0.3970968584376493
+  },
+  "official_checks": 7,
+  "legal_orientation_counts": {
+    "top_left": 2,
+    "top_right": 2,
+    "bottom_left": 1,
+    "bottom_right": 2
+  },
+  "threshold_equal": true,
+  "minimum_positive_margin": 5.0,
+  "maximum_nonpositive_value": 0.0,
+  "remaining_cost_to_20": 12
+}

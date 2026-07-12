@@ -273,3 +273,27 @@ overrides were applied without changing the other 398 hashes.
 - Integrated local score: `7277.533577`.
 - Kaggle ref: `54605141`, public score `7277.67` (`COMPLETE`).
 - Online gain over the provided package: `+1.06`.
+
+## 2026-07-12: B-20 task104 rank-2 sign rewrite
+
+Folder: `20260712_b20_task104_rank2_sign_v1`
+
+The current B scoreboard has 67 tasks: 9 are at or above 20 points and 58 are
+still below 20. Work now proceeds one task at a time without public-package
+rescans.
+
+task104 was rewritten from a three-component template Einsum to a rank-2
+indefinite sign factorization derived from the four legal generator
+orientations.
+
+- Cost: `238 -> 160`.
+- Points: `19.527729 -> 19.924826`.
+- Gain: `+0.397097`.
+- Validation: `7/7` official examples, all four legal orientations, minimum
+  positive raw margin `5.0`.
+- Candidate aggregate local score: `7277.930673`.
+
+This gain is retained for the next aggregate because it is below the `+1.0`
+direct-submit threshold. The same folder records strict negative evidence for
+task395 sparse/legacy attempts and structural audits of tasks083, 261, 001,
+and 360, so those exact failed representations are not repeated.
