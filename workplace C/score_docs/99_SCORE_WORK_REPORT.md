@@ -153,3 +153,14 @@ hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.
 - additional expected local gain: `+0.5270889313257321`
 - cumulative current local campaign gain: `+3.965123086040556`
 - detailed report: `38_LOCAL_TASK_PLAN_PROGRESS_20260712.md`
+
+## 2026-07-12 Submission 5 Rebase
+
+- exact parent: `E:/submission (5).zip`, SHA256 `d53db8c5eb5111d065f7fcc241581584da0930a06fa9c15145364bae1c14e47b`
+- parent ref/score: `54606556` / `7277.83`
+- parent-aware accepted overlays: 22 tasks
+- expected gain: `+0.9191029246708331`
+- submission ref: `54608730`
+- public score: `7278.75`
+- observed gain: `+0.92`
+- detailed retrospective: `39_SUBMISSION5_REBASE_RETROSPECTIVE_20260712.md`
