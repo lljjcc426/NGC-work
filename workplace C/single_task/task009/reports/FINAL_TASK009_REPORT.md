@@ -4,13 +4,13 @@ Generated: 2026-07-11
 
 ## Result
 
-- Public validation: `266/266`
+- Public validation: `265/265`
 - Parent cost: `6694`
-- Candidate cost: `6595`
-- Delta cost: `99`
+- Candidate cost: `6585`
+- Delta cost: `109`
 - Parent points: `16.191033118228727`
-- Candidate points: `16.205932934848583`
-- Delta points: `+0.014899816619855955`
+- Candidate points: `16.207450385822618`
+- Delta points: `+0.016417267593890728`
 - Status: local accepted; not submitted
 
 ## Accepted Design
@@ -36,6 +36,10 @@ for uint8 Einsum in the official execution path. It is not usable.
 
 ## Artifact
 
-Local artifact: `workplace C/single_task/task009/onnx/task009_outside_sentinel.onnx`
+Local artifact: `workplace C/single_task/task009/onnx/task009_candidate.onnx`
+
+The latest candidate stacks a compact opset-18 spatial Pad control path on the
+outside-sentinel model. It passes all 265 currently scored examples and saves
+another 10 cost.
 
 The ONNX file is intentionally excluded from GitHub.

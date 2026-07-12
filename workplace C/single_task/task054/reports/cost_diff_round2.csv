@@ -1,0 +1,3 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,local_valid,accepted,artifact_path
+task054,dedup_scalar_lines,25394,26756,1362,14.857731795370263,14.805485973761702,-0.05224582160856173,true,false,workplace C\single_task\task054\onnx\task054_candidate.onnx
+task054,line_then_neighbor_fusion,25394,24795,-599,14.857731795370263,14.881602701076766,0.0238709057065023,false,false,workplace C\single_task\task054\onnx\task054_line_then_neighbor_candidate.onnx

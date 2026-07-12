@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task332,compact_row_code_conv,561,438,-123,18.670279094477305,18.917781089623553,0.24750199514624782,267,267,true,true,workplace C/single_task/task332/onnx/task332_candidate.onnx

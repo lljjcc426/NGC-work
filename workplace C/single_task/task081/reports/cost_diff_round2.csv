@@ -1,0 +1,4 @@
+model,passed,checked,memory,params,cost,delta_vs_baseline,ok,accepted,artifact,notes
+baseline,264,264,392,72,464,0,True,False,E:/kagglegolf/submissions/candidates/GOLF_20260711_097_v96_plus_task132_task046/onnx/task081.onnx,official full validation rerun
+float_conv_rule,264,264,6370,82,6452,5988,True,False,E:/kongming/NGC-work/workplace C/single_task/task081/onnx/task081_float_conv.onnx,exact but more expensive
+direct_7x7_lower_bound,0,264,,490,>490,>26,False,False,,weight parameters alone exceed baseline total cost

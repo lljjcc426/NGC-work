@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task091,compact_pad_axes,2759,2730,-29,17.077376425782713,17.087943111820994,0.010566686038281148,266,266,true,true,E:\kongming\NGC-work\workplace C\single_task\task091\debug\task091_compact_pad_axes.onnx,

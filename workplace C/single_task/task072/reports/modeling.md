@@ -15,3 +15,12 @@ Rows 0-5 and rows 7-12 are two 6x5 binary pictures separated by a color-4 row. T
 - Baseline cost: 421 (memory 390, params 31).
 - Candidate cost: 474 (memory 450, params 24).
 - Decision: rule accepted as an independent model; replacement rejected because cost increased by 53 despite fewer parameters.
+
+## Accepted single-Conv difference
+
+The follow-up model uses one 8x1 float Conv whose only nonzero coefficients
+read channel 2 at row offsets 0 and 7. Negative bottom/right pads make the Conv
+directly output the 6x5 bottom-minus-top plane. Equality with zero then selects
+the color-0 or color-3 one-hot value. This removes one complete float Slice
+activation and passes 268/268 examples. Official cost is 368 versus 421 for the
+baseline, so this candidate is accepted locally.

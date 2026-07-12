@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task009,compact_separator_pads,6595,6585,-10,16.205932934848583,16.207450385822618,0.001517450974034773,265,265,true,true,E:\kongming\NGC-work\workplace C\single_task\task009\debug\task009_compact_separator_pads.onnx,

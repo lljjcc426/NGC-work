@@ -1,0 +1,6 @@
+group,kernel,pad_top,pad_left,conflicting_channels,status
+5,4,1,1,"0 4 7",infeasible
+5,4,2,2,"0 4 7",infeasible
+5,5,2,2,"0 4 7",infeasible
+2,4,1,1,"7",infeasible
+2,4,2,2,"7",infeasible

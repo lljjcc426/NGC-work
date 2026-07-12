@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task237,compact_packed_conv,1836,1716,-120,17.484655428819565,17.552248719952093,0.06759329113252832,266,266,true,true,workplace C/single_task/task237/onnx/task237_candidate.onnx

@@ -1,0 +1,4 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task383,activation_crop_23x24,5800,5642,-158,16.33438680346549,16.36200610843806,0.027619304972567704,257,266,false,false,E:\kongming\NGC-work\workplace C\single_task\task383\debug\task383_activation_crop_23x24.onnx,
+task383,activation_crop_24x23,5800,5640,-160,16.33438680346549,16.362360655507896,0.02797385204240399,264,266,false,false,E:\kongming\NGC-work\workplace C\single_task\task383\debug\task383_activation_crop_24x23.onnx,
+task383,activation_crop_23x22,5800,5286,-514,16.33438680346549,16.427182904835767,0.09279610137027561,242,266,false,false,E:\kongming\NGC-work\workplace C\single_task\task383\debug\task383_activation_crop_23x22.onnx,

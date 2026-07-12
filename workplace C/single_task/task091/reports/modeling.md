@@ -9,4 +9,6 @@ gray-channel row projection. It removes the left-column `ArgMax`, `Squeeze`,
 and cast decoder and uses an independent row `Einsum` plus two `ArgMax` nodes.
 
 All 266 examples pass. The 30-element row projection increases scored memory,
-so the candidate is rejected.
+so that candidate is rejected. A second, exact metadata/control-path rewrite
+compacts dynamic Pad axes and lowers official cost from 2759 to 2730 while
+remaining 266/266; that candidate is accepted locally.

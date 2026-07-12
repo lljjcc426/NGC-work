@@ -37,3 +37,11 @@ A separate opset-18 compact Pad rewrite preserves the five-round baseline:
 - delta points: `+0.00013660269128479285`
 
 This candidate is local accepted and has not been submitted.
+
+## Fused Seed Expansion Probe
+
+A dedicated 5x5 seed-expansion fusion reduced nominal cost from 14642 to
+12882, but passed only 110/266 examples. Separate A-only and B-only fusions
+also failed (157/266 and 161/266). The two seed branches encode distinct
+component boundary conditions and cannot be replaced by the tested shared
+kernel. This route is rejected.

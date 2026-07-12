@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task364,fused_seed_expansion,14642,12882,-1760,15.408350609793413,15.536413732893164,0.12806312309975176,110,266,false,false,E:\kongming\NGC-work\workplace C\single_task\task364\debug\task364_fused_seed_expansion.onnx,

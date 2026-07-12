@@ -10,14 +10,14 @@
 - arc-gen pass: `262/262`
 - total pass: `266/266`
 - ONNX candidate generated: `yes`
-- candidate artifact: `workplace C/single_task/task158/onnx/task158_candidate.onnx`
+- candidate artifact: `workplace C/single_task/task158/onnx/task158_pair3_candidate.onnx`
 - accepted: `yes`
 
 ## Cost
 
 | old_cost | new_cost | delta_cost | old_points | new_points | delta_points |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 28483 | 28023 | 460 | 14.742937302942996 | 14.759219119459042 | 0.01628181651604521 |
+| 28483 | 26250 | 2233 | 14.742937302942996 | 14.82457873198023 | 0.08164142903723359 |
 
 ## Rule
 
@@ -32,7 +32,11 @@ The baseline ONNX was already task-specific. The accepted candidate keeps the so
 - added `stamp_size2` and `stamp_size3` with `8` params total
 - replaced both `Gather` stamp builders with nearest `Resize` from `stamp_w1`
 
-Net official cost reduction: `460`.
+The second accepted rewrite encodes four orientation states in three
+collision-safe channels. A small 1x1 quantized transform reconstructs the
+three signed stamp channels, and all scale-specific pair detectors are reduced
+from four channels to three. Relative to the first accepted candidate this
+reduces official cost from 28023 to 26250 and remains 266/266.
 
 ## Validation Command
 
@@ -42,7 +46,6 @@ python "workplace C\neurogolf-2026-work\scripts\c_cost_diff_runner.py" --task ta
 
 ## Next
 
-1. Build a full 400-file candidate package by copying current best ONNX files and replacing only `task158.onnx`.
-2. Validate package file count equals `400` and missing task count equals `0`.
-3. If submission quota remains and user explicitly confirms, submit the package.
-4. Try the same `Gather expanded stamp -> Resize` rewrite on other motif/stamp tasks, starting with `task286` and `task054`.
+Try sharing the remaining scale-specific pair kernels or folding the 1x1
+orientation transform into the first scale convolution. No submission work is
+part of this local task pass.

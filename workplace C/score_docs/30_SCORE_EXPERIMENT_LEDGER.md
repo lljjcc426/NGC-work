@@ -162,29 +162,32 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task237 | task237_20260711_float32_fraction_path_v2 | task237_float32_fraction_path_v2 | 1836 | 1836 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task237\onnx\task237_float32_fraction_path.onnx` |
 | task302 | task302_20260711_scalar_quant_params | task302_scalar_quant_params | 1774 | 1774 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task302\onnx\task302_scalar_quant_params.onnx` |
 | task061 | task061_20260711_mul_outer_product | task061_mul_outer_product | 1668 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task061\onnx\task061_mul_outer_product.onnx` |
+| task298 | task298_20260712_fused_strip_einsum | task298_fused_strip_einsum | 135 | 129 | 6 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task298\onnx\task298_fused_strip.onnx` |
+| task193 | task193_20260712_depthwise_4x4_lp | public_exact_depthwise_4x4_conv | 910 | 170 | 740 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task193\onnx\task193_candidate.onnx` |
+| task230 | task230_20260712_group2_lp | public_exact_group2_conv | 900 | 460 | 440 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task230\onnx\task230_candidate.onnx` |
+| task372 | task372_20260712_group2_lp | public_exact_group2_conv | 710 | 360 | 350 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task372\onnx\task372_candidate.onnx` |
+| task349 | task349_20260712_width29_height29_halo | width29_height29_halo_support | 14892 | 14647 | 245 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task335 | task335_20260712_exact_rank4_template | exact_integer_rank4_einsum_factor | 1380 | 1324 | 56 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task335\onnx\task335_exact_rank4_template.onnx` |
+| task286 | task286_20260712_conv_support_crop | conv_spatial_support_crop | 26909 | 26879 | 30 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task286\onnx\task286_conv_support_crop.onnx` |
+| task069 | task069_20260712_compact_pad_conv_crop | compact_pad_plus_conv_support_crop | 2946 | 2916 | 30 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_compact_pad_axes_conv_crop.onnx` |
+| task201 | task201_20260712_compact_pad_conv_crop | compact_pad_plus_conv_support_crop | 3043 | 3013 | 30 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task201\onnx\task201_compact_pad_axes_conv_crop.onnx` |
+| task391 | task391_20260712_direct_onehot | direct_onehot_attr_fusion | 159 | 275 | -116 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task391\onnx\task391_direct_onehot.onnx` |
+| task278 | task278_20260712_single_conv_lp | dense_and_grouped_local_conv_feasibility | 4505 |  |  | False | False | `` |
+| task077 | task077_20260712_binary_vertical_threshold | binary_vertical_threshold_fusion | 7655 | 7234 | 421 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task077\onnx\task077_candidate.onnx` |
+| task096 | task096_20260712_compact_projection_conv | compact_19x19_projection_conv | 7678 | 6850 | 828 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task096\onnx\task096_candidate.onnx` |
+| task349 | task349_20260712_collision_safe_three_channel | collision_safe_three_channel_halo | 14647 | 12480 | 2167 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task349\onnx\task349_candidate.onnx` |
+| task332 | task332_20260712_compact_row_code_conv | compact_row_code_conv | 561 | 438 | 123 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task332\onnx\task332_candidate.onnx` |
+| task237 | task237_20260712_compact_packed_conv | compact_packed_conv | 1836 | 1716 | 120 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task237\onnx\task237_candidate.onnx` |
+| task015 | task015_20260712_grouped_window_conflicts | grouped_large_window_feasibility | 900 |  |  | False | False | `` |
+| task054 | task054_20260712T202917 | line_then_neighbor_fusion | 25394 | 24795 | 599 | False | False | `workplace C\single_task\task054\onnx\task054_line_then_neighbor_candidate.onnx` |
+| task054 | task054_20260712T202918 | dedup_scalar_lines | 25394 | 26756 | -1362 | True | False | `workplace C\single_task\task054\onnx\task054_candidate.onnx` |
+| task158 | task158_20260712T202942 | three_channel_pair_stamp | 28023 |  |  | False | False | `workplace C\single_task\task158\onnx\task158_pair3_candidate.onnx` |
+| task158 | task158_20260712T203055 | three_channel_pair_stamp_profiled | 28023 | 26250 | 1773 | True | True | `workplace C\single_task\task158\onnx\task158_pair3_candidate.onnx` |
+| task091 | task091_20260712_compact_pad_axes | compact_pad_axes | 2759 | 2730 | 29 | True | True | `workplace C\single_task\task091\onnx\task091_candidate.onnx` |
+| task009 | task009_20260712_compact_separator_pads | compact_separator_pads | 6595 | 6585 | 10 | True | True | `workplace C\single_task\task009\onnx\task009_candidate.onnx` |
+| task072 | task072_20260712_single_conv_difference | single_conv_difference | 421 | 368 | 53 | True | True | `workplace C\single_task\task072\onnx\task072_candidate.onnx` |
+| task146 | task146_20260712_low_width_checksum | low_width_exact_checksum | 265 | 302 | -37 | True | False | `workplace C\single_task\task146\onnx\task146_candidate.onnx` |
+| task081 | task081_20260712_quantized_hard_margin | one_stage_quantized_hard_margin | 464 |  |  | False | False | `` |
 
-## 2026-07-12 Local-Only High-Yield Pass
-
-| task | method | old cost | new cost | saved cost | delta points | validation | accepted |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| task193 | 4x4 depthwise hard-margin Conv | 910 | 170 | 740 | +1.677646 | 266/266 | true |
-| task230 | 3x3 group=2 hard-margin Conv | 900 | 460 | 440 | +0.671168 | 266/266 | true |
-| task372 | 7x1 group=2 hard-margin Conv | 710 | 360 | 350 | +0.679161 | 266/266 | true |
-| task349 | 29x29 detector/halo activation crop | 14892 | 14647 | 245 | +0.016589 | 267/267 | true |
-| task335 | exact rank-4 template factor | 1380 | 1324 | 56 | +0.041426 | 266/266 | true |
-| task286 | Conv support crop | 26909 | 26879 | 30 | +0.001115 | 265/265 | true |
-| task069 | compact Pad plus Conv support crop | 2946 | 2916 | 30 | +0.010236 | 264/264 | true |
-| task201 | compact Pad plus Conv support crop | 3043 | 3013 | 30 | +0.009908 | 266/266 | true |
-
-Total local expected points gain: `+3.107248641435721`. No parent package,
-kernel, or Kaggle submission was built in this pass.
-
-## 2026-07-12 Continuation
-
-| task | method | old cost | new cost | saved cost | delta points | validation |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| task077 | binary vertical threshold fusion | 7655 | 7234 | 421 | +0.056567 | 266/266 |
-| task096 | compact 19x19 projection Conv | 7678 | 6850 | 828 | +0.114110 | 266/266 |
-| task349 | collision-safe three-channel halo | 14647 | 12480 | 2167 | +0.160108 | 267/267 |
-
-Additional local expected gain: `+0.3307855132791033`.
+The latest accepted group adds `+0.5270889313257321` expected points. The
+cumulative local campaign gain is `+3.965123086040556`.

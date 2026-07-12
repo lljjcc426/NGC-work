@@ -81,3 +81,11 @@ If task054 is revisited, the next concrete route is a larger reorder:
 2. Apply line overlay before local template-neighborhood overlay.
 3. Let the existing local template `ScatterND` restore marker/neighborhood cells.
 4. Only continue if this deletes one full-grid tensor rather than replacing it with another.
+
+## 2026-07-12 Follow-up
+
+Two implementations of that reorder were built and scored. The duplicate-line
+union model was valid on all examples but increased cost to 26756. The
+line-first/neighborhood-restore model reduced nominal cost to 24795 but failed
+full validation. Neither is accepted; the remaining blocker is collision-safe
+duplicate-index aggregation without materializing another full-grid mask.

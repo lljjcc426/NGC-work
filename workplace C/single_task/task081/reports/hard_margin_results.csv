@@ -1,0 +1,10 @@
+kernel,output_color,unique_windows,hard_margin_feasible,direct_weight_params
+3,0,93,False,90
+3,1,93,False,90
+3,8,93,True,90
+5,0,2253,False,250
+5,1,2253,False,250
+5,8,2253,True,250
+7,0,6086,True,490
+7,1,6086,True,490
+7,8,6086,True,490

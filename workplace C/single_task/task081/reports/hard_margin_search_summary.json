@@ -1,0 +1,14 @@
+{
+  "public_examples": 264,
+  "unique_3x3_windows": 93,
+  "baseline_cost": 464,
+  "direct_7x7_weight_lower_bound": 490,
+  "two_channel_search": {
+    "checked": 23700,
+    "best": null
+  },
+  "two_channel_search_seed": 81,
+  "two_channel_scales": 79,
+  "two_channel_trials_per_scale": 300,
+  "accepted": false
+}

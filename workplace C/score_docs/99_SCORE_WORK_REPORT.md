@@ -139,3 +139,17 @@ hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.
   the local expectation from parent score `7273.50`.
 - submission management stopped immediately after that result; subsequent work
   returned to the local task list.
+
+## 2026-07-12 Local Task Plan Progress
+
+- submission-related work remained disabled
+- six additional accepted task-specific rewrites
+- task332: `561 -> 438`, 267/267
+- task237: `1836 -> 1716`, 266/266
+- task091: `2759 -> 2730`, 266/266
+- task009: `6595 -> 6585`, 265/265
+- task158: `28023 -> 26250`, 266/266
+- task072: `421 -> 368`, 268/268
+- additional expected local gain: `+0.5270889313257321`
+- cumulative current local campaign gain: `+3.965123086040556`
+- detailed report: `38_LOCAL_TASK_PLAN_PROGRESS_20260712.md`

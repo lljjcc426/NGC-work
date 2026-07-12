@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task158,three_channel_pair_stamp,28023,26250,-1773,14.759219119459042,14.82457873198023,0.06535961252118838,266,266,true,true,E:\kongming\NGC-work\workplace C\single_task\task158\onnx\task158_pair3_candidate.onnx,

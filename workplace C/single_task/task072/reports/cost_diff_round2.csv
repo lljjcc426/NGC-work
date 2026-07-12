@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task072,single_conv_difference,421,368,-53,18.957367166317617,19.09191706183107,0.13454989551345165,268,268,true,true,E:\kongming\NGC-work\workplace C\single_task\task072\debug\task072_conv_difference.onnx,
