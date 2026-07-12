@@ -234,3 +234,32 @@
   - Kaggle CLI then reported `Successfully submitted to The 2026 NeuroGolf Championship`.
   - Follow-up status queries could not read `C:/Users/cc/.kaggle/access_token` under the current sandbox, so submission ref, completion status, and public score are not yet recorded.
 - Next sequential task: task007.
+
+## 2026-07-12 sequential loop: task007 and task011
+
+- Fast-forwarded to GitHub `origin/main` commit `4d04f5f` and reviewed current B/C/F optimization records before editing E tasks.
+  - Reused the verified principles: output-direct operations avoid intermediate-memory charges; initializer dtype does not change parameter count; exact algebraic rewrites are preferred over added Cast chains; fixed 30x30 output shape is mandatory.
+  - Did not reuse locally valid uint8 TopK paths because the B team recorded Kaggle evaluator errors for that operator path.
+- task007 audit:
+  - Added `e_analyze_task007_sequential_20260712.py` and `e_scan_task007_team_sources_20260712.py`.
+  - Scan output: `e_task007_team_source_scan_20260712.csv`.
+  - Current model is one output-direct Einsum, cost `127`, points `20.155812914`, with zero intermediate memory.
+  - Every tracked team `submission.zip` contained the same unique task007 model SHA256 `ee94f67c01b2af670919d608cdab2bd9611aa816f0d618d81945b3de27e3fabc`.
+  - No replacement was accepted; the loop advanced immediately instead of spending more time on this near-lower-bound graph.
+- Accepted task011 affine-count rewrite:
+  - Analysis: `e_analyze_task011_sequential_20260712.py`.
+  - Script: `e_optimize_task011_affine_counts_20260712.py`.
+  - Model: `optimized_onnx/task011_affine_counts_20260712/task011.onnx`.
+  - Model SHA256: `d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134`.
+  - Folded both `Sub(..., [12,12,12,-1])` operations into affine channel weights in the two source Einsums, and flipped the separator mapping signs so separator rows and columns remain positive.
+  - Removed two Sub nodes, initializer `subv`, and stale value_info for the deleted tensors.
+  - Full validation: train `4/4`, test `1/1`, ARC-GEN `262/262` (`267/267`).
+  - Cost: `318 -> 282` (`-36`).
+  - Points: `19.237948617 -> 19.358092929` (`+0.120144312`).
+- Built cumulative full package preserving task003 and adding task011:
+  - `F:/kaggle/neurogolf-2026/submissions/submission_team_high_e_seq_task003_task011_20260712.zip`.
+  - SHA256: `580724449a68479b44c90a31ed04dfd0cdde86457271259323850f2ccbf9242f`.
+  - Exact 400-task inventory, ZIP CRC, task011 override hash, and all `67/67` E task scores passed.
+- Kaggle CLI reported successful submission using `staging_e_task011_20260712/submission.zip`.
+  - Follow-up status query remained blocked by sandbox read permission on `C:/Users/cc/.kaggle/access_token`; ref and public score are not recorded yet.
+- Next sequential task: task012.

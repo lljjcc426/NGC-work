@@ -10,13 +10,29 @@
       "delta_points": 0.084218079,
       "validation": "265/265",
       "model_sha256": "4394bab28a9345e184cc55d896067714310c15c37c444e5430f2400bb67d658c"
+    },
+    {
+      "task": "task011",
+      "base_cost": 318,
+      "candidate_cost": 282,
+      "delta_points": 0.120144312,
+      "validation": "267/267",
+      "model_sha256": "d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134"
     }
   ],
-  "next_task": "task007",
+  "audited_without_improvement": [
+    {
+      "task": "task007",
+      "cost": 127,
+      "points": 20.155812914,
+      "reason": "single output-direct Einsum with zero intermediate memory; all tracked team packages contain the same task007 model SHA"
+    }
+  ],
+  "next_task": "task012",
   "submission": {
     "submitted": true,
-    "package_sha256": "23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60",
-    "description": "E sequential task003 260 to 239 local +0.084218 base ca5ed65c out 23117163",
+    "package_sha256": "580724449a68479b44c90a31ed04dfd0cdde86457271259323850f2ccbf9242f",
+    "description": "E seq task011 318 to 282 local +0.120144 parent 23117163 out 58072444",
     "result_query": "blocked by local Kaggle access_token read permission; ref and public score not yet recorded"
   }
 }

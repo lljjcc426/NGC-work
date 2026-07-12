@@ -1,0 +1,2 @@
+task,method,base_memory,base_params,base_cost,candidate_memory,candidate_params,candidate_cost,delta_cost,base_points,candidate_points,delta_points,train,test,arc_gen,verified_all,removed_nodes,removed_initializers,model_sha256
+task011,fold_sub_offsets_into_affine_channel_counts,64,254,318,32,250,282,36,19.237948617,19.358092929,0.120144312,4/4,1/1,262/262,True,2,subv,d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134
