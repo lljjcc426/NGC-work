@@ -177,9 +177,9 @@ def main() -> int:
         "lowest_cost": None if lowest is None else lowest["cost"],
         "lowest_points": None if lowest is None else lowest["points"],
         "loop_rule": (
-            "Rank E tasks by practical score ROI: meaningful expected point gain divided by "
-            "implementation and full-validation time. Optimize the best verified opportunity, "
-            "update the scoreboard, then rescan and continue."
+            "Process E-owned tasks in ascending task number, one task at a time. "
+            "After a verified improvement, update the package and scoreboard, then continue "
+            "to the next assigned task without opportunity ranking."
         ),
     }
     args.json.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

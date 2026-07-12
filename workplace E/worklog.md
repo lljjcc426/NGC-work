@@ -207,3 +207,30 @@
   - Exact 400-task inventory, ZIP CRC, and both override hashes passed.
 - Recomputed scoreboard: `e_scoreboard_roi_task085_20260711.csv` and `e_scoreboard_roi_task085_summary_20260711.json`; all `67/67` E tasks scored successfully.
 - Cleanup: deleted generated `F:/kaggle/NGC-work/workplace E/__pycache__/`; no ONNX, CSV, JSON, ZIP manifest, script, or experiment result was deleted.
+
+## 2026-07-12 sequential loop: task003
+
+- Changed the loop to fixed ascending E task order to remove task-selection overhead.
+- User-supplied baseline: `F:/kaggle/submission (1).zip`.
+  - SHA256: `ca5ed65c12ab15a7194f7b00d6cc83722dcc6f65b8cc1d11ae7b5d6fab16a9eb`.
+  - The user explicitly requested direct analysis without rechecking whether it matches the live team-high submission.
+- Added read-only graph/example inspection script: `e_analyze_task003_sequential_20260712.py`.
+- Accepted task003 rewrite:
+  - Script: `e_optimize_task003_qlinear_output_20260712.py`.
+  - Model: `optimized_onnx/task003_qlinear_output_20260712/task003.onnx`.
+  - Model SHA256: `4394bab28a9345e184cc55d896067714310c15c37c444e5430f2400bb67d658c`.
+  - Replaced BitwiseXor plus Concat with one QLinearConv over the valid 9x3 area; retained the final ConvInteger so padding remains zero.
+  - Full validation: train `3/3`, test `1/1`, ARC-GEN `261/261` (`265/265`).
+  - Cost: `260 -> 239` (`-21`).
+  - Points: `19.439318369 -> 19.523536448` (`+0.084218079`).
+- Rejected probe retained in the script history but not as a model: direct padded QLinearConv cost `181` but failed `0/265` because its bias colored the padding area.
+- Built full package from the user baseline:
+  - `F:/kaggle/neurogolf-2026/submissions/submission_team_high_e_task003_qlinear_20260712.zip`.
+  - SHA256: `23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60`.
+  - Exact 400-task inventory, ZIP CRC, and task003 override hash passed.
+- Kaggle submission:
+  - The first upload used a noncanonical archive filename and returned HTTP 400; no submission was created.
+  - Copied the same package bytes to `F:/kaggle/neurogolf-2026/submissions/staging_e_task003_20260712/submission.zip`; SHA256 remained `23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60`.
+  - Kaggle CLI then reported `Successfully submitted to The 2026 NeuroGolf Championship`.
+  - Follow-up status queries could not read `C:/Users/cc/.kaggle/access_token` under the current sandbox, so submission ref, completion status, and public score are not yet recorded.
+- Next sequential task: task007.

@@ -1,0 +1,22 @@
+{
+  "policy": "Process E-owned tasks in ascending task number, one task at a time, without opportunity ranking.",
+  "base_zip": "F:\\kaggle\\submission (1).zip",
+  "base_sha256": "ca5ed65c12ab15a7194f7b00d6cc83722dcc6f65b8cc1d11ae7b5d6fab16a9eb",
+  "completed": [
+    {
+      "task": "task003",
+      "base_cost": 260,
+      "candidate_cost": 239,
+      "delta_points": 0.084218079,
+      "validation": "265/265",
+      "model_sha256": "4394bab28a9345e184cc55d896067714310c15c37c444e5430f2400bb67d658c"
+    }
+  ],
+  "next_task": "task007",
+  "submission": {
+    "submitted": true,
+    "package_sha256": "23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60",
+    "description": "E sequential task003 260 to 239 local +0.084218 base ca5ed65c out 23117163",
+    "result_query": "blocked by local Kaggle access_token read permission; ref and public score not yet recorded"
+  }
+}

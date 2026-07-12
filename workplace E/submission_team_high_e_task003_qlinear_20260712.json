@@ -1,0 +1,17 @@
+{
+  "base": "F:\\kaggle\\submission (1).zip",
+  "base_sha256": "ca5ed65c12ab15a7194f7b00d6cc83722dcc6f65b8cc1d11ae7b5d6fab16a9eb",
+  "output": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_team_high_e_task003_qlinear_20260712.zip",
+  "output_sha256": "23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60",
+  "output_bytes": 451359,
+  "zip_entries": 400,
+  "zip_test": null,
+  "overrides": [
+    {
+      "task": "task003.onnx",
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task003_qlinear_output_20260712\\task003.onnx",
+      "sha256": "4394bab28a9345e184cc55d896067714310c15c37c444e5430f2400bb67d658c",
+      "bytes": 1442
+    }
+  ]
+}

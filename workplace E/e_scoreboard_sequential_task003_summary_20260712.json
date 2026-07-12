@@ -1,0 +1,13 @@
+{
+  "submission_zip": "F:\\kaggle\\neurogolf-2026\\submissions\\submission_team_high_e_task003_qlinear_20260712.zip",
+  "submission_sha256": "23117163ed67a1677abb3e91932aa62e0c9c06b44ca7127104a8ca622a6fbb60",
+  "scoreboard_csv": "F:\\kaggle\\NGC-work\\workplace E\\e_scoreboard_sequential_task003_20260712.csv",
+  "task_count": 67,
+  "scored_ok": 67,
+  "above_20_count": 8,
+  "target_20_cost": 148,
+  "lowest_task": "task233",
+  "lowest_cost": 30384,
+  "lowest_points": "14.678328567",
+  "loop_rule": "Process E-owned tasks in ascending task number, one task at a time. After a verified improvement, update the package and scoreboard, then continue to the next assigned task without opportunity ranking."
+}

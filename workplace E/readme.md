@@ -17,3 +17,9 @@ Current loop status (2026-07-11):
 - Latest accepted ROI target: task085, cost `2845 -> 2597`, points `17.046681653 -> 17.137887788` (`+0.091206135`), full validation `265/265`.
 - Lowest E task remains task233 at cost `30384`, but it is no longer automatically the next target.
 - Do not submit until the exact v90 package is available for grafting and hash/provenance checks.
+
+Sequential loop status (2026-07-12):
+- New baseline supplied by the user: `F:/kaggle/submission (1).zip`, SHA256 `ca5ed65c12ab15a7194f7b00d6cc83722dcc6f65b8cc1d11ae7b5d6fab16a9eb`.
+- Selection rule changed to fixed ascending E task order; no opportunity-ranking pass is performed.
+- Completed task003: cost `260 -> 239`, points `19.439318369 -> 19.523536448` (`+0.084218079`), full validation `265/265`.
+- Next task: task007.

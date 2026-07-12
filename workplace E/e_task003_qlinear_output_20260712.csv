@@ -1,0 +1,2 @@
+task,method,base_memory,base_params,base_cost,candidate_memory,candidate_params,candidate_cost,delta_cost,base_points,candidate_points,delta_points,train,test,arc_gen,verified_all,removed_nodes,removed_initializers,model_sha256
+task003,qlinear_fuses_inverse_and_concat,227,33,260,200,39,239,21,19.439318369,19.523536448,0.084218079,3/3,1/1,261/261,True,1,one_u8,4394bab28a9345e184cc55d896067714310c15c37c444e5430f2400bb67d658c
