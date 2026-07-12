@@ -42,3 +42,17 @@ Cost 170 consists of 60 bytes of float intermediate memory and 110 parameters.
 Crossing 20 requires cost 148 or lower. The remaining target is therefore a
 22-element reduction in the final dense `10 x 1 x 3 x 3` route and bias without
 creating another scored intermediate tensor.
+
+The follow-up cross-20 search tested four smaller one-feature architectures with
+estimated costs from 113 to 145. Exact linear programming rejected all 32
+binary codes, 20,024 integer state codes, and 1,944 dilation/alignment layouts.
+Continuous ReLU searches converged to fixed boundary-conflict sets across many
+random starts. See `reports/cross20_structure_search.json`. Do not spend more
+training time on a one-feature `2 x 2` bottleneck; the remaining solution must
+change the output representation or exploit a different operator family.
+
+The same pass tested a rank-3 output-direct decomposition for `task313`. It
+would have cost 135 and crossed 20, but both random and SVD-initialized searches
+retained thousands of sign errors. The fourth basis is required to represent
+the generator's simultaneous period-2 and period-3 phases. Details are in
+`reports/task313_rank3_search.json`.

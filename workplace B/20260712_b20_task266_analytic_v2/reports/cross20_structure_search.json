@@ -1,0 +1,32 @@
+{
+  "task": 266,
+  "target_cost": 148,
+  "current_cost": 170,
+  "searches": [
+    {
+      "structure": "2x2 Conv -> 2x2 dilated Conv",
+      "estimated_cost": 141,
+      "result": "not linearly separable",
+      "evidence": "40 random starts converged to the same 155 sign conflicts"
+    },
+    {
+      "structure": "2x2 Conv -> 2x2 ConvTranspose",
+      "estimated_cost": 113,
+      "result": "not linearly separable",
+      "evidence": "80-start search retained 64 sign conflicts"
+    },
+    {
+      "structure": "2x2 Conv -> ReLU -> 2x2 ConvTranspose",
+      "estimated_cost": 145,
+      "result": "not separable with one shared feature",
+      "evidence": "multi-start optimization retained 76 sign conflicts"
+    },
+    {
+      "structure": "five-state uint8 code -> QLinearConv",
+      "estimated_cost": 134,
+      "result": "not linearly separable",
+      "evidence": "20024 integer state codes and 1944 dilation/alignment layouts rejected by exact LP"
+    }
+  ],
+  "conclusion": "The current cost-170 analytic model remains the accepted task266 result. Further work must change the output representation rather than train another one-feature 2x2 bottleneck."
+}

@@ -220,3 +220,10 @@ The rewrite replaces two learned convolutions and a ReLU with a one-channel
 marker encoding followed by one analytic linear classifier. The failed task001
 quantized outer-product experiment is retained in the folder as negative
 evidence, so its incorrect flatten ordering is not retried.
+
+Cross-20 follow-up: four task266 architectures with theoretical costs between
+113 and 145 were rejected by exact state-code enumeration or fixed sign
+conflicts. A task313 rank-3 Einsum candidate (cost 135) was also rejected because
+the fourth coordinate basis is required by the generator's joint period-2 and
+period-3 phase. These negative results are recorded under
+`20260712_b20_task266_analytic_v2/reports/`.

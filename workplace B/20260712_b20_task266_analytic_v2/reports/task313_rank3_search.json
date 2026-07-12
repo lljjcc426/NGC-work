@@ -1,0 +1,20 @@
+{
+  "task": 313,
+  "arc_gen_id": "caa06a1f",
+  "baseline_cost": 188,
+  "baseline_points": 19.763611,
+  "candidate": {
+    "coordinate_rank": 3,
+    "parameter_cost": 135,
+    "theoretical_points": 20.09483
+  },
+  "result": "rejected",
+  "random_initialization": "best runs retained thousands of sign errors",
+  "svd_initialization": {
+    "initial_sign_errors": 32028,
+    "best_observed_sign_errors": 13159,
+    "minimum_margin": -115.1532
+  },
+  "reason": "The fourth coordinate basis independently carries the combined period-2 row phase and period-3 column phase. It is not a numerically redundant rank component.",
+  "next_rule": "Do not retry rank-3 coordinate distillation. A lower-cost task313 model needs a different operator representation of modulo-6 phase."
+}
