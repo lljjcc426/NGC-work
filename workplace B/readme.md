@@ -257,4 +257,5 @@ recommended override is
 Combined with the accepted task266 analytic rewrite (`+0.603994`), the two-task
 B-only gain is about `+1.061236`, crossing the team threshold for an immediate
 online probe. The 400-model package changes only task205 and task266; Kaggle
-submission ref `54604712` was accepted and initially entered `PENDING` state.
+submission ref `54604712` completed at `7269.46`, an online gain of `+1.07`
+over the `7268.39` base and a close match to the local `+1.061236` estimate.

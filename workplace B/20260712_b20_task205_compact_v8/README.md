@@ -39,4 +39,5 @@ team rule of `+1.0`; the two overrides were submitted as one B-only aggregate.
 - Changed tasks: task205 and task266 only; the other 398 hashes match the base.
 - Combined local gain: `+1.061236`.
 - Kaggle submission ref: `54604712`.
-- Initial status: `PENDING`.
+- Kaggle public score: `7269.46` (`COMPLETE`).
+- Online gain over the `7268.39` base: `+1.07`.
