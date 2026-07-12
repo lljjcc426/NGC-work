@@ -154,3 +154,11 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task388 | task388_20260711_compact_pad_axes | task388_compact_pad_axes | 1827 | 1822 | 5 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task388\onnx\task388_compact_pad_axes.onnx` |
 | task069 | task069_20260711_compact_pad_axes | task069_compact_pad_axes | 2948 | 2946 | 2 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_compact_pad_axes.onnx` |
 | task224 | task224_20260711_compact_pad_axes | task224_compact_pad_axes | 1886 | 1876 | 10 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task224\onnx\task224_compact_pad_axes.onnx` |
+| task225 | task225_20260711_compact_pad_axes | task225_compact_pad_axes | 1031 | 1031 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task225\onnx\task225_compact_pad_axes.onnx` |
+| task132 | task132_20260711_compact_pad_axes | task132_compact_pad_axes | 3652 | 3651 | 1 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task132\onnx\task132_compact_pad_axes.onnx` |
+| task046 | task046_20260711_conv_crop_collapse | task046_conv_crop_collapse | 2079 | 2069 | 10 | True | True | `E:\kongming\NGC-work\workplace C\single_task\task046\onnx\task046_conv_crop_collapse.onnx` |
+| task284 | task284_20260711_cast_reuse | task284_cast_reuse | 3085 | 3085 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task284\onnx\task284_cast_reuse.onnx` |
+| task237 | task237_20260711_float32_fraction_path | task237_float32_fraction_path | 1836 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task237\onnx\task237_float32_fraction_path.onnx` |
+| task237 | task237_20260711_float32_fraction_path_v2 | task237_float32_fraction_path_v2 | 1836 | 1836 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task237\onnx\task237_float32_fraction_path.onnx` |
+| task302 | task302_20260711_scalar_quant_params | task302_scalar_quant_params | 1774 | 1774 | 0 | True | False | `E:\kongming\NGC-work\workplace C\single_task\task302\onnx\task302_scalar_quant_params.onnx` |
+| task061 | task061_20260711_mul_outer_product | task061_mul_outer_product | 1668 |  |  | False | False | `E:\kongming\NGC-work\workplace C\single_task\task061\onnx\task061_mul_outer_product.onnx` |

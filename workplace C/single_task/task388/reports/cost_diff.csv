@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task388,dynamic_slice_tile,1822,,,,266,266,true,false,workplace C/single_task/task388/onnx/task388_dynamic_tile.onnx

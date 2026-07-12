@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task356,bidirectional_axis_scans,1319,5632,4313,266,266,true,false,workplace C/single_task/task356/onnx/task356_bidirectional_spans.onnx

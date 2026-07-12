@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task378,broadcast_coordinate_moments,3089,75149,72060,16.96439730708142,13.772771911627308,-3.1916253954541123,267,267,true,false,E:\kongming\NGC-work\workplace C\single_task\task378\onnx\task378_broadcast_coordinate_moments.onnx

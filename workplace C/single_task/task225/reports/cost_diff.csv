@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task225,einsum_source_color_decode,1031,1031,0,265,265,true,false,workplace C/single_task/task225/onnx/task225_einsum_source.onnx

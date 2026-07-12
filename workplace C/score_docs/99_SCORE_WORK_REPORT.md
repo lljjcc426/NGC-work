@@ -96,3 +96,14 @@ Checkpoint commit created and pushed to `origin/main`:
 - pushed: yes, `5d65954..c62c95f main -> main`
 
 The accepted ONNX artifact remains local and ignored by `.gitignore`; lightweight scripts, reports, debug examples, and score docs were committed.
+
+## 2026-07-12 Deep Modeling Completion
+
+- Strict C-task individual modeling status: `67/67` complete.
+- The final ten tasks were rebuilt with independent rule-level graph structures and validated on every public train/test/arc-gen example.
+- All final-ten structures were semantically correct but cost-negative, so none were merged.
+- Campaign accepted improvement: task298 `135 -> 129`, `267/267`, expected points delta `+0.045462`.
+- Exact rebase parent: user upload SHA256 `d3284267c02846dde8571890d4c761dcf9592fce2ec190c3348a0dee1c13c44f`, matching team-best v93 score `7273.37`.
+- Submitted candidate: `GOLF_20260712_099_v93_plus_task298`, ref `54595725`.
+- Public result: `7273.42`, observed delta `+0.05`; online verification passed.
+- Detailed report: `35_DEEP_MODELING_CAMPAIGN_20260712.md`.

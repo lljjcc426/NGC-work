@@ -1,9 +1,9 @@
 # C Individual Model Status
 
 - total: 67
-- accepted: 17
-- attempted without accepted gain: 10
-- unattempted: 40
+- accepted: 19
+- attempted without accepted gain: 28
+- unattempted: 20
 
 A task counts as attempted only when it has a task-specific script/report or a non-generic experiment ledger entry. Artifact scans and generic optimizer runs do not count.
 
@@ -22,22 +22,22 @@ A task counts as attempted only when it has a task-specific script/report or a n
 | task278 | P1_16_16p7 | 5010 | attempted_no_gain | 1 | 1 | 1 |  |
 | task165 | P1_16_16p7 | 4814 | accepted | 1 | 1 | 1 | 4528 |
 | task378 | P1_16_16p7 | 4426 | accepted | 1 | 1 | 1 | 3087 |
-| task132 | P1_16_16p7 | 4089 | unattempted | 0 | 0 | 0 |  |
-| task069 | P2_16p7_17p5 | 3905 | accepted | 1 | 1 | 0 | 2946 |
-| task284 | P2_16p7_17p5 | 3608 | unattempted | 0 | 0 | 0 |  |
-| task201 | P2_16p7_17p5 | 3349 | accepted | 1 | 1 | 0 | 3043 |
-| task335 | P2_16p7_17p5 | 3133 | unattempted | 0 | 0 | 0 |  |
+| task132 | P1_16_16p7 | 4089 | accepted | 1 | 1 | 1 | 3651 |
+| task069 | P2_16p7_17p5 | 3905 | accepted | 1 | 1 | 1 | 2946 |
+| task284 | P2_16p7_17p5 | 3608 | attempted_no_gain | 1 | 1 | 1 | 3085 |
+| task201 | P2_16p7_17p5 | 3349 | accepted | 1 | 1 | 1 | 3043 |
+| task335 | P2_16p7_17p5 | 3133 | attempted_no_gain | 0 | 1 | 1 |  |
 | task091 | P2_16p7_17p5 | 3013 | unattempted | 0 | 0 | 0 |  |
-| task224 | P2_16p7_17p5 | 2829 | accepted | 1 | 1 | 0 | 1876 |
+| task224 | P2_16p7_17p5 | 2829 | accepted | 1 | 1 | 1 | 1876 |
 | task094 | P2_16p7_17p5 | 2703 | accepted | 1 | 1 | 1 | 2671 |
 | task190 | P2_16p7_17p5 | 2525 | accepted | 1 | 1 | 1 | 2425 |
-| task046 | P2_16p7_17p5 | 2279 | unattempted | 0 | 0 | 0 |  |
-| task388 | P2_16p7_17p5 | 2190 | accepted | 1 | 1 | 0 | 1822 |
+| task046 | P2_16p7_17p5 | 2279 | accepted | 1 | 1 | 1 | 2069 |
+| task388 | P2_16p7_17p5 | 2190 | accepted | 1 | 1 | 1 | 1822 |
 | task381 | P2_16p7_17p5 | 2064 | accepted | 1 | 1 | 1 | 1750 |
 | task392 | P2_16p7_17p5 | 1941 | accepted | 1 | 1 | 1 | 1703 |
-| task237 | P2_16p7_17p5 | 1836 | unattempted | 0 | 0 | 0 |  |
-| task302 | P3_ge17p5 | 1774 | unattempted | 0 | 0 | 0 |  |
-| task061 | P3_ge17p5 | 1668 | unattempted | 0 | 0 | 0 |  |
+| task237 | P2_16p7_17p5 | 1836 | attempted_no_gain | 2 | 1 | 1 | 1836 |
+| task302 | P3_ge17p5 | 1774 | attempted_no_gain | 1 | 1 | 1 | 1774 |
+| task061 | P3_ge17p5 | 1668 | attempted_no_gain | 1 | 1 | 1 |  |
 | task159 | P3_ge17p5 | 1568 | unattempted | 0 | 0 | 0 |  |
 | task075 | P3_ge17p5 | 1487 | unattempted | 0 | 0 | 0 |  |
 | task304 | P3_ge17p5 | 1441 | unattempted | 0 | 0 | 0 |  |
@@ -45,11 +45,11 @@ A task counts as attempted only when it has a task-specific script/report or a n
 | task356 | P3_ge17p5 | 1319 | attempted_no_gain | 0 | 1 | 0 |  |
 | task351 | P3_ge17p5 | 1229 | unattempted | 0 | 0 | 0 |  |
 | task301 | P3_ge17p5 | 1141 | unattempted | 0 | 0 | 0 |  |
-| task225 | P3_ge17p5 | 1031 | unattempted | 0 | 0 | 0 |  |
+| task225 | P3_ge17p5 | 1031 | attempted_no_gain | 1 | 1 | 1 | 1031 |
 | task194 | P3_ge17p5 | 949 | unattempted | 0 | 0 | 0 |  |
 | task193 | P3_ge17p5 | 910 | attempted_no_gain | 1 | 1 | 3 | 82912 |
 | task015 | P3_ge17p5 | 900 | attempted_no_gain | 1 | 0 | 0 |  |
-| task230 | P3_ge17p5 | 900 | unattempted | 0 | 0 | 0 |  |
+| task230 | P3_ge17p5 | 900 | attempted_no_gain | 0 | 1 | 1 |  |
 | task221 | P3_ge17p5 | 805 | unattempted | 0 | 0 | 0 |  |
 | task178 | P3_ge17p5 | 762 | unattempted | 0 | 0 | 0 |  |
 | task372 | P3_ge17p5 | 710 | attempted_no_gain | 1 | 2 | 3 | 7135 |
@@ -60,19 +60,19 @@ A task counts as attempted only when it has a task-specific script/report or a n
 | task072 | P3_ge17p5 | 421 | unattempted | 0 | 0 | 0 |  |
 | task203 | P3_ge17p5 | 355 | unattempted | 0 | 0 | 0 |  |
 | task121 | P3_ge17p5 | 326 | unattempted | 0 | 0 | 0 |  |
-| task108 | P3_ge17p5 | 300 | unattempted | 0 | 0 | 0 |  |
+| task108 | P3_ge17p5 | 300 | attempted_no_gain | 0 | 1 | 1 |  |
 | task146 | P3_ge17p5 | 267 | unattempted | 0 | 0 | 0 |  |
-| task315 | P3_ge17p5 | 230 | unattempted | 0 | 0 | 0 |  |
-| task180 | P3_ge17p5 | 210 | unattempted | 0 | 0 | 0 |  |
+| task315 | P3_ge17p5 | 230 | attempted_no_gain | 0 | 1 | 1 |  |
+| task180 | P3_ge17p5 | 210 | attempted_no_gain | 0 | 1 | 1 |  |
 | task052 | P3_ge17p5 | 194 | unattempted | 0 | 0 | 0 |  |
-| task252 | P3_ge17p5 | 180 | unattempted | 0 | 0 | 0 |  |
+| task252 | P3_ge17p5 | 180 | attempted_no_gain | 0 | 1 | 1 |  |
 | task391 | P3_ge17p5 | 159 | attempted_no_gain | 1 | 0 | 0 |  |
 | task347 | P3_ge17p5 | 143 | unattempted | 0 | 0 | 0 |  |
 | task298 | P3_ge17p5 | 135 | unattempted | 0 | 0 | 0 |  |
-| task144 | P3_ge17p5 | 104 | unattempted | 0 | 0 | 0 |  |
-| task142 | P3_ge17p5 | 90 | unattempted | 0 | 0 | 0 |  |
-| task373 | P3_ge17p5 | 60 | unattempted | 0 | 0 | 0 |  |
-| task113 | P3_ge17p5 | 30 | unattempted | 0 | 0 | 0 |  |
-| task311 | P3_ge17p5 | 30 | unattempted | 0 | 0 | 0 |  |
-| task276 | P3_ge17p5 | 10 | unattempted | 0 | 0 | 0 |  |
-| task307 | P3_ge17p5 | 5 | unattempted | 0 | 0 | 0 |  |
+| task144 | P3_ge17p5 | 104 | attempted_no_gain | 0 | 1 | 1 |  |
+| task142 | P3_ge17p5 | 90 | attempted_no_gain | 0 | 1 | 1 |  |
+| task373 | P3_ge17p5 | 60 | attempted_no_gain | 0 | 1 | 1 |  |
+| task113 | P3_ge17p5 | 30 | attempted_no_gain | 0 | 1 | 1 |  |
+| task311 | P3_ge17p5 | 30 | attempted_no_gain | 0 | 1 | 1 |  |
+| task276 | P3_ge17p5 | 10 | attempted_no_gain | 0 | 1 | 1 |  |
+| task307 | P3_ge17p5 | 5 | attempted_no_gain | 0 | 1 | 1 |  |

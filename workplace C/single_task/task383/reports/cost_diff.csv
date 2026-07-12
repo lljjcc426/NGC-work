@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task383,crop_then_color_decode,5830,33497,27667,16.32922772065546,14.580788838435689,-1.7484388822197712,266,266,true,false,E:\kongming\NGC-work\workplace C\single_task\task383\onnx\task383_crop_then_color_decode.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task159,axis_occupancy_locator,1568,2000,432,265,265,true,false,workplace C/single_task/task159/onnx/task159_axis_occupancy.onnx

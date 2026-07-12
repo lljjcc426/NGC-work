@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,264,264,392,72,464,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task081.onnx
+float_conv_rule,264,264,6370,82,6452,True,E:\kongming\NGC-work\workplace C\single_task\task081\onnx\task081_float_conv.onnx

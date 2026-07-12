@@ -1,0 +1,3 @@
+task,variant,passed,checked,cost,points,valid,artifact
+task351,baseline,265,265,1229,17.886043890433967,True,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task351.onnx
+task351,reduce_gather_locator,265,265,3863,16.74080063733372,True,E:\kongming\NGC-work\workplace C\single_task\task351\onnx\task351_candidate.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task298,fused_strip_einsum,135,129,-6,20.09472522156157,20.140187595638327,0.045462374076757,267,267,true,true,workplace C/single_task/task298/onnx/task298_fused_strip.onnx

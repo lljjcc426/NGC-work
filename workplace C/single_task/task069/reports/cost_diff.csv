@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task069,explicit_float_dynamic_correlations,2948,4644,1696,17.011117746690772,16.556668657182218,-0.4544490895085538,264,264,true,false,E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_explicit_float_dynamic_correlations.onnx

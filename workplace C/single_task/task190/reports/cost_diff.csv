@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task190,float_directional_ray_convs,2425,4497,2072,266,266,true,false,workplace C/single_task/task190/onnx/task190_float_rays.onnx

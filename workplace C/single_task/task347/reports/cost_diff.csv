@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task347,explicit_union_arithmetic,143,275,132,269,269,true,false,workplace C/single_task/task347/onnx/task347_union_arithmetic.onnx

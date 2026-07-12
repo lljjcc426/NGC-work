@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task372,grouped_conv_rule_model,710,7135,6425,266,266,true,false,workplace C/single_task/task372/onnx/task372_candidate.onnx

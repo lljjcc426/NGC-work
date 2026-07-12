@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task304,decoded_grid_histogram,1320,1616,296,266,266,true,false,workplace C/single_task/task304/onnx/task304_grid_histogram.onnx

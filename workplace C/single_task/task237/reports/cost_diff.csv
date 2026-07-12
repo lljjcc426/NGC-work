@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task237,integer_packed_conv,1836,11157,9321,266,266,true,false,workplace C/single_task/task237/onnx/task237_integer_packed.onnx

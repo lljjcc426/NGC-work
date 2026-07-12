@@ -1,13 +1,10 @@
-# FINAL TASK069 REPORT
+# Final task069
 
-Generated: 2026-07-11
-
-- Public validation: `266/266`
-- Parent cost: `2948`
-- Candidate cost: `2946`
-- Delta cost: `2`
-- Delta points: `+0.0006786562866523127`
-- Status: local accepted; not submitted
-
-The opset-18 candidate compacts two H/W Pad constants and migrates ReduceMax
-and Unsqueeze axes using shared initializers.
+- method: explicit float dynamic correlations
+- full validation: 264/264
+- old cost: 2948
+- new cost: 4644
+- delta cost: 1696
+- accepted: false
+- artifact: `E:\kongming\NGC-work\workplace C\single_task\task069\onnx\task069_explicit_float_dynamic_correlations.onnx`
+- next action: retain as a falsified cost hypothesis and redesign

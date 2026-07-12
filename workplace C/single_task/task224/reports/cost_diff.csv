@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task224,shared_gray_projection_map,1886,37900,36014,17.457786536806598,14.457293608929483,-3.000492927877115,266,266,true,false,E:\kongming\NGC-work\workplace C\single_task\task224\onnx\task224_shared_gray_projection_map.onnx

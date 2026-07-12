@@ -1,0 +1,3 @@
+task,variant,passed,checked,cost,points,valid,artifact
+task194,baseline,266,266,949,18.14459120139007,True,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task194.onnx
+task194,rotation_quadrants,266,266,5066,16.46969316943838,True,E:\kongming\NGC-work\workplace C\single_task\task194\onnx\task194_candidate.onnx

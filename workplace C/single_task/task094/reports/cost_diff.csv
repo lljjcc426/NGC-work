@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task094,slice_reduce_line_detector,2677,5856,3179,17.10754795647965,16.32477794435885,-0.7827700121207997,265,265,true,false,E:\kongming\NGC-work\workplace C\single_task\task094\onnx\task094_slice_reduce_line_detector.onnx

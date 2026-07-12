@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task307,slice_nearest_resize,5,,,,266,266,true,false,workplace C/single_task/task307/onnx/task307_deep_candidate.onnx

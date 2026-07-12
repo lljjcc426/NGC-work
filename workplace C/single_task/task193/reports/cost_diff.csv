@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task193,depthwise_rule_model,910,82912,82002,266,266,true,false,workplace C/single_task/task193/onnx/task193_candidate.onnx

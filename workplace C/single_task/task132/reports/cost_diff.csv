@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task132,direct_grid_axis_reductions,3652,3899,247,16.79696975828514,16.731524611017402,-0.06544514726773798,267,267,true,false,E:\kongming\NGC-work\workplace C\single_task\task132\onnx\task132_direct_grid_axis_reductions.onnx

@@ -1,0 +1,76 @@
+# C Deep Individual Model Status
+
+- complete: 67/67
+- remaining: 0
+- completion requires a rule report, a structurally different builder, a candidate ONNX, and a cost-diff record
+- audit-only, Identity, opset-only, and initializer-only changes do not qualify
+
+| task | priority | baseline cost | complete | modeling | cost diff | builders | candidates |
+| --- | --- | ---: | --- | --- | --- | ---: | ---: |
+| task158 | P0_lt16 | 28483 | true | true | true | 1 | 1 |
+| task286 | P0_lt16 | 26909 | true | true | true | 3 | 1 |
+| task054 | P0_lt16 | 25394 | true | true | true | 1 | 4 |
+| task364 | P0_lt16 | 20802 | true | true | true | 2 | 2 |
+| task349 | P0_lt16 | 14892 | true | true | true | 1 | 1 |
+| task077 | P0_lt16 | 8510 | true | true | true | 2 | 2 |
+| task096 | P1_16_16p7 | 7678 | true | true | true | 1 | 1 |
+| task009 | P1_16_16p7 | 6699 | true | true | true | 2 | 2 |
+| task383 | P1_16_16p7 | 5912 | true | true | true | 2 | 2 |
+| task382 | P1_16_16p7 | 5702 | true | true | true | 2 | 2 |
+| task278 | P1_16_16p7 | 5010 | true | true | true | 1 | 1 |
+| task165 | P1_16_16p7 | 4814 | true | true | true | 2 | 2 |
+| task378 | P1_16_16p7 | 4426 | true | true | true | 2 | 2 |
+| task132 | P1_16_16p7 | 4089 | true | true | true | 2 | 2 |
+| task069 | P2_16p7_17p5 | 3905 | true | true | true | 2 | 2 |
+| task284 | P2_16p7_17p5 | 3608 | true | true | true | 2 | 2 |
+| task201 | P2_16p7_17p5 | 3349 | true | true | true | 2 | 2 |
+| task335 | P2_16p7_17p5 | 3133 | true | true | true | 2 | 1 |
+| task091 | P2_16p7_17p5 | 3013 | true | true | true | 1 | 1 |
+| task224 | P2_16p7_17p5 | 2829 | true | true | true | 2 | 2 |
+| task094 | P2_16p7_17p5 | 2703 | true | true | true | 2 | 2 |
+| task190 | P2_16p7_17p5 | 2525 | true | true | true | 2 | 2 |
+| task046 | P2_16p7_17p5 | 2279 | true | true | true | 2 | 2 |
+| task388 | P2_16p7_17p5 | 2190 | true | true | true | 2 | 2 |
+| task381 | P2_16p7_17p5 | 2064 | true | true | true | 2 | 2 |
+| task392 | P2_16p7_17p5 | 1941 | true | true | true | 2 | 2 |
+| task237 | P2_16p7_17p5 | 1836 | true | true | true | 2 | 2 |
+| task302 | P3_ge17p5 | 1774 | true | true | true | 2 | 2 |
+| task061 | P3_ge17p5 | 1668 | true | true | true | 2 | 1 |
+| task159 | P3_ge17p5 | 1568 | true | true | true | 1 | 1 |
+| task075 | P3_ge17p5 | 1487 | true | true | true | 1 | 1 |
+| task304 | P3_ge17p5 | 1441 | true | true | true | 1 | 1 |
+| task141 | P3_ge17p5 | 1383 | true | true | true | 1 | 1 |
+| task356 | P3_ge17p5 | 1319 | true | true | true | 2 | 1 |
+| task351 | P3_ge17p5 | 1229 | true | true | true | 1 | 1 |
+| task301 | P3_ge17p5 | 1141 | true | true | true | 1 | 1 |
+| task225 | P3_ge17p5 | 1031 | true | true | true | 2 | 2 |
+| task194 | P3_ge17p5 | 949 | true | true | true | 1 | 1 |
+| task193 | P3_ge17p5 | 910 | true | true | true | 1 | 1 |
+| task015 | P3_ge17p5 | 900 | true | true | true | 1 | 1 |
+| task230 | P3_ge17p5 | 900 | true | true | true | 1 | 1 |
+| task221 | P3_ge17p5 | 805 | true | true | true | 1 | 1 |
+| task178 | P3_ge17p5 | 762 | true | true | true | 1 | 1 |
+| task372 | P3_ge17p5 | 710 | true | true | true | 1 | 1 |
+| task065 | P3_ge17p5 | 638 | true | true | true | 1 | 1 |
+| task332 | P3_ge17p5 | 561 | true | true | true | 1 | 1 |
+| task362 | P3_ge17p5 | 521 | true | true | true | 1 | 1 |
+| task081 | P3_ge17p5 | 464 | true | true | true | 1 | 1 |
+| task072 | P3_ge17p5 | 421 | true | true | true | 1 | 1 |
+| task203 | P3_ge17p5 | 355 | true | true | true | 1 | 1 |
+| task121 | P3_ge17p5 | 326 | true | true | true | 1 | 1 |
+| task108 | P3_ge17p5 | 300 | true | true | true | 1 | 1 |
+| task146 | P3_ge17p5 | 267 | true | true | true | 1 | 1 |
+| task315 | P3_ge17p5 | 230 | true | true | true | 1 | 1 |
+| task180 | P3_ge17p5 | 210 | true | true | true | 1 | 1 |
+| task052 | P3_ge17p5 | 194 | true | true | true | 1 | 1 |
+| task252 | P3_ge17p5 | 180 | true | true | true | 1 | 2 |
+| task391 | P3_ge17p5 | 159 | true | true | true | 1 | 3 |
+| task347 | P3_ge17p5 | 143 | true | true | true | 1 | 1 |
+| task298 | P3_ge17p5 | 135 | true | true | true | 1 | 1 |
+| task144 | P3_ge17p5 | 104 | true | true | true | 1 | 1 |
+| task142 | P3_ge17p5 | 90 | true | true | true | 1 | 1 |
+| task373 | P3_ge17p5 | 60 | true | true | true | 1 | 1 |
+| task113 | P3_ge17p5 | 30 | true | true | true | 1 | 1 |
+| task311 | P3_ge17p5 | 30 | true | true | true | 1 | 1 |
+| task276 | P3_ge17p5 | 10 | true | true | true | 1 | 1 |
+| task307 | P3_ge17p5 | 5 | true | true | true | 1 | 1 |

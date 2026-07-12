@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task391,two_stage_color_histogram,159,202,43,267,267,true,false,workplace C/single_task/task391/onnx/task391_deep_candidate.onnx

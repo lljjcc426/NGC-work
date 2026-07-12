@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task284,shared_marker_projection_map,3085,39099,36014,16.96569306366051,14.42614782980117,-2.5395452338593394,266,266,true,false,E:\kongming\NGC-work\workplace C\single_task\task284\onnx\task284_shared_marker_projection_map.onnx

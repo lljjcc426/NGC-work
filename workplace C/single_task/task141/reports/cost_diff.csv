@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task141,flat_seed_argmax_locator,1383,8567,7184,265,265,true,false,workplace C/single_task/task141/onnx/task141_flat_seed_locator.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task015,split_sparse_channel_conv,900,109805,108905,265,265,true,false,workplace C/single_task/task015/onnx/task015_deep_candidate.onnx

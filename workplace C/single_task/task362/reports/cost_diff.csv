@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,267,267,408,113,521,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task362.onnx
+dynamic_shift,267,267,17974,67,18041,True,E:\kongming\NGC-work\workplace C\single_task\task362\onnx\task362_dynamic_shift.onnx

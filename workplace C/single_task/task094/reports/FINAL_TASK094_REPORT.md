@@ -1,13 +1,10 @@
-# FINAL TASK094 REPORT
+# Final task094
 
-Generated: 2026-07-11
-
-- Public validation: `266/266`
-- Parent cost: `2677`
-- Candidate cost: `2671`
-- Delta cost: `6`
-- Delta points: `+0.002243830410389336`
-- Status: local accepted; not submitted
-
-The candidate upgrades to opset 18 and compacts two H/W Pad constants while
-sharing one axes initializer.
+- method: slice reduce line detector
+- full validation: 265/265
+- old cost: 2677
+- new cost: 5856
+- delta cost: 3179
+- accepted: false
+- artifact: `E:\kongming\NGC-work\workplace C\single_task\task094\onnx\task094_slice_reduce_line_detector.onnx`
+- next action: retain as a falsified cost hypothesis and redesign

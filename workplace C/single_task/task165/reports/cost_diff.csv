@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task165,explicit_float_template_correlation,4532,6604,2072,16.5810813778521,16.20456919495998,-0.37651218289212096,265,265,true,false,E:\kongming\NGC-work\workplace C\single_task\task165\onnx\task165_explicit_float_template_correlation.onnx

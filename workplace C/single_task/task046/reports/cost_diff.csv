@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task046,slice_einsum_path_decode,2069,4475,2406,267,267,true,false,workplace C/single_task/task046/onnx/task046_slice_einsum.onnx

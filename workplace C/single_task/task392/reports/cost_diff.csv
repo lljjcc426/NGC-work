@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task392,channel_presence_color_decode,1703,1772,69,266,266,true,false,workplace C/single_task/task392/onnx/task392_presence_color.onnx

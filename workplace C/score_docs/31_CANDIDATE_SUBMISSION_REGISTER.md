@@ -14,3 +14,25 @@ Generated: 2026-07-09T20:56:21
 | task158 | 28483 | 28023 | 460 | true | `workplace C\single_task\task158\onnx\task158_candidate.onnx` | replacement ready; full 400-file package not built in this single-task pass |
 
 Next packaging requirement: copy the current best 400 ONNX files, replace only `task158.onnx`, verify `file_count_400=400` and `missing_task_count=0`, then submit only after explicit user confirmation.
+
+## 2026-07-12 Current Cumulative Candidate
+
+| candidate_id | parent | file_count | missing | cumulative replacements | expected public delta | kernel | submitted |
+| --- | --- | ---: | ---: | ---: | ---: | --- | --- |
+| GOLF_20260712_098_v97_plus_task298 | v92 / public 7271.95 lineage | 400 | 0 | 20 | +0.09225703817750024 | not built | no |
+| GOLF_20260712_099_v93_plus_task298 | v93 / public 7273.37, sha d3284267 | 400 | 0 | 1 | +0.045462374076757 | complete: 7273.42 | yes |
+
+Local path: `E:/kagglegolf/submissions/candidates/GOLF_20260712_098_v97_plus_task298`
+
+Online-verified path: `E:/kagglegolf/submissions/candidates/GOLF_20260712_099_v93_plus_task298`
+
+Submission ref: `54595725`; observed public delta: `+0.05`.
+
+Newest accepted replacement:
+
+| task | old_cost | new_cost | delta points | full validation | artifact |
+| --- | ---: | ---: | ---: | --- | --- |
+| task298 | 135 | 129 | +0.045462374076757 | 267/267 | `workplace C/single_task/task298/onnx/task298_fused_strip.onnx` |
+
+The candidate remains local. Kernel construction is deferred until Kaggle
+quota is near the previously specified five-percent reserve threshold.

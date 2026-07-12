@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task091,direct_gray_row_projection,2759,2863,104,266,266,true,false,workplace C/single_task/task091/onnx/task091_direct_gray_rows.onnx

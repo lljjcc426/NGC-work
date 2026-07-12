@@ -1,0 +1,3 @@
+task,variant,passed,checked,memory,params,cost,points,valid,artifact
+task373,baseline,75,75,0,60,60,20.9056554377779,True,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task373.onnx
+task373,checkerboard_concat,75,75,1040,18,1058,18.035864387581753,True,E:\kongming\NGC-work\workplace C\single_task\task373\onnx\task373_candidate.onnx

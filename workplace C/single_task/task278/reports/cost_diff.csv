@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task278,fused_anchor_halo_conv,4503,4195,-308,0,265,false,false,workplace C/single_task/task278/onnx/task278_fused_halo_probe.onnx

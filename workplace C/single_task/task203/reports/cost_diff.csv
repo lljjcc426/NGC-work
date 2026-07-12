@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,267,267,352,3,355,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task203.onnx
+frequency_involution,267,267,788,7,795,True,E:\kongming\NGC-work\workplace C\single_task\task203\onnx\task203_frequency_involution.onnx

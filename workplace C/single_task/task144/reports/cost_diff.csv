@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,267,267,0,104,104,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task144.onnx
+background_intersection,267,267,960,23,983,True,E:\kongming\NGC-work\workplace C\single_task\task144\onnx\task144_background_intersection.onnx

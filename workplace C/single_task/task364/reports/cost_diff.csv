@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task364,three_round_component_propagation,14642,14642,0,199,266,false,false,workplace C/single_task/task364/onnx/task364_three_round_probe.onnx

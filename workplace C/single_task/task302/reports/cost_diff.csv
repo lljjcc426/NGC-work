@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task302,float_frame_fill_detectors,1774,3537,1763,0,266,false,false,workplace C/single_task/task302/onnx/task302_float_detectors.onnx

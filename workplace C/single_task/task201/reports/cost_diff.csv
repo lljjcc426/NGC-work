@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task201,shared_frame_projection_map,3045,39059,36014,16.978743819856003,14.427171397535563,-2.55157242232044,266,266,true,false,E:\kongming\NGC-work\workplace C\single_task\task201\onnx\task201_shared_frame_projection_map.onnx

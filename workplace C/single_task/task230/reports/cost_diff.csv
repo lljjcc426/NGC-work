@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,266,266,0,900,900,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task230.onnx
+pool_deconv,266,266,70753,75,70828,True,E:\kongming\NGC-work\workplace C\single_task\task230\onnx\task230_pool_deconv.onnx

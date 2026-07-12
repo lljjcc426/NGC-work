@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task077,two_round_horizontal_propagation,7657,6817,-840,258,266,false,false,workplace C/single_task/task077/onnx/task077_two_round_candidate.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task061,float_outer_product,1668,3108,1440,267,267,true,false,workplace C/single_task/task061/onnx/task061_float_outer.onnx

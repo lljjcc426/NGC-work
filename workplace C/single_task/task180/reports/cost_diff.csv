@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,268,268,0,210,210,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task180.onnx
+priority_overlay,268,268,1296,34,1330,True,E:\kongming\NGC-work\workplace C\single_task\task180\onnx\task180_priority_overlay.onnx

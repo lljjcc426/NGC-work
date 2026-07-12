@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task075,slice_argmax_template,1487,1788,301,265,265,true,false,workplace C/single_task/task075/onnx/task075_slice_argmax.onnx

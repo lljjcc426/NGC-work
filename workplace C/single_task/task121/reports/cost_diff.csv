@@ -1,0 +1,3 @@
+model,passed,checked,memory,params,cost,ok,artifact
+baseline,266,266,260,66,326,True,E:\kagglegolf\submissions\candidates\GOLF_20260711_097_v96_plus_task132_task046\onnx\task121.onnx
+marker_object,266,266,4517,65,4582,True,E:\kongming\NGC-work\workplace C\single_task\task121\onnx\task121_marker_object.onnx

@@ -1,13 +1,10 @@
-# FINAL TASK378 REPORT
+# Final task378
 
-Generated: 2026-07-11
-
-- Public validation: `266/266`
-- Parent cost: `3089`
-- Candidate cost: `3087`
-- Delta cost: `2`
-- Delta points: `+0.0006476684164198332`
-- Status: local accepted; not submitted
-
-The candidate upgrades to opset 18. Its Pad and two-dimensional ReduceSum share
-one H/W axes initializer, reducing parameters without new activations.
+- method: broadcast coordinate moments
+- full validation: 267/267
+- old cost: 3089
+- new cost: 75149
+- delta cost: 72060
+- accepted: false
+- artifact: `E:\kongming\NGC-work\workplace C\single_task\task378\onnx\task378_broadcast_coordinate_moments.onnx`
+- next action: retain as a falsified cost hypothesis and redesign

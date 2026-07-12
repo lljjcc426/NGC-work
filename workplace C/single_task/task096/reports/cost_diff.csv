@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task096,presence_reduce_max,7678,7678,0,0,266,false,false,workplace C/single_task/task096/onnx/task096_presence_reduce_max.onnx

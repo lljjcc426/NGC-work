@@ -68,6 +68,11 @@ cd "E:\kongming\NGC-work\workplace C\dashboard"
 - `score_docs/34_FULL_RETROSPECTIVE_AND_NEXT_BUILD_PLAN_20260711.md`: current
   score state, accepted/rejected experiments, rebase evidence, quota policy,
   and the next three-track build plan.
+- `score_docs/35_DEEP_MODELING_CAMPAIGN_20260712.md`: strict `67/67` individual
+  modeling completion, final-ten cost results, and the task298 online-verified
+  `7273.42` submission.
+- `score_docs/C_DEEP_MODEL_STATUS.md`: per-task evidence checklist for all 67 C
+  tasks.
 - `cleanup_log.md`: cleanup record for setup-only directories.
 
 The project scaffold still requires `KAGGLE_API_TOKEN` before running Kaggle

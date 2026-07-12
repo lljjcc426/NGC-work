@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task009,conv_outside_sentinel,6694,6595,-99,266,266,true,true,workplace C/single_task/task009/onnx/task009_outside_sentinel.onnx

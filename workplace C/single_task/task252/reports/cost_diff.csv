@@ -1,0 +1,3 @@
+task,variant,passed,checked,memory,params,cost,points,valid,artifact
+task252,baseline,266,266,0,180,180,19.807043149109788,True,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task252.onnx
+task252,odd_column_recolor,266,266,219600,89,219689,12.700031811155677,True,E:\kongming\NGC-work\workplace C\single_task\task252\onnx\task252_candidate.onnx

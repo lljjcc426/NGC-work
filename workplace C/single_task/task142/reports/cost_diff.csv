@@ -1,0 +1,3 @@
+task,variant,passed,checked,memory,params,cost,points,valid,artifact
+task142,baseline,266,266,0,90,90,20.500190329669735,True,E:\kagglegolf\submissions\candidates\GOLF_20260709_101_prvsiyan_7266_72_repro\onnx\task142.onnx
+task142,mirror_quadrants,266,266,4320,25,4345,16.623218962300506,True,E:\kongming\NGC-work\workplace C\single_task\task142\onnx\task142_candidate.onnx

@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,examples_passed,examples_checked,local_valid,accepted,artifact_path
+task381,bidirectional_cumsum_span,1750,3001,1251,265,265,true,false,workplace C/single_task/task381/onnx/task381_bidirectional_cumsum.onnx
