@@ -234,3 +234,27 @@ task181 dynamic Scatter indices cost more than its static table; and task395
 sparse zero tensors cannot feed dense Concat under the official ONNX checker.
 No model from these three experiments should be submitted. Full evidence is in
 `20260712_b20_task266_analytic_v2/reports/20260712_bold_structure_search_round2.json`.
+
+## 2026-07-12: B-20 task205 compact rewrite v8
+
+Folder: `20260712_b20_task205_compact_v8`
+
+This pass stays B-only and uses no new public submission packages. It rewrites
+the current online-safe task205 graph one chain at a time.
+
+- Cost: `4251 -> 2691` (`-36.70%`).
+- Points: `16.645090 -> 17.102332`.
+- Gain: `+0.457241`.
+- Validation: `8458/8458` exact against the online-safe baseline, consisting of
+  all 266 official examples and 8192 seeded random legal grids.
+
+The largest reduction comes from replacing two float32 complement pipelines
+with boolean `Not`, keeping coordinate arithmetic in int32, and keeping the
+final coordinate matrices boolean until one post-Concat float16 Cast. The
+recommended override is
+`20260712_b20_task205_compact_v8/model/task205.onnx`.
+
+Combined with the accepted task266 analytic rewrite (`+0.603994`), the two-task
+B-only gain is about `+1.061236`, crossing the team threshold for an immediate
+online probe. The 400-model package changes only task205 and task266; Kaggle
+submission ref `54604712` was accepted and initially entered `PENDING` state.

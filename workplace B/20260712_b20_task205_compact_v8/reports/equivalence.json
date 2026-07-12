@@ -1,0 +1,10 @@
+{
+  "baseline": "D:\\golf\\public_probe_variants\\b_yusuke_v176_b_online_safe_v6_20260711\\submission\\task205.onnx",
+  "candidate": "D:\\golf\\reconstruction_candidates\\b20_task205_bool_coords_v8_20260712\\task205.onnx",
+  "official_checks": 266,
+  "random_checks": 8192,
+  "total_checks": 8458,
+  "exact_equal": true,
+  "seed": 20520260712,
+  "seconds": 4.091
+}

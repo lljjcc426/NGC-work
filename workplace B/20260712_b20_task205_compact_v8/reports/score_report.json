@@ -1,0 +1,31 @@
+{
+  "task": 205,
+  "baseline": {
+    "source": "b_yusuke_v176_b_online_safe_v6_20260711",
+    "memory": 4206,
+    "params": 45,
+    "cost": 4251,
+    "points": 16.64509047164121
+  },
+  "versions": [
+    {"version": "v1", "cost": 4131, "points": 16.673725212603, "gain": 0.028634740962},
+    {"version": "v2", "cost": 4011, "points": 16.703204134230, "gain": 0.058113662589},
+    {"version": "v3", "cost": 3771, "points": 16.764904502742, "gain": 0.119814031100},
+    {"version": "v4", "cost": 3731, "points": 16.775568426779, "gain": 0.130477955138},
+    {"version": "v5", "cost": 3651, "points": 16.797243618344, "gain": 0.152153146703},
+    {"version": "v6", "cost": 2973, "points": 17.002673177002, "gain": 0.357582705361},
+    {"version": "v7", "cost": 2931, "points": 17.016901059289, "gain": 0.371810587648},
+    {"version": "v8", "cost": 2691, "points": 17.102331849273, "gain": 0.457241377632}
+  ],
+  "final": {
+    "model": "model/task205.onnx",
+    "memory": 2886,
+    "params": 45,
+    "cost": 2691,
+    "points": 17.102331849273092,
+    "gain": 0.457241377631882,
+    "cost_reduction": 1560,
+    "exact_checks": 8458
+  },
+  "submission_policy": "Combine with accepted task266 (+0.603994) and submit; total gain is above 1.0 point."
+}
