@@ -1,0 +1,12 @@
+{
+  "task": 266,
+  "arc_gen_id": "a9f96cdd",
+  "legal_parameter_cases": 15,
+  "passed": 15,
+  "model_bytes": 832,
+  "memory_excluding_output": 60,
+  "params": 110,
+  "cost": 170,
+  "points": 19.864201562949738,
+  "gain": 0.603994475128971
+}

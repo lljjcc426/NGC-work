@@ -1,0 +1,22 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b20_task266_analytic_marker_v2_20260712",
+  "module": "D:\\golf\\src\\optimize_task266_analytic_marker_yusuke.py",
+  "changed_count": 1,
+  "reverted_count": 0,
+  "positives": [
+    {
+      "task": 266,
+      "gain": 0.603994475128971,
+      "base_points": 19.260207087820767,
+      "points": 19.864201562949738,
+      "base_cost": 311,
+      "cost": 170,
+      "stats": {
+        "task266_analytic_marker": 1
+      }
+    }
+  ],
+  "errors": [],
+  "total_gain": 0.603994475128971
+}

@@ -201,3 +201,22 @@ Integration note:
 The team also had a newer non-B aggregate scoring `7271.93`. Use the seven ONNX
 files in `20260711_b_yusuke_v176_online_safe_v5/overrides/` as a B-task overlay
 on that newer full package.
+
+## 2026-07-12: B-20 task266 analytic rewrite
+
+Folder: `20260712_b20_task266_analytic_v2`
+
+The active objective is now to push every B task toward at least 20 points. Team
+submission blending is paused; this folder is an independent task-level result.
+
+- Exact generator: `a9f96cdd`.
+- Cost: `311 -> 170`.
+- Points: `19.260207 -> 19.864202`.
+- Gain: `+0.603994`.
+- Validation: official train/test/ARC-GEN plus all 15 legal marker positions.
+- Remaining gap to 20: reduce cost by another 22, from 170 to at most 148.
+
+The rewrite replaces two learned convolutions and a ReLU with a one-channel
+marker encoding followed by one analytic linear classifier. The failed task001
+quantized outer-product experiment is retained in the folder as negative
+evidence, so its incorrect flatten ordering is not retried.

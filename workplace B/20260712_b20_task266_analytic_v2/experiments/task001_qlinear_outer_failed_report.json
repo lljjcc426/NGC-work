@@ -1,0 +1,10 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b20_task001_qlinear_outer_v1_20260712",
+  "module": "D:\\golf\\src\\optimize_task001_qlinear_outer_yusuke.py",
+  "changed_count": 1,
+  "reverted_count": 1,
+  "positives": [],
+  "errors": [],
+  "total_gain": 0
+}
