@@ -1,0 +1,39 @@
+{
+  "scope": "B tasks only",
+  "accepted_models": 0,
+  "experiments": [
+    {
+      "task": 181,
+      "idea": "replace cell-level ScatterND with dynamic ScatterElements or generated indices",
+      "result": "rejected by exact cost accounting",
+      "reason": "Generating 18 dynamic four-axis indices costs at least 576 bytes; the existing 144 static parameters plus 144-byte update tensor is smaller."
+    },
+    {
+      "task": 285,
+      "idea": "remove the 124-cell safety pad and gather directly from the 900-cell label grid",
+      "local_gain": 0.053486453682207724,
+      "local_cost": 18674,
+      "result": "hidden-unsafe and rejected",
+      "fresh_generator_failure": 125,
+      "failure": "Gather index 924 exceeds [-900, 899]",
+      "index_stress_examples": 5000,
+      "observed_ranges": {
+        "nidx": [-31, 918],
+        "widx": [-90, 899],
+        "he": [34, 775],
+        "hv": [34, 775],
+        "hd": [34, 775]
+      }
+    },
+    {
+      "task": 395,
+      "idea": "replace the computed 3x3 zero channel with a one-entry sparse initializer",
+      "result": "rejected by ONNX full checker",
+      "failure": "Concat receives sparse_tensor(bool) where tensor(bool) is required; forcing tensor value_info causes a type-case mismatch."
+    }
+  ],
+  "next_targets": [
+    "task001 dynamic ConvTranspose weight fusion",
+    "task181 alternative output representation rather than dynamic indices"
+  ]
+}

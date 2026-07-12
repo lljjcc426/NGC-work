@@ -56,3 +56,11 @@ would have cost 135 and crossed 20, but both random and SVD-initialized searches
 retained thousands of sign errors. The fourth basis is required to represent
 the generator's simultaneous period-2 and period-3 phases. Details are in
 `reports/task313_rank3_search.json`.
+
+Round 2 tested more aggressive operator changes on tasks 181, 285, and 395.
+The task285 no-pad model gained `+0.053486` locally but failed on fresh exact
+generator case 126 with Gather index 924, so it is explicitly rejected and was
+not submitted. Dynamic task181 indices cost more memory than the existing static
+ScatterND table, and ONNX type checking prevents task395 from concatenating a
+sparse zero initializer with dense bool tensors. See
+`reports/20260712_bold_structure_search_round2.json`.

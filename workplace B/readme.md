@@ -227,3 +227,10 @@ conflicts. A task313 rank-3 Einsum candidate (cost 135) was also rejected becaus
 the fourth coordinate basis is required by the generator's joint period-2 and
 period-3 phase. These negative results are recorded under
 `20260712_b20_task266_analytic_v2/reports/`.
+
+The next bold-structure pass rejected three hidden-risk shortcuts: task285
+without its safety Pad fails fresh generator inference at Gather index 924;
+task181 dynamic Scatter indices cost more than its static table; and task395
+sparse zero tensors cannot feed dense Concat under the official ONNX checker.
+No model from these three experiments should be submitted. Full evidence is in
+`20260712_b20_task266_analytic_v2/reports/20260712_bold_structure_search_round2.json`.

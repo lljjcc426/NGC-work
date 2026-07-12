@@ -1,0 +1,29 @@
+{
+  "base_name": "yusuketogashi_v176_full",
+  "out_name": "b20_task285_safe_unpad_v1_20260712",
+  "module": "D:\\golf\\src\\optimize_task285_safe_unpad_yusuke.py",
+  "changed_count": 1,
+  "reverted_count": 0,
+  "positives": [
+    {
+      "task": 285,
+      "gain": 0.053486453682207724,
+      "base_points": 15.11162608527392,
+      "points": 15.165112538956128,
+      "base_cost": 19700,
+      "cost": 18674,
+      "stats": {
+        "task285_safe_unpad": 1,
+        "rewired_consumers": 5,
+        "initializers": 1
+      }
+    }
+  ],
+  "errors": [
+    {
+      "task": 350,
+      "error": "InferenceError: [ShapeInferenceError] Inference error(s): (op_type:Where): [ShapeInferenceError] Incompatible dimensions\n"
+    }
+  ],
+  "total_gain": 0.053486453682207724
+}
