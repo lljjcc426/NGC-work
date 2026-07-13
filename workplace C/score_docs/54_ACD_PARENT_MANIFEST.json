@@ -1,0 +1,23 @@
+{
+  "frozen_count": 14,
+  "parent_dir": "E:\\kagglegolf\\submissions\\candidates\\GOLF_20260713_ALL399_DIRECT_13\\onnx",
+  "parent_examples_checked": 101347,
+  "parent_full_validation_ok": true,
+  "parent_models_full_valid": 400,
+  "parent_models_total": 400,
+  "parent_package_sha256": "346129a9e05f2a30d303eaa2d9b8f0a052cdccb57715c3fba12284c3061f2da9",
+  "parent_zip": "E:\\kagglegolf\\submissions\\candidates\\GOLF_20260713_ALL399_DIRECT_13\\submission.zip",
+  "priority_counts": {
+    "P0": 35,
+    "P1": 116,
+    "P2": 50
+  },
+  "public_ref": "54638601",
+  "public_score": 7378.01,
+  "root_onnx_count": 400,
+  "scope_counts": {
+    "A": 67,
+    "C": 67,
+    "D": 67
+  }
+}

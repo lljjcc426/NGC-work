@@ -46,8 +46,10 @@ def load_examples() -> tuple[np.ndarray, np.ndarray, list[np.ndarray]]:
             grid = arrays["input"]
             answer = arrays["output"]
             inputs.append((grid[:, 9:10] > 0).astype(np.float32))
-            # Halo may cover the original 9 cells; the final Max restores 9.
-            targets.append(((answer[:, 3:4] > 0) | (grid[:, 9:10] > 0)).astype(np.float32))
+            # The final Max restores color 9 directly. Requiring the halo branch
+            # to also cover those cells adds false constraints and can make a
+            # valid lower-rank factorization appear impossible.
+            targets.append((answer[:, 3:4] > 0).astype(np.float32))
             expected.append(answer)
     return np.concatenate(inputs), np.concatenate(targets), expected
 

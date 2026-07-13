@@ -10,13 +10,13 @@ from onnx import TensorProto, helper, numpy_helper
 
 TASK_DIR = Path(__file__).resolve().parent.parent
 ONNX_DIR = TASK_DIR / "onnx"
-PARENT = Path(
+DEFAULT_PARENT = Path(
     r"E:\kagglegolf\submissions\candidates\GOLF_20260711_093_v92_plus_task349_k11\onnx\task286.onnx"
 )
 
 
-def build(rounds: int, output_path: Path) -> None:
-    model = onnx.load(PARENT)
+def build(source: Path, rounds: int, output_path: Path) -> None:
+    model = onnx.load(source)
     graph = model.graph
 
     # Nodes 0..26 decode the grid and pack passable/seed cells into one uint32
@@ -89,11 +89,12 @@ def build(rounds: int, output_path: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--source", type=Path, default=DEFAULT_PARENT)
     parser.add_argument("--rounds", type=int, required=True)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     output = args.output or ONNX_DIR / f"task286_shared_r{args.rounds}.onnx"
-    build(args.rounds, output)
+    build(args.source, args.rounds, output)
     print(output)
 
 
