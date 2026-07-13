@@ -164,3 +164,16 @@ hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.
 - public score: `7278.75`
 - observed gain: `+0.92`
 - detailed retrospective: `39_SUBMISSION5_REBASE_RETROSPECTIVE_20260712.md`
+
+## 2026-07-13 C+D Archive Research
+
+- source attachment: `E:/archive.zip`, 399 ONNX files, missing task173
+- discussion source: Kaggle dataset `zealous9230/neurogolf7300`
+- C+D official full benchmark: 134/134 parent models and 133/133 available archive models valid
+- archive lower than parent: 54 tasks (30 C, 24 D)
+- direct archive replacement: prohibited by local policy; all such rows on compliance hold
+- independent accepted improvement: task075 `1487 -> 1394`, 265/265, `+0.0645833551`
+- deterministic one-round archive derivation: 6 changed, 2 lower than source and parent
+- held candidates: task158 `18530`, task182 `6065`; both `do_not_submit`
+- task315 rank-two argmax probe rejected by official per-channel threshold validation
+- detailed report: `43_CD_ARCHIVE_METHOD_INTEL_20260713.md`

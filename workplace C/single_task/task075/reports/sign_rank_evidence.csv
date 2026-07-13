@@ -1,0 +1,3 @@
+object,shape,exact_real_rank,rank0_possible,max_reconstruction_error,conclusion
+templ_scalar_coefficient_tensor,10x30x30x3x3,1,False,0.0,already rank-1; compress spatial selectors by cropped Conv
+ten_color_identity,10x10,10,False,0.0,task104 two-color complementary sign trick cannot decode ten exact colors

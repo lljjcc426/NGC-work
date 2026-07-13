@@ -1,0 +1,2 @@
+task,method,old_cost,new_cost,delta_cost,old_points,new_points,delta_points,examples_passed,examples_checked,local_valid,accepted,artifact_path,error
+task315,rank2_color_sign,230,210,-20,19.561920691076804,19.65289246928253,0.0909717782057271,0,266,false,false,E:\kongming\NGC-work\workplace C\single_task\task315\debug\task315_rank2_color_sign.onnx,
