@@ -1,0 +1,33 @@
+{
+  "task": 18,
+  "scope": "B-only self rewrite",
+  "online_base_score": 7296.04,
+  "local_base_total": 7295.9034192396875,
+  "projected_local_total": 7296.149452073673,
+  "base": {
+    "cost": 24360,
+    "memory": 23668,
+    "params": 692,
+    "points": 14.899302278176167
+  },
+  "candidate": {
+    "cost": 19047,
+    "memory": 18836,
+    "params": 211,
+    "points": 15.14533511216144,
+    "gain": 0.2460328339852731,
+    "valid": true,
+    "official_examples": 266
+  },
+  "submission": {
+    "files": 400,
+    "sha256": "30C7DC1985687DB9C7ED01F75BAED4388D11989EC5E6A73ED6F975C41E85A60C",
+    "submitted": false,
+    "reason": "gain below +1.0 direct-submit threshold"
+  },
+  "rejected_designs": [
+    "dynamic NonZero sparse coordinates: correct but prohibited by scorer",
+    "uint8 TopK: known online-incompatible for task018"
+  ]
+}
+
