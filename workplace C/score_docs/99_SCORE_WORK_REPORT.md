@@ -186,3 +186,28 @@ completed with the predicted positive direction: `7296.29`, `7296.47`,
 against a local prediction of `+0.983686`. Archive-derived candidates remained
 excluded. See `45_C5_ONLINE_RESULTS_20260713.md` for refs, task membership, and
 package hashes.
+
+## 2026-07-13 ALL399 Direct Replacement Campaign
+
+The earlier archive compliance hold was superseded by an explicit user
+instruction to apply every locally valid archive artifact that had lower cost
+than the current parent. The complete 399-model archive was scanned against
+`GOLF_20260713_C5_05` (`7297.02`): 398 available archive models passed official
+local validation, 128 were valid lower-cost replacements, and `task173` was the
+only missing archive model. Two non-overlapping local micro reductions were
+added to produce 130 unique replacements.
+
+The replacements were packaged as 13 cumulative candidates with exactly 10 new
+tasks per batch. Batches 01-07 completed at `7317.92`, `7331.89`, `7342.26`,
+`7350.18`, `7357.00`, `7362.56`, and `7367.18`. These values matched the local
+cumulative projections to leaderboard display precision. Competition refs for
+batches 08-13 were then created without result polling, as explicitly
+requested: `54638565`, `54638567`, `54638571`, `54638574`, `54638577`, and
+`54638601`.
+
+Batch 07 was accidentally submitted a second time as ref `54638561` because the
+earlier sequential process had already submitted ref `54637603` before it was
+terminated. The duplicate contains no additional model change and must not be
+counted as incremental gain. Full task membership, expected scores, refs, and
+the evidence boundary are recorded in
+`52_ALL399_DIRECT_BATCH_RESULTS_20260713.md`.

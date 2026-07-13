@@ -1,0 +1,13 @@
+{
+  "tasks": 4,
+  "attempted": 4,
+  "accepted": 0,
+  "total_delta_cost": 0,
+  "total_delta_points": 0,
+  "status_counts": {
+    "all_variants_failed": 3,
+    "attempted_no_structural_opportunity": 1
+  },
+  "source_policy": "parent_only_no_archive",
+  "scope": "archive"
+}

@@ -1,0 +1,23 @@
+{
+  "archive_models": 399,
+  "missing_tasks": [
+    "task173"
+  ],
+  "archive_valid": 398,
+  "parent_valid": 399,
+  "archive_lower_and_valid": 128,
+  "method_families": {
+    "bitpacked_state_logic": 9,
+    "conv_local_detection": 81,
+    "gather_scatter_relayout": 83,
+    "general_tensor_graph": 34,
+    "pool_propagation": 8,
+    "quantized_local_detection": 50,
+    "reduction_mask_logic": 27,
+    "resize_shape_transform": 1,
+    "single_terminal_einsum": 57,
+    "small_direct_graph": 6,
+    "terminal_einsum": 43
+  },
+  "source_policy": "analysis_only_do_not_copy_or_submit_archive_model"
+}

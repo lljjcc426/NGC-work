@@ -1,0 +1,5 @@
+task,parent_path,candidate_path,attempted,source_policy,parent_nodes,parent_initializers,parent_initializer_elements,variant_count,opportunities,status
+task122,E:\kagglegolf\submissions\candidates\GOLF_20260713_C5_05\onnx\task122.onnx,,True,parent_only_no_archive,1,2,810,0,,attempted_no_structural_opportunity
+task130,E:\kagglegolf\submissions\candidates\GOLF_20260713_C5_05\onnx\task130.onnx,,True,parent_only_no_archive,1,1,30,0,,attempted_no_structural_opportunity
+task144,E:\kagglegolf\submissions\candidates\GOLF_20260713_C5_05\onnx\task144.onnx,,True,parent_only_no_archive,1,2,104,0,,attempted_no_structural_opportunity
+task258,E:\kagglegolf\submissions\candidates\GOLF_20260713_C5_05\onnx\task258.onnx,,True,parent_only_no_archive,1,2,160,0,,attempted_no_structural_opportunity

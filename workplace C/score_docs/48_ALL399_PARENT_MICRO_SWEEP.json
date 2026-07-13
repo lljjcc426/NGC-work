@@ -1,0 +1,15 @@
+{
+  "tasks": 399,
+  "attempted": 399,
+  "accepted": 9,
+  "total_delta_cost": 21,
+  "total_delta_points": 0.007114586372141574,
+  "status_counts": {
+    "accepted": 9,
+    "all_variants_failed": 12,
+    "attempted_no_structural_opportunity": 362,
+    "valid_no_cost_gain": 16
+  },
+  "source_policy": "parent_only_no_archive",
+  "scope": "archive"
+}

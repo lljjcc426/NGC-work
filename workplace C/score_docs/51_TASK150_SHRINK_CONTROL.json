@@ -1,0 +1,12 @@
+{
+  "tasks": 1,
+  "attempted": 1,
+  "accepted": 1,
+  "total_delta_cost": 1,
+  "total_delta_points": 0.007272759329080003,
+  "status_counts": {
+    "accepted": 1
+  },
+  "source_policy": "parent_only_no_archive",
+  "scope": "archive"
+}
