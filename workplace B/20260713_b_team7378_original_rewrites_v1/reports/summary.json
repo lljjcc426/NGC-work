@@ -1,0 +1,69 @@
+{
+  "base_total": 7377.858249106621,
+  "gain": 1.0620369069802091,
+  "projected_total": 7378.920286013601,
+  "changed_tasks": [
+    {
+      "task": 18,
+      "base_cost": 24360,
+      "new_cost": 19047,
+      "base_points": 14.899302278176167,
+      "new_points": 15.14533511216144,
+      "gain": 0.2460328339852733,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task018.onnx",
+      "sha256": "8a9eaacb6a1ee1283392468be4091930a96b27a5d72e7398175c9f1d89c2f997"
+    },
+    {
+      "task": 123,
+      "base_cost": 1342,
+      "new_cost": 1020,
+      "base_points": 17.798083682468373,
+      "new_points": 18.072442093721683,
+      "gain": 0.27435841125330995,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task123.onnx",
+      "sha256": "2f4584ab9407776a942958dfa19ece523d78cf0d334c4a0420835cb526c42bc3"
+    },
+    {
+      "task": 134,
+      "base_cost": 1529,
+      "new_cost": 1329,
+      "base_points": 17.667630794070938,
+      "new_points": 17.807817941286753,
+      "gain": 0.1401871472158156,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task134.onnx",
+      "sha256": "c2040ddb14c46e0d641cebbc25ba54d02bf7bcea41cbce30c8749554e8a3a1b8"
+    },
+    {
+      "task": 285,
+      "base_cost": 18674,
+      "new_cost": 18189,
+      "base_points": 15.165112538956128,
+      "new_points": 15.191427705260159,
+      "gain": 0.026315166304030413,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task285.onnx",
+      "sha256": "17a2ae17c0695a6ec2f335fef24db23ecbfd59156001f402d800d869d4ab8da9"
+    },
+    {
+      "task": 350,
+      "base_cost": 428,
+      "new_cost": 400,
+      "base_points": 18.940876804418203,
+      "new_points": 19.00853545289202,
+      "gain": 0.06765864847381664,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task350.onnx",
+      "sha256": "41f31240c1acb24ab1d5a1328f6dbb420025b91e36b528c0c35ad0d3bde952c1"
+    },
+    {
+      "task": 360,
+      "base_cost": 340,
+      "new_cost": 250,
+      "base_points": 19.17105438238979,
+      "new_points": 19.478539082137754,
+      "gain": 0.3074846997479632,
+      "path": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission\\task360.onnx",
+      "sha256": "d10d1cc40a2b09d79c571a3d7d61ab916a0df307031e9682eb5c0805634e2599"
+    }
+  ],
+  "submission_zip": "D:\\golf\\public_probe_variants\\team_submission2_pending_b018_b123_b134_b285_b350_b360_v1_20260713\\submission.zip",
+  "submission_sha256": "77b2e974e84ee0212cd22f7114161f7394bbaa70b5f7452cd465e05bbc99de8b"
+}

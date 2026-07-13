@@ -6,6 +6,20 @@ Tasks:
 
 task001, task008, task018, task019, task023, task024, task056, task057, task063, task068, task076, task083, task088, task090, task097, task101, task104, task123, task125, task128, task131, task134, task140, task143, task151, task161, task163, task170, task172, task175, task181, task185, task205, task208, task209, task212, task228, task242, task244, task245, task247, task255, task261, task266, task270, task277, task280, task285, task289, task291, task293, task295, task300, task308, task312, task313, task317, task318, task320, task328, task344, task350, task360, task368, task369, task377, task395
 
+## 2026-07-13: new team baseline, six original B rewrites
+
+Folder: `20260713_b_team7378_original_rewrites_v1`
+
+- New provided baseline validates `400/400` at `7377.858249` locally.
+- Changed only B tasks `018`, `123`, `134`, `285`, `350`, and `360`.
+- Combined local gain: `+1.062037`.
+- Projected local score: `7378.920286`.
+- Main new structures are task123 nested-square factorization, task134
+  generator-proven one-axis variance, task350 shared rule tensors, and task360
+  shared fold/output route.
+- Complete submission ZIP, six models, scripts, and reports are included.
+- Kaggle ref: `54647712` (submitted; initial status `PENDING`).
+
 ## 2026-07-09: yusuketogashi V176 B-only positive graft
 
 Folder: `20260709_b_yusuketogashi_v176_positive_v1`
