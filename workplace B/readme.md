@@ -404,3 +404,24 @@ The package remains below the `+1.0` direct-submit threshold. The current
 task-level report also corrects stale assignment data: task350 is already at
 cost 428 and 18.940877 points, so the next structural pass moves to task101
 and task076 instead.
+
+## 2026-07-13: exact rewrite batch 2 on accepted 7379.07 parent
+
+Folder: `20260713_b_team7379_exact_batch2_v1`
+
+Seven further B-only rewrites pass their complete official datasets and the
+combined 400-model package validates `400/400`. Costs changed as follows:
+
+- task076: `12825 -> 12313`.
+- task101: `13711 -> 13071`.
+- task163: `310 -> 298`.
+- task208: `4181 -> 4084`.
+- task209: `7609 -> 7324`.
+- task270: `2846 -> 2719`.
+- task328: `5746 -> 5189`.
+
+The reliable unpublished gain is `+0.337284`; the full continuation package
+scores `7379.257570` locally and projects to about `7379.41` from Kaggle ref
+`54647712` (`7379.07`). It is archived but not submitted because the gain is
+below the agreed `+1.0` verification threshold. Resume from this package and
+accumulate another `+0.662716` before the next direct submission.

@@ -1,0 +1,15 @@
+{
+  "scope": "B tasks only",
+  "parent_kaggle_ref": 54647712,
+  "parent_public_score": 7379.07,
+  "parent_local_score": 7378.920286013601,
+  "combined_gain": 0.337283958433942,
+  "candidate_local_score": 7379.2575699720355,
+  "projected_public_score": 7379.407283958434,
+  "valid_tasks": 400,
+  "invalid_tasks": 0,
+  "submitted": false,
+  "submission_reason": "Combined unpublished gain is below the +1.0 direct-submit threshold.",
+  "changed_tasks": [76, 101, 163, 208, 209, 270, 328],
+  "submission_sha256": "916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef"
+}

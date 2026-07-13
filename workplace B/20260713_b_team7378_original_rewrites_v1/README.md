@@ -45,7 +45,12 @@ Projected local score: `7378.920286`.
 ## Kaggle
 
 - Submission ref: `54647712`
-- Initial status: `PENDING`
+- Final status: `COMPLETE`
+- Public score: `7379.07`
+- The displayed gain over the nearby `7378.40` team submission is about
+  `+0.67`. This closely matches the guaranteed task123/task285/task350/task360
+  local subtotal; task018 and task134 are therefore not counted as reliable
+  unpublished gains in later batches.
 
 ## Contents
 
