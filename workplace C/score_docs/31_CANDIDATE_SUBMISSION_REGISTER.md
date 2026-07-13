@@ -52,3 +52,15 @@ have not been rebased, packaged, or submitted.
 | task286 | 26909 | 26879 | +0.001115 | 265/265 | `workplace C/single_task/task286/onnx/task286_conv_support_crop.onnx` |
 | task069 | 2946 | 2916 | +0.010236 | 264/264 | `workplace C/single_task/task069/onnx/task069_compact_pad_axes_conv_crop.onnx` |
 | task201 | 3043 | 3013 | +0.009908 | 266/266 | `workplace C/single_task/task201/onnx/task201_compact_pad_axes_conv_crop.onnx` |
+
+## 2026-07-13 Five-Batch Online Stack
+
+All five cumulative candidates were rebased on the accepted `7296.04` package.
+They completed at `7296.29`, `7296.47`, `7296.66`, `7296.84`, and `7297.02`.
+The final package contains 23 independently validated C replacements and has
+SHA-256 `5374C6BB7A0276FE778F6E6B14996301A47786EDDFD3480122AA91719D42C091`.
+
+Kaggle refs: `54633385`, `54633579`, `54633759`, `54633899`, `54634057`.
+
+Detailed task membership and predicted/observed deltas are recorded in
+`45_C5_ONLINE_RESULTS_20260713.md`.

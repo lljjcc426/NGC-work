@@ -177,3 +177,12 @@ hypotheses are in `36_LOCAL_TASK_SCORE_CAMPAIGN_20260712.md`.
 - held candidates: task158 `18530`, task182 `6065`; both `do_not_submit`
 - task315 rank-two argmax probe rejected by official per-channel threshold validation
 - detailed report: `43_CD_ARCHIVE_METHOD_INTEL_20260713.md`
+## 2026-07-13 Five-Batch Kaggle Result
+
+Twenty-three independent C replacements were revalidated against the accepted
+`7296.04` team package and submitted in five cumulative batches. Every batch
+completed with the predicted positive direction: `7296.29`, `7296.47`,
+`7296.66`, `7296.84`, and `7297.02`. The cumulative online gain is `+0.98`
+against a local prediction of `+0.983686`. Archive-derived candidates remained
+excluded. See `45_C5_ONLINE_RESULTS_20260713.md` for refs, task membership, and
+package hashes.
