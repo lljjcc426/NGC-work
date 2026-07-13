@@ -153,6 +153,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--screen-examples", type=int, default=3)
+    parser.add_argument("--parent-score", type=float, default=7379.07)
+    parser.add_argument(
+        "--parent-zip-sha256",
+        default="77b2e974e84ee0212cd22f7114161f7394bbaa70b5f7452cd465e05bbc99de8b",
+    )
     parser.add_argument(
         "--local-root",
         type=Path,
@@ -254,8 +259,8 @@ def main() -> int:
 
     manifest: dict = {
         "parent_dir": str(parent_dir),
-        "parent_online_score": 7379.07,
-        "parent_zip_sha256": "77b2e974e84ee0212cd22f7114161f7394bbaa70b5f7452cd465e05bbc99de8b",
+        "parent_online_score": args.parent_score,
+        "parent_zip_sha256": args.parent_zip_sha256,
         "archive_dir": str(archive_dir),
         "archive_zip_sha256": "ab6515e0f82e2eebe82e205db8a62f46042fd4b7941b7d61b72cf47ba9284f87",
         "excluded_tasks": sorted(excluded_tasks),
@@ -311,14 +316,14 @@ def main() -> int:
     package_directory(output_onnx, zip_path)
     manifest["replacement_count"] = replacements
     manifest["predicted_point_gain"] = total_gain
-    manifest["predicted_score"] = 7379.07 + total_gain
+    manifest["predicted_score"] = args.parent_score + total_gain
     manifest["package_sha256"] = sha256_file(zip_path)
     manifest["root_onnx_count"] = 400
     manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True), encoding="utf-8")
     print(
         json.dumps(
             {
-                "parent_score": 7379.07,
+                "parent_score": args.parent_score,
                 "replacements": replacements,
                 "predicted_point_gain": total_gain,
                 "predicted_score": manifest["predicted_score"],
