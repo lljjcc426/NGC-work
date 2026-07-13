@@ -1,0 +1,17 @@
+{
+  "current_cost": 5976,
+  "current_points": 16.304493273187347,
+  "params": 55,
+  "memory": 5921,
+  "largest_intermediates": [
+    {"name": "mv", "bytes": 900},
+    {"name": "mh", "bytes": 900},
+    {"name": "fill", "bytes": 900},
+    {"name": "vertical_count_pipeline", "bytes": 720},
+    {"name": "horizontal_count_pipeline", "bytes": 720}
+  ],
+  "finding": "Only one orientation branch is active, but selecting and transposing a canonical 30x30 mask with ordinary ONNX nodes costs back the memory saved by sharing the branches.",
+  "rejected_small_edit": "Sharing the post-orientation index pipeline saves about 1296 bytes but cannot approach the greater-than-one-point target once dynamic output orientation is restored.",
+  "next_architecture": "Compile orientation selection and input overlay into a terminal expression so the canonical mask is not materialized in direct, transposed, and selected forms."
+}
+

@@ -29,4 +29,7 @@ The complete run from `7282.01` to `7296.04` adds `+14.03` online. The final
 
 The next independent rewrite target is task255. Even after this integration it
 has cost 5976 and only 16.304493 points, making it one of the weakest B tasks.
-
+Its tensor profile is recorded in `reports/task255_rewrite_analysis.json`.
+Ordinary branch sharing is insufficient because dynamic orientation restores
+three 30x30 masks; the next rewrite must fuse orientation into the terminal
+output expression.
