@@ -352,3 +352,18 @@ The new tasks are 001, 024, 143, 244, 245, 255, 291, 313, 344, 368, 369, and
 377. Task285 remains explicitly excluded because its smaller no-Pad model is
 hidden-unsafe. Task255 is now the main independent rewrite target: cost 5976,
 16.304493 points.
+
+## 2026-07-13: task018 sparse dihedral rewrite
+
+Folder: `20260713_b20_task018_sparse_dihedral_v1`
+
+Task018 was independently reconstructed as a sparse template-selection
+problem over one or two source templates and all eight dihedral transforms.
+The whitelist-safe fixed-TopK model passes all 266 official examples and cuts
+cost from `24360` to `19047`, for `+0.246033` local points. A smaller dynamic
+`NonZero` version was rejected because that operator is prohibited by the
+competition scorer; uint8 `TopK` also remains excluded for online safety.
+
+The 400-task continuation package projects to `7296.149452` locally. It is
+archived but not submitted yet because the accumulated new gain is below the
+`+1.0` direct-submit threshold.
