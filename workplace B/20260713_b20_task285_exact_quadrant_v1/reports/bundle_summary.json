@@ -1,0 +1,39 @@
+﻿{
+    "variant":  "team_pending_b018_b285_exact_v1_20260713",
+    "purpose":  "B-only exact self rewrites accumulated over online 7296.04 baseline",
+    "online_base_score":  7296.04,
+    "local_base_total":  7295.9034192396884,
+    "expected_local_total":  7296.2292536936593,
+    "combined_gain_vs_base":  0.325834453970856,
+    "changed_tasks":  [
+                          {
+                              "task":  18,
+                              "base_cost":  24360,
+                              "base_points":  14.899302278176169,
+                              "cost":  19047,
+                              "memory":  18836,
+                              "params":  211,
+                              "points":  15.14533511216144,
+                              "gain":  0.24603283398527154,
+                              "path":  "D:\\golf\\public_probe_variants\\team_pending_b018_b285_exact_v1_20260713\\submission\\task018.onnx"
+                          },
+                          {
+                              "task":  285,
+                              "base_cost":  19700,
+                              "base_points":  15.111626085273921,
+                              "cost":  18189,
+                              "memory":  17920,
+                              "params":  269,
+                              "points":  15.191427705260161,
+                              "gain":  0.079801619986239913,
+                              "path":  "D:\\golf\\public_probe_variants\\team_pending_b018_b285_exact_v1_20260713\\submission\\task285.onnx"
+                          }
+                      ],
+    "valid_tasks":  400,
+    "invalid_tasks":  0,
+    "zip_path":  "D:\\golf\\public_probe_variants\\team_pending_b018_b285_exact_v1_20260713\\submission.zip",
+    "zip_size":  440498,
+    "zip_sha256":  "5E3D36266B2D508D7F062302EDD2F770CC91AD7E76EC9EC0A4C4A0C245238B93",
+    "submitted":  false,
+    "submit_threshold":  1
+}

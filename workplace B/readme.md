@@ -367,3 +367,26 @@ competition scorer; uint8 `TopK` also remains excluded for online safety.
 The 400-task continuation package projects to `7296.149452` locally. It is
 archived but not submitted yet because the accumulated new gain is below the
 `+1.0` direct-submit threshold.
+
+## 2026-07-13: task285 exact quadrant rewrite
+
+Folder: `20260713_b20_task285_exact_quadrant_v1`
+
+task285 was reconstructed from the exact ARC-GEN `b775ac94` rule and rewritten
+without public-model blending. The model resolves the complete source sprite,
+expands its connected 5x5 mask, and reflects it into all colored target
+quadrants. Signed int8 colors make padding double as the boundary sentinel,
+while the float16 `TopK` path is retained for Kaggle compatibility.
+
+- Cost: `19700 -> 18189`.
+- Points: `15.111626 -> 15.191428`.
+- Gain: `+0.079802`.
+- Validation: `265/265` official examples, `50000/50000` fresh exact-generator
+  cases, and `400/400` valid files in the cumulative package.
+- Accumulated task018 + task285 local gain: `+0.325834`.
+- Accumulated local score: `7296.229254`.
+
+The package remains below the `+1.0` direct-submit threshold. The current
+task-level report also corrects stale assignment data: task350 is already at
+cost 428 and 18.940877 points, so the next structural pass moves to task101
+and task076 instead.
