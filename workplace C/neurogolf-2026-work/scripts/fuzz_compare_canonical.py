@@ -74,6 +74,9 @@ def main() -> None:
             item["input"]
             for split in ("train", "test", "arc-gen")
             for item in examples.get(split, [])
+            if item.get("input")
+            and len(item["input"]) <= 30
+            and len(item["input"][0]) <= 30
         ]
         shapes = {(len(grid), len(grid[0])) for grid in inputs}
         shape_list = sorted(shapes)
