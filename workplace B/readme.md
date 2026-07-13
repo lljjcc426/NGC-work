@@ -320,3 +320,21 @@ Kaggle ref `54613658` proved task293 in isolation at `7280.93` (`+3.26`). Ref
 a total online improvement of `+4.34` from the `7277.67` baseline. The B group
 now has 11 tasks at or above 20 points. Full comparison, risks, accepted models,
 and the exact submission artifacts are retained in the audit folder.
+
+## 2026-07-13: four terminal-rule models accepted at 7290.38
+
+Folder: `20260713_b20_terminal_rules_online_v2`
+
+Four further B tasks were integrated one at a time on top of the accepted
+`7282.01` package. All predicted gains matched the online direction and size:
+
+- task161: cost `1779 -> 275`, online score `7283.88`.
+- task163: cost `1791 -> 310`, online score `7285.64`.
+- task212: cost `2249 -> 412`, online score `7287.33`.
+- task350: cost `9036 -> 428`, online score `7290.38`.
+
+This round adds `+8.37` online. Task350 also passed 500 independently generated
+grids after its exact first-to-last span rule was reconstructed. A task163
+sparse-initializer attempt was rejected locally because official strict shape
+inference cannot infer sparse Einsum input ranks; the failed construction is
+documented and must not be submitted.

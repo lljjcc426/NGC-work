@@ -1,0 +1,11 @@
+{
+  "rule": "fill color 8 strictly between the first and last color-1 point in every row and column; preserve original color-1 points",
+  "official_examples": 267,
+  "official_status": "PASS",
+  "independent_random_examples": 500,
+  "dimension_range": [1, 30],
+  "tested_densities": [0.03, 0.15, 0.5],
+  "random_status": "PASS",
+  "minimum_nonzero_output_margin": 1.0
+}
+

@@ -1,0 +1,15 @@
+{
+  "baseline": {
+    "kaggle_ref": "54613833",
+    "score": 7282.01
+  },
+  "steps": [
+    {"task": "task161", "cost": 275, "points": 19.38322890233343, "local_gain": 1.867036, "kaggle_ref": "54614776", "online_score": 7283.88, "status": "COMPLETE"},
+    {"task": "task163", "cost": 310, "points": 19.263427702520808, "local_gain": 1.753957, "kaggle_ref": "54615076", "online_score": 7285.64, "status": "COMPLETE"},
+    {"task": "task212", "cost": 412, "points": 18.978976650650473, "local_gain": 1.697218, "kaggle_ref": "54615262", "online_score": 7287.33, "status": "COMPLETE"},
+    {"task": "task350", "cost": 428, "points": 18.940876804418203, "local_gain": 3.049849, "kaggle_ref": "54615459", "online_score": 7290.38, "status": "COMPLETE"}
+  ],
+  "online_gain": 8.37,
+  "final_zip_sha256": "FBF70D2171E37613C40A727E4EF230F7FA5FFCB6BB9E1CDB41A3E95251BA926D"
+}
+

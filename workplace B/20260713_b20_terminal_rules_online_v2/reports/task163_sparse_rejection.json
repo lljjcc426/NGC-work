@@ -1,0 +1,9 @@
+{
+  "dense_cost": 310,
+  "dense_nonzero_values": 88,
+  "theoretical_sparse_points": 20.522638,
+  "status": "REJECTED",
+  "checker_error": "ShapeInferenceError: Rank of sparse Einsum input 0 (0) does not match the equation indices (1)",
+  "reason": "The official scorer calls onnx.shape_inference.infer_shapes(strict_mode=True), so the sparse model is invalid before runtime."
+}
+
