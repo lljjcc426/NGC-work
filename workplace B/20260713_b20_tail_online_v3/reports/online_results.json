@@ -1,0 +1,13 @@
+{
+  "baseline": {"kaggle_ref": "54615459", "score": 7290.38},
+  "steps": [
+    {"tasks": [244, 377], "kaggle_ref": "54628864", "score": 7292.17, "online_gain": 1.79, "status": "COMPLETE"},
+    {"tasks": [24, 245], "kaggle_ref": "54628977", "score": 7293.55, "online_gain": 1.38, "status": "COMPLETE"},
+    {"tasks": [291, 368, 369], "kaggle_ref": "54629107", "score": 7294.97, "online_gain": 1.42, "status": "COMPLETE"},
+    {"tasks": [1, 143, 255, 313, 344], "kaggle_ref": "54629233", "score": 7296.04, "online_gain": 1.07, "status": "COMPLETE"}
+  ],
+  "gain_from_7290_38": 5.66,
+  "gain_from_7282_01": 14.03,
+  "final_zip_sha256": "4CD81F2341673942CB95F8F959DCAFA6D194BB0A948B524DC38CD104CE165A20"
+}
+

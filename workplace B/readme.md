@@ -338,3 +338,17 @@ grids after its exact first-to-last span rule was reconstructed. A task163
 sparse-initializer attempt was rejected locally because official strict shape
 inference cannot infer sparse Einsum input ranks; the failed construction is
 documented and must not be submitted.
+
+## 2026-07-13: B tail integration accepted at 7296.04
+
+Folder: `20260713_b20_tail_online_v3`
+
+Twelve more B models were added in four online-verified batches. Scores moved
+from `7290.38` through `7292.17`, `7293.55`, and `7294.97` to `7296.04`.
+Together with the preceding terminal-rule round, the full run from `7282.01`
+adds `+14.03` online.
+
+The new tasks are 001, 024, 143, 244, 245, 255, 291, 313, 344, 368, 369, and
+377. Task285 remains explicitly excluded because its smaller no-Pad model is
+hidden-unsafe. Task255 is now the main independent rewrite target: cost 5976,
+16.304493 points.
