@@ -425,3 +425,19 @@ scores `7379.257570` locally and projects to about `7379.41` from Kaggle ref
 `54647712` (`7379.07`). It is archived but not submitted because the gain is
 below the agreed `+1.0` verification threshold. Resume from this package and
 accumulate another `+0.662716` before the next direct submission.
+
+## 2026-07-14: submission 3 B batch accepted at 7384.93
+
+Folder: `20260714_b_submission3_exact_batch1_online7384_93_v1`
+
+The team-provided `submission (3).zip` validates `400/400`, scores
+`7383.777544` locally, and has online score `7383.93` at ref `54673685`.
+Ten exact B-only overrides were rebased onto it: tasks 076, 101, 123, 163,
+208, 209, 270, 328, 350, and 360.
+
+The resulting package validates `400/400` at `7384.778427` locally, a gain of
+`+1.000883`. Kaggle ref `54686944` completed at `7384.93`, confirming a full
+`+1.00` online gain over the same baseline. task208 also passed 20,000 fresh
+exact-generator samples; task163 global state truncation and the more
+aggressive task350 gate-removal variants are explicitly rejected and retained
+only as documented search scripts.

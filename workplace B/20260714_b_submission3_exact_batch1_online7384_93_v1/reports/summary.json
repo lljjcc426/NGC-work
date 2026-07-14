@@ -1,0 +1,17 @@
+{
+  "scope": "B tasks only",
+  "baseline_source_sha256": "a5c0b4bf18f1c89a27452888ff309b9293026de9d5441497ff8cccdb0e9a458d",
+  "baseline_local_score": 7383.777544448324,
+  "baseline_kaggle_ref": 54673685,
+  "baseline_public_score": 7383.93,
+  "combined_local_gain": 1.000882707997,
+  "candidate_local_score": 7384.778427156321,
+  "valid_tasks": 400,
+  "invalid_tasks": 0,
+  "changed_tasks": [76, 101, 123, 163, 208, 209, 270, 328, 350, 360],
+  "submission_sha256": "8eba05f6379d98c2f99e56760468521d912d23fd0a247556bcb1dc2ef2211207",
+  "kaggle_ref": 54686944,
+  "kaggle_status": "COMPLETE",
+  "public_score": 7384.93,
+  "online_gain": 1.0
+}
