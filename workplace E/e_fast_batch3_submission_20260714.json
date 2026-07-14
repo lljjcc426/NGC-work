@@ -2,7 +2,8 @@
   "competition": "neurogolf-2026",
   "submitted_at": "2026-07-14T20:04:01+08:00",
   "submission_ref": 54684628,
-  "submission_status_at_record": "PENDING",
+  "submission_status_at_record": "COMPLETE",
+  "public_score": 7363.94,
   "requested_team_high": {
     "ref": 54673685,
     "public_score": 7383.93,
@@ -39,5 +40,14 @@
   "validation": "No new local validation in this fast submission; reused prior complete official local passes.",
   "private_dataset": "llccqq624/ngc-e-fast737940-batch3-20260714",
   "private_notebook": "llccqq624/ngc-e-fast-737940-batch3-submit-v1",
-  "local_submission_sha256": "51b185fd8756283cb6676ac49da462dc0651b2b764758b3293c1e4c04881df8b"
+  "local_submission_sha256": "51b185fd8756283cb6676ac49da462dc0651b2b764758b3293c1e4c04881df8b",
+  "online_evaluation": {
+    "delta_vs_actual_binary_parent": -15.467283958434,
+    "delta_vs_requested_team_high": -19.99,
+    "meets_expectation": false,
+    "verdict": "The combined task110/task138/task216 submission regressed substantially online.",
+    "disposition": "Reject this combined package and do not merge it into the team-high submission.",
+    "attribution_limit": "This three-task combined submission does not identify which individual replacement caused the regression.",
+    "recommended_next_step": "Return to the team-high baseline and isolate replacements in separate Kaggle submissions before reuse."
+  }
 }
