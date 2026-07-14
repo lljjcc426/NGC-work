@@ -49,5 +49,37 @@
     "disposition": "Reject this combined package and do not merge it into the team-high submission.",
     "attribution_limit": "This three-task combined submission does not identify which individual replacement caused the regression.",
     "recommended_next_step": "Return to the team-high baseline and isolate replacements in separate Kaggle submissions before reuse."
+  },
+  "isolation_evaluation": {
+    "baseline": {
+      "submission_ref": 54685007,
+      "public_score": 7379.41,
+      "package_sha256": "916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef",
+      "delta_vs_baseline": 0.0
+    },
+    "task110_only": {
+      "submission_ref": 54685012,
+      "public_score": 7363.58,
+      "package_sha256": "4e46fb4394778080c51f0623b59a184a1a4af1f72acb5030ac098708b0c636ef",
+      "delta_vs_baseline": -15.83,
+      "result": "reject"
+    },
+    "task138_only": {
+      "submission_ref": 54685015,
+      "public_score": 7379.55,
+      "package_sha256": "401bc883a17ee1c20118e2ba283c4e171fd643d3d9c7969b6b2259b4b5c6d250",
+      "delta_vs_baseline": 0.14,
+      "result": "positive_on_isolation_baseline"
+    },
+    "task216_only": {
+      "submission_ref": 54685019,
+      "public_score": 7379.62,
+      "package_sha256": "52d64dad4f069c95935f96de07a1cd8a81eb45ba6de9b0f0d7622be3527a1cb8",
+      "delta_vs_baseline": 0.21,
+      "result": "positive_on_isolation_baseline"
+    },
+    "diagnosis": "task110 is the confirmed source of the large online regression. task138 and task216 are individually positive on the 7379.41 isolation baseline.",
+    "combined_consistency": "The isolated rounded deltas sum to -15.48, consistent with the combined submission delta of about -15.47 after leaderboard rounding.",
+    "team_high_limit": "task138 and task216 have not yet been tested on the unavailable 7383.93 team-high binary."
   }
 }
