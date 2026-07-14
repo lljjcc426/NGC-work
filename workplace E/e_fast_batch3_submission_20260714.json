@@ -1,0 +1,43 @@
+{
+  "competition": "neurogolf-2026",
+  "submitted_at": "2026-07-14T20:04:01+08:00",
+  "submission_ref": 54684628,
+  "submission_status_at_record": "PENDING",
+  "requested_team_high": {
+    "ref": 54673685,
+    "public_score": 7383.93,
+    "description": "v118 rollback391 online-safe keep058 local7383.777544 shaa5c0b4bf",
+    "binary_available_in_github": false
+  },
+  "actual_binary_parent": {
+    "source": "origin/main workplace B/20260713_b_team7379_exact_batch2_v1/submission/submission.zip",
+    "parent_ref": 54647712,
+    "projected_public_score": 7379.407283958434,
+    "sha256": "916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef"
+  },
+  "changed_tasks": [110, 138, 216],
+  "candidates": [
+    {
+      "task": 110,
+      "baseline_cost": 9682,
+      "candidate_cost": 7326,
+      "sha256": "5a5d48b1e0b54a0a29b2039186b81bbf525066cc717296a9df7e297a027512a1"
+    },
+    {
+      "task": 138,
+      "baseline_cost": 11656,
+      "candidate_cost": 10096,
+      "sha256": "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d"
+    },
+    {
+      "task": 216,
+      "baseline_cost": 8781,
+      "candidate_cost": 7137,
+      "sha256": "02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275"
+    }
+  ],
+  "validation": "No new local validation in this fast submission; reused prior complete official local passes.",
+  "private_dataset": "llccqq624/ngc-e-fast737940-batch3-20260714",
+  "private_notebook": "llccqq624/ngc-e-fast-737940-batch3-submit-v1",
+  "local_submission_sha256": "51b185fd8756283cb6676ac49da462dc0651b2b764758b3293c1e4c04881df8b"
+}

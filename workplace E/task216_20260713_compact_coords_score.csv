@@ -1,0 +1,2 @@
+task,path,status,arc_agi_pass,arc_agi_fail,arc_gen_pass,arc_gen_fail,memory,params,cost,points,filesize,error
+216,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_compact_coords\task216.onnx,ok,4,0,262,0,7034,103,7137,16.126952201028935,4776,

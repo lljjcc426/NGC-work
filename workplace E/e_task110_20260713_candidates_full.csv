@@ -1,0 +1,11 @@
+task,path,status,arc_agi_pass,arc_agi_fail,arc_gen_pass,arc_gen_fail,memory,params,cost,points,filesize,error
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\general_k4\task110.onnx,ok,4,0,262,0,8821,117,8938,15.901932870506602,4952,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\general_k4_valid29\task110.onnx,ok,4,0,262,0,8229,144,8373,15.967232477795568,4997,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\general_k4_valid29_u8period\task110.onnx,ok,4,0,262,0,8161,144,8305,15.975386977952605,5040,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\no_patch_k4_rejected\task110.onnx,wrong,4,0,261,1,7777,85,7862,16.030203694018194,4372,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\no_patch_k4_valid29_rejected\task110.onnx,wrong,4,0,261,1,7446,115,7561,16.06924126444173,4600,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\no_patch_k4_valid29_u8period_rejected\task110.onnx,wrong,4,0,261,1,7378,115,7493,16.07827546963569,4643,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\scatter_k3_rejected\task110.onnx,wrong,4,0,257,5,7677,100,7777,16.041074061305057,4850,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\scatter_k4\task110.onnx,ok,4,0,262,0,8055,101,8156,15.993490868305654,4953,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\scatter_k4_valid29\task110.onnx,ok,4,0,262,0,7715,131,7846,16.032240873230503,5181,
+110,F:\kaggle\NGC-work\workplace E\optimized_onnx\task110_20260713\scatter_k4_valid29_u8period\task110.onnx,ok,4,0,262,0,7647,131,7778,16.040945485284308,5224,

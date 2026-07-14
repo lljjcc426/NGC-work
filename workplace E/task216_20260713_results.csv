@@ -1,0 +1,11 @@
+variant,status,arc_agi_pass,arc_agi_fail,arc_gen_pass,arc_gen_fail,memory,params,cost,cost_reduction,points,filesize,report,model,error
+task216_20260713_compact_coords,ok,4,0,262,0,7034,103,7137,1644,16.126952201028935,4776,task216_20260713_compact_coords_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_compact_coords\task216.onnx,
+task216_20260713_slot_conv,ok,4,0,262,0,7070,121,7191,1590,16.119414476897504,4836,task216_20260713_slot_conv_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_slot_conv\task216.onnx,
+task216_20260713_row_slots,ok,4,0,262,0,7142,103,7245,1536,16.111933145245217,5016,task216_20260713_row_slots_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_row_slots\task216.onnx,
+task216_20260713_negative_pad_corner,ok,4,0,262,0,7382,85,7467,1314,16.081751408964298,4191,task216_20260713_negative_pad_corner_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_negative_pad_corner\task216.onnx,
+task216_20260713_bounded_corner,ok,4,0,262,0,7382,117,7499,1282,16.07747504269861,4199,task216_20260713_bounded_corner_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_bounded_corner\task216.onnx,
+task216_20260713_compact_tail,ok,4,0,262,0,7625,84,7709,1072,16.049856243540738,4042,task216_20260713_compact_tail_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_compact_tail\task216.onnx,
+task216_20260713_midslice_qlinear,ok,4,0,262,0,7657,90,7747,1034,16.044939049368097,4465,task216_20260713_midslice_qlinear_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_midslice_qlinear\task216.onnx,
+task216_20260713_qlinear_counts,ok,4,0,262,0,7882,90,7972,809,16.016309318667314,4456,task216_20260713_qlinear_counts_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_qlinear_counts\task216.onnx,
+baseline,ok,4,0,262,0,8694,87,8781,0,15.919654424640004,3895,task216_20260713_baseline.csv,F:\kaggle\neurogolf-2026\work\e_high737801_recovered7_v1\models\task216.onnx,
+task216_20260713_einsum_bounds,unmeasured,4,0,262,0,,90,,,,4316,task216_20260713_einsum_bounds_score.csv,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_einsum_bounds\task216.onnx,memory or params could not be measured

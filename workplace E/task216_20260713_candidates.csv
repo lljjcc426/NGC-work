@@ -1,0 +1,2 @@
+task,variant,source,candidate,source_nodes,candidate_nodes,source_params,candidate_params,filesize,train,test,arc_gen,verified_all,sha256
+task216,binary_corner_slot_conv_compact_coords,F:\kaggle\neurogolf-2026\work\e_high737801_recovered7_v1\models\task216.onnx,F:\kaggle\NGC-work\workplace E\optimized_onnx\task216_20260713_compact_coords\task216.onnx,76,75,87,103,4776,3/3,1/1,262/262,True,02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275

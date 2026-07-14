@@ -1,0 +1,3 @@
+candidate,status,score_source,arc_agi_pass,arc_gen_pass,memory,params,cost,cost_delta,points,points_delta,filesize,sha256,path,method
+baseline,ok,official_score_onnx.py,4,262,11440,186,11626,0,15.639000751738704,0,6151,6c13a20a862f0afed7ce56a2dcd9bc8c36b330f6cc1a97a488fc72fbcc5b72fa,F:\kaggle\neurogolf-2026\work\e_probe_737834_task064_pair_sums_v1\models\task138.onnx,fixed_23x23_crop_and_two_directional_pools
+dynamic_rect_four_pool,ok,official_score_onnx.py,4,262,9965,131,10096,1530,15.780105415219005,0.141104663480301,4806,36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d,F:\kaggle\NGC-work\workplace E\optimized_onnx\task138_deep_20260713\dynamic_rect_four_pool\task138.onnx,dynamic_true_rectangle_plus_four_direct_pools_plus_pad_max_border_merge
