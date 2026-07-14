@@ -43,10 +43,28 @@ def _canonical(owner: str, task: str) -> Path:
     )
 
 
-def _zero_border(weight: np.ndarray) -> tuple[int, int, int, int]:
+def _broadcast_zero_point(
+    weight: np.ndarray, zero_point: np.ndarray | int | None
+) -> np.ndarray | None:
+    if zero_point is None:
+        return np.asarray(0, dtype=weight.dtype)
+    value = np.asarray(zero_point)
+    if value.size == 1:
+        return value.reshape(()).astype(weight.dtype, copy=False)
+    if value.ndim == 1 and value.shape[0] == weight.shape[0]:
+        return value.reshape((-1, 1, 1, 1)).astype(weight.dtype, copy=False)
+    return None
+
+
+def _zero_border(
+    weight: np.ndarray, zero_point: np.ndarray | int | None = None
+) -> tuple[int, int, int, int] | None:
     if weight.ndim != 4:
         return 0, 0, 0, 0
-    support = np.any(weight != 0, axis=(0, 1))
+    broadcast = _broadcast_zero_point(weight, zero_point)
+    if broadcast is None:
+        return None
+    support = np.any(weight != broadcast, axis=(0, 1))
     if not support.any():
         return 0, 0, 0, 0
     rows = np.flatnonzero(support.any(axis=1))
@@ -59,7 +77,7 @@ def _zero_border(weight: np.ndarray) -> tuple[int, int, int, int]:
     )
 
 
-def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
+def crop_zero_support_detailed(model: onnx.ModelProto) -> tuple[list[dict], list[dict]]:
     initializers = {item.name: item for item in model.graph.initializer}
     consumers: dict[str, int] = {}
     for node in model.graph.node:
@@ -68,6 +86,7 @@ def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
                 consumers[name] = consumers.get(name, 0) + 1
 
     changes: list[dict] = []
+    rejections: list[dict] = []
     for index, node in enumerate(model.graph.node):
         if node.op_type not in {"Conv", "QLinearConv"}:
             continue
@@ -81,7 +100,31 @@ def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
         if tensor is None or consumers.get(tensor.name, 0) != 1:
             continue
         weight = numpy_helper.to_array(tensor)
-        top, bottom, left, right = _zero_border(weight)
+        weight_zero_point = None
+        if node.op_type == "QLinearConv":
+            if len(node.input) <= 5 or node.input[5] not in initializers:
+                rejections.append(
+                    {
+                        "node": node.name or f"node_{index}",
+                        "op_type": node.op_type,
+                        "reason": "unknown_weight_zero_point",
+                    }
+                )
+                continue
+            weight_zero_point = numpy_helper.to_array(initializers[node.input[5]])
+        border = _zero_border(weight, weight_zero_point)
+        if border is None:
+            rejections.append(
+                {
+                    "node": node.name or f"node_{index}",
+                    "op_type": node.op_type,
+                    "reason": "unsupported_weight_zero_point_broadcast",
+                    "weight_shape": list(weight.shape),
+                    "weight_zero_point_shape": list(np.asarray(weight_zero_point).shape),
+                }
+            )
+            continue
+        top, bottom, left, right = border
         if top + bottom + left + right == 0:
             continue
         pads = _attribute(node, "pads")
@@ -96,6 +139,18 @@ def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
             old_pads[2] - bottom * dilations[0],
             old_pads[3] - right * dilations[1],
         ]
+        if any(value < 0 for value in new_pads):
+            rejections.append(
+                {
+                    "node": node.name or f"node_{index}",
+                    "op_type": node.op_type,
+                    "reason": "rejected_negative_padding",
+                    "old_shape": list(weight.shape),
+                    "old_pads": old_pads,
+                    "new_pads": new_pads,
+                }
+            )
+            continue
         trimmed = weight[
             :,
             :,
@@ -121,9 +176,19 @@ def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
                 "new_shape": list(trimmed.shape),
                 "old_pads": old_pads,
                 "new_pads": new_pads,
+                "weight_zero_point": (
+                    np.asarray(weight_zero_point).reshape(-1).tolist()
+                    if weight_zero_point is not None
+                    else 0
+                ),
                 "removed_parameters": int(weight.size - trimmed.size),
             }
         )
+    return changes, rejections
+
+
+def crop_zero_support(model: onnx.ModelProto) -> list[dict]:
+    changes, _ = crop_zero_support_detailed(model)
     return changes
 
 
@@ -164,7 +229,15 @@ def main() -> None:
         built: list[tuple[str, Path, list[dict]]] = []
         for source_name, source_path in sources:
             model = onnx.load(source_path)
-            changes = crop_zero_support(model)
+            changes, rejections = crop_zero_support_detailed(model)
+            for rejection in rejections:
+                print(
+                    json.dumps(
+                        {"task": task, "source": source_name, **rejection},
+                        separators=(",", ":"),
+                    ),
+                    flush=True,
+                )
             if not changes:
                 continue
             candidate_path = args.work_dir / f"{task}_{source_name}.onnx"

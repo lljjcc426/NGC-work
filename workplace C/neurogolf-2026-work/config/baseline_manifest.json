@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-07-13T22:11:39+00:00",
+  "examples_checked": 101347,
+  "kaggle_ref": 54662258,
+  "local_score": 7381.64809158354,
+  "model_count": 400,
+  "model_set_sha256": "d3c36e86b8de0110c9ca1d0bf1b8fad076533ab26a78ec3fcaa02279d7b8d176",
+  "models_valid": 400,
+  "name": "team_7381_65",
+  "onnx_dir": "workplace C/artifacts/full400_round17_extrema_stack/onnx",
+  "package_sha256": "186b46cbbae80ce6e07122d80d96263bcddded3a58a82f850ba08cea9853dfcd",
+  "public_score": 7381.65,
+  "source_commit": "6a7a6b686c7cbcd2b2f4dc1f4244323042647f6e",
+  "submission_zip": "workplace C/artifacts/full400_round17_extrema_stack/submission.zip"
+}

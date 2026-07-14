@@ -5,98 +5,89 @@ import json
 import math
 import shutil
 import sys
-import zipfile
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import asdict
 from pathlib import Path
+from typing import Any
 
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parents[2]
-DEFAULT_PARENT = Path(
-    r"E:/kagglegolf/submissions/candidates/GOLF_20260713_SUBMISSION8_REBASE/onnx"
-)
-DEFAULT_ARCHIVE = Path(r"E:/kagglegolf/data/external/archive_1_ab6515e0/onnx")
-DEFAULT_OUTPUT = Path(
-    r"E:/kagglegolf/submissions/candidates/GOLF_20260713_SUBMISSION8_ARCHIVE_LOCAL_REBASE"
-)
+HERE = Path(__file__).resolve()
+PROJECT = HERE.parent.parent
+REPO = HERE.parents[3]
+DEFAULT_BASELINE = PROJECT / "config" / "baseline_manifest.json"
+DEFAULT_REGISTRY = PROJECT / "config" / "candidate_registry.json"
+DEFAULT_OUTPUT = REPO / "workplace C" / "artifacts" / "full400_registered_rebase"
+TASK_DATA = REPO / "neurogolf_400_tasks" / "tasks"
+SCORER_SOURCE = HERE.parent / "c_score_common.py"
 
 
-def sha256_file(path: Path) -> str:
-    import hashlib
-
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
-def expected_tasks() -> list[str]:
-    return [f"task{index:03d}" for index in range(1, 401)]
-
-
-def assert_complete_directory(path: Path) -> None:
-    actual = {item.stem for item in path.glob("task*.onnx") if item.is_file()}
-    expected = set(expected_tasks())
-    if actual != expected:
-        missing = sorted(expected - actual)
-        extra = sorted(actual - expected)
-        raise RuntimeError(
-            f"invalid ONNX directory {path}: count={len(actual)} "
-            f"missing={missing[:10]} extra={extra[:10]}"
-        )
-
-
-def local_candidates(task: str, roots: list[Path]) -> list[Path]:
-    candidates: set[Path] = set()
-    for root in roots:
-        task_dir = root / "single_task" / task / "onnx"
-        if task_dir.exists():
-            # Only the canonical artifact is eligible. Task directories also
-            # contain public-fit, unsupported-op and failed experimental graphs
-            # that can pass the known examples but are not valid replacements.
-            canonical = task_dir / f"{task}_candidate.onnx"
-            if canonical.is_file():
-                candidates.add(canonical.resolve())
-    return sorted(candidates, key=lambda path: str(path).lower())
-
-
-def score_job(job: tuple[str, str, int]) -> dict:
+def _score_job(job: tuple[str, str, int]) -> dict[str, Any]:
     task, raw_path, max_examples = job
-    sys.path.insert(0, str(SCRIPT_DIR))
+    sys.path.insert(0, str(HERE.parent))
     from c_score_common import score_onnx
 
-    result = score_onnx(
-        task,
-        Path(raw_path),
-        validate_all=max_examples == 0,
-        max_examples=max_examples,
+    return asdict(
+        score_onnx(
+            task,
+            Path(raw_path),
+            validate_all=max_examples == 0,
+            max_examples=max_examples,
+        )
     )
-    return asdict(result)
 
 
-def score_many(
+def _load_cache(path: Path) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(payload, dict):
+            raise TypeError("cache root must be an object")
+        return payload
+    except Exception:
+        backup = path.with_suffix(path.suffix + ".invalid")
+        counter = 1
+        while backup.exists():
+            backup = path.with_suffix(path.suffix + f".invalid{counter}")
+            counter += 1
+        path.replace(backup)
+        return {}
+
+
+def _score_many(
     jobs: list[tuple[str, Path]],
+    *,
     workers: int,
     max_examples: int,
-    cache: dict[str, dict],
-) -> dict[tuple[str, str], dict]:
-    results: dict[tuple[str, str], dict] = {}
+    cache: dict[str, dict[str, Any]],
+    cache_path: Path,
+) -> dict[tuple[str, str], dict[str, Any]]:
+    from full400_safety import atomic_write_json, validation_cache_key
+
+    results: dict[tuple[str, str], dict[str, Any]] = {}
     pending: list[tuple[str, str, int]] = []
+    keys: dict[tuple[str, str], str] = {}
     for task, path in jobs:
-        sha = sha256_file(path)
-        key = f"{task}:{sha}:examples={max_examples}"
-        if key in cache:
-            results[(task, str(path.resolve()))] = cache[key]
+        resolved = str(path.resolve())
+        key = validation_cache_key(
+            task=task,
+            model_path=path,
+            task_json=TASK_DATA / f"{task}.json",
+            scorer_source=SCORER_SOURCE,
+            validation_mode="official_full" if max_examples == 0 else "official_screen",
+            max_examples=max_examples,
+        )
+        keys[(task, resolved)] = key
+        cached = cache.get(key)
+        if cached and Path(cached.get("path", "")).is_file():
+            results[(task, resolved)] = cached
         else:
-            pending.append((task, str(path.resolve()), max_examples))
+            pending.append((task, resolved, max_examples))
 
     if pending:
-        with ProcessPoolExecutor(max_workers=workers) as executor:
-            futures = {executor.submit(score_job, job): job for job in pending}
-            completed = 0
-            for future in as_completed(futures):
+        with ProcessPoolExecutor(max_workers=max(1, workers)) as pool:
+            futures = {pool.submit(_score_job, job): job for job in pending}
+            for completed, future in enumerate(as_completed(futures), start=1):
                 task, raw_path, _ = futures[future]
                 try:
                     row = future.result()
@@ -114,221 +105,185 @@ def score_many(
                         "cost": None,
                         "points": None,
                         "file_size": Path(raw_path).stat().st_size,
-                        "sha256": sha256_file(Path(raw_path)),
-                        "error": f"worker_error:{type(exc).__name__}:{exc}",
+                        "sha256": "",
+                        "error": f"worker:{type(exc).__name__}:{exc}",
                     }
-                key = f"{task}:{row['sha256']}:examples={max_examples}"
+                resolved = str(Path(raw_path).resolve())
+                key = keys[(task, resolved)]
                 cache[key] = row
-                results[(task, str(Path(raw_path).resolve()))] = row
-                completed += 1
+                results[(task, resolved)] = row
                 if completed % 25 == 0 or completed == len(pending):
-                    print(
-                        json.dumps(
-                            {
-                                "stage": "full" if max_examples == 0 else "screen",
-                                "completed": completed,
-                                "total": len(pending),
-                            }
-                        ),
-                        flush=True,
-                    )
+                    print(json.dumps({"stage": "full" if max_examples == 0 else "screen", "completed": completed, "total": len(pending)}), flush=True)
+        atomic_write_json(cache_path, cache)
     return results
-
-
-def package_directory(source_dir: Path, zip_path: Path) -> None:
-    if zip_path.exists():
-        zip_path.unlink()
-    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-        for task in expected_tasks():
-            path = source_dir / f"{task}.onnx"
-            archive.write(path, arcname=path.name)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Rebase on a COMPLETE 400-model parent and retain only fully validated lower-cost models."
+        description="Build a deterministic full-400 package from parent-bound registered candidates."
     )
-    parser.add_argument("--parent-dir", type=Path, default=DEFAULT_PARENT)
-    parser.add_argument("--archive-dir", type=Path, default=DEFAULT_ARCHIVE)
+    parser.add_argument("--baseline-manifest", type=Path, default=DEFAULT_BASELINE)
+    parser.add_argument("--candidate-registry", type=Path, default=DEFAULT_REGISTRY)
+    parser.add_argument("--parent-dir", type=Path)
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--screen-examples", type=int, default=3)
-    parser.add_argument(
-        "--local-root",
-        type=Path,
-        action="append",
-        default=[],
-        help="Workspace group root containing single_task/taskXXX/onnx. Repeatable.",
-    )
-    parser.add_argument(
-        "--exclude-task",
-        action="append",
-        default=[],
-        help="Force this task to remain on the parent model. Repeatable.",
-    )
-    parser.add_argument(
-        "--local-task",
-        action="append",
-        default=[],
-        help="When present, consider local candidates only for these tasks. Repeatable.",
-    )
+    parser.add_argument("--parent-score", type=float, help="Compatibility override; must match manifest.")
+    parser.add_argument("--parent-zip-sha256", help="Compatibility assertion; must match manifest.")
+    parser.add_argument("--exclude-task", action="append", default=[])
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    parent_dir = args.parent_dir.resolve()
-    archive_dir = args.archive_dir.resolve()
+    sys.path.insert(0, str(HERE.parent))
+    from candidate_registry import eligible_candidates
+    from full400_safety import (
+        TASKS,
+        assert_complete_onnx_directory,
+        atomic_write_json,
+        deterministic_zip,
+        load_baseline_manifest,
+        model_hashes,
+        model_set_sha256,
+        sha256_file,
+        verify_zip,
+    )
+
+    baseline = load_baseline_manifest(args.baseline_manifest, args.parent_dir)
+    if args.parent_score is not None and abs(args.parent_score - float(baseline["public_score"])) > 1e-9:
+        raise RuntimeError("--parent-score does not match baseline manifest")
+    if args.parent_zip_sha256 and args.parent_zip_sha256.lower() != baseline["package_sha256"].lower():
+        raise RuntimeError("--parent-zip-sha256 does not match baseline manifest")
+    parent_dir = Path(baseline["onnx_dir"])
+    parent_hashes = baseline["models"]
+    eligible = eligible_candidates(args.candidate_registry, parent_hashes)
+    excluded = set(args.exclude_task)
+    unknown = excluded - set(TASKS)
+    if unknown:
+        raise RuntimeError(f"unknown excluded tasks: {sorted(unknown)}")
+
     output_root = args.output_root.resolve()
     output_onnx = output_root / "onnx"
-    cache_path = output_root / "score_cache.json"
-    manifest_path = output_root / "package_manifest.json"
-    zip_path = output_root / "submission.zip"
-    local_roots = args.local_root or [
-        REPO_ROOT / "workplace A",
-        REPO_ROOT / "workplace C",
-        REPO_ROOT / "workplace D",
-    ]
-    excluded_tasks = set(args.exclude_task)
-    allowed_local_tasks = set(args.local_task)
-    unknown_exclusions = excluded_tasks - set(expected_tasks())
-    if unknown_exclusions:
-        raise ValueError(f"unknown excluded tasks: {sorted(unknown_exclusions)}")
-
-    assert_complete_directory(parent_dir)
-    assert_complete_directory(archive_dir)
-    output_root.mkdir(parents=True, exist_ok=True)
     output_onnx.mkdir(parents=True, exist_ok=True)
-    cache: dict[str, dict] = {}
-    if cache_path.exists():
-        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    cache_path = output_root / "score_cache.json"
+    cache = _load_cache(cache_path)
 
-    sources: dict[str, list[tuple[str, Path]]] = {}
     screen_jobs: list[tuple[str, Path]] = []
-    for task in expected_tasks():
+    sources: dict[str, list[tuple[str, Path, dict[str, Any] | None]]] = {}
+    for task in TASKS:
         parent = parent_dir / f"{task}.onnx"
-        entries: list[tuple[str, Path]] = [("parent", parent)]
-        archive = archive_dir / f"{task}.onnx"
-        if task not in excluded_tasks and sha256_file(archive) != sha256_file(parent):
-            entries.append(("archive", archive))
-        if task not in excluded_tasks and (
-            not allowed_local_tasks or task in allowed_local_tasks
-        ):
-            for path in local_candidates(task, local_roots):
-                if sha256_file(path) != sha256_file(parent):
-                    entries.append(("local", path))
-        deduplicated: dict[str, tuple[str, Path]] = {}
-        for label, path in entries:
-            deduplicated.setdefault(sha256_file(path), (label, path))
-        sources[task] = list(deduplicated.values())
-        screen_jobs.extend((task, path) for _, path in sources[task])
+        entries: list[tuple[str, Path, dict[str, Any] | None]] = [("parent", parent, None)]
+        if task not in excluded:
+            for record in eligible.get(task, []):
+                entries.append((record["status"], Path(record["candidate_path"]), record))
+        sources[task] = entries
+        screen_jobs.extend((task, path) for _, path, _ in entries)
 
-    screen = score_many(
+    screen = _score_many(
         screen_jobs,
-        max(1, args.workers),
-        max(1, args.screen_examples),
-        cache,
+        workers=args.workers,
+        max_examples=max(1, args.screen_examples),
+        cache=cache,
+        cache_path=cache_path,
     )
-    cache_path.write_text(json.dumps(cache, indent=2, sort_keys=True), encoding="utf-8")
-
     full_jobs: list[tuple[str, Path]] = []
-    candidates_by_task: dict[str, list[tuple[str, Path]]] = {}
-    for task in expected_tasks():
-        entries = sources[task]
-        parent_path = next(path for label, path in entries if label == "parent")
+    lower: dict[str, list[tuple[str, Path, dict[str, Any]]]] = {}
+    for task in TASKS:
+        parent_path = parent_dir / f"{task}.onnx"
         parent = screen[(task, str(parent_path.resolve()))]
         if not parent.get("ok") or parent.get("cost") is None:
-            raise RuntimeError(f"parent screen failed for {task}: {parent.get('error', '')}")
-        lower: list[tuple[str, Path]] = []
-        for label, path in entries:
-            if label == "parent":
-                continue
+            raise RuntimeError(f"parent screen failed for {task}: {parent.get('error')}")
+        lower[task] = []
+        for label, path, record in sources[task][1:]:
             row = screen[(task, str(path.resolve()))]
             if row.get("ok") and row.get("cost") is not None and row["cost"] < parent["cost"]:
-                lower.append((label, path))
+                lower[task].append((label, path, record or {}))
                 full_jobs.append((task, path))
-        candidates_by_task[task] = lower
 
-    full = score_many(full_jobs, max(1, args.workers), 0, cache)
-    cache_path.write_text(json.dumps(cache, indent=2, sort_keys=True), encoding="utf-8")
-
-    manifest: dict = {
-        "parent_dir": str(parent_dir),
-        "parent_online_score": 7379.07,
-        "parent_zip_sha256": "77b2e974e84ee0212cd22f7114161f7394bbaa70b5f7452cd465e05bbc99de8b",
-        "archive_dir": str(archive_dir),
-        "archive_zip_sha256": "ab6515e0f82e2eebe82e205db8a62f46042fd4b7941b7d61b72cf47ba9284f87",
-        "excluded_tasks": sorted(excluded_tasks),
-        "allowed_local_tasks": sorted(allowed_local_tasks),
-        "tasks": {},
-    }
+    full = _score_many(
+        full_jobs,
+        workers=args.workers,
+        max_examples=0,
+        cache=cache,
+        cache_path=cache_path,
+    )
     total_gain = 0.0
+    manifest: dict[str, Any] = {"baseline": baseline, "tasks": {}}
     replacements = 0
-    for task in expected_tasks():
+    for task in TASKS:
         parent_path = parent_dir / f"{task}.onnx"
         parent = screen[(task, str(parent_path.resolve()))]
         winner_label = "parent"
         winner_path = parent_path
         winner = parent
-        considered: list[dict] = []
-        for label, path in candidates_by_task[task]:
+        winner_record = None
+        considered = []
+        for label, path, record in lower[task]:
             row = full[(task, str(path.resolve()))]
-            considered.append(
-                {
-                    "source": label,
-                    "path": str(path),
-                    "sha256": row.get("sha256"),
-                    "cost": row.get("cost"),
-                    "ok": row.get("ok"),
-                    "examples_checked": row.get("examples_checked"),
-                    "examples_passed": row.get("examples_passed"),
-                    "error": row.get("error", ""),
-                }
-            )
-            if row.get("ok") and row.get("cost") is not None and row["cost"] < winner["cost"]:
-                winner_label = label
-                winner_path = path
-                winner = row
-        destination = output_onnx / f"{task}.onnx"
-        shutil.copy2(winner_path, destination)
+            considered.append({
+                "status": label,
+                "path": str(path),
+                "sha256": row.get("sha256"),
+                "cost": row.get("cost"),
+                "examples_checked": row.get("examples_checked"),
+                "examples_passed": row.get("examples_passed"),
+                "ok": row.get("ok"),
+                "error": row.get("error", ""),
+            })
+            if (
+                row.get("ok")
+                and row.get("examples_checked") == row.get("examples_passed")
+                and row.get("cost") is not None
+                and row["cost"] < winner["cost"]
+            ):
+                winner_label, winner_path, winner, winner_record = label, path, row, record
+        shutil.copyfile(winner_path, output_onnx / f"{task}.onnx")
         gain = math.log(parent["cost"] / winner["cost"]) if winner["cost"] < parent["cost"] else 0.0
-        if gain > 0:
+        if gain:
             replacements += 1
             total_gain += gain
         manifest["tasks"][task] = {
-            "parent_sha256": parent["sha256"],
+            "parent_sha256": parent_hashes[task],
             "parent_cost": parent["cost"],
             "winner_source": winner_label,
             "winner_path": str(winner_path),
-            "winner_sha256": winner["sha256"],
+            "winner_sha256": sha256_file(winner_path),
             "winner_cost": winner["cost"],
-            "predicted_point_gain": gain,
-            "fully_validated_replacement": winner_label != "parent",
-            "considered_lower_cost_models": considered,
+            "delta_points": gain,
+            "validation_evidence": winner_record,
+            "considered": considered,
         }
 
-    assert_complete_directory(output_onnx)
-    package_directory(output_onnx, zip_path)
-    manifest["replacement_count"] = replacements
-    manifest["predicted_point_gain"] = total_gain
-    manifest["predicted_score"] = 7379.07 + total_gain
-    manifest["package_sha256"] = sha256_file(zip_path)
-    manifest["root_onnx_count"] = 400
-    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True), encoding="utf-8")
-    print(
-        json.dumps(
-            {
-                "parent_score": 7379.07,
-                "replacements": replacements,
-                "predicted_point_gain": total_gain,
-                "predicted_score": manifest["predicted_score"],
-                "package_sha256": manifest["package_sha256"],
-                "submission_zip": str(zip_path),
-                "manifest": str(manifest_path),
-            },
-            indent=2,
-        )
-    )
+    assert_complete_onnx_directory(output_onnx)
+    hashes = model_hashes(output_onnx)
+    first_zip = output_root / "submission.zip"
+    repeat_zip = output_root / "submission.repeat.zip"
+    first_sha = deterministic_zip(output_onnx, first_zip)
+    repeat_sha = deterministic_zip(output_onnx, repeat_zip)
+    if first_sha != repeat_sha:
+        raise RuntimeError(f"deterministic ZIP check failed: {first_sha} != {repeat_sha}")
+    repeat_zip.unlink()
+    zip_check = verify_zip(first_zip, hashes)
+    manifest.update({
+        "replacement_count": replacements,
+        "predicted_point_gain": total_gain,
+        "predicted_score": float(baseline["public_score"]) + total_gain,
+        "package_sha256": first_sha,
+        "model_set_sha256": model_set_sha256(hashes),
+        "root_onnx_count": 400,
+        "deterministic_zip": True,
+        "zip_check": zip_check,
+    })
+    atomic_write_json(output_root / "package_manifest.json", manifest)
+    print(json.dumps({
+        "parent_score": baseline["public_score"],
+        "replacements": replacements,
+        "predicted_point_gain": total_gain,
+        "predicted_score": manifest["predicted_score"],
+        "package_sha256": first_sha,
+        "submission_zip": str(first_zip),
+    }, indent=2))
     return 0
 
 

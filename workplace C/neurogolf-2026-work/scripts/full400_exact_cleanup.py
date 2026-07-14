@@ -24,8 +24,6 @@ ASSIGNMENTS = REPO / "assignments" / "task_assignment_400.csv"
 SAFE_TRANSFORMS = [
     "pad_axes",
     "constant_pad_axes",
-    "conv_crop",
-    "terminal_conv_bias_absorb",
     "broadcast_init",
     "trivial_nodes",
     "optional_defaults",
@@ -77,6 +75,12 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--tasks", default="")
     parser.add_argument(
+        "--source-mode",
+        choices=("parent", "canonical"),
+        default="parent",
+        help="Apply transforms to the parent or the current canonical when present.",
+    )
+    parser.add_argument(
         "--transforms",
         default=",".join(SAFE_TRANSFORMS),
         help="Comma-separated transform names to apply in order.",
@@ -101,7 +105,21 @@ def main() -> None:
     canonical_by_task: dict[str, Path] = {}
     for task in tasks:
         parent = args.parent_dir / f"{task}.onnx"
-        source = onnx.load(parent)
+        owner = owners[task]
+        canonical = (
+            REPO
+            / f"workplace {owner}"
+            / "single_task"
+            / task
+            / "onnx"
+            / f"{task}_candidate.onnx"
+        )
+        source_path = (
+            canonical
+            if args.source_mode == "canonical" and canonical.is_file()
+            else parent
+        )
+        source = onnx.load(source_path)
         try:
             candidate, changes = sweep.apply_transforms(source, transforms)
         except Exception as exc:
@@ -142,15 +160,6 @@ def main() -> None:
             )
             continue
 
-        owner = owners[task]
-        canonical = (
-            REPO
-            / f"workplace {owner}"
-            / "single_task"
-            / task
-            / "onnx"
-            / f"{task}_candidate.onnx"
-        )
         changes_by_task[task] = changes
         canonical_by_task[task] = canonical
         jobs.append((task, str(parent), str(candidate_path), str(canonical)))

@@ -185,9 +185,80 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task158 | task158_20260712T203055 | three_channel_pair_stamp_profiled | 28023 | 26250 | 1773 | True | True | `workplace C\single_task\task158\onnx\task158_pair3_candidate.onnx` |
 | task091 | task091_20260712_compact_pad_axes | compact_pad_axes | 2759 | 2730 | 29 | True | True | `workplace C\single_task\task091\onnx\task091_candidate.onnx` |
 | task009 | task009_20260712_compact_separator_pads | compact_separator_pads | 6595 | 6585 | 10 | True | True | `workplace C\single_task\task009\onnx\task009_candidate.onnx` |
+| task364 | task364_20260712_fused_seed_expansion | fused_seed_expansion | 14642 | 12882 | 1760 | False | False | `workplace C\single_task\task364\debug\task364_fused_seed_expansion.onnx` |
+| task383 | task383_20260712_activation_crop | activation_crop_boundary_probe | 5800 | 5286 | 514 | False | False | `workplace C\single_task\task383\debug\task383_activation_crop_23x22.onnx` |
 | task072 | task072_20260712_single_conv_difference | single_conv_difference | 421 | 368 | 53 | True | True | `workplace C\single_task\task072\onnx\task072_candidate.onnx` |
 | task146 | task146_20260712_low_width_checksum | low_width_exact_checksum | 265 | 302 | -37 | True | False | `workplace C\single_task\task146\onnx\task146_candidate.onnx` |
 | task081 | task081_20260712_quantized_hard_margin | one_stage_quantized_hard_margin | 464 |  |  | False | False | `` |
-
-The latest accepted group adds `+0.5270889313257321` expected points. The
-cumulative local campaign gain is `+3.965123086040556`.
+| task075 | task075_20260713_rank1_crop_conv | rank1_crop_conv_and_marker_stride_crop | 1487 | 1394 | 93 | True | True | `workplace C\single_task\task075\onnx\task075_candidate.onnx` |
+| task315 | task315_20260713_rank2_color_sign | rank2_color_sign | 230 | 210 | 20 | False | False | `workplace C\single_task\task315\debug\task315_rank2_color_sign.onnx` |
+| task174 | task174_20260714T033407 | online_verified_rebase | 3947 | 3306 | 641 | True | True | `E:\kagglegolf\submissions\candidates\GOLF_20260713_SUBMISSION6_REBASE\onnx\task174.onnx` |
+| task064 | task064_20260714T034746 | complement_equal_terminal_fusion | 8356 | 7828 | 528 | True | True | `workplace E\single_task\task064\onnx\task064_candidate.onnx` |
+| task076 | task076_20260714T034958 | fold_not_cast_bool | 12313 | 12308 | 5 | True | True | `workplace C\artifacts\full400_not_cast_fold\task076.onnx` |
+| task134 | task134_20260714T035001 | fold_not_cast_bool | 1289 | 1290 | -1 | True | False | `workplace C\artifacts\full400_not_cast_fold\task134.onnx` |
+| task280 | task280_20260714T035007 | fold_not_cast_bool | 4588 | 4590 | -2 | True | False | `workplace C\artifacts\full400_not_cast_fold\task280.onnx` |
+| task382 | task382_20260714T035220 | fold_not_where | 4205 | 4205 | 0 | True | False | `workplace C\single_task\task382\onnx\task382_not_where.onnx` |
+| task018 | castmask_task018_20260714 | cast_mask_mul_to_where | 19002 | 19004 | -2 | True | False | `workplace C\artifacts\full400_cast_mask_mul\task018.onnx` |
+| task046 | castmask_task046_20260714 | cast_mask_mul_to_where | 2069 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task046.onnx` |
+| task133 | castmask_task133_20260714 | cast_mask_mul_to_where | 21250 | 21131 | 119 | True | True | `workplace C\artifacts\full400_cast_mask_mul\task133.onnx` |
+| task174 | castmask_task174_20260714 | cast_mask_mul_to_where | 3306 | 3251 | 55 | True | True | `workplace C\artifacts\full400_cast_mask_mul\task174.onnx` |
+| task185 | castmask_task185_20260714 | cast_mask_mul_to_where | 1682 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task185.onnx` |
+| task234 | castmask_task234_20260714 | cast_mask_mul_to_where | 3497 | 3418 | 79 | True | True | `workplace C\artifacts\full400_cast_mask_mul\task234.onnx` |
+| task285 | castmask_task285_20260714 | cast_mask_mul_to_where | 18189 | 18178 | 11 | True | True | `workplace C\artifacts\full400_cast_mask_mul\task285.onnx` |
+| task297 | castmask_task297_20260714 | cast_mask_mul_to_where | 1389 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task297.onnx` |
+| task319 | castmask_task319_20260714 | cast_mask_mul_to_where | 3563 | 3564 | -1 | True | False | `workplace C\artifacts\full400_cast_mask_mul\task319.onnx` |
+| task363 | castmask_task363_20260714 | cast_mask_mul_to_where | 3827 | 3826 | 1 | True | True | `workplace C\artifacts\full400_cast_mask_mul\task363.onnx` |
+| task046 | castmask_task046_retry_20260714 | cast_mask_mul_to_where_retry | 2069 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task046.onnx` |
+| task185 | castmask_task185_retry_20260714 | cast_mask_mul_to_where_retry | 1682 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task185.onnx` |
+| task297 | castmask_task297_retry_20260714 | cast_mask_mul_to_where_retry | 1389 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task297.onnx` |
+| task187 | task187_terminal_float_20260714 | terminal_float_where | 15136 |  |  | False | False | `workplace A\single_task\task187\onnx\task187_terminal_float.onnx` |
+| task187 | task187_terminal_float_20260714_v2 | terminal_float_where | 15136 | 19086 | -3950 | True | False | `workplace A\single_task\task187\onnx\task187_terminal_float.onnx` |
+| task174 | task174_scalar_pick_20260714_v2 | castmask_plus_scalar_pick | 3306 | 3164 | 142 | True | True | `workplace E\single_task\task174\onnx\task174_scalar_pick.onnx` |
+| task174 | task174_shared_pick_where_20260714 | castmask_plus_shared_pick_where | 3306 | 3229 | 77 | True | True | `workplace E\single_task\task174\onnx\task174_shared_pick_where.onnx` |
+| task035 | sharedmask_task035_20260714 | shared_cast_mask_mul_to_where | 1879 | 1876 | 3 | True | True | `workplace C\artifacts\full400_shared_cast_mask_mul\task035.onnx` |
+| task148 | sharedmask_task148_20260714 | shared_cast_mask_mul_to_where | 4887 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task148.onnx` |
+| task185 | sharedmask_task185_20260714 | shared_cast_mask_mul_to_where | 1682 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task185.onnx` |
+| task361 | sharedmask_task361_20260714 | shared_cast_mask_mul_to_where | 4604 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task361.onnx` |
+| task107 | sharedmask_task107_20260714_v2 | shared_cast_mask_mul_to_where | 3576 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task107.onnx` |
+| task148 | sharedmask_task148_20260714_v2 | shared_cast_mask_mul_to_where | 4887 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task148.onnx` |
+| task185 | sharedmask_task185_20260714_v2 | shared_cast_mask_mul_to_where | 1682 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task185.onnx` |
+| task361 | sharedmask_task361_20260714_v2 | shared_cast_mask_mul_to_where | 4604 |  |  | False | False | `workplace C\artifacts\full400_shared_cast_mask_mul\task361.onnx` |
+| task046 | castmask_task046_final_20260714 | cast_mask_mul_to_where | 2069 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task046.onnx` |
+| task185 | castmask_task185_final_20260714 | cast_mask_mul_to_where | 1682 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task185.onnx` |
+| task297 | castmask_task297_final_20260714 | cast_mask_mul_to_where | 1389 |  |  | False | False | `workplace C\artifacts\full400_cast_mask_mul\task297.onnx` |
+| task364 | task364_fold_mod_20260714_v2 | fold_mod_into_conv | 14640 | 14200 | 440 | False | False | `workplace C\single_task\task364\onnx\task364_fold_mod.onnx` |
+| task275 | 20260714_double_complement | double_complement_fold | 1349 | 1345 | 4 | True | True | `workplace E\single_task\task275\debug\task275_double_complement.onnx` |
+| task219 | 20260714_flatten_max | flatten_variadic_max | 8077 | 7477 | 600 | True | True | `workplace D\single_task\task219\debug\task219_flatten_max.onnx` |
+| task076 | 20260714_round9_recheck | not_cast_fold | 12313 | 12308 | 5 | True | True | `workplace C\artifacts\full400_not_cast_fold\task076.onnx` |
+| task366 | 20260714_narrow_reduce_cast | narrow_bool_min_cast | 29656 | 29350 | 306 | True | True | `workplace A\single_task\task366\debug\task366_narrow_reduce_cast.onnx` |
+| task366 | 20260714_topk_i8 | narrow_bool_topk_i8_and_reduce | 29656 | 28569 | 1087 | True | True | `workplace A\single_task\task366\debug\task366_narrow_reduce_cast_topk_i8.onnx` |
+| task308 | 20260714_topk_i8 | narrow_bool_topk_i8 | 1468 | 1453 | 15 | True | True | `workplace E\single_task\task308\debug\task308_topk_i8.onnx` |
+| task260 | 20260714_sum_f16 | collapse_exact_bool_sum_casts | 1573 | 1517 | 56 | True | True | `workplace A\single_task\task260\debug\task260_bool_sum_f16.onnx` |
+| task076 | 20260714_task076_topk_i8 | narrow_bool_topk_i8 | 12308 | 11850 | 458 | True | True | `workplace B\single_task\task076\debug\task076_topk_i8.onnx` |
+| task092 | 20260714_task092_topk_i8 | narrow_bool_topk_i8 | 6553 | 6523 | 30 | True | True | `workplace E\single_task\task092\debug\task092_topk_i8.onnx` |
+| task233 | 20260714_task233_topk_i8 | narrow_bool_topk_i8 | 30384 | 27965 | 2419 | True | True | `workplace A\single_task\task233\debug\task233_topk_i8.onnx` |
+| task308 | 20260714_task308_topk_i8 | narrow_bool_topk_i8 | 1468 | 1453 | 15 | True | True | `workplace E\single_task\task308\debug\task308_topk_i8.onnx` |
+| task009 | 20260714_uint8_einsum | uint8_einsum_direct | 6399 |  |  | False | False | `workplace C\single_task\task009\debug\task009_uint8_einsum.onnx` |
+| task219 | 20260714_dot_einsum | fold_mul_global_sum | 7477 | 7477 | 0 | True | False | `workplace D\single_task\task219\debug\task219_flatten_max_dot_einsum.onnx` |
+| task133 | 20260714_task133_flat_sum | flatten_float_add_sum | 21131 | 20967 | 164 | True | True | `workplace D\single_task\task133\debug\task133_flat_sum.onnx` |
+| task268 | 20260714_task268_flat_sum | flatten_float_add_sum | 2993 | 2979 | 14 | True | True | `workplace E\single_task\task268\debug\task268_flat_sum.onnx` |
+| task285 | 20260714_task285_flat_sum | flatten_float_add_sum | 18178 | 18016 | 162 | True | True | `workplace E\single_task\task285\debug\task285_flat_sum.onnx` |
+| task101 | 20260714_task101_flat_sum | flatten_float_add_sum | 13071 | 13055 | 16 | True | True | `workplace C\artifacts\full400_flat_float_sum_scan\task101.onnx` |
+| task280 | 20260714_task280_flat_sum | flatten_float_add_sum | 4588 | 4584 | 4 | True | True | `workplace C\artifacts\full400_flat_float_sum_scan\task280.onnx` |
+| task325 | 20260714_task325_flat_sum | flatten_float_add_sum | 1483 | 1479 | 4 | True | True | `workplace C\artifacts\full400_flat_float_sum_scan\task325.onnx` |
+| task378 | 20260714_task378_flat_sum | flatten_float_add_sum | 1980 | 1976 | 4 | True | True | `workplace C\artifacts\full400_flat_float_sum_scan\task378.onnx` |
+| task161 | task161_20260714T051921 | concat_constant_to_pad | 275 | 270 | 5 | True | True | `workplace C\artifacts\full400_concat_constant_pad_scan\task161.onnx` |
+| task219 | task219_20260714T051927 | concat_constant_to_pad | 7477 | 7476 | 1 | True | True | `workplace C\artifacts\full400_concat_constant_pad_scan\task219.onnx` |
+| task197 | task197_20260714T052035 | opset_convert_concat_constant_to_pad | 1141 | 1196 | -55 | True | False | `workplace C\artifacts\full400_concat_constant_pad_scan\task197_opset11.onnx` |
+| task136 | task136_20260714T054622 | fold_integer_affine_constants | 1194 | 1194 | 0 | True | False | `workplace C\artifacts\full400_integer_affine_scan\task136.onnx` |
+| task219 | task219_20260714T054638 | fold_integer_affine_constants | 7477 | 7536 | -59 | True | False | `workplace C\artifacts\full400_integer_affine_scan\task219.onnx` |
+| task239 | task239_20260714T054645 | fold_integer_affine_constants | 947 | 975 | -28 | True | False | `workplace C\artifacts\full400_integer_affine_scan\task239.onnx` |
+| task301 | task301_20260714T054652 | fold_integer_affine_constants | 1141 | 1152 | -11 | True | False | `workplace C\artifacts\full400_integer_affine_scan\task301.onnx` |
+| task107 | task107_20260714T060151 | narrow_bool_reducesum_f16 | 3576 | 3570 | 6 | True | True | `workplace C\artifacts\full400_bool_reducesum_scan\task107.onnx` |
+| task366 | task366_20260714T060204 | narrow_bool_reducesum_f16 | 29350 | 29260 | 90 | True | True | `workplace C\artifacts\full400_bool_reducesum_scan\task366.onnx` |
+| task219 | task219_20260714T060504 | narrow_bool_arg_extrema_u8 | 7476 | 7461 | 15 | True | True | `workplace C\artifacts\full400_bool_arg_extrema_scan\task219.onnx` |
+| task377 | task377_20260714T060507 | narrow_bool_arg_extrema_u8 | 1730 | 1730 | 0 | True | False | `workplace C\artifacts\full400_bool_arg_extrema_scan\task377.onnx` |
+| task148 | task148_20260714T060929 | narrow_bool_extrema_family_u8 | 4887 | 4888 | -1 | True | False | `workplace C\artifacts\full400_bool_extrema_family_scan\task148.onnx` |
+| task219 | task219_20260714T060936 | narrow_bool_extrema_family_u8 | 7461 | 7405 | 56 | True | True | `workplace C\artifacts\full400_bool_extrema_family_scan\task219.onnx` |
+| task285 | task285_20260714T060941 | narrow_bool_extrema_family_u8 | 18016 | 18082 | -66 | True | False | `workplace C\artifacts\full400_bool_extrema_family_scan\task285.onnx` |
+| task377 | task377_20260714T060944 | narrow_bool_extrema_family_u8 | 1730 | 1730 | 0 | True | False | `workplace C\artifacts\full400_bool_extrema_family_scan\task377.onnx` |

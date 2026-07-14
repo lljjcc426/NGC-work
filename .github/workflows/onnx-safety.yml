@@ -1,0 +1,30 @@
+name: ONNX safety
+
+on:
+  push:
+    paths:
+      - "workplace C/neurogolf-2026-work/scripts/**"
+      - "workplace C/neurogolf-2026-work/tests/**"
+      - "workplace C/neurogolf-2026-work/config/**"
+      - ".github/workflows/onnx-safety.yml"
+  pull_request:
+    paths:
+      - "workplace C/neurogolf-2026-work/scripts/**"
+      - "workplace C/neurogolf-2026-work/tests/**"
+      - "workplace C/neurogolf-2026-work/config/**"
+
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -r requirements-dev.txt numpy onnx onnxruntime
+      - run: python -m compileall "workplace C/neurogolf-2026-work/scripts"
+      - run: pytest -q "workplace C/neurogolf-2026-work/tests"
+      - run: python "workplace C/neurogolf-2026-work/scripts/candidate_registry.py" validate --strict
+      - run: python "workplace C/neurogolf-2026-work/scripts/candidate_registry.py" --help
+      - run: python "workplace C/neurogolf-2026-work/scripts/build_best_rebase.py" --help
+      - run: python "workplace C/neurogolf-2026-work/scripts/fuzz_compare_canonical.py" --help

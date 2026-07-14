@@ -182,6 +182,580 @@ def deduplicate_constant_tensors(model: onnx.ModelProto) -> int:
     return removed
 
 
+def eliminate_dead_subgraphs(model: onnx.ModelProto) -> int:
+    """Remove nodes that cannot contribute to a declared graph output."""
+    needed = {item.name for item in model.graph.output}
+    kept_reversed: list[onnx.NodeProto] = []
+    for node in reversed(model.graph.node):
+        if any(name in needed for name in node.output if name):
+            kept_reversed.append(node)
+            needed.update(name for name in node.input if name)
+
+    kept = list(reversed(kept_reversed))
+    removed = len(model.graph.node) - len(kept)
+    if not removed:
+        return 0
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+
+    available = {
+        item.name
+        for item in [*model.graph.input, *model.graph.output, *model.graph.initializer]
+    }
+    available.update(name for node in kept for name in node.output if name)
+    value_info = [item for item in model.graph.value_info if item.name in available]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return removed
+
+
+def compose_fixed_gather_chains(model: onnx.ModelProto) -> int:
+    shapes = _shape_map(model)
+    sources = _tensor_sources(model)
+    graph_outputs = {item.name for item in model.graph.output}
+    producers = {
+        name: node for node in model.graph.node for name in node.output if name
+    }
+    consumers: dict[str, int] = {}
+    for node in model.graph.node:
+        for name in node.input:
+            if name:
+                consumers[name] = consumers.get(name, 0) + 1
+
+    removable: set[int] = set()
+    composed = 0
+    existing_names = {
+        name
+        for node in model.graph.node
+        for name in [*node.input, *node.output]
+        if name
+    }
+    existing_names.update(item.name for item in model.graph.initializer)
+
+    for second in model.graph.node:
+        if second.op_type != "Gather" or len(second.input) < 2:
+            continue
+        first = producers.get(second.input[0])
+        if (
+            first is None
+            or first.op_type != "Gather"
+            or len(first.input) < 2
+            or id(first) in removable
+            or consumers.get(first.output[0], 0) != 1
+            or first.output[0] in graph_outputs
+        ):
+            continue
+        first_indices = sources.get(first.input[1])
+        second_indices = sources.get(second.input[1])
+        if (
+            first_indices is None
+            or second_indices is None
+            or first_indices.ndim != 1
+            or first_indices.dtype.kind not in {"i", "u"}
+            or second_indices.dtype.kind not in {"i", "u"}
+        ):
+            continue
+        input_shape = shapes.get(first.input[0])
+        intermediate_shape = shapes.get(first.output[0])
+        if not input_shape or not intermediate_shape or len(input_shape) != len(intermediate_shape):
+            continue
+        first_axis_attr = _attribute(first, "axis")
+        second_axis_attr = _attribute(second, "axis")
+        first_axis = int(first_axis_attr.i) if first_axis_attr is not None else 0
+        second_axis = int(second_axis_attr.i) if second_axis_attr is not None else 0
+        first_axis %= len(input_shape)
+        second_axis %= len(intermediate_shape)
+        if first_axis != second_axis:
+            continue
+        try:
+            selected = first_indices[np.asarray(second_indices, dtype=np.int64)]
+        except (IndexError, ValueError):
+            continue
+        selected = np.asarray(selected, dtype=first_indices.dtype)
+        base_name = f"{second.output[0]}_composed_indices"
+        name = base_name
+        suffix = 0
+        while name in existing_names:
+            suffix += 1
+            name = f"{base_name}_{suffix}"
+        existing_names.add(name)
+        model.graph.initializer.append(numpy_helper.from_array(selected, name=name))
+        second.input[0] = first.input[0]
+        second.input[1] = name
+        if second_axis_attr is None:
+            second_axis_attr = second.attribute.add()
+            second_axis_attr.name = "axis"
+            second_axis_attr.type = onnx.AttributeProto.INT
+        second_axis_attr.i = first_axis
+        removable.add(id(first))
+        composed += 1
+
+    if not composed:
+        return 0
+    kept = [node for node in model.graph.node if id(node) not in removable]
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    removed_outputs = {
+        name
+        for node in producers.values()
+        if id(node) in removable
+        for name in node.output
+    }
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return composed
+
+
+def flatten_concat_chains(model: onnx.ModelProto) -> int:
+    shapes = _shape_map(model)
+    graph_outputs = {item.name for item in model.graph.output}
+    producers = {
+        name: node for node in model.graph.node for name in node.output if name
+    }
+    consumers: dict[str, int] = {}
+    for node in model.graph.node:
+        for name in node.input:
+            if name:
+                consumers[name] = consumers.get(name, 0) + 1
+
+    removable: set[int] = set()
+    flattened = 0
+    for second in model.graph.node:
+        if second.op_type != "Concat":
+            continue
+        second_axis_attr = _attribute(second, "axis")
+        if second_axis_attr is None:
+            continue
+        output_shape = shapes.get(second.output[0]) if second.output else None
+        if not output_shape:
+            continue
+        second_axis = int(second_axis_attr.i) % len(output_shape)
+        expanded_inputs: list[str] = []
+        changed = False
+        for name in second.input:
+            first = producers.get(name)
+            first_shape = shapes.get(name)
+            first_axis_attr = _attribute(first, "axis") if first is not None else None
+            can_flatten = bool(
+                first is not None
+                and first.op_type == "Concat"
+                and first_axis_attr is not None
+                and first_shape
+                and len(first_shape) == len(output_shape)
+                and int(first_axis_attr.i) % len(first_shape) == second_axis
+                and consumers.get(name, 0) == 1
+                and name not in graph_outputs
+                and id(first) not in removable
+            )
+            if can_flatten:
+                expanded_inputs.extend(first.input)
+                removable.add(id(first))
+                flattened += 1
+                changed = True
+            else:
+                expanded_inputs.append(name)
+        if changed:
+            del second.input[:]
+            second.input.extend(expanded_inputs)
+
+    if not flattened:
+        return 0
+    removed_outputs = {
+        name
+        for node in model.graph.node
+        if id(node) in removable
+        for name in node.output
+    }
+    kept = [node for node in model.graph.node if id(node) not in removable]
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return flattened
+
+
+def deduplicate_compute_nodes(model: onnx.ModelProto) -> int:
+    graph_outputs = {item.name for item in model.graph.output}
+    nondeterministic = {"Bernoulli", "Dropout", "Multinomial"}
+    replacements: dict[str, str] = {}
+    signatures: dict[bytes, onnx.NodeProto] = {}
+    kept: list[onnx.NodeProto] = []
+    removed_outputs: set[str] = set()
+    removed = 0
+
+    def source(name: str) -> str:
+        while name in replacements:
+            name = replacements[name]
+        return name
+
+    for node in model.graph.node:
+        for index, name in enumerate(node.input):
+            if name:
+                node.input[index] = source(name)
+        blocked = (
+            node.op_type in nondeterministic
+            or node.op_type.startswith("Random")
+            or any(name in graph_outputs for name in node.output)
+        )
+        probe = onnx.NodeProto()
+        probe.CopyFrom(node)
+        probe.name = ""
+        del probe.output[:]
+        signature = probe.SerializeToString()
+        canonical = None if blocked else signatures.get(signature)
+        if canonical is None or len(canonical.output) != len(node.output):
+            kept.append(node)
+            if not blocked:
+                signatures[signature] = node
+            continue
+        for duplicate_name, canonical_name in zip(node.output, canonical.output):
+            replacements[duplicate_name] = source(canonical_name)
+            removed_outputs.add(duplicate_name)
+        removed += 1
+
+    if not removed:
+        return 0
+    for node in kept:
+        for index, name in enumerate(node.input):
+            if name:
+                node.input[index] = source(name)
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return removed
+
+
+def eliminate_idempotent_nodes(model: onnx.ModelProto) -> int:
+    shapes = _shape_map(model)
+    graph_outputs = {item.name for item in model.graph.output}
+    replacements: dict[str, str] = {}
+    kept: list[onnx.NodeProto] = []
+    removed_outputs: set[str] = set()
+
+    def source(name: str) -> str:
+        while name in replacements:
+            name = replacements[name]
+        return name
+
+    for node in model.graph.node:
+        for index, name in enumerate(node.input):
+            if name:
+                node.input[index] = source(name)
+        replacement = ""
+        if len(node.output) == 1 and node.output[0] not in graph_outputs:
+            if (
+                node.op_type == "Where"
+                and len(node.input) == 3
+                and node.input[1] == node.input[2]
+            ):
+                replacement = node.input[1]
+            elif (
+                node.op_type in {"And", "Or", "Max", "Min"}
+                and len(node.input) == 2
+                and node.input[0] == node.input[1]
+            ):
+                replacement = node.input[0]
+        if replacement:
+            replacement_shape = shapes.get(replacement)
+            output_shape = shapes.get(node.output[0])
+            same_shape = replacement_shape == output_shape
+            scalar_equivalent = bool(
+                replacement_shape is not None
+                and output_shape is not None
+                and int(np.prod(replacement_shape or (1,))) == 1
+                and int(np.prod(output_shape or (1,))) == 1
+            )
+            if not (same_shape or scalar_equivalent):
+                kept.append(node)
+                continue
+            replacements[node.output[0]] = source(replacement)
+            removed_outputs.add(node.output[0])
+        else:
+            kept.append(node)
+
+    if not replacements:
+        return 0
+    for node in kept:
+        for index, name in enumerate(node.input):
+            if name:
+                node.input[index] = source(name)
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return len(replacements)
+
+
+def fuse_static_slice_pad(model: onnx.ModelProto) -> int:
+    shapes = _shape_map(model)
+    sources = _tensor_sources(model)
+    graph_outputs = {item.name for item in model.graph.output}
+    producers = {
+        name: node for node in model.graph.node for name in node.output if name
+    }
+    consumers: dict[str, int] = {}
+    for node in model.graph.node:
+        for name in node.input:
+            if name:
+                consumers[name] = consumers.get(name, 0) + 1
+    existing_names = {
+        name
+        for node in model.graph.node
+        for name in [*node.input, *node.output]
+        if name
+    }
+    existing_names.update(item.name for item in model.graph.initializer)
+
+    removable: set[int] = set()
+    removed_outputs: set[str] = set()
+    fused = 0
+    for pad in model.graph.node:
+        if pad.op_type != "Pad" or len(pad.input) < 2:
+            continue
+        sliced = producers.get(pad.input[0])
+        if (
+            sliced is None
+            or sliced.op_type != "Slice"
+            or len(sliced.input) < 3
+            or consumers.get(pad.input[0], 0) != 1
+            or pad.input[0] in graph_outputs
+        ):
+            continue
+        mode = _attribute(pad, "mode")
+        if mode is not None and mode.s not in {b"", b"constant"}:
+            continue
+        input_shape = shapes.get(sliced.input[0])
+        starts = sources.get(sliced.input[1])
+        ends = sources.get(sliced.input[2])
+        pads = sources.get(pad.input[1])
+        if input_shape is None or starts is None or ends is None or pads is None:
+            continue
+        rank = len(input_shape)
+        axes = (
+            sources.get(sliced.input[3])
+            if len(sliced.input) > 3 and sliced.input[3]
+            else np.arange(rank, dtype=np.int64)
+        )
+        steps = (
+            sources.get(sliced.input[4])
+            if len(sliced.input) > 4 and sliced.input[4]
+            else np.ones(np.atleast_1d(starts).size, dtype=np.int64)
+        )
+        pad_axes = (
+            sources.get(pad.input[3])
+            if len(pad.input) > 3 and pad.input[3]
+            else np.arange(rank, dtype=np.int64)
+        )
+        if axes is None or steps is None or pad_axes is None:
+            continue
+        starts = np.atleast_1d(starts)
+        ends = np.atleast_1d(ends)
+        axes = np.atleast_1d(axes)
+        steps = np.atleast_1d(steps)
+        pad_axes = np.atleast_1d(pad_axes)
+        pads = np.atleast_1d(pads)
+        if (
+            not (starts.size == ends.size == axes.size == steps.size)
+            or np.any(steps != 1)
+            or pads.size != 2 * pad_axes.size
+            or len({int(axis) % rank for axis in axes}) != axes.size
+            or len({int(axis) % rank for axis in pad_axes}) != pad_axes.size
+            or np.any(pads < 0)
+        ):
+            continue
+
+        crop_begin = np.zeros(rank, dtype=np.int64)
+        crop_end = np.zeros(rank, dtype=np.int64)
+        for start, end, axis in zip(starts, ends, axes):
+            normalized_axis = int(axis) % rank
+            begin, stop, _ = slice(int(start), int(end), 1).indices(
+                input_shape[normalized_axis]
+            )
+            crop_begin[normalized_axis] = begin
+            crop_end[normalized_axis] = input_shape[normalized_axis] - stop
+        pad_begin = np.zeros(rank, dtype=np.int64)
+        pad_end = np.zeros(rank, dtype=np.int64)
+        for index, axis in enumerate(pad_axes):
+            normalized_axis = int(axis) % rank
+            pad_begin[normalized_axis] = int(pads[index])
+            pad_end[normalized_axis] = int(pads[index + pad_axes.size])
+        if (
+            np.any((crop_begin > 0) & (pad_begin > 0))
+            or np.any((crop_end > 0) & (pad_end > 0))
+        ):
+            continue
+        combined = np.concatenate(
+            [pad_begin - crop_begin, pad_end - crop_end]
+        ).astype(np.int64)
+        base_name = f"{pad.output[0]}_fused_pads"
+        pads_name = base_name
+        suffix = 0
+        while pads_name in existing_names:
+            suffix += 1
+            pads_name = f"{base_name}_{suffix}"
+        existing_names.add(pads_name)
+        model.graph.initializer.append(
+            numpy_helper.from_array(combined, name=pads_name)
+        )
+        pad.input[0] = sliced.input[0]
+        pad.input[1] = pads_name
+        if len(pad.input) > 3:
+            del pad.input[3:]
+        if len(pad.input) == 3 and not pad.input[2]:
+            del pad.input[2:]
+        removable.add(id(sliced))
+        removed_outputs.update(sliced.output)
+        fused += 1
+
+    if not fused:
+        return 0
+    kept = [node for node in model.graph.node if id(node) not in removable]
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return fused
+
+
+def fuse_static_pad_slice(model: onnx.ModelProto) -> int:
+    shapes = _shape_map(model)
+    sources = _tensor_sources(model)
+    graph_outputs = {item.name for item in model.graph.output}
+    producers = {
+        name: node for node in model.graph.node for name in node.output if name
+    }
+    consumers: dict[str, int] = {}
+    for node in model.graph.node:
+        for name in node.input:
+            if name:
+                consumers[name] = consumers.get(name, 0) + 1
+    existing_names = {
+        name
+        for node in model.graph.node
+        for name in [*node.input, *node.output]
+        if name
+    }
+    existing_names.update(item.name for item in model.graph.initializer)
+
+    removable: set[int] = set()
+    removed_outputs: set[str] = set()
+    fused = 0
+    for sliced in model.graph.node:
+        if sliced.op_type != "Slice" or len(sliced.input) < 3:
+            continue
+        pad = producers.get(sliced.input[0])
+        if (
+            pad is None
+            or pad.op_type != "Pad"
+            or len(pad.input) < 2
+            or consumers.get(sliced.input[0], 0) != 1
+            or sliced.input[0] in graph_outputs
+        ):
+            continue
+        mode = _attribute(pad, "mode")
+        if mode is not None and mode.s not in {b"", b"constant"}:
+            continue
+        input_shape = shapes.get(pad.input[0])
+        starts = sources.get(sliced.input[1])
+        ends = sources.get(sliced.input[2])
+        pads = sources.get(pad.input[1])
+        if input_shape is None or starts is None or ends is None or pads is None:
+            continue
+        rank = len(input_shape)
+        axes = (
+            sources.get(sliced.input[3])
+            if len(sliced.input) > 3 and sliced.input[3]
+            else np.arange(rank, dtype=np.int64)
+        )
+        steps = (
+            sources.get(sliced.input[4])
+            if len(sliced.input) > 4 and sliced.input[4]
+            else np.ones(np.atleast_1d(starts).size, dtype=np.int64)
+        )
+        pad_axes = (
+            sources.get(pad.input[3])
+            if len(pad.input) > 3 and pad.input[3]
+            else np.arange(rank, dtype=np.int64)
+        )
+        if axes is None or steps is None or pad_axes is None:
+            continue
+        starts = np.atleast_1d(starts)
+        ends = np.atleast_1d(ends)
+        axes = np.atleast_1d(axes)
+        steps = np.atleast_1d(steps)
+        pad_axes = np.atleast_1d(pad_axes)
+        pads = np.atleast_1d(pads)
+        if (
+            not (starts.size == ends.size == axes.size == steps.size)
+            or np.any(steps != 1)
+            or pads.size != 2 * pad_axes.size
+            or len({int(axis) % rank for axis in axes}) != axes.size
+            or len({int(axis) % rank for axis in pad_axes}) != pad_axes.size
+            or np.any(pads < 0)
+        ):
+            continue
+
+        pad_begin = np.zeros(rank, dtype=np.int64)
+        pad_end = np.zeros(rank, dtype=np.int64)
+        for index, axis in enumerate(pad_axes):
+            normalized_axis = int(axis) % rank
+            pad_begin[normalized_axis] = int(pads[index])
+            pad_end[normalized_axis] = int(pads[index + pad_axes.size])
+        padded_shape = np.asarray(input_shape, dtype=np.int64) + pad_begin + pad_end
+        slice_begin = np.zeros(rank, dtype=np.int64)
+        slice_end = padded_shape.copy()
+        for start, end, axis in zip(starts, ends, axes):
+            normalized_axis = int(axis) % rank
+            begin, stop, _ = slice(int(start), int(end), 1).indices(
+                int(padded_shape[normalized_axis])
+            )
+            slice_begin[normalized_axis] = begin
+            slice_end[normalized_axis] = stop
+        new_begin = pad_begin - slice_begin
+        new_end = slice_end - (pad_begin + np.asarray(input_shape, dtype=np.int64))
+        output_shape = np.asarray(input_shape, dtype=np.int64) + new_begin + new_end
+        cropped = np.maximum(-new_begin, 0) + np.maximum(-new_end, 0)
+        if np.any(output_shape <= 0) or np.any(cropped >= np.asarray(input_shape)):
+            continue
+        combined = np.concatenate([new_begin, new_end]).astype(np.int64)
+        base_name = f"{sliced.output[0]}_fused_pads"
+        pads_name = base_name
+        suffix = 0
+        while pads_name in existing_names:
+            suffix += 1
+            pads_name = f"{base_name}_{suffix}"
+        existing_names.add(pads_name)
+        model.graph.initializer.append(
+            numpy_helper.from_array(combined, name=pads_name)
+        )
+        old_pad_output = pad.output[0]
+        pad.input[1] = pads_name
+        if len(pad.input) > 3:
+            del pad.input[3:]
+        if len(pad.input) == 3 and not pad.input[2]:
+            del pad.input[2:]
+        pad.output[0] = sliced.output[0]
+        removed_outputs.add(old_pad_output)
+        removable.add(id(sliced))
+        fused += 1
+
+    if not fused:
+        return 0
+    kept = [node for node in model.graph.node if id(node) not in removable]
+    del model.graph.node[:]
+    model.graph.node.extend(kept)
+    value_info = [item for item in model.graph.value_info if item.name not in removed_outputs]
+    del model.graph.value_info[:]
+    model.graph.value_info.extend(value_info)
+    return fused
+
+
 def _shape_map(model: onnx.ModelProto) -> dict[str, tuple[int, ...]]:
     try:
         inferred = shape_inference.infer_shapes(model, strict_mode=False, data_prop=True)
@@ -840,6 +1414,13 @@ TRANSFORMS = {
     "neutral_elementwise": eliminate_neutral_elementwise,
     "nonnegative_offset_shrink": replace_nonnegative_scalar_offsets_with_shrink,
     "unit_reduction_axes": compact_unit_reduction_axes,
+    "dead_subgraphs": eliminate_dead_subgraphs,
+    "gather_chain": compose_fixed_gather_chains,
+    "concat_chain": flatten_concat_chains,
+    "duplicate_nodes": deduplicate_compute_nodes,
+    "idempotent_nodes": eliminate_idempotent_nodes,
+    "slice_pad": fuse_static_slice_pad,
+    "pad_slice": fuse_static_pad_slice,
     "constant_dedup": deduplicate_constant_tensors,
     "opset12_controls": downgrade_to_opset12,
     "init_cleanup": lambda model: deduplicate_initializers(model) + prune_initializers(model),
