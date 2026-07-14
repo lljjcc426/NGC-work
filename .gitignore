@@ -8,3 +8,7 @@ kaggle.json
 *.npz
 *.pyc
 __pycache__/
+.pytest_cache/
+workplace C/artifacts/
+workplace C/neurogolf-2026-work/logs/
+workplace C/score_docs/54_ACD_COSTS.json

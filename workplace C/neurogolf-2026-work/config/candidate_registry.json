@@ -1,0 +1,158 @@
+{
+  "candidates": [
+    {
+      "candidate_path": "workplace E/optimized_onnx/task011_affine_counts_20260712/task011.onnx",
+      "candidate_sha256": "d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134",
+      "cost": 282,
+      "created_at": "2026-07-13T19:16:28.890179+00:00",
+      "created_by": "round4 stack",
+      "delta_cost": 36,
+      "delta_points": 0.120144312,
+      "forbidden_ops": [],
+      "fuzz_trials": 267,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-13T19:16:28.890179+00:00",
+          "reason": "Kaggle ref54658428 COMPLETE 7381.14",
+          "status": "online_verified"
+        }
+      ],
+      "method": "fold sub offsets into affine channel counts",
+      "negative_padding": [],
+      "notes": "",
+      "official_examples_checked": 267,
+      "official_examples_passed": 267,
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Einsum": 3
+        },
+        "runtime_compatible": true
+      },
+      "owner": "E",
+      "parent_path": "workplace C/artifacts/GOLF_20260714_FULL400_ROUND3_REBASE_7379_19/onnx/task011.onnx",
+      "parent_sha256": "df7ddffdefd8d1f168424610c67e41dcbc66e7251fc7d35e61f2aa883f311ad9",
+      "points": null,
+      "public_example_selected": false,
+      "risk_level": "low",
+      "runtime_compatible": true,
+      "status": "online_verified",
+      "task": "task011",
+      "updated_at": "2026-07-13T19:16:28.890179+00:00"
+    },
+    {
+      "candidate_path": "workplace E/single_task/task324/onnx/task324_candidate.onnx",
+      "candidate_sha256": "c75e065faa1919757628e3e3c5e80519304c12d67166f7edaf3e21a67767a327",
+      "cost": 8551,
+      "created_at": "2026-07-13T19:16:28.894826+00:00",
+      "created_by": "round4 stack",
+      "delta_cost": 4,
+      "delta_points": 0.000467672,
+      "forbidden_ops": [],
+      "fuzz_trials": 2000,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-13T19:16:28.894826+00:00",
+          "reason": "Kaggle ref54658428 COMPLETE 7381.14",
+          "status": "online_verified"
+        }
+      ],
+      "method": "exact graph micro compression",
+      "negative_padding": [],
+      "notes": "",
+      "official_examples_checked": 266,
+      "official_examples_passed": 266,
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 1,
+          "And": 4,
+          "Cast": 2,
+          "Conv": 1,
+          "Equal": 5,
+          "Greater": 1,
+          "Max": 2,
+          "Not": 4,
+          "Or": 1,
+          "Pad": 1,
+          "QLinearConv": 1,
+          "ReduceMax": 10,
+          "ReduceSum": 1,
+          "Split": 1,
+          "Sub": 2,
+          "TopK": 1,
+          "Where": 10
+        },
+        "runtime_compatible": true
+      },
+      "owner": "E",
+      "parent_path": "workplace C/artifacts/GOLF_20260714_FULL400_ROUND3_REBASE_7379_19/onnx/task324.onnx",
+      "parent_sha256": "cd303d7c495546f2313cb3b65f44020975cdbe5683ad1c0a4ad9dd7d022d639a",
+      "points": null,
+      "public_example_selected": false,
+      "risk_level": "low",
+      "runtime_compatible": true,
+      "status": "online_verified",
+      "task": "task324",
+      "updated_at": "2026-07-13T19:16:28.894826+00:00"
+    },
+    {
+      "candidate_path": "workplace C/single_task/task349/onnx/task349_rank2_exact.onnx",
+      "candidate_sha256": "3d93129a92b0fbba02102fab9ec753be5ef8cfa515d12dd0544b6571e0c51f2a",
+      "cost": 11396,
+      "created_at": "2026-07-13T19:06:59.520302+00:00",
+      "created_by": "round4 probe",
+      "delta_cost": 1051,
+      "delta_points": 0.08821721338317874,
+      "forbidden_ops": [],
+      "fuzz_trials": 11,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-13T19:06:59.520302+00:00",
+          "reason": "online hidden distribution failure ref54658200 score7365.45",
+          "status": "blocked"
+        }
+      ],
+      "method": "observed-neighborhood rank2 compression",
+      "negative_padding": [],
+      "notes": "Exact on all public outputs but failed color-role permutation and hidden Kaggle distribution; never rebase.",
+      "official_examples_checked": 267,
+      "official_examples_passed": 267,
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Cast": 2,
+          "Equal": 1,
+          "Gather": 1,
+          "Max": 1,
+          "MaxPool": 1,
+          "Min": 1,
+          "Mul": 1,
+          "QLinearConv": 2,
+          "ReduceMax": 1,
+          "Transpose": 1,
+          "Where": 1
+        },
+        "runtime_compatible": true
+      },
+      "owner": "C",
+      "parent_path": "workplace C/artifacts/GOLF_20260714_FULL400_ROUND3_REBASE_7379_19/onnx/task349.onnx",
+      "parent_sha256": "e7a37c4e0ca773780952d382b465c4992cc503589f3cd39547dc84d6b81a6b6e",
+      "points": 15.658982304382201,
+      "public_example_selected": false,
+      "risk_level": "high",
+      "runtime_compatible": true,
+      "status": "blocked",
+      "task": "task349",
+      "updated_at": "2026-07-13T19:06:59.520302+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "updated_at": "2026-07-13T19:16:28.894826+00:00"
+}

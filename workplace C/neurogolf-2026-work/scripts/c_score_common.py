@@ -218,7 +218,7 @@ def score_onnx(task: str, onnx_path: Path, validate_all: bool = True, max_exampl
         options = ort.SessionOptions()
         options.enable_profiling = True
         options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_DISABLE_ALL
-        with tempfile.TemporaryDirectory(prefix="ngc_c_score_") as tmp:
+        with tempfile.TemporaryDirectory(prefix="ngc_c_score_", ignore_cleanup_errors=True) as tmp:
             options.profile_file_prefix = str(Path(tmp) / task)
             session = ort.InferenceSession(
                 sanitized.SerializeToString(),

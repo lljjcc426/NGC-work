@@ -24,8 +24,6 @@ ASSIGNMENTS = REPO / "assignments" / "task_assignment_400.csv"
 SAFE_TRANSFORMS = [
     "pad_axes",
     "constant_pad_axes",
-    "conv_crop",
-    "terminal_conv_bias_absorb",
     "broadcast_init",
     "trivial_nodes",
     "optional_defaults",
