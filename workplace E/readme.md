@@ -1,5 +1,8 @@
 E team workspace
 
+Latest team handoff: [TEAM_HANDOFF_20260715.md](./TEAM_HANDOFF_20260715.md).
+Historical experiment log: [worklog.md](./worklog.md).
+
 Scope:
 - Primary owner tasks are listed in ../assignments/task_assignment_400.csv.
 - E also has shared_review for task233. Primary owner for task233 remains A.

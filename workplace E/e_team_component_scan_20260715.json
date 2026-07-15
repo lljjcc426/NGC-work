@@ -1,0 +1,54 @@
+{
+  "purpose": "search shared disk for exact components used by team refs 54709399 and 54711326",
+  "tasks": [
+    "task118",
+    "task133",
+    "task174",
+    "task249",
+    "task315",
+    "task321"
+  ],
+  "files_found": {
+    "task118": 651,
+    "task133": 626,
+    "task174": 616,
+    "task249": 613,
+    "task315": 608,
+    "task321": 607
+  },
+  "unique_sha256_models": {
+    "task118": 73,
+    "task133": 63,
+    "task174": 39,
+    "task249": 31,
+    "task315": 22,
+    "task321": 27
+  },
+  "quick_screen": {
+    "unique_models_scored": 255,
+    "examples_per_model": 3,
+    "report": "e_team_component_quickscore_20260715.csv",
+    "warning": "Quick-screen results are for candidate ranking only and are not full-validation acceptance evidence."
+  },
+  "full_validation_on_exact_7385_93_parent": [
+    {
+      "task": "task249",
+      "cost": 196,
+      "examples": "265/265",
+      "sha256": "8888a63ae4c132a1b88a3704a827f4a70e79c9ed0b028a3b35e5be2fe8fd6174"
+    },
+    {
+      "task": "task315",
+      "cost": 230,
+      "examples": "266/266",
+      "sha256": "c949139725d6492da4802002e4608ce88f9bf8290d32c211dbf8e024a911102e"
+    },
+    {
+      "task": "task321",
+      "cost": 180,
+      "examples": "267/267",
+      "sha256": "5ce4cbdc653f2339cbdf91853e67c2f4f9dec1d83a993c730da26fe9ec148e68"
+    }
+  ],
+  "result": "The exact 7387.15 package was not identified. Do not claim a reconstruction from this quick screen."
+}

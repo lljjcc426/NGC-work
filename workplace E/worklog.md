@@ -263,3 +263,54 @@
 - Kaggle CLI reported successful submission using `staging_e_task011_20260712/submission.zip`.
   - Follow-up status query remained blocked by sandbox read permission on `C:/Users/cc/.kaggle/access_token`; ref and public score are not recorded yet.
 - Next sequential task: task012.
+
+## 2026-07-13 teammate methods, 2025 code-golf review, and deep task rewrites
+
+- Reviewed current teammate package methods before E optimization and recorded the reusable graph patterns.
+- Added `e_analyze_arc_golf_2025_20260713.py` and `e_arc_golf_2025_reference_20260713.csv` to index the previous competition's public code-golf structures.
+- Built and fully validated new candidates for `task035`, `task092`, `task110`, `task138`, `task174`, `task216`, and `task233`.
+- The strongest locally valid candidates were retained with scripts and CSV reports; unsafe or wrong candidates were not promoted into the team package.
+- `task110`, `task138`, and `task216` were selected for a fast three-task online diagnosis on the latest reproducible GitHub package.
+
+## 2026-07-14 fast batch and Kaggle isolation diagnosis
+
+- The requested team-high ref `54673685` (`7383.93`) binary was not available in GitHub, so the actual reproducible parent was ref `54685007` (`7379.41`), package SHA256 `916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef`.
+- Submitted `task110/task138/task216` together as ref `54684628`; public score was `7363.94`, a large regression.
+- Split the same three changes into isolated submissions:
+  - `task110`, ref `54685012`: `7379.41 -> 7363.58` (`-15.83`), rejected.
+  - `task138`, ref `54685015`: `7379.41 -> 7379.55` (`+0.14`), accepted for migration.
+  - `task216`, ref `54685019`: `7379.41 -> 7379.62` (`+0.21`), accepted for migration.
+- Full metadata, private Kaggle dataset/notebook names, package hashes, and diagnosis are in `e_fast_batch3_submission_20260714.json`.
+- Policy fixed after diagnosis: keep the baseline `task110`; never reuse the aggressive cost-7326 candidate.
+
+## 2026-07-15 full E round and exact online ladder
+
+- Scored all 67 E assignment slots on the reproducible package: `16798/16798` released examples passed.
+- Applied the agreed method order: teammate exact transforms, 2025 public gold/code-golf structure review, then E-owned graph strategies.
+- Added color-permutation differential fuzzing. It caught unsafe candidates that released examples alone did not catch:
+  - `task012`: `69/500` mismatches, hold.
+  - `task233`: `12/147` comparable mismatches, hold.
+  - `task035` and `task092`: `0/500`, promoted to Kaggle isolation.
+- Rebased onto exact teammate ref `54686944` (`7384.93`) and built the following online-confirmed E ladder:
+  - `task035 + task092`: ref `54707421`, score `7385.15`.
+  - add `task216`: ref `54707704`, score `7385.37`.
+  - add `task138`: ref `54707882`, score `7385.51`.
+  - add `task085`: ref `54708032`, score `7385.60`.
+  - add `task174`: ref `54708238`, score `7385.77`.
+  - add `task064`: ref `54708724`, score `7385.88`.
+- Isolated `task118` on the exact `7385.88` package: cost `8699 -> 8266`, official `267/267`, fuzz `0/5000`, ref `54710570`, score `7385.93`; accepted.
+- Tested a one-MaxPool canonical-direction rewrite for `task138`: official `266/266`, but cost increased `10096 -> 12963`; rejected without Kaggle submission.
+- Tested two structural `task198` rewrites: one had no cost gain (`7922 -> 7922`), the other regressed (`7922 -> 8762`); both rejected without submission.
+- Tested `task324/task050/task013` as a three-task batch. Local gain was `+0.019061` with `0/15000` fuzz mismatches, but ref `54711035` scored `7385.91` from the `7385.93` parent; rejected.
+- Isolated the three tasks from the same exact parent:
+  - `task324`, ref `54711156`: score `7385.94` (`+0.01`), accepted.
+  - `task050`, ref `54711267`: score `7385.89` (`-0.04`), hidden-set regression, rejected.
+  - `task013`, ref `54711365`: score unchanged at `7385.93`, hold.
+- Observed new team-high ref `54711326` at `7387.15`. Its description records `task118/task133/task174` rebased onto ref `54709399`; the exact binary was not in GitHub at the last fetch.
+- Added `TEAM_HANDOFF_20260715.md` as the operational index for teammates.
+- Searched shared disk for `task118/task133/task174/task249/task315/task321` components while attempting to reconstruct the current team-high package.
+  - Files found: 3721; unique SHA256 models: 255.
+  - Quick-screen report: `e_team_component_quickscore_20260715.csv` (3 examples per unique model; ranking only, not acceptance evidence).
+  - Structured summary: `e_team_component_scan_20260715.json`.
+  - The exact ref `54711326` package was not identified, so no reconstruction claim was made.
+- No files were deleted during this organization pass.
