@@ -1,0 +1,2 @@
+task,candidate,candidate_sha256,trials,comparable_trials,mismatches,matched,parent_runtime_errors,candidate_runtime_errors,first_mismatch_trial,first_mismatch_cells,first_permutation
+task064,workplace E\optimized_onnx\task064_complement_equal_20260715\task064.onnx,473256223d033d3d7564c43fcb2e52bc15e119cbd2e1ea151f7b741457250146,5000,5000,0,5000,0,0,,,

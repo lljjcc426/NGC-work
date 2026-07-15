@@ -1,0 +1,42 @@
+{
+  "competition": "neurogolf-2026",
+  "parent": {
+    "kaggle_ref": 54708238,
+    "public_score": 7385.77,
+    "record": "../20260715_e_online7385_77_v1"
+  },
+  "task": "task064",
+  "method": "inner22 geometry plus complement-equal terminal fusion",
+  "baseline_cost": 8356,
+  "candidate_cost": 7507,
+  "local_gain": 0.107143925103454,
+  "official_examples_checked": 267,
+  "official_examples_passed": 267,
+  "fuzz_trials": 5000,
+  "fuzz_mismatches": 0,
+  "model_sha256": "473256223d033d3d7564c43fcb2e52bc15e119cbd2e1ea151f7b741457250146",
+  "submission": {
+    "sha256": "c2196b88f5293b545dd089c802b327408ccb6e37f7841846aec6e00873e1032b",
+    "kaggle_ref": 54708724,
+    "status": "COMPLETE",
+    "public_score": 7385.88,
+    "online_gain": 0.11,
+    "gain_since_team_7384_93": 0.95,
+    "cumulative_e_tasks": [
+      "task035",
+      "task092",
+      "task216",
+      "task138",
+      "task085",
+      "task174",
+      "task064"
+    ]
+  },
+  "rejected_experiment": {
+    "description": "incorrect boolean interpretation of encoded uint8 row and column states",
+    "official_examples_checked": 267,
+    "official_examples_passed": 0,
+    "submitted": false,
+    "retained": false
+  }
+}
