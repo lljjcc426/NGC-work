@@ -441,3 +441,22 @@ The resulting package validates `400/400` at `7384.778427` locally, a gain of
 exact-generator samples; task163 global state truncation and the more
 aggressive task350 gate-removal variants are explicitly rejected and retained
 only as documented search scripts.
+
+## 2026-07-15: submission 4 B original rewrite batch
+
+Folder: `20260715_b_submission4_original_batch1_v1`
+
+The team-provided `submission (4).zip` validates `400/400` and scores
+`7386.993113` locally. Ten B-only models were independently rewritten: tasks
+018, 023, 076, 101, 209, 270, 280, 285, 328, and 344. Their combined reliable
+gain is `+1.028545`, producing a locally verified `7388.021658` package.
+
+The largest gains are task018 (`+0.378792`), task344 (`+0.145995`), task101
+(`+0.141002`), and task209 (`+0.138929`). Task344 is a new joint rank-2 spatial
+and color-factor rewrite followed by full-dataset hard-negative refinement; it
+passes all 266 official examples at cost 598 instead of 692.
+
+An online submission was attempted because the batch crossed `+1.0`, but the
+runtime cannot reach Kaggle's signed `www.googleapis.com` upload endpoint. No
+submission record was created, so the score remains local-only. The complete
+400-model ZIP and its SHA256 are archived in the folder for direct verification.

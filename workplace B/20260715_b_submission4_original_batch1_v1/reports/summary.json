@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-15",
+  "scope": "B tasks only",
+  "baseline": {
+    "source": "submission (4).zip",
+    "sha256": "03849373E14E07E2AE3D5664A4BEA4144EF4F3CC137E1E2E1B6EE71DC6509403",
+    "local_points": 7386.993113263445
+  },
+  "changes": {
+    "18": 0.3787919997466602,
+    "23": 0.02163966699719566,
+    "76": 0.03984788940223716,
+    "101": 0.14100209594567303,
+    "209": 0.13892941081711996,
+    "270": 0.03252015218726356,
+    "280": 0.056722589034620796,
+    "285": 0.06613416372212733,
+    "328": 0.006961931039516145,
+    "344": 0.14599520166703428
+  },
+  "local_gain": 1.0285451005594481,
+  "projected_local_points": 7388.021658364004,
+  "validation": "All 10 changed tasks passed train, test, and arc-gen validation.",
+  "submission": {
+    "file": "submission.zip",
+    "entries": 400,
+    "sha256": "738e1cfc91a4bb9306e58d133bc6c30148964e7026b10ec3c74ebb6dc14ff7ab"
+  }
+}
