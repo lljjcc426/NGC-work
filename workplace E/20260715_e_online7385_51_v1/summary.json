@@ -1,0 +1,37 @@
+{
+  "competition": "neurogolf-2026",
+  "parent": {
+    "kaggle_ref": 54707704,
+    "public_score": 7385.37,
+    "record": "../20260715_e_online7385_37_v1"
+  },
+  "task": "task138",
+  "method": "dynamic rectangle four-pool rewrite",
+  "baseline_cost": 11656,
+  "candidate_cost": 10096,
+  "local_gain": 0.143681763094046,
+  "official_examples_checked": 266,
+  "official_examples_passed": 266,
+  "fuzz_trials": 500,
+  "fuzz_mismatches": 0,
+  "previous_isolated_kaggle": {
+    "ref": 54685015,
+    "parent_score": 7379.41,
+    "public_score": 7379.55,
+    "online_gain": 0.14
+  },
+  "model_sha256": "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d",
+  "submission": {
+    "sha256": "44136fea71b291af31d9ce6172c5ab2db3d33c6aec7d0b724af187abb1bea79a",
+    "kaggle_ref": 54707882,
+    "status": "COMPLETE",
+    "public_score": 7385.51,
+    "online_gain": 0.14,
+    "cumulative_e_tasks": [
+      "task035",
+      "task092",
+      "task216",
+      "task138"
+    ]
+  }
+}
