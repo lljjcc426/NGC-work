@@ -1,0 +1,42 @@
+{
+  "competition": "neurogolf-2026",
+  "parent": {
+    "kaggle_ref": 54707421,
+    "public_score": 7385.15,
+    "record": "../20260715_e_team738493_online7385_15_v1"
+  },
+  "task": "task216",
+  "method": "compact coordinate representation",
+  "baseline_cost": 8781,
+  "candidate_cost": 7137,
+  "local_gain": 0.207297776388928,
+  "official_examples_checked": 266,
+  "official_examples_passed": 266,
+  "fuzz_trials": 500,
+  "fuzz_mismatches": 0,
+  "previous_isolated_kaggle": {
+    "ref": 54685019,
+    "parent_score": 7379.41,
+    "public_score": 7379.62,
+    "online_gain": 0.21
+  },
+  "model_sha256": "02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275",
+  "submission": {
+    "sha256": "863b7090f8b0a336dea6b5960f271f123f14ccabdcc2d9fdda850673c0e1d1a2",
+    "kaggle_ref": 54707704,
+    "status": "COMPLETE",
+    "public_score": 7385.37,
+    "online_gain": 0.22,
+    "changed_tasks_since_team_7384_93": [
+      "task035",
+      "task092",
+      "task216"
+    ]
+  },
+  "next_candidates": {
+    "task138": "0 mismatches in 500 trials; previous isolated online gain +0.14",
+    "task085": "0 mismatches in 500 trials; previous isolated online gain +0.09",
+    "task174": "0 mismatches in 500 trials; superseded by teammate cost 2884 candidate",
+    "task064": "hold because 1 mismatch occurred in 500 trials"
+  }
+}
