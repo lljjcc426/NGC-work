@@ -129,6 +129,8 @@ kaggle competitions submissions -c neurogolf-2026 -v
 - 2026-07-15 全 67 task 扫描：`e_round_20260715_summary.json`
 - 队伍最高包组件共享盘筛选：`e_team_component_scan_20260715.json` 和
   `e_team_component_quickscore_20260715.csv`
+- Research-only 全局拼装清单：
+  `artifacts/e_research_champion_20260715/manifest.json`（禁止直接提交）
 - 候选差分验证：`e_color_permutation_fuzz_20260715.py`
 - 当前全量计分：`e_score_full67_20260715.py`
 - `task035`: `e_optimize_task035_compact_scatter_20260713.py`
@@ -165,6 +167,10 @@ kaggle competitions submissions -c neurogolf-2026 -v
 `task118/task133/task174/task249/task315/task321`，共发现 3721 个文件、255 个
 唯一模型哈希，并对每个唯一模型执行 3 例快速筛选。该筛选只用于候选排序，不能
 代替全量验证；最终没有识别出可证明等同于 ref `54711326` 的完整包。
+
+另有一份 400-task research-only 拼装目录。它包含后来已拒绝的
+`task012/task050/task233`，因此 GitHub 只保存 manifest 和风险说明，不保存 400 个
+重复 ONNX，也绝不能把该目录打包提交 Kaggle。
 
 本次整理没有删除任何文件。历史上删除过的生成缓存和临时 probe 已在
 `worklog.md` 对应日期明确记录。

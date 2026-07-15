@@ -313,4 +313,7 @@
   - Quick-screen report: `e_team_component_quickscore_20260715.csv` (3 examples per unique model; ranking only, not acceptance evidence).
   - Structured summary: `e_team_component_scan_20260715.json`.
   - The exact ref `54711326` package was not identified, so no reconstruction claim was made.
+- Preserved the research-only full-400 composition manifest under `artifacts/e_research_champion_20260715/`.
+  - The materialized 400 ONNX files total 1,318,622 bytes and are generated duplicates, so they are not tracked.
+  - The composition is explicitly not submission-safe because it includes later-rejected `task012`, `task050`, and `task233` candidates.
 - No files were deleted during this organization pass.

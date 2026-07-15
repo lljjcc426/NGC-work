@@ -1,0 +1,133 @@
+﻿{
+    "created_at":  "2026-07-15T08:46:16.7444840+08:00",
+    "purpose":  "research_only_not_submission_safe",
+    "baseline":  "team_shared_737940_tracked_20260714",
+    "baseline_sha256":  "916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef",
+    "task110":  "kept_baseline_after_isolated_regression",
+    "overrides":  [
+                      {
+                          "task":  "task011",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task011_affine_counts_20260712\\task011.onnx",
+                          "cost":  282,
+                          "parent_cost":  318,
+                          "sha256":  "d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task012",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task012_grouped_lp_20260712\\task012.onnx",
+                          "cost":  820,
+                          "parent_cost":  2251,
+                          "sha256":  "8df48d736e812c92729bb4cbad8a60bc8c81c363b569b40a3c00262994362d62",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task013",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task013_control_compact_20260713\\task013.onnx",
+                          "cost":  1419,
+                          "parent_cost":  1424,
+                          "sha256":  "639f910262f56f9a132742518de128550303d589f8f5cbfc412b93af06e6862f",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task035",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task035_compact_scatter_20260713\\task035.onnx",
+                          "cost":  1746,
+                          "parent_cost":  1879,
+                          "sha256":  "85e6d76db512de4ece8c69a4c62b0696140fc8b26305cc9bbdf1c86a677a5510",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task050",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\task050_20260713_candidates\\task050_20260713_dynamic_hw_qlinear_int32_controls\\task050.onnx",
+                          "cost":  2981,
+                          "parent_cost":  3000,
+                          "sha256":  "efe13bb5075f5c9d7563f0a4ee8a07847d6bfb4b8a472c1cbb745fb7d11e9e0d",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task064",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task064_20260713\\pair_sums_inner22\\task064.onnx",
+                          "cost":  7858,
+                          "parent_cost":  8356,
+                          "sha256":  "dd0deb7acca65686943b185e6defa56c94f0a38714121be70a6b5a705b61c657",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task085",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task085_integer_codes_20260713\\task085.onnx",
+                          "cost":  2299,
+                          "parent_cost":  2507,
+                          "sha256":  "188fa089bc273044c8db94000a98fba01b42c5a12eaa0dabac4985763f7f4a3e",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task092",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task092_deep_20260713\\rank12_qmm_cross_guard\\task092.onnx",
+                          "cost":  5631,
+                          "parent_cost":  6553,
+                          "sha256":  "849c867a0265ef9a8e1759149fd4c7d466fcae72eaf068514c49eae29d2567b4",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task118",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\classify_then_selected\\task118.onnx",
+                          "cost":  8266,
+                          "parent_cost":  8699,
+                          "sha256":  "27712f2f76bdb42000e8ef5b3b94663d0e35745af4cdecf1375e582a87c7a1ce",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task138",
+                          "source":  "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\optimized_onnx\\fast_batch3_20260714\\task138.onnx",
+                          "cost":  10096,
+                          "parent_cost":  11656,
+                          "sha256":  "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d",
+                          "evidence":  "kaggle_isolated_positive",
+                          "submission_ref":  54685015,
+                          "public_score":  7379.55
+                      },
+                      {
+                          "task":  "task174",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task174_row_hash_symmetry_20260713\\task174.onnx",
+                          "cost":  3306,
+                          "parent_cost":  3947,
+                          "sha256":  "64be91c9a54983b38ff70e96ae3f7ba3a1cffc96d4f48d2eabb83f77fe9b5833",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task216",
+                          "source":  "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\optimized_onnx\\fast_batch3_20260714\\task216.onnx",
+                          "cost":  7137,
+                          "parent_cost":  8781,
+                          "sha256":  "02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275",
+                          "evidence":  "kaggle_isolated_positive",
+                          "submission_ref":  54685019,
+                          "public_score":  7379.62
+                      },
+                      {
+                          "task":  "task233",
+                          "source":  "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_20260713_best\\task233.onnx",
+                          "cost":  26136,
+                          "parent_cost":  30384,
+                          "sha256":  "a6dc22f34172de39b6cf56115746a2954d7d3196cd2921b0e6bcef3855916f0d",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task275",
+                          "source":  "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task275_double_complement.onnx",
+                          "cost":  1345,
+                          "parent_cost":  1349,
+                          "sha256":  "2417119c0394cbd5f9f42c7690430830e0dddee2191ff4775249c8cd2f9eba2c",
+                          "evidence":  "local_full"
+                      },
+                      {
+                          "task":  "task324",
+                          "source":  "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task324_cast_mask_mul.onnx",
+                          "cost":  8556,
+                          "parent_cost":  8635,
+                          "sha256":  "7da86e46a66b6872c14e4094ebbfc28f291c42bf4008ce31fd775450384f5fa5",
+                          "evidence":  "local_full"
+                      }
+                  ]
+}
