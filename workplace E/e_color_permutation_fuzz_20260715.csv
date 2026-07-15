@@ -1,0 +1,6 @@
+task,candidate,candidate_sha256,trials,comparable_trials,mismatches,matched,parent_runtime_errors,candidate_runtime_errors,first_mismatch_trial,first_mismatch_cells,first_permutation
+task110,F:\kaggle\NGC-work-sync-e-fast\workplace E\optimized_onnx\fast_batch3_20260714\task110.onnx,5a5d48b1e0b54a0a29b2039186b81bbf525066cc717296a9df7e297a027512a1,500,500,5,495,0,0,159,1180,"0,3,7,4,2,5,1,6,8,9"
+task012,F:\kaggle\NGC-work-sync-e-fast\workplace E\optimized_onnx\e_round_20260715\task012.onnx,8df48d736e812c92729bb4cbad8a60bc8c81c363b569b40a3c00262994362d62,500,500,69,431,0,0,19,3,"0,1,2,5,4,3,6,7,8,9"
+task035,F:\kaggle\NGC-work-sync-e-fast\workplace E\optimized_onnx\e_round_20260715\task035.onnx,daca24478751bd2e969f1ad27e00ac787ecd95e2263e57674ce00de701e4d0b4,500,500,0,500,0,0,,,
+task092,F:\kaggle\NGC-work-sync-e-fast\workplace E\optimized_onnx\e_round_20260715\task092.onnx,849c867a0265ef9a8e1759149fd4c7d466fcae72eaf068514c49eae29d2567b4,500,500,0,500,0,0,,,
+task233,F:\kaggle\NGC-work-sync-e-fast\workplace E\optimized_onnx\e_round_20260715\task233.onnx,a6dc22f34172de39b6cf56115746a2954d7d3196cd2921b0e6bcef3855916f0d,500,147,12,135,353,0,14,36,"0,1,4,3,6,7,8,5,2,9"

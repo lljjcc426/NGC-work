@@ -49,6 +49,15 @@
       "new_candidate": "task035 compact-scatter plus shared cast-mask fold"
     }
   },
+  "color_permutation_differential_fuzz": {
+    "trials_per_task": 500,
+    "oracle": "reproducible 7379.41 baseline model for the same task",
+    "task110_positive_control": "5 mismatches in 500 comparable trials",
+    "task012": "69 mismatches in 500 comparable trials; hold",
+    "task035": "0 mismatches in 500 comparable trials; ready for isolated submission",
+    "task092": "0 mismatches in 500 comparable trials; ready for isolated submission",
+    "task233": "12 mismatches in 147 comparable trials; hold; baseline runtime rejected 353 additional permutations"
+  },
   "isolated_candidates": [
     {
       "task": "task035",
@@ -59,7 +68,7 @@
       "model_sha256": "daca24478751bd2e969f1ad27e00ac787ecd95e2263e57674ce00de701e4d0b4",
       "package_sha256": "ea15022993300d395fe79a6bafae4c0e7ad17079b1fa290f6396871d58fb68c3",
       "risk": "low_exact_graph_transform",
-      "submission_status": "not_submitted_credential_blocked"
+      "submission_status": "ready_not_submitted_credential_blocked"
     },
     {
       "task": "task012",
@@ -70,7 +79,7 @@
       "model_sha256": "8df48d736e812c92729bb4cbad8a60bc8c81c363b569b40a3c00262994362d62",
       "package_sha256": "e83daa6a61abb2de59ddff175133153323853bafd66d78135d31eec92a3e4217",
       "risk": "high_structural_rewrite",
-      "submission_status": "not_submitted_credential_blocked"
+      "submission_status": "hold_color_fuzz_mismatch"
     },
     {
       "task": "task092",
@@ -81,7 +90,7 @@
       "model_sha256": "849c867a0265ef9a8e1759149fd4c7d466fcae72eaf068514c49eae29d2567b4",
       "package_sha256": "3609b093ec32053a8e49b8575d02704c3435aa936ae85cf795b587f1de92187b",
       "risk": "high_structural_rewrite",
-      "submission_status": "not_submitted_credential_blocked"
+      "submission_status": "ready_not_submitted_credential_blocked"
     },
     {
       "task": "task233",
@@ -92,7 +101,7 @@
       "model_sha256": "a6dc22f34172de39b6cf56115746a2954d7d3196cd2921b0e6bcef3855916f0d",
       "package_sha256": "68534a12fa76229abca400d2056d57741923bdf63611eaaf323950ff8f3fb9b3",
       "risk": "high_structural_rewrite",
-      "submission_status": "not_submitted_credential_blocked"
+      "submission_status": "hold_color_fuzz_mismatch"
     }
   ],
   "kaggle_blocker": {
