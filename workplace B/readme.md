@@ -459,3 +459,22 @@ Kaggle ref `54732385` completed at `7369.57`. The score exactly matches the
 nine safe gains plus a complete loss of baseline task344 points, so task344 is
 restored and archived under `rejected/`. The safe9 package needs another
 `+0.117450` before the next direct submission.
+
+## 2026-07-15: submission 4 B exact batch 2
+
+Folder: `20260715_b_submission4_exact_batch2_v1`
+
+Three further rule-equivalent B rewrites were added to the hidden-safe nine:
+task063 changes its 0/1/2 class chain from float16 to uint8, task185 replaces
+boolean ramp casts and multiplication with uint8 `Where`, and task295 moves
+its integer triangle geometry to uint8 under opset 14.
+
+- New three-task local gain: `+0.138395`.
+- Cumulative B-only local gain: `+1.020945`.
+- Projected local score: `7388.014059`.
+- Validation: complete train/test/ARC-GEN sets for all three new tasks.
+- Submission: 400 root entries, CRC clean, SHA256
+  `B00C5AFDF426D175E4DC2ECD3ACA7F0046E3A2AB1391809CC572F3B87FE97779`.
+
+This package crosses the agreed one-point threshold and is the next direct
+online verification candidate.

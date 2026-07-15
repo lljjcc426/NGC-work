@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-15",
+  "scope": "B tasks only",
+  "baseline_local_points": 7386.993113263445,
+  "previous_safe9_gain": 0.8825498988924139,
+  "new_tasks": [63, 185, 295],
+  "accepted_tasks": [18, 23, 63, 76, 101, 185, 209, 270, 280, 285, 295, 328],
+  "new_gain": 0.1383953642316378,
+  "cumulative_gain": 1.0209452631240516,
+  "projected_local_points": 7388.014058526569,
+  "submission": {
+    "file": "submission/submission.zip",
+    "entries": 400,
+    "bytes": 414233,
+    "sha256": "B00C5AFDF426D175E4DC2ECD3ACA7F0046E3A2AB1391809CC572F3B87FE97779"
+  },
+  "task_results": [
+    {"task": 63, "cost_before": 1706, "cost_after": 1556, "gain": 0.092033023313288},
+    {"task": 185, "cost_before": 1682, "cost_after": 1623, "gain": 0.0357072730182999},
+    {"task": 295, "cost_before": 1604, "cost_after": 1587, "gain": 0.010655067900049886}
+  ]
+}
