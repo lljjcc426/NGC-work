@@ -476,5 +476,7 @@ its integer triangle geometry to uint8 under opset 14.
 - Submission: 400 root entries, CRC clean, SHA256
   `B00C5AFDF426D175E4DC2ECD3ACA7F0046E3A2AB1391809CC572F3B87FE97779`.
 
-This package crosses the agreed one-point threshold and is the next direct
-online verification candidate.
+This package crossed the agreed one-point threshold. Kaggle ref `54733885`
+completed at `7388.17`, a confirmed `+1.02` over the same-base ref `54711326`
+at `7387.15`. The result matches the local `+1.020945` prediction, so all three
+new rewrites are accepted as hidden-safe.

@@ -28,7 +28,18 @@ example outputs.
 
 The ZIP contains exactly `task001.onnx` through `task400.onnx` at archive
 root and passes CRC validation. This crosses the agreed `+1.0` threshold and
-is ready for direct Kaggle verification.
+was submitted for direct Kaggle verification.
+
+## Kaggle result
+
+- Ref: `54733885`.
+- Status: `COMPLETE`.
+- Public score: `7388.17`.
+- Same-base control: ref `54711326`, public score `7387.15`.
+- Confirmed online gain: `+1.02`.
+
+The online delta matches the local `+1.020945` prediction at leaderboard
+precision. The three new rewrites are therefore accepted as hidden-safe.
 
 ## Contents
 

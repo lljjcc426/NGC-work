@@ -14,6 +14,14 @@
     "bytes": 414233,
     "sha256": "B00C5AFDF426D175E4DC2ECD3ACA7F0046E3A2AB1391809CC572F3B87FE97779"
   },
+  "online_result": {
+    "ref": 54733885,
+    "status": "COMPLETE",
+    "public_score": 7388.17,
+    "baseline_ref": 54711326,
+    "baseline_public_score": 7387.15,
+    "online_gain": 1.02
+  },
   "task_results": [
     {"task": 63, "cost_before": 1706, "cost_after": 1556, "gain": 0.092033023313288},
     {"task": 185, "cost_before": 1682, "cost_after": 1623, "gain": 0.0357072730182999},
