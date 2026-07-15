@@ -1,0 +1,33 @@
+{
+  "scope": "B_only",
+  "parent": {
+    "kaggle_ref": 54736568,
+    "public_score": 7420.93,
+    "package_sha256": "bcef5a066b75fc36f231dec160e34612edb1e38007775c9e1a9dfd2407196023"
+  },
+  "accepted": {
+    "task": 18,
+    "base_cost": 17025,
+    "new_cost": 15754,
+    "base_points": 15.278094277922827,
+    "new_points": 15.335150419736731,
+    "gain": 0.057056141813904,
+    "memory": 15585,
+    "params": 169,
+    "sha256": "26c109a847f83aa0757f41e607740e5d90c2001d7a5e5ba00afedcb9bdb36a70",
+    "official_validation": "266/266",
+    "fresh_core_equivalence": "18000/18000",
+    "fresh_final_equivalence": "2000/2000"
+  },
+  "rejected_task285": {
+    "direct_unpad": "generator out-of-range index",
+    "flood_steps_4": "fresh generator failure at example 794",
+    "flood_steps_5": "fresh generator failure at example 6588",
+    "orthogonal_anchor": "official train failure at example 0",
+    "diagonal_minus_31": "official train failure at example 0",
+    "diagonal_plus_31": "official train failure at example 2"
+  },
+  "unpublished_gain_since_parent": 0.057056141813904,
+  "remaining_to_submit_threshold": 0.942943858186096,
+  "submission_status": "not_submitted_below_one_point_threshold"
+}

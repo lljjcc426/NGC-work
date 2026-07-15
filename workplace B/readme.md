@@ -497,3 +497,18 @@ All 11 changed tasks pass their complete train/test/ARC-GEN sets. Predicted
 gain is `+1.025027`; package SHA256 is `BCEF5A066B75FC36F231DEC160E34612E`
 `DB1E38007775C9E1A9DFD2407196023`. Kaggle ref `54736568` completed at
 `7420.93`, confirming a `+1.03` gain over baseline ref `54733776` at `7419.90`.
+
+## 2026-07-16: task018 compact exact continuation on 7420.93
+
+Folder: `20260716_b7420_task018_compact_exact_v1`
+
+Only B task018 changes. Exact clip-bound checks, linearized coordinate lookup,
+direct two-anchor grouping, and rank-3 ScatterND reduce cost from `17025` to
+`15754`, worth `+0.057056`. Validation is `266/266` official examples, plus
+`18000/18000` fresh differential examples for the algebraic core and another
+`2000/2000` after the final ScatterND change.
+
+No task285 experiment was accepted: direct unpadding produced a generator
+out-of-range index, four/five flood steps missed fresh generated creatures, and
+both legacy diagonal anchor directions proved necessary. The current unpublished
+gain is `+0.057056`, leaving `+0.942944` before the next direct submission.
