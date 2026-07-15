@@ -480,3 +480,19 @@ This package crossed the agreed one-point threshold. Kaggle ref `54733885`
 completed at `7388.17`, a confirmed `+1.02` over the same-base ref `54711326`
 at `7387.15`. The result matches the local `+1.020945` prediction, so all three
 new rewrites are accepted as hidden-safe.
+
+## 2026-07-16: submission 5 full-400 repository integration
+
+Folder: `20260716_submission5_all400_integration_v1`
+
+This is a repository-wide 400-task integration, not a B-only candidate scan.
+It deduplicates 892 task/model hashes from 136 tracked ONNX files and 30 tracked
+submission ZIPs, then validates all 554 models different from the working
+package. Four locally positive historical models were rejected using existing
+hidden-risk evidence; no unsafe repository candidate was merged.
+
+The final 400-task package keeps the complete `7419.90` team baseline and adds
+ten previously Kaggle-confirmed rewrites plus a new exact task295 contraction.
+All 11 changed tasks pass their complete train/test/ARC-GEN sets. Predicted
+gain is `+1.025027`; package SHA256 is `BCEF5A066B75FC36F231DEC160E34612E`
+`DB1E38007775C9E1A9DFD2407196023`. Kaggle ref `54736568` is pending.

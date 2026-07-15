@@ -1,0 +1,62 @@
+[
+  {
+    "task": 12,
+    "label": "github_all_candidates_20260716/task012",
+    "path": "D:\\golf\\github_all_candidates_20260716\\task012\\8df48d736e812c92\\task012.onnx",
+    "bytes": 3557,
+    "valid": true,
+    "memory": 0,
+    "params": 820,
+    "cost": 820,
+    "points": 18.2906956597417,
+    "error": "",
+    "base_points": 17.28087015909327,
+    "base_cost": 2251,
+    "gain": 1.0098255006484322
+  },
+  {
+    "task": 344,
+    "label": "github_all_candidates_20260716/task344",
+    "path": "D:\\golf\\github_all_candidates_20260716\\task344\\8363327198901795\\task344.onnx",
+    "bytes": 2742,
+    "valid": true,
+    "memory": 0,
+    "params": 598,
+    "cost": 598,
+    "points": 18.606409246049367,
+    "error": "",
+    "base_points": 18.460414044382333,
+    "base_cost": 692,
+    "gain": 0.14599520166703428
+  },
+  {
+    "task": 134,
+    "label": "github_all_candidates_20260716/task134",
+    "path": "D:\\golf\\github_all_candidates_20260716\\task134\\c2040ddb14c46e0d\\task134.onnx",
+    "bytes": 3145,
+    "valid": true,
+    "memory": 1227,
+    "params": 102,
+    "cost": 1329,
+    "points": 17.807817941286753,
+    "error": "",
+    "base_points": 17.667630794070938,
+    "base_cost": 1529,
+    "gain": 0.1401871472158156
+  },
+  {
+    "task": 23,
+    "label": "github_all_candidates_20260716/task023",
+    "path": "D:\\golf\\github_all_candidates_20260716\\task023\\ebbdb542168ecadd\\task023.onnx",
+    "bytes": 8875,
+    "valid": true,
+    "memory": 2878,
+    "params": 3048,
+    "cost": 5926,
+    "points": 16.312895271866488,
+    "error": "",
+    "base_points": 16.264957245730663,
+    "base_cost": 6217,
+    "gain": 0.04793802613582443
+  }
+]

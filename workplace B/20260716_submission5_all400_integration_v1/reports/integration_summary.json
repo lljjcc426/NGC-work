@@ -1,0 +1,29 @@
+{
+  "scope": "all_400_tasks",
+  "baseline": {
+    "source": "submission (5).zip",
+    "sha256": "4dcf46e72fd4890d867a9bb025edd1e989b9a7978f86198670ce50f04e9a2da8",
+    "kaggle_ref": 54733776,
+    "public_score": 7419.90
+  },
+  "repository_scan": {
+    "tracked_onnx_files": 136,
+    "tracked_zip_files": 30,
+    "unique_models": 892,
+    "unique_models_different_from_working": 554,
+    "tasks_covered": 400,
+    "local_positive_candidates": 4,
+    "accepted_repository_candidates": 0
+  },
+  "accepted_overrides": [18, 23, 63, 76, 101, 185, 209, 270, 285, 295, 328],
+  "predicted_gain": 1.025026570172,
+  "submission": {
+    "models": 400,
+    "crc_clean": true,
+    "bytes": 370311,
+    "sha256": "bcef5a066b75fc36f231dec160e34612edb1e38007775c9e1a9dfd2407196023",
+    "kaggle_ref": 54736568,
+    "status": "PENDING",
+    "public_score": null
+  }
+}
