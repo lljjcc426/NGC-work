@@ -1,15 +1,15 @@
 {
-  "created_at": "2026-07-13T22:11:39+00:00",
+  "created_at": "2026-07-15T06:47:05+00:00",
   "examples_checked": 101347,
-  "kaggle_ref": 54662258,
-  "local_score": 7381.64809158354,
+  "kaggle_ref": 54715535,
+  "local_score": 7407.546052980321,
   "model_count": 400,
-  "model_set_sha256": "d3c36e86b8de0110c9ca1d0bf1b8fad076533ab26a78ec3fcaa02279d7b8d176",
+  "model_set_sha256": "bc242fc8c9db4be90d8dd6f4c5d6f1ca855ce18b32caca3ef46943532e9d0fed",
   "models_valid": 400,
-  "name": "team_7381_65",
-  "onnx_dir": "workplace C/artifacts/full400_round17_extrema_stack/onnx",
-  "package_sha256": "186b46cbbae80ce6e07122d80d96263bcddded3a58a82f850ba08cea9853dfcd",
-  "public_score": 7381.65,
-  "source_commit": "6a7a6b686c7cbcd2b2f4dc1f4244323042647f6e",
-  "submission_zip": "workplace C/artifacts/full400_round17_extrema_stack/submission.zip"
+  "name": "round36_public_source_safe37_online_verified",
+  "onnx_dir": "workplace C/artifacts/full400_round36_public_source_safe37/onnx",
+  "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd",
+  "public_score": 7407.70,
+  "source_commit": "3907fd2271280c2827862560f742956ad051cbf7",
+  "submission_zip": "workplace C/artifacts/full400_round36_public_source_safe37/submission.zip"
 }

@@ -18,11 +18,18 @@
           "status": "online_verified"
         }
       ],
+      "inherited_parent_risk": false,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
       "method": "fold sub offsets into affine channel counts",
       "negative_padding": [],
       "notes": "",
       "official_examples_checked": 267,
       "official_examples_passed": 267,
+      "online_kaggle_ref": 54658428,
+      "online_package_delta": 0.12,
+      "online_public_score": 7381.14,
+      "online_status": "COMPLETE",
       "operator_audit": {
         "forbidden_ops": [],
         "negative_padding": [],
@@ -32,6 +39,7 @@
         "runtime_compatible": true
       },
       "owner": "E",
+      "parent_cost": 318,
       "parent_path": "workplace C/artifacts/GOLF_20260714_FULL400_ROUND3_REBASE_7379_19/onnx/task011.onnx",
       "parent_sha256": "df7ddffdefd8d1f168424610c67e41dcbc66e7251fc7d35e61f2aa883f311ad9",
       "points": null,
@@ -41,6 +49,509 @@
       "status": "online_verified",
       "task": "task011",
       "updated_at": "2026-07-13T19:16:28.890179+00:00"
+    },
+    {
+      "candidate_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round23_nested_exact_scan\\task110_nested_where.onnx",
+      "candidate_sha256": "990cbe262cfc23604090304dfd9aa0b48cc9dd305c495e58e3405dfd4cc855f0",
+      "checker_passed": true,
+      "cost": 9679,
+      "created_at": "2026-07-14T06:33:28.826244+00:00",
+      "created_by": "full400_round28",
+      "delta_cost": 3,
+      "delta_points": 0.0003099013505510985,
+      "forbidden_ops": [],
+      "full400_examples_checked": 101347,
+      "full400_examples_passed": 101347,
+      "full400_models_passed": 400,
+      "fuzz_trials": 2000,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-14T05:55:17.934476+00:00",
+          "reason": "official 266/266 and random-grid exact 2000/2000",
+          "status": "runtime_safe"
+        },
+        {
+          "at": "2026-07-14T06:33:28.826244+00:00",
+          "reason": "round28 full 400/400 and 101347/101347",
+          "status": "canonical"
+        }
+      ],
+      "inherited_parent_risk": false,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
+      "method": "nested_where_boolean_fusion",
+      "negative_padding": [],
+      "notes": "Exact nested Where branch identity; random-grid exact 2000/2000.",
+      "official_examples_checked": 266,
+      "official_examples_passed": 266,
+      "online_kaggle_ref": null,
+      "online_package_delta": null,
+      "online_public_score": null,
+      "online_status": "",
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 2,
+          "Cast": 6,
+          "Concat": 1,
+          "Conv": 1,
+          "Equal": 7,
+          "Gather": 7,
+          "Greater": 7,
+          "MaxPool": 11,
+          "Min": 1,
+          "Mod": 1,
+          "Or": 1,
+          "Pad": 1,
+          "ReduceMax": 4,
+          "ReduceMin": 1,
+          "Slice": 4,
+          "Where": 15
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "owner": "E",
+      "parent_cost": 9682,
+      "parent_operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 2,
+          "Cast": 6,
+          "Concat": 1,
+          "Conv": 1,
+          "Equal": 7,
+          "Gather": 7,
+          "Greater": 7,
+          "MaxPool": 11,
+          "Min": 1,
+          "Mod": 1,
+          "Pad": 1,
+          "ReduceMax": 4,
+          "ReduceMin": 1,
+          "Slice": 4,
+          "Where": 16
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "parent_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round21_reshape_unit_dims_stack\\onnx\\task110.onnx",
+      "parent_sha256": "be2c0cc56a5c09e79e0e7c79fa48574dfae9babdd019abba1c10058e6c67473e",
+      "points": 15.82228613085091,
+      "proof_class": "algebraic_exact_plus_random_grid",
+      "public_example_selected": false,
+      "risk_level": "low",
+      "runtime_compatible": true,
+      "shape_inference_passed": true,
+      "status": "canonical",
+      "task": "task110",
+      "updated_at": "2026-07-14T06:33:28.826244+00:00"
+    },
+    {
+      "candidate_path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task133\\onnx\\task133_candidate.onnx",
+      "candidate_sha256": "ca6daf272b1fd99ebd13068a288fcd221d5bc7290ac6d38a9e0b557c696a9e18",
+      "checker_passed": true,
+      "cost": 20920,
+      "created_at": "2026-07-14T07:02:57.302003+00:00",
+      "created_by": "build_one_hot_selector.py",
+      "delta_cost": 45,
+      "delta_points": 0.0021487414260038056,
+      "forbidden_ops": [],
+      "full400_examples_checked": 0,
+      "full400_examples_passed": 0,
+      "full400_models_passed": 0,
+      "fuzz_trials": 5000,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-14T07:02:57.302003+00:00",
+          "reason": "official 267/267 and one-hot metamorphic exact 5000/5000",
+          "status": "runtime_safe"
+        }
+      ],
+      "inherited_parent_risk": false,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
+      "method": "one_hot_color_selector_to_argmax_gatherelements",
+      "negative_padding": [],
+      "notes": "One-hot selector 267/267 official and 5000/5000 nonzero color permutations.",
+      "official_examples_checked": 267,
+      "official_examples_passed": 267,
+      "online_kaggle_ref": null,
+      "online_package_delta": null,
+      "online_public_score": null,
+      "online_status": "",
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 8,
+          "And": 3,
+          "ArgMax": 6,
+          "Cast": 23,
+          "Clip": 3,
+          "Concat": 1,
+          "Conv": 1,
+          "Div": 1,
+          "Equal": 10,
+          "Flatten": 1,
+          "Floor": 2,
+          "Gather": 5,
+          "GatherElements": 2,
+          "Greater": 3,
+          "Less": 1,
+          "Max": 1,
+          "Mul": 15,
+          "Pad": 1,
+          "QLinearConv": 4,
+          "ReduceMax": 4,
+          "ReduceSum": 4,
+          "Reshape": 6,
+          "Resize": 3,
+          "ScatterND": 4,
+          "Squeeze": 2,
+          "Sub": 7,
+          "Sum": 4,
+          "Unsqueeze": 1,
+          "Where": 6
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "owner": "D",
+      "parent_cost": 20965,
+      "parent_operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 7,
+          "And": 3,
+          "ArgMax": 5,
+          "Cast": 23,
+          "Clip": 3,
+          "Concat": 1,
+          "Conv": 1,
+          "Div": 1,
+          "Equal": 10,
+          "Flatten": 1,
+          "Floor": 2,
+          "Gather": 5,
+          "Greater": 3,
+          "Less": 1,
+          "Max": 1,
+          "Mul": 18,
+          "Pad": 1,
+          "QLinearConv": 4,
+          "ReduceMax": 4,
+          "ReduceSum": 7,
+          "Reshape": 6,
+          "Resize": 3,
+          "ScatterND": 4,
+          "Squeeze": 2,
+          "Sub": 7,
+          "Sum": 4,
+          "Unsqueeze": 1,
+          "Where": 6
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "parent_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round28_task110_task174_stack\\onnx\\task133.onnx",
+      "parent_sha256": "eacbda0a55fbe97d0c5cbb52f66974c3e6b330cbc3dd4913540537fd21b92a09",
+      "points": 15.05153908182114,
+      "proof_class": "one_hot_selector_identity_plus_metamorphic_color_fuzz",
+      "public_example_selected": false,
+      "risk_level": "medium",
+      "runtime_compatible": true,
+      "shape_inference_passed": true,
+      "status": "runtime_safe",
+      "task": "task133",
+      "updated_at": "2026-07-14T07:02:57.302003+00:00"
+    },
+    {
+      "candidate_path": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task174\\onnx\\task174_scalar_pick.onnx",
+      "candidate_sha256": "9b28dd1215b955bc7b526eb4cfa66297cebbae0abb6fc99cbfeb8bd7486128f5",
+      "checker_passed": true,
+      "cost": 3164,
+      "created_at": "2026-07-14T06:33:28.837403+00:00",
+      "created_by": "full400_round28",
+      "delta_cost": 60,
+      "delta_points": 0.018785774738974383,
+      "forbidden_ops": [],
+      "full400_examples_checked": 101347,
+      "full400_examples_passed": 101347,
+      "full400_models_passed": 400,
+      "fuzz_trials": 5000,
+      "generator_trials": 5000,
+      "history": [
+        {
+          "at": "2026-07-14T05:55:17.941083+00:00",
+          "reason": "official 266/266 and generated legal-domain exact 5000/5000",
+          "status": "runtime_safe"
+        },
+        {
+          "at": "2026-07-14T06:33:28.837403+00:00",
+          "reason": "round28 full 400/400 and 101347/101347",
+          "status": "canonical"
+        }
+      ],
+      "inherited_parent_risk": true,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
+      "method": "one_hot_symmetric_object_selector_to_argmax_gather",
+      "negative_padding": [
+        {
+          "node": "node_0",
+          "pads": [
+            0,
+            0,
+            -20,
+            -20
+          ]
+        }
+      ],
+      "notes": "Selector one-hot 266/266 official; unseen legal three-object layouts exact 5000/5000 against cumulative parent.",
+      "official_examples_checked": 266,
+      "official_examples_passed": 266,
+      "online_kaggle_ref": null,
+      "online_package_delta": null,
+      "online_public_score": null,
+      "online_status": "",
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              0,
+              0,
+              -20,
+              -20
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 6,
+          "And": 1,
+          "ArgMax": 1,
+          "Cast": 8,
+          "Clip": 2,
+          "Conv": 1,
+          "Einsum": 2,
+          "Equal": 4,
+          "Gather": 9,
+          "Less": 2,
+          "Mul": 6,
+          "Pad": 1,
+          "ReduceMax": 7,
+          "ReduceMin": 1,
+          "Reshape": 4,
+          "Slice": 1,
+          "Squeeze": 1,
+          "Sub": 4,
+          "TopK": 1,
+          "Where": 2
+        },
+        "risk_fingerprint": {
+          "negative_padding": [
+            "[0, 0, -20, -20]"
+          ],
+          "runtime": []
+        },
+        "runtime_compatible": false,
+        "runtime_risks": []
+      },
+      "owner": "E",
+      "parent_cost": 3224,
+      "parent_operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              0,
+              0,
+              -20,
+              -20
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 6,
+          "And": 1,
+          "Cast": 9,
+          "Clip": 2,
+          "Conv": 1,
+          "Einsum": 2,
+          "Equal": 4,
+          "Flatten": 1,
+          "Gather": 4,
+          "Less": 2,
+          "Mul": 6,
+          "Pad": 1,
+          "ReduceMax": 13,
+          "ReduceMin": 1,
+          "Slice": 1,
+          "Squeeze": 1,
+          "Sub": 4,
+          "TopK": 1,
+          "Unsqueeze": 2,
+          "Where": 8
+        },
+        "risk_fingerprint": {
+          "negative_padding": [
+            "[0, 0, -20, -20]"
+          ],
+          "runtime": []
+        },
+        "runtime_compatible": false,
+        "runtime_risks": []
+      },
+      "parent_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round21_reshape_unit_dims_stack\\onnx\\task174.onnx",
+      "parent_sha256": "2739be85b59cd90eaa400b699987af26a8585090bd2c47265718ee18c7093505",
+      "points": 16.940407671112453,
+      "proof_class": "one_hot_selector_identity_plus_legal_domain_fuzz",
+      "public_example_selected": false,
+      "risk_level": "medium",
+      "runtime_compatible": false,
+      "shape_inference_passed": true,
+      "status": "canonical",
+      "task": "task174",
+      "updated_at": "2026-07-14T06:33:28.837403+00:00"
+    },
+    {
+      "candidate_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round22_advanced_exact_scan\\task219_slice_pad.onnx",
+      "candidate_sha256": "57ab1ca4909866aca733ea7b3a1f93354123fc227ee123d21638440664be351a",
+      "checker_passed": true,
+      "cost": 7359,
+      "created_at": "2026-07-14T06:33:28.851081+00:00",
+      "created_by": "full400_round28",
+      "delta_cost": 44,
+      "delta_points": 0.005961269516499446,
+      "forbidden_ops": [],
+      "full400_examples_checked": 101347,
+      "full400_examples_passed": 101347,
+      "full400_models_passed": 400,
+      "fuzz_trials": 2000,
+      "generator_trials": 0,
+      "history": [
+        {
+          "at": "2026-07-14T05:55:17.953928+00:00",
+          "reason": "official 265/265 and random-grid exact 2000/2000",
+          "status": "runtime_safe"
+        },
+        {
+          "at": "2026-07-14T06:33:28.851081+00:00",
+          "reason": "round28 full 400/400 and 101347/101347",
+          "status": "canonical"
+        }
+      ],
+      "inherited_parent_risk": false,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
+      "method": "slice_to_equivalent_pad_fusion",
+      "negative_padding": [],
+      "notes": "Exact Slice-to-Pad fusion; random-grid exact 2000/2000.",
+      "official_examples_checked": 265,
+      "official_examples_passed": 265,
+      "online_kaggle_ref": null,
+      "online_package_delta": null,
+      "online_public_score": null,
+      "online_status": "",
+      "operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 14,
+          "ArgMax": 15,
+          "Cast": 29,
+          "Clip": 5,
+          "Concat": 7,
+          "CumSum": 1,
+          "Einsum": 3,
+          "Equal": 6,
+          "Flatten": 1,
+          "Gather": 23,
+          "Max": 2,
+          "Mul": 10,
+          "Pad": 8,
+          "ReduceMax": 7,
+          "ReduceSum": 2,
+          "Slice": 5,
+          "Squeeze": 7,
+          "Sub": 8,
+          "Unsqueeze": 12
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "owner": "D",
+      "parent_cost": 7403,
+      "parent_operator_audit": {
+        "forbidden_ops": [],
+        "negative_padding": [],
+        "operators": {
+          "Add": 14,
+          "ArgMax": 15,
+          "Cast": 29,
+          "Clip": 5,
+          "Concat": 7,
+          "CumSum": 1,
+          "Einsum": 3,
+          "Equal": 6,
+          "Flatten": 1,
+          "Gather": 23,
+          "Max": 2,
+          "Mul": 10,
+          "Pad": 8,
+          "ReduceMax": 7,
+          "ReduceSum": 2,
+          "Slice": 6,
+          "Squeeze": 7,
+          "Sub": 8,
+          "Unsqueeze": 12
+        },
+        "risk_fingerprint": {
+          "negative_padding": [],
+          "runtime": []
+        },
+        "runtime_compatible": true,
+        "runtime_risks": []
+      },
+      "parent_path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round21_reshape_unit_dims_stack\\onnx\\task219.onnx",
+      "parent_sha256": "dda43e80be43679f9b816dce48419672c1caf520e2e9f19c6995cc16d020cfd5",
+      "points": 16.0963206670734,
+      "proof_class": "algebraic_exact_plus_random_grid",
+      "public_example_selected": false,
+      "risk_level": "low",
+      "runtime_compatible": true,
+      "shape_inference_passed": true,
+      "status": "canonical",
+      "task": "task219",
+      "updated_at": "2026-07-14T06:33:28.851081+00:00"
     },
     {
       "candidate_path": "workplace E/single_task/task324/onnx/task324_candidate.onnx",
@@ -60,11 +571,18 @@
           "status": "online_verified"
         }
       ],
+      "inherited_parent_risk": false,
+      "introduced_negative_padding": [],
+      "introduced_runtime_risks": [],
       "method": "exact graph micro compression",
       "negative_padding": [],
       "notes": "",
       "official_examples_checked": 266,
       "official_examples_passed": 266,
+      "online_kaggle_ref": 54658428,
+      "online_package_delta": 0.12,
+      "online_public_score": 7381.14,
+      "online_status": "COMPLETE",
       "operator_audit": {
         "forbidden_ops": [],
         "negative_padding": [],
@@ -90,6 +608,7 @@
         "runtime_compatible": true
       },
       "owner": "E",
+      "parent_cost": 8555,
       "parent_path": "workplace C/artifacts/GOLF_20260714_FULL400_ROUND3_REBASE_7379_19/onnx/task324.onnx",
       "parent_sha256": "cd303d7c495546f2313cb3b65f44020975cdbe5683ad1c0a4ad9dd7d022d639a",
       "points": null,
@@ -154,5 +673,5 @@
     }
   ],
   "schema_version": 1,
-  "updated_at": "2026-07-13T19:16:28.894826+00:00"
+  "updated_at": "2026-07-14T07:02:57.302003+00:00"
 }

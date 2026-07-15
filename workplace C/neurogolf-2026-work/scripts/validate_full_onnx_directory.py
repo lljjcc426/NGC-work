@@ -23,6 +23,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("onnx_dir", type=Path)
     parser.add_argument("--workers", type=int, default=6)
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
     tasks = [f"task{index:03d}" for index in range(1, 401)]
@@ -39,6 +40,7 @@ def main() -> None:
     failures: list[dict] = []
     checked_examples = 0
     passed_examples = 0
+    results: dict[str, dict] = {}
     with ProcessPoolExecutor(max_workers=max(1, args.workers)) as executor:
         futures = {
             executor.submit(_score, (task, str(args.onnx_dir / f"{task}.onnx"))): task
@@ -53,6 +55,7 @@ def main() -> None:
                 result = {"task": task, "ok": False, "error": f"worker:{type(exc).__name__}:{exc}"}
             checked_examples += int(result.get("examples_checked") or 0)
             passed_examples += int(result.get("examples_passed") or 0)
+            results[task] = result
             if not (
                 result.get("ok")
                 and result.get("valid_all_checked")
@@ -74,7 +77,13 @@ def main() -> None:
             {"task": item.get("task"), "error": item.get("error", "")}
             for item in failures
         ],
+        "tasks": {task: results[task] for task in sorted(results)},
     }
+    if args.output:
+        sys.path.insert(0, str(HERE.parent))
+        from full400_safety import atomic_write_json
+
+        atomic_write_json(args.output, summary)
     print(json.dumps(summary, separators=(",", ":")))
     raise SystemExit(1 if failures else 0)
 

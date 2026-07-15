@@ -1,0 +1,111 @@
+{
+  "highest_complete_parent": {
+    "kaggle_ref": 54715535,
+    "public_score": 7407.70,
+    "local_score": 7407.546052980321,
+    "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd",
+    "model_set_sha256": "bc242fc8c9db4be90d8dd6f4c5d6f1ca855ce18b32caca3ef46943532e9d0fed",
+    "model_count": 400,
+    "full_validation": "400/400 and 101347/101347"
+  },
+  "online_positive_stacks": [
+    {
+      "kaggle_ref": 54713674,
+      "public_score": 7395.79,
+      "parent_ref": 54711326,
+      "tasks": ["task017", "task197"],
+      "predicted_delta": 8.641841,
+      "package_sha256": "f8d91bf203a685484ec6a3c4559567739c84df5085dd432ccb506d9da7c853ab"
+    },
+    {
+      "kaggle_ref": 54715181,
+      "public_score": 7406.77,
+      "parent_ref": 54713674,
+      "replacement_count": 24,
+      "predicted_delta": 10.978315,
+      "package_sha256": "402ee71aea0f6fc1f490584b4d27dbd261f02255d0dde27e20697791ad5269aa"
+    },
+    {
+      "kaggle_ref": 54715535,
+      "public_score": 7407.70,
+      "parent_ref": 54715181,
+      "replacement_count": 13,
+      "predicted_delta": 0.932784,
+      "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd"
+    }
+  ],
+  "hidden_distribution_failure": {
+    "kaggle_ref": 54716159,
+    "status": "COMPLETE",
+    "public_score": 7391.08,
+    "parent_ref": 54715535,
+    "parent_public_score": 7407.70,
+    "observed_delta": -16.62,
+    "predicted_delta": 0.9905996173080721,
+    "tasks": ["task187", "task251"],
+    "package_sha256": "89a1c8401e8e65ace44a942689aa6b59f55c76e47b2d88048cee1cec1bd343eb",
+    "conclusion": "Public bundled examples are insufficient for at least one source-derived task rule. Both tasks remain blocked until isolated online evidence identifies a safe task."
+  },
+  "blocked_candidates": [
+    {
+      "task": "task187",
+      "candidate_sha256": "649e7dd192ef5aebdb575008a172ada6d9381c8461fddf3515571f1045f4f1a0",
+      "cost": 7411,
+      "reason": "member of hidden-distribution regression ref 54716159"
+    },
+    {
+      "task": "task251",
+      "candidate_sha256": "c0d2bbe7413830b15c9e5b0cc68320b6c27ae6fee773ee160cc67e4a7aa0d705",
+      "cost": 2107,
+      "reason": "member of hidden-distribution regression ref 54716159"
+    },
+    {
+      "task": "task187",
+      "candidate_sha256": "fc7a46c2d4edae4698b3da4efed5b3e6438470ccf2ddfb7f1cc3add5c397f424",
+      "cost": 4941,
+      "reason": "same source-derived rule as blocked ref 54716159"
+    },
+    {
+      "task": "task251",
+      "candidate_sha256": "1c7821d078c8d9b9cce5efca87a5db6dc8feb03399041eb060891804dedeb474",
+      "cost": 1561,
+      "reason": "same source-derived rule as blocked ref 54716159"
+    }
+  ],
+  "self_einsum_search": {
+    "tasks_completed": 400,
+    "max_atoms": 2,
+    "exact_hit_tasks": ["task067", "task179", "task241"],
+    "new_improvements": 0,
+    "conclusion": "The complete two-atom search recovered only the three already-perfect identity/transpose tasks."
+  },
+  "unsubmitted_runtime_safe_candidates": [
+    {
+      "task": "task086",
+      "method": "negative-pad 1x1 Conv to 2x2 dilated valid Conv",
+      "parent_cost": 3028,
+      "candidate_cost": 2663,
+      "predicted_delta": 0.12844902874341102,
+      "examples": "266/266",
+      "candidate_sha256": "377fbfccf674aaac17899618b1d83254d231049f2569b9137f10ae6216e51878"
+    },
+    {
+      "task": "task101",
+      "method": "negative-pad 1x1 Conv to 2x2 dilated valid Conv",
+      "parent_cost": 13071,
+      "candidate_cost": 13003,
+      "predicted_delta": 0.005215935734231181,
+      "examples": "266/266",
+      "candidate_sha256": "2a95c5ea4333ee073b26f28333783920a546672b8b166f79aeb38a82c6f8d2be"
+    },
+    {
+      "task": "task173",
+      "method": "negative-pad 1x1 Conv to 2x2 dilated valid Conv",
+      "parent_cost": 13383,
+      "candidate_cost": 11350,
+      "predicted_delta": 0.16476750088682657,
+      "examples": "266/266",
+      "candidate_sha256": "69e7037994b2a7dadc51dcef2373b7549c3b3804fe6342e35aa9bf1f91091faf"
+    }
+  ]
+}

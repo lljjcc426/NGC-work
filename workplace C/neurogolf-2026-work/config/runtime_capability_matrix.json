@@ -1,0 +1,233 @@
+{
+  "onnx_version": "1.21.0",
+  "onnxruntime_version": "1.26.0",
+  "probes": [
+    {
+      "dtype": "float16",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:float16",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "float16",
+        "int64"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int16",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:int16",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "int16",
+        "int64"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int32",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:int32",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "int32",
+        "int64"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int64",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:int64",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "int64",
+        "int64"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int8",
+      "error": "",
+      "kaggle_ref": 54660619,
+      "kaggle_status": "ERROR",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:int8",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "int8",
+        "int64"
+      ],
+      "status": "blocked_online",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "uint8",
+      "error": "",
+      "kaggle_status": "ERROR",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "TopK:uint8",
+      "official_sanitizer": true,
+      "operator": "TopK",
+      "opset": 18,
+      "output_dtypes": [
+        "uint8",
+        "int64"
+      ],
+      "status": "blocked_online",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "float16",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "Einsum:float16",
+      "official_sanitizer": true,
+      "operator": "Einsum",
+      "opset": 18,
+      "output_dtypes": [
+        "float16"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "uint8",
+      "error": "ort:NotImplemented:[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for Einsum(12) node with name 'safe_name_1'",
+      "local_checker": true,
+      "local_ort": false,
+      "name": "Einsum:uint8",
+      "official_sanitizer": true,
+      "operator": "Einsum",
+      "opset": 18,
+      "output_dtypes": [],
+      "status": "blocked_local",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int8",
+      "error": "ort:NotImplemented:[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for Where(16) node with name 'safe_name_3'",
+      "local_checker": true,
+      "local_ort": false,
+      "name": "Where:int8",
+      "official_sanitizer": true,
+      "operator": "Where",
+      "opset": 18,
+      "output_dtypes": [],
+      "status": "blocked_local",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int16",
+      "error": "ort:NotImplemented:[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for Where(16) node with name 'safe_name_3'",
+      "local_checker": true,
+      "local_ort": false,
+      "name": "Where:int16",
+      "official_sanitizer": true,
+      "operator": "Where",
+      "opset": 18,
+      "output_dtypes": [],
+      "status": "blocked_local",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int64",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "Where:int64",
+      "official_sanitizer": true,
+      "operator": "Where",
+      "opset": 18,
+      "output_dtypes": [
+        "int64"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "int32",
+      "error": "checker:InferenceError:[ShapeInferenceError] (op_type:Sum): data_0 typestr: T, has unsupported type: tensor(int32) | ort:InvalidGraph:[ONNXRuntimeError] : 10 : INVALID_GRAPH : This is an invalid model. Type Error: Type 'tensor(int32)' of input parameter (safe_name_0) of operator (Sum) in node (safe_name_3) is invalid.",
+      "local_checker": false,
+      "local_ort": false,
+      "name": "Sum:int32:variadic",
+      "official_sanitizer": true,
+      "operator": "Sum",
+      "opset": 18,
+      "output_dtypes": [],
+      "status": "blocked_local",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "float16",
+      "error": "",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "Sum:float16:variadic",
+      "official_sanitizer": true,
+      "operator": "Sum",
+      "opset": 18,
+      "output_dtypes": [
+        "float16"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "float32",
+      "error": "checker:InferenceError:[ShapeInferenceError] (op_type:ScatterND): indices typestr: tensor(int64), has unsupported type: tensor(int32) | ort:InvalidGraph:[ONNXRuntimeError] : 10 : INVALID_GRAPH : This is an invalid model. Type Error: Type 'tensor(int32)' of input parameter (safe_name_1) of operator (ScatterND) in node (output) is invalid.",
+      "index_dtype": "int32",
+      "local_checker": false,
+      "local_ort": false,
+      "name": "ScatterND:int32",
+      "official_sanitizer": true,
+      "operator": "ScatterND",
+      "opset": 18,
+      "output_dtypes": [],
+      "status": "blocked_local",
+      "strict_shape_inference": true
+    },
+    {
+      "dtype": "float32",
+      "error": "",
+      "index_dtype": "int64",
+      "local_checker": true,
+      "local_ort": true,
+      "name": "ScatterND:int64",
+      "official_sanitizer": true,
+      "operator": "ScatterND",
+      "opset": 18,
+      "output_dtypes": [
+        "float32"
+      ],
+      "status": "local_supported_unverified",
+      "strict_shape_inference": true
+    }
+  ],
+  "schema_version": 1
+}

@@ -262,3 +262,4 @@ Machine-readable ledger: `30_SCORE_EXPERIMENT_LEDGER.csv`.
 | task219 | task219_20260714T060936 | narrow_bool_extrema_family_u8 | 7461 | 7405 | 56 | True | True | `workplace C\artifacts\full400_bool_extrema_family_scan\task219.onnx` |
 | task285 | task285_20260714T060941 | narrow_bool_extrema_family_u8 | 18016 | 18082 | -66 | True | False | `workplace C\artifacts\full400_bool_extrema_family_scan\task285.onnx` |
 | task377 | task377_20260714T060944 | narrow_bool_extrema_family_u8 | 1730 | 1730 | 0 | True | False | `workplace C\artifacts\full400_bool_extrema_family_scan\task377.onnx` |
+| task286 | task286_20260714T115455 | shared_r24 | 26876 | 39187 | -12311 | False | False | `workplace C\single_task\task286\onnx\task286_shared_r24.onnx` |

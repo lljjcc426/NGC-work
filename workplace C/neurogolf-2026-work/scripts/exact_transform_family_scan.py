@@ -25,6 +25,26 @@ TRANSFORMS = {
     "where_bool_cast": ("fold_where_bool_cast.py", "fold"),
     "gather_index_i32": ("narrow_gather_indices.py", "narrow"),
     "commutative_cse": ("merge_commutative_cse.py", "merge"),
+    "reshape_flatten": ("reshape_to_flatten.py", "flatten"),
+    "reshape_unit_dims": ("reshape_unit_dims.py", "fold"),
+    "cast_selection_pushdown": ("push_cast_through_selection.py", "push"),
+    "identical_where": ("fold_identical_where.py", "fold"),
+    "nested_where": ("fold_nested_where.py", "fold"),
+    "associative_idempotence": ("fold_associative_idempotence.py", "fold"),
+    "lossless_cast_chain": ("fold_lossless_cast_chain.py", "fold"),
+    "integer_additive_chain": ("fold_integer_additive_chain.py", "fold"),
+    "dead_subgraphs": ("cd_parent_micro_sweep.py", "eliminate_dead_subgraphs"),
+    "gather_chain": ("cd_parent_micro_sweep.py", "compose_fixed_gather_chains"),
+    "concat_chain": ("cd_parent_micro_sweep.py", "flatten_concat_chains"),
+    "duplicate_nodes": ("cd_parent_micro_sweep.py", "deduplicate_compute_nodes"),
+    "idempotent_nodes": ("cd_parent_micro_sweep.py", "eliminate_idempotent_nodes"),
+    "slice_pad": ("cd_parent_micro_sweep.py", "fuse_static_slice_pad"),
+    "pad_slice": ("cd_parent_micro_sweep.py", "fuse_static_pad_slice"),
+    "nonnegative_offset_shrink": (
+        "cd_parent_micro_sweep.py",
+        "replace_nonnegative_scalar_offsets_with_shrink",
+    ),
+    "static_subgraphs": ("fold_static_subgraphs.py", "fold"),
 }
 
 
@@ -67,20 +87,58 @@ def main() -> None:
     parser.add_argument("--work-dir", type=Path, required=True)
     parser.add_argument("--tasks", default="")
     parser.add_argument("--workers", type=int, default=6)
+    parser.add_argument("--transforms", default=",".join(TRANSFORMS))
+    parser.add_argument(
+        "--cumulative",
+        action="store_true",
+        help="Apply the selected exact transforms in order to one candidate until stable.",
+    )
     args = parser.parse_args()
 
     requested = {item.strip() for item in args.tasks.split(",") if item.strip()}
     tasks = sorted(requested or {f"task{i:03d}" for i in range(1, 401)})
     args.work_dir.mkdir(parents=True, exist_ok=True)
+    selected = [item.strip() for item in args.transforms.split(",") if item.strip()]
+    unknown = sorted(set(selected) - set(TRANSFORMS))
+    if unknown:
+        parser.error(f"unknown transforms: {unknown}")
     loaded = {
         name: _load_transform(filename, function)
         for name, (filename, function) in TRANSFORMS.items()
+        if name in selected
     }
 
     jobs: list[tuple[str, str, str, str]] = []
     for task in tasks:
         parent_path = args.parent_dir / f"{task}.onnx"
         parent = onnx.load(parent_path)
+        if args.cumulative:
+            candidate = copy.deepcopy(parent)
+            total_changed = 0
+            try:
+                for _ in range(5):
+                    pass_changed = 0
+                    for transform in loaded.values():
+                        pass_changed += int(transform(candidate))
+                    total_changed += pass_changed
+                    if pass_changed == 0:
+                        break
+                if total_changed > 0:
+                    candidate.producer_name = "ngc_exact_cumulative"
+                    onnx.checker.check_model(candidate, full_check=True)
+                    candidate = onnx.shape_inference.infer_shapes(candidate, strict_mode=True)
+                    onnx.checker.check_model(candidate, full_check=True)
+                    output = args.work_dir / f"{task}_cumulative.onnx"
+                    onnx.save(candidate, output)
+                    jobs.append((task, "cumulative", str(parent_path), str(output)))
+            except Exception as exc:
+                print(json.dumps({
+                    "task": task,
+                    "transform": "cumulative",
+                    "stage": "build",
+                    "error": f"{type(exc).__name__}:{exc}",
+                }, separators=(",", ":")), flush=True)
+            continue
         for name, transform in loaded.items():
             candidate = copy.deepcopy(parent)
             try:

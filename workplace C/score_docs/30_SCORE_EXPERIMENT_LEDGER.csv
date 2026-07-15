@@ -257,3 +257,4 @@ task148,task148_20260714T060929,narrow_bool_extrema_family_u8,4887,4888,-1,16.50
 task219,task219_20260714T060936,narrow_bool_extrema_family_u8,7461,7405,56,16.082555267528484,16.0900892732981,0.00753400576961738,True,workplace C\artifacts\full400_bool_extrema_family_scan\task219.onnx,True,
 task285,task285_20260714T060941,narrow_bool_extrema_family_u8,18016,18082,-66,15.200984469060582,15.197327752702689,-0.0036567163578933304,True,workplace C\artifacts\full400_bool_extrema_family_scan\task285.onnx,False,
 task377,task377_20260714T060944,narrow_bool_extrema_family_u8,1730,1730,0,17.544123312508177,17.544123312508177,0.0,True,workplace C\artifacts\full400_bool_extrema_family_scan\task377.onnx,False,
+task286,task286_20260714T115455,shared_r24,26876,39187,-12311,14.801011025959959,14.423899661876776,-0.37711136408318247,False,workplace C\single_task\task286\onnx\task286_shared_r24.onnx,False,

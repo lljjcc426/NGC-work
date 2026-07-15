@@ -23,13 +23,26 @@ def build(source: Path, rounds: int, output_path: Path) -> None:
     # per row. Keep that task-specific frontend and replace only its scalar
     # propagation network with a shared [1, 1, 25, 1] state.
     nodes = list(graph.node[:27])
-    nodes.append(helper.make_node("Cast", ["pk2_s012"], ["shared_seed"], to=TensorProto.UINT32))
+    nodes.extend(
+        [
+            helper.make_node(
+                "Cast", ["pk2_s012"], ["shared_seed_rows"], to=TensorProto.UINT32
+            ),
+            helper.make_node(
+                "Unsqueeze", ["shared_seed_rows", "shared_axis3"], ["shared_seed"]
+            ),
+            helper.make_node(
+                "Unsqueeze", ["v14", "shared_axis3"], ["shared_passable"]
+            ),
+        ]
+    )
 
     up_indices = np.array([0, *range(24)], dtype=np.int64)
     down_indices = np.array([*range(1, 25), 24], dtype=np.int64)
     extra_initializers = [
         numpy_helper.from_array(up_indices, name="shared_up_indices"),
         numpy_helper.from_array(down_indices, name="shared_down_indices"),
+        numpy_helper.from_array(np.array([3], dtype=np.int64), name="shared_axis3"),
     ]
 
     state = "shared_seed"
@@ -54,7 +67,9 @@ def build(source: Path, rounds: int, output_path: Path) -> None:
                 helper.make_node("Gather", [state, "shared_down_indices"], [down], axis=2),
                 helper.make_node("BitwiseOr", [up, down], [vertical]),
                 helper.make_node("BitwiseOr", [horizontal_both, vertical], [expanded]),
-                helper.make_node("BitwiseAnd", [expanded, "v14"], [next_state]),
+                helper.make_node(
+                    "BitwiseAnd", [expanded, "shared_passable"], [next_state]
+                ),
             ]
         )
         state = next_state
