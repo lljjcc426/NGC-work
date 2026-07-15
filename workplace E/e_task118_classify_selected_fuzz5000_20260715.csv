@@ -1,0 +1,2 @@
+task,candidate,candidate_sha256,trials,comparable_trials,mismatches,matched,parent_runtime_errors,candidate_runtime_errors,first_mismatch_trial,first_mismatch_cells,first_permutation
+task118,F:\kaggle\NGC-work\workplace E\optimized_onnx\task118_deep_20260713\classify_then_selected\task118.onnx,27712f2f76bdb42000e8ef5b3b94663d0e35745af4cdecf1375e582a87c7a1ce,5000,5000,0,5000,0,0,,,

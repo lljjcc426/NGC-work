@@ -1,0 +1,31 @@
+{
+  "competition": "neurogolf-2026",
+  "task": "task198",
+  "baseline": {
+    "cost": 7922,
+    "official_examples_checked": 266,
+    "official_examples_passed": 266,
+    "sha256": "f91d74e1e9ed867584bfb477ee8c84532b0876cbc954c616500f2597f8d5a2ec"
+  },
+  "experiments": [
+    {
+      "variant": "threshold_gather",
+      "method": "reuse family ArgMax and replace threshold Einsum with Gather",
+      "cost": 7922,
+      "official_examples_checked": 266,
+      "official_examples_passed": 266,
+      "sha256": "6ec9b675370deb9bbd2b73ee632c2e11e6f7d0cb8f91fdc9ea60cc8c910dd129",
+      "result": "reject_no_cost_gain"
+    },
+    {
+      "variant": "selected_family",
+      "method": "gather one room matrix before simplified Einsum",
+      "cost": 8762,
+      "official_examples_checked": 266,
+      "official_examples_passed": 266,
+      "sha256": "7c2e2f90da1671f2752a3a7d47739ec87814a6e52329c9dec20b9b3d023a8c71",
+      "result": "reject_cost_regression"
+    }
+  ],
+  "submitted": false
+}
