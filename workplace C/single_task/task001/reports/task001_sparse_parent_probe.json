@@ -1,0 +1,39 @@
+{
+  "checker_default": {
+    "error": "",
+    "ok": true
+  },
+  "checker_full": {
+    "error": "InferenceError: [ShapeInferenceError] Inference error(s): (op_type:Einsum): [ShapeInferenceError] Rank of input 4 (0) does not match the equation indices (3).\n",
+    "ok": false
+  },
+  "direct_ort": {
+    "checked": 268,
+    "passed": 268
+  },
+  "official_style_score": {
+    "cost": null,
+    "error": "InferenceError:[ShapeInferenceError] Inference error(s): (op_type:Einsum, node name: output): [ShapeInferenceError] Rank of input 4 (0) does not match the equation indices (3).\n",
+    "examples_checked": 268,
+    "examples_failed": 0,
+    "examples_passed": 268,
+    "file_size": 1123,
+    "memory": null,
+    "ok": false,
+    "params": null,
+    "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task001\\debug\\task001_sparse_parent_cost37_unscoreable.onnx",
+    "points": null,
+    "sha256": "8f6d5297fd7f1381ce2951dede592f3852c3823ed28bcfb3f72e06ac408b45cc",
+    "task": "task001",
+    "valid_all_checked": true
+  },
+  "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task001\\debug\\task001_sparse_parent_cost37_unscoreable.onnx",
+  "sha256": "8f6d5297fd7f1381ce2951dede592f3852c3823ed28bcfb3f72e06ac408b45cc",
+  "shape_inference_strict": {
+    "error": "InferenceError: [ShapeInferenceError] Inference error(s): (op_type:Einsum): [ShapeInferenceError] Rank of input 4 (0) does not match the equation indices (3).\n",
+    "ok": false
+  },
+  "theoretical_cost": 37,
+  "theoretical_memory": 0,
+  "theoretical_params": 37
+}

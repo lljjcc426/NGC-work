@@ -75,6 +75,11 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--tasks", default="")
     parser.add_argument(
+        "--no-promote",
+        action="store_true",
+        help="Keep accepted models in --work-dir without overwriting canonical task models.",
+    )
+    parser.add_argument(
         "--source-mode",
         choices=("parent", "canonical"),
         default="parent",
@@ -162,9 +167,17 @@ def main() -> None:
 
         changes_by_task[task] = changes
         canonical_by_task[task] = canonical
-        jobs.append((task, str(parent), str(candidate_path), str(canonical)))
+        jobs.append(
+            (
+                task,
+                str(parent),
+                str(candidate_path),
+                "" if args.no_promote else str(canonical),
+            )
+        )
 
     promoted = 0
+    accepted_count = 0
     total_delta_cost = 0
     total_delta_points = 0.0
     with ProcessPoolExecutor(max_workers=max(1, args.workers)) as pool:
@@ -193,7 +206,9 @@ def main() -> None:
                 and candidate["cost"] is not None
                 and canonical["cost"] <= candidate["cost"]
             )
-            did_promote = accepted and not canonical_better
+            did_promote = accepted and not canonical_better and not args.no_promote
+            if accepted:
+                accepted_count += 1
             if did_promote:
                 canonical_path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(candidate_path, canonical_path)
@@ -202,10 +217,15 @@ def main() -> None:
                 delta_points = float(candidate["points"] - parent["points"])
                 total_delta_cost += delta_cost
                 total_delta_points += delta_points
-            else:
+            elif not accepted:
                 candidate_path.unlink(missing_ok=True)
                 delta_cost = 0
                 delta_points = 0.0
+            else:
+                delta_cost = int(parent["cost"] - candidate["cost"])
+                delta_points = float(candidate["points"] - parent["points"])
+                total_delta_cost += delta_cost
+                total_delta_points += delta_points
 
             print(
                 json.dumps(
@@ -220,6 +240,8 @@ def main() -> None:
                             f"{candidate['examples_checked']}"
                         ),
                         "promoted": did_promote,
+                        "accepted": accepted,
+                        "canonical_better": canonical_better,
                         "delta_cost": delta_cost,
                         "delta_points": delta_points,
                         "error": candidate["error"],
@@ -235,6 +257,7 @@ def main() -> None:
                 "tasks_scanned": len(tasks),
                 "transforms": transforms,
                 "opportunity_tasks": len(jobs),
+                "accepted": accepted_count,
                 "promoted": promoted,
                 "total_delta_cost": total_delta_cost,
                 "total_delta_points": total_delta_points,

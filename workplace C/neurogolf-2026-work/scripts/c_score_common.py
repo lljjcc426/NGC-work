@@ -231,10 +231,7 @@ def score_onnx(task: str, onnx_path: Path, validate_all: bool = True, max_exampl
             )
             examples = json.loads((TASK_DATA_DIR / f"{task}.json").read_text(encoding="utf-8"))
             pairs = list(examples.get("train", [])) + list(examples.get("test", [])) + list(examples.get("arc-gen", []))
-            if max_examples:
-                pairs = pairs[:max_examples]
-            if not validate_all and max_examples == 0:
-                pairs = pairs[:3]
+            valid_example_limit = max_examples or (3 if not validate_all else 0)
             for ex in pairs:
                 arrays = utils.convert_to_numpy(ex)
                 if arrays is None:
@@ -250,6 +247,8 @@ def score_onnx(task: str, onnx_path: Path, validate_all: bool = True, max_exampl
                     failed += 1
                     if not validate_all:
                         break
+                if valid_example_limit and checked >= valid_example_limit:
+                    break
             trace = session.end_profiling()
             memory, params = utils.score_network(sanitized, trace)
             # ORT can retain the profiling JSON handle on Windows until the

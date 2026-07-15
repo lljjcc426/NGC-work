@@ -1,0 +1,316 @@
+{
+  "all_required_checks_passed": true,
+  "artifacts": {
+    "model": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task110\\agent_round39\\onnx\\task110_cp65_exact.onnx",
+    "model_sha256": "ed33e0fb664f42d455ce80c0cf9b1aa44d2d955213fcbd3288fa4a680bdbde8f",
+    "report": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task110\\agent_round39\\reports\\task110_cp65_exact_evidence.json",
+    "script": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task110\\agent_round39\\build_cp65_exact.py",
+    "script_sha256": "154aac7d2258ff5bc3ec1ee99bda6ceb3ad66253fd4fae2b2c3a10dae833aa6c"
+  },
+  "candidate": {
+    "cost": 2751,
+    "error": "",
+    "examples_checked": 266,
+    "examples_failed": 0,
+    "examples_passed": 266,
+    "file_size": 10844,
+    "memory": 264,
+    "ok": true,
+    "params": 2487,
+    "path": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task110\\agent_round39\\onnx\\task110_cp65_exact.onnx",
+    "points": 17.080280239075424,
+    "sha256": "ed33e0fb664f42d455ce80c0cf9b1aa44d2d955213fcbd3288fa4a680bdbde8f",
+    "task": "task110",
+    "valid_all_checked": true
+  },
+  "cost_delta": 3060,
+  "graph": {
+    "candidate_initializers": {
+      "B": [
+        30,
+        65
+      ],
+      "C": [
+        6,
+        65
+      ],
+      "D": [
+        10,
+        10
+      ],
+      "U": [
+        6,
+        6
+      ],
+      "m": [
+        10
+      ],
+      "zero": [
+        1
+      ]
+    },
+    "candidate_ops": {
+      "Cast": 4,
+      "Einsum": 5,
+      "Equal": 4,
+      "Mul": 2
+    },
+    "parent_initializers": {
+      "A": [
+        6,
+        30,
+        30
+      ],
+      "D": [
+        10,
+        10
+      ],
+      "U": [
+        6,
+        6
+      ],
+      "m": [
+        10
+      ],
+      "zero": [
+        1
+      ]
+    },
+    "parent_ops": {
+      "Cast": 4,
+      "Einsum": 5,
+      "Equal": 4,
+      "Mul": 2
+    }
+  },
+  "official_parent_candidate_raw_sample_comparison": {
+    "array_equal_all": true,
+    "cases": 12,
+    "failed": 0,
+    "max_abs_error": 0.0,
+    "mismatches": [],
+    "passed": 12,
+    "selected_slice_pair_coverage": {
+      "1,1": 2,
+      "2,2": 1,
+      "3,0": 1,
+      "3,3": 1,
+      "4,4": 6,
+      "5,0": 1
+    }
+  },
+  "owner_directory": "E:\\kongming\\NGC-work\\workplace E\\single_task\\task110\\agent_round39",
+  "parameter_delta": 3060,
+  "parent": {
+    "cost": 5811,
+    "error": "",
+    "examples_checked": 266,
+    "examples_failed": 0,
+    "examples_passed": 266,
+    "expected_cost": 5811,
+    "file_size": 22971,
+    "memory": 264,
+    "ok": true,
+    "params": 5547,
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round37b_isolate_dilated_187\\onnx\\task110.onnx",
+    "points": 16.332492047924895,
+    "sha256": "c67c1ec3caf6e0fee36b462c03eea816fbd4c5216c14bd2cc69e6e36947dcb59",
+    "task": "task110",
+    "valid_all_checked": true
+  },
+  "random_parent_candidate_raw_comparison": {
+    "array_equal_all": true,
+    "cases": 52,
+    "failed": 0,
+    "max_abs_error": 0.0,
+    "mismatches": [],
+    "passed": 52,
+    "selected_slice_pair_coverage": {
+      "0,0": 17,
+      "0,1": 1,
+      "0,2": 1,
+      "0,3": 1,
+      "0,4": 1,
+      "0,5": 1,
+      "1,0": 1,
+      "1,1": 1,
+      "1,2": 1,
+      "1,3": 1,
+      "1,4": 1,
+      "1,5": 1,
+      "2,0": 1,
+      "2,1": 1,
+      "2,2": 1,
+      "2,3": 1,
+      "2,4": 1,
+      "2,5": 1,
+      "3,0": 1,
+      "3,1": 1,
+      "3,2": 1,
+      "3,3": 1,
+      "3,4": 1,
+      "3,5": 1,
+      "4,0": 1,
+      "4,1": 1,
+      "4,2": 1,
+      "4,3": 1,
+      "4,4": 1,
+      "4,5": 1,
+      "5,0": 1,
+      "5,1": 1,
+      "5,2": 1,
+      "5,3": 1,
+      "5,4": 1,
+      "5,5": 1
+    }
+  },
+  "task": "task110",
+  "tensor_analysis": {
+    "A_elements": 5400,
+    "A_nonzero": 663,
+    "A_shape": [
+      6,
+      30,
+      30
+    ],
+    "cp": {
+      "dense_factor_parameters": 2340,
+      "exact_constructive_terms": 65,
+      "exact_identity_verified": true,
+      "factor_shapes": {
+        "B": [
+          30,
+          65
+        ],
+        "C": [
+          6,
+          65
+        ]
+      },
+      "lower_bound_reason": "rank 30 would force simultaneous diagonalization because slice 0 is I_30, but slices 1 and 2 do not commute",
+      "rank_lower_bound": 31,
+      "rank_upper_bound": 65,
+      "slice_1_2_commutator_nonzero": 40
+    },
+    "exact_slice_ranks": [
+      30,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "exact_tucker_mode_ranks": [
+      6,
+      30,
+      30
+    ],
+    "kronecker_block_analysis": [
+      {
+        "kind": "identity",
+        "slice": 0,
+        "start": 0,
+        "stop": 30,
+        "terms": 30
+      },
+      {
+        "kind": "residue_gram",
+        "last_block_is_zero": true,
+        "period": 5,
+        "permuted_block_sizes": [
+          6,
+          6,
+          6,
+          6,
+          5,
+          1
+        ],
+        "slice": 1,
+        "start": 30,
+        "stop": 35,
+        "terms": 5
+      },
+      {
+        "kind": "residue_gram",
+        "last_block_is_zero": true,
+        "period": 6,
+        "permuted_block_sizes": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          4,
+          1
+        ],
+        "slice": 2,
+        "start": 35,
+        "stop": 41,
+        "terms": 6
+      },
+      {
+        "kind": "residue_gram",
+        "last_block_is_zero": true,
+        "period": 7,
+        "permuted_block_sizes": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "slice": 3,
+        "start": 41,
+        "stop": 48,
+        "terms": 7
+      },
+      {
+        "kind": "residue_gram",
+        "last_block_is_zero": true,
+        "period": 8,
+        "permuted_block_sizes": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "slice": 4,
+        "start": 48,
+        "stop": 56,
+        "terms": 8
+      },
+      {
+        "kind": "residue_gram",
+        "last_block_is_zero": true,
+        "period": 9,
+        "permuted_block_sizes": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "slice": 5,
+        "start": 56,
+        "stop": 65,
+        "terms": 9
+      }
+    ],
+    "kronecker_note": "For each period, residue permutation gives a direct sum of J blocks and one zero padding block; equal full blocks are J_k kron I_period before the 29-cell truncation.",
+    "rank_basis": "I_30 and residue-class all-ones blocks after exact permutation",
+    "tucker_rank_basis": "six independent slices; each spatial unfolding contains the I_30 slice"
+  }
+}

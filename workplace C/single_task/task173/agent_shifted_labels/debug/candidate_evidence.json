@@ -1,0 +1,87 @@
+{
+  "task": "task173",
+  "rewrite": [
+    "derive cropped row-column extents from fractional label Conv",
+    "replace uint8 Unsqueeze-Expand-Reshape repetition with 1-D Resize"
+  ],
+  "parent": {
+    "task": "task173",
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round36_public_source_safe37\\onnx\\task173.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 266,
+    "examples_passed": 266,
+    "examples_failed": 0,
+    "memory": 13307,
+    "params": 76,
+    "cost": 13383,
+    "points": 15.498259476203625,
+    "file_size": 4073,
+    "sha256": "804b575ba69cd27c923f1e2fe031438bd3e3a50ea0725310cea6f4e3584b494e",
+    "error": ""
+  },
+  "safe_dilated_source": {
+    "task": "task173",
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\safe_dilated_crop_conv\\task173.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 266,
+    "examples_passed": 266,
+    "examples_failed": 0,
+    "memory": 11232,
+    "params": 118,
+    "cost": 11350,
+    "points": 15.663026977090452,
+    "file_size": 4812,
+    "sha256": "69e7037994b2a7dadc51dcef2373b7549c3b3804fe6342e35aa9bf1f91091faf",
+    "error": ""
+  },
+  "candidate": {
+    "task": "task173",
+    "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task173\\agent_shifted_labels\\debug\\task173_candidate.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 266,
+    "examples_passed": 266,
+    "examples_failed": 0,
+    "memory": 11087,
+    "params": 114,
+    "cost": 11201,
+    "points": 15.67624166098826,
+    "file_size": 4687,
+    "sha256": "a4c74217703baddeedf91801a8e014b1a5787867955b90e348b372e2e0e4cafd",
+    "error": ""
+  },
+  "delta_from_parent": 2182,
+  "delta_from_safe_dilated_source": 149,
+  "operator_audit": {
+    "operators": {
+      "Add": 10,
+      "And": 6,
+      "Cast": 14,
+      "Concat": 2,
+      "Conv": 1,
+      "Equal": 11,
+      "Gather": 18,
+      "Greater": 5,
+      "Max": 2,
+      "Or": 1,
+      "Pad": 1,
+      "ReduceMax": 2,
+      "Reshape": 3,
+      "Resize": 1,
+      "ScatterElements": 5,
+      "TopK": 3,
+      "Unsqueeze": 1,
+      "Where": 11
+    },
+    "forbidden_ops": [],
+    "runtime_risks": [],
+    "negative_padding": [],
+    "risk_fingerprint": {
+      "runtime": [],
+      "negative_padding": []
+    },
+    "runtime_compatible": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "task": "task243",
+  "rewrite": "fuse terminal color input and T2 into rank-4 seed/output selector",
+  "proof_scores": {
+    "base": "0.5 - (output_color - input_color)^2",
+    "flood": "blue_seed * (-2 for black, +2 for blue)"
+  },
+  "parent": {
+    "task": "task243",
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round37b_isolate_dilated_187\\onnx\\task243.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 265,
+    "examples_passed": 265,
+    "examples_failed": 0,
+    "memory": 2592,
+    "params": 1428,
+    "cost": 4020,
+    "points": 16.700962818386934,
+    "file_size": 6881,
+    "sha256": "5a0bb78fea7748cf964cd09a78ee2dad0eef5d41895fef3bf1cadd403d935763",
+    "error": ""
+  },
+  "candidate": {
+    "task": "task243",
+    "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task243\\agent_round39\\debug\\task243_fused_lowrank_selector.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 265,
+    "examples_passed": 265,
+    "examples_failed": 0,
+    "memory": 2592,
+    "params": 1296,
+    "cost": 3888,
+    "points": 16.73434983441967,
+    "file_size": 6369,
+    "sha256": "0e4986e330bfbb099e5e3c76a7ea95e8c7d7737cd1bb74cea4a81e38a1997b83",
+    "error": ""
+  },
+  "parent_sha256": "5a0bb78fea7748cf964cd09a78ee2dad0eef5d41895fef3bf1cadd403d935763",
+  "candidate_sha256": "0e4986e330bfbb099e5e3c76a7ea95e8c7d7737cd1bb74cea4a81e38a1997b83",
+  "parent_graph": {
+    "nodes": 2,
+    "op_types": [
+      "Einsum",
+      "Einsum"
+    ],
+    "initializer_params": 1428,
+    "terminal_operands": 92,
+    "terminal_equation": "...bcd,sb,ca,de,saf,...sfe,seg,...sfg,sfh,...shg,sgi,...shi,shj,...sji,sik,...sjk,sjl,...slk,skm,...slm,sln,...snm,smo,...sno,snp,...spo,soq,...spq,spr,...srq,sqt,...srt,sru,...sut,stx,...sux,suy,...syx,sxz,...syz,syA,...sAz,szB,...sAB,sAD,...sDB,sBE,...sDE,sDF,...sFE,sEG,...sFG,sFH,...sHG,sGI,...sHI,sHJ,...sJI,sIK,...sJK,sJL,...sLK,sKM,...sLM,sLN,...sNM,sMO,...sNO,sNP,...sPO,sOQ,...sPQ,sPS,...sSQ,sQT,...sST,sSU,...sUT,sTV,...sUV,sUW,...sWV,sVX,...sWX,sWY,...sYX,sXZ,...sYZ,RY,CZ,...wRC,svw->...vRC"
+  },
+  "candidate_graph": {
+    "nodes": 2,
+    "op_types": [
+      "Einsum",
+      "Einsum"
+    ],
+    "initializer_params": 1296,
+    "terminal_operands": 92,
+    "terminal_equation": "...bcd,sw,wv,wb,ca,de,saf,...sfe,seg,...sfg,sfh,...shg,sgi,...shi,shj,...sji,sik,...sjk,sjl,...slk,skm,...slm,sln,...snm,smo,...sno,snp,...spo,soq,...spq,spr,...srq,sqt,...srt,sru,...sut,stx,...sux,suy,...syx,sxz,...syz,syA,...sAz,szB,...sAB,sAD,...sDB,sBE,...sDE,sDF,...sFE,sEG,...sFG,sFH,...sHG,sGI,...sHI,sHJ,...sJI,sIK,...sJK,sJL,...sLK,sKM,...sLM,sLN,...sNM,sMO,...sNO,sNP,...sPO,sOQ,...sPQ,sPS,...sSQ,sQT,...sST,sSU,...sUT,sTV,...sUV,sUW,...sWV,sVX,...sWX,sWY,...sYX,sXZ,...sYZ,RY,CZ->...vRC"
+  },
+  "random_parent_exact": {
+    "seed": 2433902,
+    "cases": 2048,
+    "exact_threshold_outputs": 2048
+  }
+}

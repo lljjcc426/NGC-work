@@ -1,15 +1,15 @@
 {
-  "created_at": "2026-07-15T06:47:05+00:00",
+  "created_at": "2026-07-15T14:50:48+00:00",
   "examples_checked": 101347,
-  "kaggle_ref": 54715535,
-  "local_score": 7407.546052980321,
+  "kaggle_ref": 54729703,
+  "local_score": 7410.514164178757,
   "model_count": 400,
-  "model_set_sha256": "bc242fc8c9db4be90d8dd6f4c5d6f1ca855ce18b32caca3ef46943532e9d0fed",
+  "model_set_sha256": "495979ab1726df8710bc32cf3326ce9a346b9f90f18d33b9ba2b62aa930f0d4b",
   "models_valid": 400,
-  "name": "round36_public_source_safe37_online_verified",
-  "onnx_dir": "workplace C/artifacts/full400_round36_public_source_safe37/onnx",
-  "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd",
-  "public_score": 7407.70,
-  "source_commit": "3907fd2271280c2827862560f742956ad051cbf7",
-  "submission_zip": "workplace C/artifacts/full400_round36_public_source_safe37/submission.zip"
+  "name": "round43_terminal_contract_stack_online_verified",
+  "onnx_dir": "workplace C/artifacts/full400_round43_terminal_contract_stack/onnx",
+  "package_sha256": "d33de170ed3a2eb9e715379e265ef60c03fbf5aec5f399fb3ecf9607642d5ffa",
+  "public_score": 7410.67,
+  "source_commit": "6f0acd384a12d8c86f78e3f05b19269012476409",
+  "submission_zip": "workplace C/artifacts/full400_round43_terminal_contract_stack/submission.zip"
 }

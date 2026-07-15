@@ -1,0 +1,148 @@
+{
+  "task": "task074",
+  "parent": {
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round37b_isolate_dilated_187\\onnx\\task074.onnx",
+    "sha256": "f8c1bfb284b0817920cdf2b8d873514e4b096428785a695c56274d3316919295",
+    "file_size": 8203,
+    "nodes": [
+      "Conv",
+      "ScatterND",
+      "Cast",
+      "GatherND",
+      "Equal"
+    ],
+    "dense_initializer_elements": 1056,
+    "sparse_initializer_values": 0,
+    "checker_full_check": true
+  },
+  "candidates": [
+    {
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_conservative_no_cast.onnx",
+      "sha256": "1c7a9a354b38606cac6d54f5a1712f743d789fafd17c029f3ed902e44546c74d",
+      "file_size": 8208,
+      "nodes": [
+        "Conv",
+        "ScatterND",
+        "GatherND",
+        "Equal"
+      ],
+      "dense_initializer_elements": 1056,
+      "sparse_initializer_values": 0,
+      "checker_full_check": true
+    },
+    {
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_conservative_shared_weight.onnx",
+      "sha256": "d81928c8c190b84daf6a203d5415fa2a70de5056ec0d8d008b91e739ed769b56",
+      "file_size": 8147,
+      "nodes": [
+        "Conv",
+        "ScatterND",
+        "GatherND",
+        "Equal"
+      ],
+      "dense_initializer_elements": 1046,
+      "sparse_initializer_values": 0,
+      "checker_full_check": true
+    },
+    {
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_direct_dense_einsum.onnx",
+      "sha256": "4afb0374963a2f87ac87e2ce59b650377f96c4cdafa24ffd6b6c98d4fcaaefc3",
+      "file_size": 490274,
+      "nodes": [
+        "Einsum"
+      ],
+      "dense_initializer_elements": 122500,
+      "sparse_initializer_values": 0,
+      "checker_full_check": true
+    }
+  ],
+  "orbit_evidence": {
+    "orbit_count": 136,
+    "cell_count": 900,
+    "max_orbit_size": 8,
+    "direct_equation": "ndab,gab,gij,cd->ncij",
+    "negative_priority_weight": -9,
+    "proof": "For a one-hot cell grid, each direct output score sums +1 for its color over the target orbit and -9 for every higher color. Every orbit has at most 8 cells, so a higher color makes the score negative; otherwise the unique highest present color is positive. Color 9 is mapped with color 0 exactly as in the parent Conv weights."
+  },
+  "random_exact": {
+    "seed": 74039,
+    "cases": 256,
+    "input_domain": "uniform random one-hot colors 0..9 on every 30x30 cell",
+    "mismatched_cases": {
+      "task074_conservative_no_cast.onnx": 0,
+      "task074_conservative_shared_weight.onnx": 0,
+      "task074_direct_dense_einsum.onnx": 0
+    },
+    "mismatched_cells": {
+      "task074_conservative_no_cast.onnx": 0,
+      "task074_conservative_shared_weight.onnx": 0,
+      "task074_direct_dense_einsum.onnx": 0
+    }
+  },
+  "official_scores": [
+    {
+      "task": "task074",
+      "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round37b_isolate_dilated_187\\onnx\\task074.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 267,
+      "examples_passed": 267,
+      "examples_failed": 0,
+      "memory": 5180,
+      "params": 1056,
+      "cost": 6236,
+      "points": 16.261905769822334,
+      "file_size": 8203,
+      "sha256": "f8c1bfb284b0817920cdf2b8d873514e4b096428785a695c56274d3316919295",
+      "error": ""
+    },
+    {
+      "task": "task074",
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_conservative_no_cast.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 267,
+      "examples_passed": 267,
+      "examples_failed": 0,
+      "memory": 7744,
+      "params": 1056,
+      "cost": 8800,
+      "points": 15.917492999533701,
+      "file_size": 8208,
+      "sha256": "1c7a9a354b38606cac6d54f5a1712f743d789fafd17c029f3ed902e44546c74d",
+      "error": ""
+    },
+    {
+      "task": "task074",
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_conservative_shared_weight.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 267,
+      "examples_passed": 267,
+      "examples_failed": 0,
+      "memory": 7744,
+      "params": 1046,
+      "cost": 8790,
+      "points": 15.918630009320777,
+      "file_size": 8147,
+      "sha256": "d81928c8c190b84daf6a203d5415fa2a70de5056ec0d8d008b91e739ed769b56",
+      "error": ""
+    },
+    {
+      "task": "task074",
+      "path": "E:\\kongming\\NGC-work\\workplace D\\single_task\\task074\\agent_round39\\onnx\\task074_direct_dense_einsum.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 267,
+      "examples_passed": 267,
+      "examples_failed": 0,
+      "memory": 0,
+      "params": 122500,
+      "cost": 122500,
+      "points": 13.284133691033082,
+      "file_size": 490274,
+      "sha256": "4afb0374963a2f87ac87e2ce59b650377f96c4cdafa24ffd6b6c98d4fcaaefc3",
+      "error": ""
+    }
+  ]
+}

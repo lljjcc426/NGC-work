@@ -1,10 +1,10 @@
 {
   "highest_complete_parent": {
-    "kaggle_ref": 54715535,
-    "public_score": 7407.70,
-    "local_score": 7407.546052980321,
-    "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd",
-    "model_set_sha256": "bc242fc8c9db4be90d8dd6f4c5d6f1ca855ce18b32caca3ef46943532e9d0fed",
+    "kaggle_ref": 54716955,
+    "public_score": 7408.86,
+    "local_score": 7408.707862068725,
+    "package_sha256": "5d6f65335f84feafa8e5c7a2e747a211304a27afde61effa3d6640cdfb942987",
+    "model_set_sha256": "aa0cf21169666466705be9e24edd0227e66e5d8fc87a8433b63801abf06f3468",
     "model_count": 400,
     "full_validation": "400/400 and 101347/101347"
   },
@@ -32,6 +32,15 @@
       "replacement_count": 13,
       "predicted_delta": 0.932784,
       "package_sha256": "a4aac2509881d635b090759120a3a2d8429fdfd533c27a1e4794b31bbe8365fd"
+    },
+    {
+      "kaggle_ref": 54716955,
+      "public_score": 7408.86,
+      "parent_ref": 54715535,
+      "tasks": ["task187"],
+      "predicted_delta": 1.1618090884039378,
+      "observed_delta": 1.16,
+      "package_sha256": "5d6f65335f84feafa8e5c7a2e747a211304a27afde61effa3d6640cdfb942987"
     }
   ],
   "hidden_distribution_failure": {
@@ -44,26 +53,20 @@
     "predicted_delta": 0.9905996173080721,
     "tasks": ["task187", "task251"],
     "package_sha256": "89a1c8401e8e65ace44a942689aa6b59f55c76e47b2d88048cee1cec1bd343eb",
-    "conclusion": "Public bundled examples are insufficient for at least one source-derived task rule. Both tasks remain blocked until isolated online evidence identifies a safe task."
+    "conclusion": "Isolated ref 54716955 proved task187 positive at +1.16. The combined -16.62 regression is therefore attributed to task251, which remains blocked."
   },
   "blocked_candidates": [
     {
       "task": "task187",
       "candidate_sha256": "649e7dd192ef5aebdb575008a172ada6d9381c8461fddf3515571f1045f4f1a0",
       "cost": 7411,
-      "reason": "member of hidden-distribution regression ref 54716159"
+      "reason": "superseded by online-verified task187 cost 4941 at ref 54716955"
     },
     {
       "task": "task251",
       "candidate_sha256": "c0d2bbe7413830b15c9e5b0cc68320b6c27ae6fee773ee160cc67e4a7aa0d705",
       "cost": 2107,
       "reason": "member of hidden-distribution regression ref 54716159"
-    },
-    {
-      "task": "task187",
-      "candidate_sha256": "fc7a46c2d4edae4698b3da4efed5b3e6438470ccf2ddfb7f1cc3add5c397f424",
-      "cost": 4941,
-      "reason": "same source-derived rule as blocked ref 54716159"
     },
     {
       "task": "task251",

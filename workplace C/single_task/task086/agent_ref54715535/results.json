@@ -1,0 +1,392 @@
+{
+  "task": "task086",
+  "parent_ref": 54715535,
+  "parent": {
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round36_public_source_safe37\\onnx\\task086.onnx",
+    "sha256": "45318565531a011c9c377d6be1c8c153de04dcaca13542fff186630fd8d3b96b",
+    "opset": [
+      [
+        "",
+        13
+      ]
+    ],
+    "nodes": 19,
+    "dense_initializers": 13,
+    "sparse_initializers": 0,
+    "official_score": {
+      "task": "task086",
+      "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\full400_round36_public_source_safe37\\onnx\\task086.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 266,
+      "examples_passed": 266,
+      "examples_failed": 0,
+      "memory": 2870,
+      "params": 158,
+      "cost": 3028,
+      "points": 16.98434238544266,
+      "file_size": 1330,
+      "sha256": "45318565531a011c9c377d6be1c8c153de04dcaca13542fff186630fd8d3b96b",
+      "error": ""
+    }
+  },
+  "safe_base": {
+    "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\safe_dilated_crop_conv\\task086.onnx",
+    "sha256": "377fbfccf674aaac17899618b1d83254d231049f2569b9137f10ae6216e51878",
+    "opset": [
+      [
+        "",
+        13
+      ]
+    ],
+    "nodes": 19,
+    "dense_initializers": 14,
+    "sparse_initializers": 0,
+    "official_score": {
+      "task": "task086",
+      "path": "E:\\kongming\\NGC-work\\workplace C\\artifacts\\safe_dilated_crop_conv\\task086.onnx",
+      "ok": true,
+      "valid_all_checked": true,
+      "examples_checked": 266,
+      "examples_passed": 266,
+      "examples_failed": 0,
+      "memory": 2474,
+      "params": 189,
+      "cost": 2663,
+      "points": 17.11279141418607,
+      "file_size": 1515,
+      "sha256": "377fbfccf674aaac17899618b1d83254d231049f2569b9137f10ae6216e51878",
+      "error": ""
+    }
+  },
+  "parent_to_safe_output_equivalence": {
+    "checked": 266,
+    "equal": 266,
+    "all_equal": true
+  },
+  "safe_crop_structural_evidence": {
+    "source_sha256": "55ee89157c85a9b767897ccb5d1ef65ac3a3728b5d6a2df859f6f4a1af33c125",
+    "safe_sha256": "377fbfccf674aaac17899618b1d83254d231049f2569b9137f10ae6216e51878",
+    "weight_zero_extension_exact": true,
+    "geometry_exact": true,
+    "bundled_intermediate_tensors_checked": 5320,
+    "bundled_intermediate_tensors_equal": 5320,
+    "bundled_all_intermediates_equal": true,
+    "random_dense_inputs_checked": 64,
+    "random_lin_allclose": 64,
+    "random_all_lin_allclose": true,
+    "random_lin_max_abs_diff": 7.62939453125e-06
+  },
+  "variants": [
+    {
+      "name": "task086_sign.onnx",
+      "rewrites": [
+        {
+          "rewrite": "Greater+Cast to Sign(base)"
+        }
+      ],
+      "model": {
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_sign.onnx",
+        "sha256": "a1e04bdb44dbe37306822df2bf6d283fa0409e6c4e61b24a3bb9b24304be3a7f",
+        "opset": [
+          [
+            "",
+            13
+          ]
+        ],
+        "nodes": 18,
+        "dense_initializers": 13,
+        "sparse_initializers": 0
+      },
+      "official_score": {
+        "task": "task086",
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_sign.onnx",
+        "ok": false,
+        "valid_all_checked": true,
+        "examples_checked": 266,
+        "examples_passed": 90,
+        "examples_failed": 176,
+        "memory": 2330,
+        "params": 188,
+        "cost": 2518,
+        "points": 17.168779785395706,
+        "file_size": 1476,
+        "sha256": "a1e04bdb44dbe37306822df2bf6d283fa0409e6c4e61b24a3bb9b24304be3a7f",
+        "error": ""
+      },
+      "safe_base_output_equivalence": null,
+      "safe_base_common_tensor_equivalence": null
+    },
+    {
+      "name": "task086_sign_opset10.onnx",
+      "rewrites": [
+        {
+          "rewrite": "TopK K and Pad geometry/value inputs to opset10 attributes"
+        }
+      ],
+      "error": "ValidationError: Node(top3_colors) with schema(::TopK:10) has input size 1 not in range [min=2, max=2].\n\n==> Context: Bad node spec for node. Name: top3_colors OpType: TopK"
+    },
+    {
+      "name": "task086_scatter_colors.onnx",
+      "rewrites": [
+        {
+          "rewrite": "eight-node dynamic color swap to Cast+Gather+Gather+ScatterElements",
+          "predicted_memory_delta": -41,
+          "predicted_param_delta": 2
+        }
+      ],
+      "model": {
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_scatter_colors.onnx",
+        "sha256": "03ff50f53d24452b0261a0d8b20bc6ca47db239e99e7ad017b92f57adec7e108",
+        "opset": [
+          [
+            "",
+            13
+          ]
+        ],
+        "nodes": 15,
+        "dense_initializers": 14,
+        "sparse_initializers": 0
+      },
+      "official_score": {
+        "task": "task086",
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_scatter_colors.onnx",
+        "ok": true,
+        "valid_all_checked": true,
+        "examples_checked": 266,
+        "examples_passed": 266,
+        "examples_failed": 0,
+        "memory": 2433,
+        "params": 191,
+        "cost": 2624,
+        "points": 17.127544849936022,
+        "file_size": 1560,
+        "sha256": "03ff50f53d24452b0261a0d8b20bc6ca47db239e99e7ad017b92f57adec7e108",
+        "error": ""
+      },
+      "safe_base_output_equivalence": {
+        "checked": 266,
+        "equal": 266,
+        "all_equal": true
+      },
+      "safe_base_common_tensor_equivalence": {
+        "tensor_names": [
+          "F8",
+          "Fb",
+          "Lin",
+          "base",
+          "c0u",
+          "chan_perm",
+          "cnt",
+          "label",
+          "label30",
+          "output",
+          "q",
+          "ti",
+          "tv",
+          "vh"
+        ],
+        "comparisons": 3724,
+        "equal": 3724,
+        "all_equal": true
+      }
+    },
+    {
+      "name": "task086_pad_axes.onnx",
+      "rewrites": [
+        {
+          "rewrite": "Pad-18 axes input reduces full-rank pads from 8 to 4+2 elements",
+          "predicted_memory_delta": 0,
+          "predicted_param_delta": -2
+        }
+      ],
+      "model": {
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_pad_axes.onnx",
+        "sha256": "dc37229c6fa0f704b02bbf71aaaaf50fa4f2194a3040d07d19fc313a4c979bc5",
+        "opset": [
+          [
+            "",
+            18
+          ]
+        ],
+        "nodes": 19,
+        "dense_initializers": 15,
+        "sparse_initializers": 0
+      },
+      "official_score": {
+        "task": "task086",
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_pad_axes.onnx",
+        "ok": true,
+        "valid_all_checked": true,
+        "examples_checked": 266,
+        "examples_passed": 266,
+        "examples_failed": 0,
+        "memory": 2474,
+        "params": 187,
+        "cost": 2661,
+        "points": 17.11354272902231,
+        "file_size": 1569,
+        "sha256": "dc37229c6fa0f704b02bbf71aaaaf50fa4f2194a3040d07d19fc313a4c979bc5",
+        "error": ""
+      },
+      "safe_base_output_equivalence": {
+        "checked": 266,
+        "equal": 266,
+        "all_equal": true
+      },
+      "safe_base_common_tensor_equivalence": {
+        "tensor_names": [
+          "F8",
+          "Fb",
+          "Lin",
+          "base",
+          "c0i",
+          "c0u",
+          "c1i",
+          "c1u",
+          "chan_perm",
+          "cnt",
+          "e0",
+          "e1",
+          "label",
+          "label30",
+          "output",
+          "q",
+          "ti",
+          "tv",
+          "vh",
+          "w1"
+        ],
+        "comparisons": 5320,
+        "equal": 5320,
+        "all_equal": true
+      }
+    },
+    {
+      "name": "task086_best.onnx",
+      "rewrites": [
+        {
+          "rewrite": "combined safe color ScatterElements and compact Pad axes",
+          "predicted_cost_delta": -41
+        }
+      ],
+      "model": {
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_best.onnx",
+        "sha256": "e023ef31c2b1c2e878ee293a61ea4335a05d32c8073c018966e705b518db6187",
+        "opset": [
+          [
+            "",
+            18
+          ]
+        ],
+        "nodes": 15,
+        "dense_initializers": 15,
+        "sparse_initializers": 0
+      },
+      "official_score": {
+        "task": "task086",
+        "path": "E:\\kongming\\NGC-work\\workplace C\\single_task\\task086\\agent_ref54715535\\task086_best.onnx",
+        "ok": true,
+        "valid_all_checked": true,
+        "examples_checked": 266,
+        "examples_passed": 266,
+        "examples_failed": 0,
+        "memory": 2433,
+        "params": 189,
+        "cost": 2622,
+        "points": 17.128307335676354,
+        "file_size": 1611,
+        "sha256": "e023ef31c2b1c2e878ee293a61ea4335a05d32c8073c018966e705b518db6187",
+        "error": ""
+      },
+      "safe_base_output_equivalence": {
+        "checked": 266,
+        "equal": 266,
+        "all_equal": true
+      },
+      "safe_base_common_tensor_equivalence": {
+        "tensor_names": [
+          "F8",
+          "Fb",
+          "Lin",
+          "base",
+          "c0u",
+          "chan_perm",
+          "cnt",
+          "label",
+          "label30",
+          "output",
+          "q",
+          "ti",
+          "tv",
+          "vh"
+        ],
+        "comparisons": 3724,
+        "equal": 3724,
+        "all_equal": true
+      }
+    },
+    {
+      "name": "task086_sparse_w.onnx",
+      "rewrites": [
+        {
+          "rewrite": "dense collapse weight to exact sparse initializer",
+          "name": "w_collapse",
+          "dense_elements": 40,
+          "sparse_values": 10,
+          "saved_params": 30,
+          "sanitizer_stable_names": {
+            "w_collapse": "safe_name_13"
+          }
+        }
+      ],
+      "error": "InferenceError: [ShapeInferenceError] (op_type:Conv, node name: safe_dilated_crop_task086): W typestr: T, has unsupported type: sparse_tensor(float)"
+    },
+    {
+      "name": "task086_sparse_weights.onnx",
+      "rewrites": [
+        {
+          "rewrite": "dense arm kernel to exact sparse initializer",
+          "name": "karm",
+          "dense_elements": 121,
+          "sparse_values": 113,
+          "saved_params": 8,
+          "sanitizer_stable_names": {
+            "safe_name_13": "safe_name_12",
+            "karm": "safe_name_17"
+          }
+        }
+      ],
+      "error": "InferenceError: [ShapeInferenceError] (op_type:Conv, node name: safe_dilated_crop_task086): W typestr: T, has unsupported type: sparse_tensor(float)"
+    },
+    {
+      "name": "task086_sparse_all.onnx",
+      "rewrites": [
+        {
+          "rewrite": "dense geometry and channel constants to exact sparse initializers",
+          "parts": [
+            {
+              "name": "pad30",
+              "dense_elements": 8,
+              "sparse_values": 2,
+              "saved_params": 6
+            },
+            {
+              "name": "chan_ids",
+              "dense_elements": 10,
+              "sparse_values": 9,
+              "saved_params": 1
+            }
+          ],
+          "sanitizer_stable_names": {
+            "safe_name_12": "safe_name_10",
+            "safe_name_17": "safe_name_15",
+            "chan_ids": "safe_name_25",
+            "pad30": "safe_name_31"
+          }
+        }
+      ],
+      "error": "InferenceError: [ShapeInferenceError] (op_type:Conv, node name: safe_dilated_crop_task086): W typestr: T, has unsupported type: sparse_tensor(float)"
+    }
+  ]
+}

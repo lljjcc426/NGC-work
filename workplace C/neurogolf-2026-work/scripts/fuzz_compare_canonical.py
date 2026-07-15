@@ -142,6 +142,10 @@ def _inputs(task: str, input_mode: str, trials: int, seed: int) -> Iterable[np.n
         elif input_mode == "random-grid":
             height, width = shapes[trial % len(shapes)]
             yield rng.integers(0, 10, size=(height, width), dtype=np.int64)
+        elif input_mode == "random-grid-all-shapes":
+            height = int(rng.integers(1, 31))
+            width = int(rng.integers(1, 31))
+            yield rng.integers(0, 10, size=(height, width), dtype=np.int64)
         else:
             raise ValueError(input_mode)
 
@@ -167,7 +171,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--input-mode",
-        choices=("official", "color-permutation", "random-grid", "generator"),
+        choices=("official", "color-permutation", "random-grid", "random-grid-all-shapes", "generator"),
         default="color-permutation",
     )
     return parser.parse_args()
