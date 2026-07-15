@@ -14,7 +14,8 @@ team repository was deduplicated and compared task by task.
 - Integrated package SHA256:
   `BCEF5A066B75FC36F231DEC160E34612EDB1E38007775C9E1A9DFD2407196023`.
 - Predicted local gain over the exact baseline: `+1.025026570172`.
-- Kaggle ref: `54736568` (pending when this report was created).
+- Kaggle ref: `54736568`, status `COMPLETE`, public score `7420.93`.
+- Confirmed online gain over ref `54733776`: `+1.03`.
 
 ## Full repository audit
 

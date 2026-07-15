@@ -1,0 +1,11 @@
+{
+  "competition": "neurogolf-2026",
+  "baseline_ref": 54733776,
+  "baseline_public_score": 7419.90,
+  "submission_ref": 54736568,
+  "status": "COMPLETE",
+  "public_score": 7420.93,
+  "confirmed_gain": 1.03,
+  "predicted_local_gain": 1.025026570172,
+  "package_sha256": "bcef5a066b75fc36f231dec160e34612edb1e38007775c9e1a9dfd2407196023"
+}

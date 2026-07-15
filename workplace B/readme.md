@@ -495,4 +495,5 @@ The final 400-task package keeps the complete `7419.90` team baseline and adds
 ten previously Kaggle-confirmed rewrites plus a new exact task295 contraction.
 All 11 changed tasks pass their complete train/test/ARC-GEN sets. Predicted
 gain is `+1.025027`; package SHA256 is `BCEF5A066B75FC36F231DEC160E34612E`
-`DB1E38007775C9E1A9DFD2407196023`. Kaggle ref `54736568` is pending.
+`DB1E38007775C9E1A9DFD2407196023`. Kaggle ref `54736568` completed at
+`7420.93`, confirming a `+1.03` gain over baseline ref `54733776` at `7419.90`.

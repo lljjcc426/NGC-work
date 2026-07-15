@@ -23,7 +23,8 @@
     "bytes": 370311,
     "sha256": "bcef5a066b75fc36f231dec160e34612edb1e38007775c9e1a9dfd2407196023",
     "kaggle_ref": 54736568,
-    "status": "PENDING",
-    "public_score": null
+    "status": "COMPLETE",
+    "public_score": 7420.93,
+    "confirmed_gain": 1.03
   }
 }
