@@ -25,3 +25,12 @@ Sequential loop status (2026-07-12):
 - Audited task007: cost `127`, points `20.155812914`; no lower model exists in the tracked team packages and no replacement was accepted.
 - Completed task011: cost `318 -> 282`, points `19.237948617 -> 19.358092929` (`+0.120144312`), full validation `267/267`.
 - Next task: task012.
+
+Online loop status (2026-07-15):
+- `task118` was isolated on submission `54710570`: cost `8699 -> 8266`, public score `7385.88 -> 7385.93`, accepted.
+- A three-task batch (`task324`, `task050`, `task013`) scored `7385.91` from the `7385.93` parent and was rejected.
+- Isolated `task324` scored `7385.94` (`+0.01`) and was accepted.
+- Isolated `task050` scored `7385.89` (`-0.04`) and was rejected for hidden-set regression.
+- Isolated `task013` remained `7385.93`; hold because no online gain was visible.
+- Current team-high metadata is submission `54711326` at `7387.15`, including `task118`, `task133`, and `task174` rebased onto `54709399`.
+- The exact `7387.15` package was not present on GitHub at the last fetch. Migrate accepted `task324` after that artifact is shared.

@@ -1,0 +1,4 @@
+task,candidate,candidate_sha256,trials,comparable_trials,mismatches,matched,parent_runtime_errors,candidate_runtime_errors,first_mismatch_trial,first_mismatch_cells,first_permutation
+task324,F:\kaggle\NGC-work-sync-e-fast\workplace E\artifacts\e_full67_transform_families_20260715\task324_cast_mask_mul.onnx,7da86e46a66b6872c14e4094ebbfc28f291c42bf4008ce31fd775450384f5fa5,5000,5000,0,5000,0,0,,,
+task050,F:\kaggle\NGC-work\workplace E\task050_20260713_candidates\task050_20260713_dynamic_hw_qlinear_int32_controls\task050.onnx,efe13bb5075f5c9d7563f0a4ee8a07847d6bfb4b8a472c1cbb745fb7d11e9e0d,5000,5000,0,5000,0,0,,,
+task013,F:\kaggle\NGC-work\workplace E\optimized_onnx\task013_control_compact_20260713\task013.onnx,639f910262f56f9a132742518de128550303d589f8f5cbfc412b93af06e6862f,5000,5000,0,5000,0,0,,,

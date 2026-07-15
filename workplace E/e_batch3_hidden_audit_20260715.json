@@ -1,0 +1,73 @@
+{
+  "competition": "neurogolf-2026",
+  "parent": {
+    "kaggle_ref": 54710570,
+    "public_score": 7385.93,
+    "submission_sha256": "811be4a604d026a25384b071e10d08d607071b5e118fa725360697e55fc3bbc9"
+  },
+  "combined_submission": {
+    "tasks": [
+      "task324",
+      "task050",
+      "task013"
+    ],
+    "local_gain": 0.019061,
+    "fuzz_mismatches": 0,
+    "fuzz_trials_total": 15000,
+    "submission_sha256": "d032c9674f6ddbe9e2cc1094b12ffecb994b859faf3d4131e0d05bdb2862a248",
+    "kaggle_ref": 54711035,
+    "public_score": 7385.91,
+    "online_delta": -0.02,
+    "decision": "reject_hidden_regression"
+  },
+  "isolates": [
+    {
+      "task": "task324",
+      "cost_before": 8635,
+      "cost_after": 8556,
+      "local_gain": 0.009190920378482634,
+      "official_validation": "266/266",
+      "fuzz_validation": "0/5000",
+      "model_sha256": "7da86e46a66b6872c14e4094ebbfc28f291c42bf4008ce31fd775450384f5fa5",
+      "submission_sha256": "86190680ef9bbca8686a25868f909782056b217f97a38fa6183408d507eac1ec",
+      "kaggle_ref": 54711156,
+      "public_score": 7385.94,
+      "online_delta": 0.01,
+      "decision": "accept"
+    },
+    {
+      "task": "task050",
+      "cost_before": 3000,
+      "cost_after": 2981,
+      "local_gain": 0.006353,
+      "official_validation": "271/271",
+      "fuzz_validation": "0/5000",
+      "model_sha256": "efe13bb5075f5c9d7563f0a4ee8a07847d6bfb4b8a472c1cbb745fb7d11e9e0d",
+      "submission_sha256": "cb5ad4544c826e162aad84f2948da5afc5896505961f2eaff6e01a78a9ae3e5b",
+      "kaggle_ref": 54711267,
+      "public_score": 7385.89,
+      "online_delta": -0.04,
+      "decision": "reject_hidden_regression"
+    },
+    {
+      "task": "task013",
+      "cost_before": 1424,
+      "cost_after": 1419,
+      "local_gain": 0.003517,
+      "official_validation": "267/267",
+      "fuzz_validation": "0/5000",
+      "model_sha256": "639f910262f56f9a132742518de128550303d589f8f5cbfc412b93af06e6862f",
+      "submission_sha256": "dceb68d3f9aa41f9d759cce95bd68fbd631b8a7dd5ad9f8f2882b53c64b0981a",
+      "kaggle_ref": 54711365,
+      "public_score": 7385.93,
+      "online_delta": 0.0,
+      "decision": "hold_no_visible_online_gain"
+    }
+  ],
+  "team_high_after_audit": {
+    "kaggle_ref": 54711326,
+    "public_score": 7387.15,
+    "description": "rebase highest54709399 tasks118 133 174",
+    "artifact_status": "not_yet_available_in_github"
+  }
+}

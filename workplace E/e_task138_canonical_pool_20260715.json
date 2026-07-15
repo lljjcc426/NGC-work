@@ -1,0 +1,37 @@
+{
+  "task": "task138",
+  "method": "canonicalize four directions, run one MaxPool, then invert",
+  "parent": {
+    "task": "task138",
+    "path": "F:\\kaggle\\neurogolf-2026\\work\\e_round_738588_isolate_20260715_v1\\task118\\package\\models\\task138.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 266,
+    "examples_passed": 266,
+    "examples_failed": 0,
+    "memory": 9965,
+    "params": 131,
+    "cost": 10096,
+    "points": 15.780105415219005,
+    "file_size": 4806,
+    "sha256": "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d",
+    "error": ""
+  },
+  "candidate": {
+    "task": "task138",
+    "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\optimized_onnx\\task138_canonical_pool_20260715\\task138.onnx",
+    "ok": true,
+    "valid_all_checked": true,
+    "examples_checked": 266,
+    "examples_passed": 266,
+    "examples_failed": 0,
+    "memory": 12808,
+    "params": 155,
+    "cost": 12963,
+    "points": 15.530145575399958,
+    "file_size": 6781,
+    "sha256": "304654a021b1297d2c8ee1e22355a32b4255cf2f74c386606b7d72722e9baa99",
+    "error": ""
+  },
+  "accepted_local": false
+}
