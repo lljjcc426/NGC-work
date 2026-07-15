@@ -1,0 +1,1465 @@
+{
+  "audit_rejected": [
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "m1_pair_score",
+            "pads": [
+              0,
+              0,
+              -1,
+              0
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Conv": 3,
+          "ConvTranspose": 1,
+          "Greater": 1,
+          "Max": 1,
+          "Pad": 1,
+          "Relu": 1,
+          "Slice": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task042.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "035f05ad36b1323c6677242c2a86c7648751eaeb3471f42d29e1080d7436e2d8",
+      "task": "task042"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "n_idx_f",
+            "pads": [
+              0,
+              0,
+              -20,
+              -20
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 14,
+          "And": 4,
+          "ArgMax": 9,
+          "BitwiseAnd": 1,
+          "BitwiseXor": 1,
+          "Cast": 24,
+          "Conv": 1,
+          "ConvInteger": 4,
+          "Equal": 8,
+          "Gather": 4,
+          "Greater": 1,
+          "LessOrEqual": 10,
+          "MaxPool": 5,
+          "Min": 1,
+          "Mod": 4,
+          "Not": 3,
+          "Or": 8,
+          "Pad": 1,
+          "ReduceMax": 2,
+          "ReduceSum": 1,
+          "Reshape": 4,
+          "Slice": 4,
+          "Split": 1,
+          "Sub": 9,
+          "Where": 14,
+          "Xor": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task044.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "d8f6fb05ddbd46c6f7b82562fe36eb319d2d678d1cb0a1e471a04d75a5750a06",
+      "task": "task044"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 2,
+          "And": 3,
+          "ArgMax": 4,
+          "Cast": 5,
+          "Conv": 3,
+          "Equal": 4,
+          "Gather": 5,
+          "GatherND": 1,
+          "Less": 2,
+          "LessOrEqual": 2,
+          "MaxPool": 2,
+          "Or": 2,
+          "Pad": 1,
+          "ReduceMax": 1,
+          "Squeeze": 4,
+          "Sub": 2,
+          "Transpose": 2,
+          "Unsqueeze": 2,
+          "Where": 7
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "6c13a20a862f0afed7ce56a2dcd9bc8c36b330f6cc1a97a488fc72fbcc5b72fa",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              0,
+              0,
+              -10,
+              -10
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 1,
+          "ArgMax": 1,
+          "Cast": 2,
+          "Conv": 1,
+          "Equal": 3,
+          "MaxPool": 2,
+          "Pad": 1,
+          "ReduceSum": 1,
+          "Where": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task192.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "680e42ba047bf93cdf61b548aeb4a919c9644d34ff33ddc80ecce53785934bff",
+      "task": "task192"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_4",
+            "pads": [
+              0,
+              0,
+              -10,
+              -10
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 1,
+          "And": 4,
+          "Cast": 6,
+          "Conv": 1,
+          "Equal": 5,
+          "Greater": 1,
+          "Max": 2,
+          "Mul": 4,
+          "Not": 4,
+          "Or": 1,
+          "Pad": 1,
+          "QLinearConv": 1,
+          "ReduceMax": 10,
+          "ReduceSum": 1,
+          "Split": 1,
+          "Sub": 2,
+          "TopK": 1,
+          "Where": 6
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task324.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "bdcc94a09ac0b746b5b5151ce9bd657f2c0265b07aa5997d5193a78701a0ed92",
+      "task": "task324"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              0,
+              0,
+              -20,
+              -20
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Conv": 1,
+          "Equal": 1,
+          "Greater": 2,
+          "Max": 1,
+          "MaxPool": 6,
+          "Min": 2,
+          "Pad": 1,
+          "Where": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\round1_all_tasks_20260712\\task333.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "99e160c48ffec1227ec8f44bfb600a589e8f49ca152199663848d60493f19acf",
+      "task": "task333"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_3",
+            "pads": [
+              12,
+              0,
+              12,
+              -1
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Equal": 1,
+          "Mul": 1,
+          "Pad": 1,
+          "QLinearConv": 2,
+          "Slice": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task050_20260713\\mask_w14_context15\\task050.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "deb01aedea06600ff06e91be6b73d9085d8a734a02b33064e0016f1eafc1016b",
+      "task": "task050"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 4,
+          "ArgMax": 4,
+          "Cast": 7,
+          "Concat": 3,
+          "Conv": 3,
+          "Equal": 4,
+          "Gather": 3,
+          "GatherND": 1,
+          "Max": 1,
+          "MaxPool": 4,
+          "Or": 1,
+          "Pad": 2,
+          "ReduceMax": 1,
+          "Slice": 2,
+          "Squeeze": 4,
+          "Sub": 4,
+          "Where": 3
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task138_deep_20260713\\dynamic_rect_four_pool\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 4,
+          "ArgMax": 4,
+          "Cast": 7,
+          "Concat": 3,
+          "Conv": 3,
+          "Equal": 4,
+          "Gather": 3,
+          "GatherND": 1,
+          "Max": 1,
+          "MaxPool": 4,
+          "Or": 1,
+          "Pad": 2,
+          "ReduceMax": 1,
+          "Slice": 2,
+          "Squeeze": 4,
+          "Sub": 4,
+          "Where": 3
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task138_deep_20260713\\dynamic_rect_profiled\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "22ad1e2f7cf988b400f212582a58ddeff100c3596d36d6d8c170e6c32e813fb9",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 2,
+          "And": 1,
+          "ArgMax": 7,
+          "Cast": 6,
+          "Conv": 3,
+          "Equal": 6,
+          "Gather": 6,
+          "GatherND": 1,
+          "GreaterOrEqual": 1,
+          "LessOrEqual": 2,
+          "Neg": 1,
+          "Or": 2,
+          "Pad": 1,
+          "ReduceSum": 1,
+          "Slice": 1,
+          "Squeeze": 4,
+          "Sub": 2,
+          "Transpose": 2,
+          "Where": 7
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task138_deep_20260713\\threshold_count_color23\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "7fd547b66a16b6ee882385b4abaac1179747213708d6d65a5b2d8e8a03f48ab3",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 2,
+          "And": 3,
+          "ArgMax": 6,
+          "Cast": 6,
+          "Conv": 3,
+          "Equal": 5,
+          "Gather": 5,
+          "GatherND": 1,
+          "GreaterOrEqual": 1,
+          "Less": 2,
+          "LessOrEqual": 2,
+          "Neg": 1,
+          "Or": 2,
+          "Pad": 1,
+          "ReduceMax": 1,
+          "Squeeze": 4,
+          "Sub": 2,
+          "Transpose": 2,
+          "Unsqueeze": 2,
+          "Where": 11
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task138_deep_20260713\\threshold_inner23\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "56e30fb7239fb4560863f6f7a0f825fa75774ed4542015b22d0c2590f491c563",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_2",
+            "pads": [
+              1,
+              1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 3,
+          "ArgMax": 7,
+          "ArgMin": 2,
+          "Cast": 14,
+          "Concat": 4,
+          "Flatten": 1,
+          "Gather": 7,
+          "GatherND": 1,
+          "GreaterOrEqual": 1,
+          "Less": 4,
+          "LessOrEqual": 2,
+          "Mod": 1,
+          "Pad": 1,
+          "QLinearConv": 2,
+          "QLinearMatMul": 2,
+          "ReduceMax": 2,
+          "Reshape": 1,
+          "Slice": 3,
+          "Squeeze": 3,
+          "Sub": 4,
+          "Transpose": 2,
+          "Unsqueeze": 1,
+          "Where": 5,
+          "Xor": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_compact_coords\\task216.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275",
+      "task": "task216"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_2",
+            "pads": [
+              1,
+              1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 3,
+          "ArgMax": 5,
+          "ArgMin": 2,
+          "Cast": 12,
+          "Concat": 4,
+          "Div": 1,
+          "Flatten": 1,
+          "Gather": 6,
+          "GatherND": 1,
+          "Less": 4,
+          "LessOrEqual": 2,
+          "Mod": 1,
+          "Pad": 1,
+          "QLinearConv": 1,
+          "QLinearMatMul": 2,
+          "ReduceMax": 2,
+          "Slice": 3,
+          "Sub": 4,
+          "Transpose": 2,
+          "Unsqueeze": 4,
+          "Where": 4,
+          "Xor": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_negative_pad_corner\\task216.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "08da14867c482a5d5927eb9cfe9d997b6b56c354d47b6dafdf166dbab3ac478a",
+      "task": "task216"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_2",
+            "pads": [
+              1,
+              1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 3,
+          "ArgMax": 7,
+          "ArgMin": 2,
+          "Cast": 15,
+          "Concat": 5,
+          "Flatten": 1,
+          "Gather": 7,
+          "GatherND": 1,
+          "Greater": 1,
+          "GreaterOrEqual": 1,
+          "Less": 4,
+          "LessOrEqual": 2,
+          "Min": 1,
+          "Mod": 1,
+          "Pad": 1,
+          "QLinearConv": 1,
+          "QLinearMatMul": 3,
+          "ReduceMax": 2,
+          "Slice": 3,
+          "Squeeze": 1,
+          "Sub": 4,
+          "Transpose": 2,
+          "Unsqueeze": 4,
+          "Where": 5,
+          "Xor": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_row_slots\\task216.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "f5ca9115c5289b618e0461d4ababaacce08a4dd292a903d172f9d7d515040fee",
+      "task": "task216"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_2",
+            "pads": [
+              1,
+              1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 3,
+          "ArgMax": 7,
+          "ArgMin": 2,
+          "Cast": 14,
+          "Concat": 4,
+          "Flatten": 1,
+          "Gather": 7,
+          "GatherND": 1,
+          "GreaterOrEqual": 1,
+          "Less": 4,
+          "LessOrEqual": 2,
+          "Mod": 1,
+          "Pad": 1,
+          "QLinearConv": 2,
+          "QLinearMatMul": 2,
+          "ReduceMax": 2,
+          "Slice": 3,
+          "Squeeze": 1,
+          "Sub": 4,
+          "Transpose": 2,
+          "Unsqueeze": 4,
+          "Where": 5,
+          "Xor": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_slot_conv\\task216.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "725b4c7c4dd4098f9ab1bb4b3c42c61c1a1535bbead482a8a6fd1e73dd0e4e15",
+      "task": "task216"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "detect_all_zero_3x3",
+            "pads": [
+              0,
+              0,
+              -10,
+              -10
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Conv": 1,
+          "MaxPool": 1,
+          "Pad": 1,
+          "QuantizeLinear": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task162_20260713_candidates\\exact_w3_dense_blue\\task162.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "370fea9a52c20bb6c1fb93ac1433e92c78b90f87e73fc4309552e2e0a540d5b5",
+      "task": "task162"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "fused_detection_and_dilation",
+            "pads": [
+              2,
+              2,
+              -8,
+              -8
+            ]
+          }
+        ],
+        "operators": {
+          "Conv": 1,
+          "Greater": 1,
+          "Pad": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task162_20260713_candidates\\fused5_linear\\task162.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "e51b8aae3d306e4590c6065d0564df83c600754d9ce81f079b1ed99e596d6b8a",
+      "task": "task162"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "count_zero_3x3",
+            "pads": [
+              0,
+              0,
+              -10,
+              -10
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Conv": 1,
+          "Pad": 1,
+          "QLinearConv": 1,
+          "QuantizeLinear": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task162_20260713_candidates\\w3_qlinear_stamp\\task162.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "ee6e5152c82506c254fc45a3b10c10d0356010976bb5da269406689e3c1052ba",
+      "task": "task162"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "detect_scanned_zero_block",
+            "pads": [
+              1,
+              1,
+              -10,
+              -10
+            ]
+          }
+        ],
+        "operators": {
+          "Cast": 1,
+          "Conv": 1,
+          "MaxPool": 1,
+          "Pad": 1,
+          "QuantizeLinear": 1,
+          "Where": 1
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task162_20260713_candidates\\w4_quantized_threshold\\task162.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "817d7b40f38c839eb4c97d8ef9a3a71dd8dfb4f66b2d838588c0253899ba12a4",
+      "task": "task162"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_0",
+            "pads": [
+              1,
+              1,
+              -5,
+              -6
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 4,
+          "ArgMax": 4,
+          "Cast": 7,
+          "Concat": 3,
+          "Conv": 3,
+          "Equal": 4,
+          "Gather": 3,
+          "GatherND": 1,
+          "Max": 1,
+          "MaxPool": 4,
+          "Or": 1,
+          "Pad": 2,
+          "ReduceMax": 1,
+          "Slice": 2,
+          "Squeeze": 4,
+          "Sub": 4,
+          "Where": 3
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\optimized_onnx\\fast_batch3_20260714\\task138.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "36a73b162000f3c2548a831c0c567b67724552478fc145cfd67b659237db686d",
+      "task": "task138"
+    },
+    {
+      "audit": {
+        "forbidden_ops": [],
+        "negative_padding": [
+          {
+            "node": "node_2",
+            "pads": [
+              1,
+              1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        "operators": {
+          "Add": 3,
+          "ArgMax": 7,
+          "ArgMin": 2,
+          "Cast": 14,
+          "Concat": 4,
+          "Flatten": 1,
+          "Gather": 7,
+          "GatherND": 1,
+          "GreaterOrEqual": 1,
+          "Less": 4,
+          "LessOrEqual": 2,
+          "Mod": 1,
+          "Pad": 1,
+          "QLinearConv": 2,
+          "QLinearMatMul": 2,
+          "ReduceMax": 2,
+          "Reshape": 1,
+          "Slice": 3,
+          "Squeeze": 3,
+          "Sub": 4,
+          "Transpose": 2,
+          "Unsqueeze": 1,
+          "Where": 5,
+          "Xor": 2
+        },
+        "runtime_compatible": false
+      },
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\optimized_onnx\\fast_batch3_20260714\\task216.onnx",
+      "reason": "runtime_unsafe",
+      "sha256": "02ff032b8b63f6c6a7a40b5a63af97364d47b3b38d5df06bf4eb4916a0947275",
+      "task": "task216"
+    }
+  ],
+  "full_results": [
+    {
+      "accepted_official": true,
+      "cost": 26136,
+      "delta_cost": 4248,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 19059,
+      "memory": 25728,
+      "ok": true,
+      "params": 408,
+      "parent_cost": 30384,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_20260713_best\\task233.onnx",
+      "points": 14.828931046719093,
+      "sha256": "a6dc22f34172de39b6cf56115746a2954d7d3196cd2921b0e6bcef3855916f0d",
+      "task": "task233",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 26266,
+      "delta_cost": 4118,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 18393,
+      "memory": 25858,
+      "ok": true,
+      "params": 408,
+      "parent_cost": 30384,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_20260713_candidate_codegolf_conflict_scan_no_valid_mask\\task233.onnx",
+      "points": 14.823969393854895,
+      "sha256": "6c0a927f911daa666909e552b4184ea0558d09899a7fbed62ff02e61ae0e99a8",
+      "task": "task233",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 27638,
+      "delta_cost": 2746,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 19189,
+      "memory": 27192,
+      "ok": true,
+      "params": 446,
+      "parent_cost": 30384,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_20260713_candidate_codegolf_conflict_scan\\task233.onnx",
+      "points": 14.77305308363657,
+      "sha256": "5211e25ae4232e7cb36f9d9290d5d40595c96df383da8f565933ed5653a136c7",
+      "task": "task233",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 820,
+      "delta_cost": 1431,
+      "error": "",
+      "examples_checked": 265,
+      "examples_failed": 0,
+      "examples_passed": 265,
+      "file_size": 3557,
+      "memory": 0,
+      "ok": true,
+      "params": 820,
+      "parent_cost": 2251,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task012_grouped_lp_20260712\\task012.onnx",
+      "points": 18.2906956597417,
+      "sha256": "8df48d736e812c92729bb4cbad8a60bc8c81c363b569b40a3c00262994362d62",
+      "task": "task012",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7499,
+      "delta_cost": 968,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 4199,
+      "memory": 7382,
+      "ok": true,
+      "params": 117,
+      "parent_cost": 8467,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_bounded_corner\\task216.onnx",
+      "points": 16.07747504269861,
+      "sha256": "84dff33e47c959296d040da68553bfb622ab5bd82cf346d892588ac78382af6f",
+      "task": "task216",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 5631,
+      "delta_cost": 922,
+      "error": "",
+      "examples_checked": 265,
+      "examples_failed": 0,
+      "examples_passed": 265,
+      "file_size": 5583,
+      "memory": 5460,
+      "ok": true,
+      "params": 171,
+      "parent_cost": 6553,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task092_deep_20260713\\rank12_qmm_cross_guard\\task092.onnx",
+      "points": 16.363957674745382,
+      "sha256": "849c867a0265ef9a8e1759149fd4c7d466fcae72eaf068514c49eae29d2567b4",
+      "task": "task092",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 29544,
+      "delta_cost": 840,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 27231,
+      "memory": 29125,
+      "ok": true,
+      "params": 419,
+      "parent_cost": 30384,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task233_20260713_candidate_axis_min\\task233.onnx",
+      "points": 14.706364043467602,
+      "sha256": "e2873b3f3b4666ef6fd83bfadb9031a5681d5faf9f91945062d32ed0b33d8e1a",
+      "task": "task233",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7709,
+      "delta_cost": 758,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 4042,
+      "memory": 7625,
+      "ok": true,
+      "params": 84,
+      "parent_cost": 8467,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_compact_tail\\task216.onnx",
+      "points": 16.049856243540738,
+      "sha256": "28da82348001a658dc027a4c7f2636a6cf9c21e2b898505b6b84abc3682b634a",
+      "task": "task216",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7747,
+      "delta_cost": 720,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 4465,
+      "memory": 7657,
+      "ok": true,
+      "params": 90,
+      "parent_cost": 8467,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_midslice_qlinear\\task216.onnx",
+      "points": 16.044939049368097,
+      "sha256": "df3aae465db39057fb6b9cd26249ac2e0b7a4589acd5ac0d09c25783c20a7fbe",
+      "task": "task216",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 3306,
+      "delta_cost": 641,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 4155,
+      "memory": 3168,
+      "ok": true,
+      "params": 138,
+      "parent_cost": 3947,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task174_row_hash_symmetry_20260713\\task174.onnx",
+      "points": 16.89650572161903,
+      "sha256": "64be91c9a54983b38ff70e96ae3f7ba3a1cffc96d4f48d2eabb83f77fe9b5833",
+      "task": "task174",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7858,
+      "delta_cost": 498,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 0,
+      "examples_passed": 267,
+      "file_size": 1542,
+      "memory": 7848,
+      "ok": true,
+      "params": 10,
+      "parent_cost": 8356,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task064_20260713\\pair_sums_inner22\\task064.onnx",
+      "points": 16.030712599881596,
+      "sha256": "dd0deb7acca65686943b185e6defa56c94f0a38714121be70a6b5a705b61c657",
+      "task": "task064",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7972,
+      "delta_cost": 495,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 4456,
+      "memory": 7882,
+      "ok": true,
+      "params": 90,
+      "parent_cost": 8467,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task216_20260713_qlinear_counts\\task216.onnx",
+      "points": 16.016309318667314,
+      "sha256": "62bc4463a401262fcba096000f4455864a38f126083fc057bd39998bd0d2bf3e",
+      "task": "task216",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 8266,
+      "delta_cost": 433,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 0,
+      "examples_passed": 267,
+      "file_size": 1542,
+      "memory": 8092,
+      "ok": true,
+      "params": 174,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\classify_then_selected\\task118.onnx",
+      "points": 15.980094004928322,
+      "sha256": "27712f2f76bdb42000e8ef5b3b94663d0e35745af4cdecf1375e582a87c7a1ce",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 7990,
+      "delta_cost": 366,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 0,
+      "examples_passed": 267,
+      "file_size": 1931,
+      "memory": 7980,
+      "ok": true,
+      "params": 10,
+      "parent_cost": 8356,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task064_20260713\\inner22\\task064.onnx",
+      "points": 16.014053961239682,
+      "sha256": "d46c80396233306d591b0a5d1685d897e17a5a505885f9ea449d37b43e1cd6bd",
+      "task": "task064",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 2299,
+      "delta_cost": 208,
+      "error": "",
+      "examples_checked": 265,
+      "examples_failed": 0,
+      "examples_passed": 265,
+      "file_size": 1787,
+      "memory": 2186,
+      "ok": true,
+      "params": 113,
+      "parent_cost": 2507,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task085_integer_codes_20260713\\task085.onnx",
+      "points": 17.25977047523682,
+      "sha256": "188fa089bc273044c8db94000a98fba01b42c5a12eaa0dabac4985763f7f4a3e",
+      "task": "task085",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 1746,
+      "delta_cost": 133,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 7032,
+      "memory": 1314,
+      "ok": true,
+      "params": 432,
+      "parent_cost": 1879,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task035_compact_scatter_20260713\\task035.onnx",
+      "points": 17.53491726360045,
+      "sha256": "85e6d76db512de4ece8c69a4c62b0696140fc8b26305cc9bbdf1c86a677a5510",
+      "task": "task035",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 8556,
+      "delta_cost": 79,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 6005,
+      "memory": 6969,
+      "ok": true,
+      "params": 1587,
+      "parent_cost": 8635,
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task324_cast_mask_mul.onnx",
+      "points": 15.945611929797703,
+      "sha256": "7da86e46a66b6872c14e4094ebbfc28f291c42bf4008ce31fd775450384f5fa5",
+      "task": "task324",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 3892,
+      "delta_cost": 55,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 5324,
+      "memory": 3709,
+      "ok": true,
+      "params": 183,
+      "parent_cost": 3947,
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task174_cast_mask_mul.onnx",
+      "points": 16.733321556694104,
+      "sha256": "e868020f4e8f86fa9dc81ff4f492cc8c4ce678fc6818d9db04d843ae7717325d",
+      "task": "task174",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 282,
+      "delta_cost": 36,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 0,
+      "examples_passed": 267,
+      "file_size": 1373,
+      "memory": 32,
+      "ok": true,
+      "params": 250,
+      "parent_cost": 318,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task011_affine_counts_20260712\\task011.onnx",
+      "points": 19.358092929061886,
+      "sha256": "d39ce81a8409972dad25ffe5b0346723da549d7994719b5e757f562365487134",
+      "task": "task011",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 2981,
+      "delta_cost": 19,
+      "error": "",
+      "examples_checked": 271,
+      "examples_failed": 0,
+      "examples_passed": 271,
+      "file_size": 1982,
+      "memory": 2878,
+      "ok": true,
+      "params": 103,
+      "parent_cost": 3000,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task050_20260713_candidates\\task050_20260713_dynamic_hw_qlinear_int32_controls\\task050.onnx",
+      "points": 16.99998590632193,
+      "sha256": "efe13bb5075f5c9d7563f0a4ee8a07847d6bfb4b8a472c1cbb745fb7d11e9e0d",
+      "task": "task050",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 1419,
+      "delta_cost": 5,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 0,
+      "examples_passed": 267,
+      "file_size": 2361,
+      "memory": 1361,
+      "ok": true,
+      "params": 58,
+      "parent_cost": 1424,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task013_control_compact_20260713\\task013.onnx",
+      "points": 17.74229232283996,
+      "sha256": "639f910262f56f9a132742518de128550303d589f8f5cbfc412b93af06e6862f",
+      "task": "task013",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 1345,
+      "delta_cost": 4,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 3658,
+      "memory": 489,
+      "ok": true,
+      "params": 856,
+      "parent_cost": 1349,
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task275_double_complement.onnx",
+      "points": 17.79585070796406,
+      "sha256": "2417119c0394cbd5f9f42c7690430830e0dddee2191ff4775249c8cd2f9eba2c",
+      "task": "task275",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 1876,
+      "delta_cost": 3,
+      "error": "",
+      "examples_checked": 266,
+      "examples_failed": 0,
+      "examples_passed": 266,
+      "file_size": 8169,
+      "memory": 1428,
+      "ok": true,
+      "params": 448,
+      "parent_cost": 1879,
+      "path": "F:\\kaggle\\NGC-work-sync-e-fast\\workplace E\\artifacts\\e_full67_transform_families_20260715\\task035_shared_cast_mask_mul.onnx",
+      "points": 17.46310287043383,
+      "sha256": "a26b2e5f3142e6ad4cc38b3254ec7b04515f524112b552e71bb1f52a3d5d0774",
+      "task": "task035",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": true,
+      "cost": 2997,
+      "delta_cost": 3,
+      "error": "",
+      "examples_checked": 271,
+      "examples_failed": 0,
+      "examples_passed": 271,
+      "file_size": 1895,
+      "memory": 2894,
+      "ok": true,
+      "params": 103,
+      "parent_cost": 3000,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\task050_20260713_candidates\\task050_20260713_dynamic_hw_qlinear\\task050.onnx",
+      "points": 16.994632932683338,
+      "sha256": "28501665f43145f129049bd4694c373e76aefa0242291108e2a4435ee8747eaf",
+      "task": "task050",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 4,
+      "examples_passed": 263,
+      "file_size": 1409,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\coded_b13_e6_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "488ad8dcb859f703279ed1fb855b89eae2ad59ad4c01e4b9ec8eee64684543f5",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 4,
+      "examples_passed": 263,
+      "file_size": 1409,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\coded_b11_e5_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "7e654d8d7313aa6b6a04542669227315c994dd1564233ad02c098762114aab02",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 4,
+      "examples_passed": 263,
+      "file_size": 1408,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\coded_b9_e4_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "5b41718a641744aa88560249452d5607f6170321780ec30395537544fb1eed3c",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 4,
+      "examples_passed": 263,
+      "file_size": 1408,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\coded_b7_e3_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "04c016eaf853622b84b87e20ebd9e939c97ff5be69aadef42129fa85e24cf71d",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 9,
+      "examples_passed": 258,
+      "file_size": 1410,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\ordered_b11_e23_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "13b1137ff0ba00bc29fd25f54bffcf2f06f98f9ee08cfac4954429caebfe6a52",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 9,
+      "examples_passed": 258,
+      "file_size": 1409,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\ordered_b5_e11_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "1a0d600142fb36b1f7e66e9d9d638dff3154a843cfedf611e98557a44324469e",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 9,
+      "examples_passed": 258,
+      "file_size": 1409,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\ordered_b7_e15_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "58228f9e638cf01f4276901a70e039ec11d5b4c316e80a76bfb790f15ed08b20",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8171,
+      "delta_cost": 528,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 9,
+      "examples_passed": 258,
+      "file_size": 1409,
+      "memory": 8044,
+      "ok": false,
+      "params": 127,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\ordered_b9_e19_zero_suppressed\\task118.onnx",
+      "points": 15.991653420615293,
+      "sha256": "1d5d37f8792c26d2dd38bb8561797ecc5567d97070d361b492db4ed35940cf0e",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8216,
+      "delta_cost": 483,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 27,
+      "examples_passed": 240,
+      "file_size": 1357,
+      "memory": 8092,
+      "ok": false,
+      "params": 124,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\baseline_s2_only\\task118.onnx",
+      "points": 15.986161248391605,
+      "sha256": "603d34b2596f0d14d2c421f49534f7d22d2288840f58b47b088c7fd1525e3e11",
+      "task": "task118",
+      "valid_all_checked": true
+    },
+    {
+      "accepted_official": false,
+      "cost": 8216,
+      "delta_cost": 483,
+      "error": "",
+      "examples_checked": 267,
+      "examples_failed": 7,
+      "examples_passed": 260,
+      "file_size": 1357,
+      "memory": 8092,
+      "ok": false,
+      "params": 124,
+      "parent_cost": 8699,
+      "path": "F:\\kaggle\\NGC-work\\workplace E\\optimized_onnx\\task118_deep_20260713\\baseline_s3_only\\task118.onnx",
+      "points": 15.986161248391605,
+      "sha256": "73528b0f426a989d34921887de41c56e5758a31c13d701f62ec8e5f249d77bb0",
+      "task": "task118",
+      "valid_all_checked": true
+    }
+  ],
+  "parent_dir": "F:\\kaggle\\neurogolf-2026\\work\\team_shared_737940_tracked_20260714\\models",
+  "screen_lower": 34,
+  "unique_candidates": 50
+}

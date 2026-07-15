@@ -1,0 +1,107 @@
+{
+  "competition": "neurogolf-2026",
+  "round_date": "2026-07-15",
+  "baseline": {
+    "submission_ref": 54685007,
+    "public_score": 7379.41,
+    "package_sha256": "916737473fcbe40e2ad0c8176092acfec6f6ec287e7b0f3a122f3d09cc273cef",
+    "models": 400,
+    "note": "Latest reproducible GitHub-tracked package. The 7383.93 team-high binary is unavailable to this account."
+  },
+  "scope": {
+    "assignment_slots": 67,
+    "primary_tasks": 66,
+    "shared_review_tasks": [
+      "task233"
+    ],
+    "baseline_tasks_fully_valid": 67,
+    "baseline_examples_checked": 16798,
+    "baseline_examples_passed": 16798,
+    "task110_policy": "Keep the baseline model. The previous aggressive candidate was rejected by isolated Kaggle score 7363.58."
+  },
+  "method_order": [
+    "teammate full-400 exact transforms",
+    "2025 ARC code-golf solution structure review",
+    "E repository candidate scan and stacked exact transforms"
+  ],
+  "scans": {
+    "teammate_safe_cleanup": {
+      "tasks_scanned": 67,
+      "opportunity_tasks": 2,
+      "new_improvements": 0
+    },
+    "extended_exact_transforms_on_baseline": {
+      "tasks_scanned": 67,
+      "candidates_built": 10,
+      "fully_valid_improvements": 5,
+      "new_beyond_existing_team_records": 0
+    },
+    "repository_candidates": {
+      "unique_candidates": 50,
+      "audit_rejected": 21,
+      "screen_lower": 34,
+      "fully_valid_lower_candidates": 24
+    },
+    "stacked_exact_transforms_on_research_champions": {
+      "tasks_scanned": 67,
+      "candidates_built": 6,
+      "fully_valid_improvements": 3,
+      "new_candidate": "task035 compact-scatter plus shared cast-mask fold"
+    }
+  },
+  "isolated_candidates": [
+    {
+      "task": "task035",
+      "baseline_cost": 1879,
+      "candidate_cost": 1743,
+      "local_delta_points": 0.075131953893446,
+      "validation": "266/266",
+      "model_sha256": "daca24478751bd2e969f1ad27e00ac787ecd95e2263e57674ce00de701e4d0b4",
+      "package_sha256": "ea15022993300d395fe79a6bafae4c0e7ad17079b1fa290f6396871d58fb68c3",
+      "risk": "low_exact_graph_transform",
+      "submission_status": "not_submitted_credential_blocked"
+    },
+    {
+      "task": "task012",
+      "baseline_cost": 2251,
+      "candidate_cost": 820,
+      "local_delta_points": 1.00982550064843,
+      "validation": "265/265",
+      "model_sha256": "8df48d736e812c92729bb4cbad8a60bc8c81c363b569b40a3c00262994362d62",
+      "package_sha256": "e83daa6a61abb2de59ddff175133153323853bafd66d78135d31eec92a3e4217",
+      "risk": "high_structural_rewrite",
+      "submission_status": "not_submitted_credential_blocked"
+    },
+    {
+      "task": "task092",
+      "baseline_cost": 6553,
+      "candidate_cost": 5631,
+      "local_delta_points": 0.151635913784879,
+      "validation": "265/265",
+      "model_sha256": "849c867a0265ef9a8e1759149fd4c7d466fcae72eaf068514c49eae29d2567b4",
+      "package_sha256": "3609b093ec32053a8e49b8575d02704c3435aa936ae85cf795b587f1de92187b",
+      "risk": "high_structural_rewrite",
+      "submission_status": "not_submitted_credential_blocked"
+    },
+    {
+      "task": "task233",
+      "baseline_cost": 30384,
+      "candidate_cost": 26136,
+      "local_delta_points": 0.15060247977116,
+      "validation": "266/266",
+      "model_sha256": "a6dc22f34172de39b6cf56115746a2954d7d3196cd2921b0e6bcef3855916f0d",
+      "package_sha256": "68534a12fa76229abca400d2056d57741923bdf63611eaaf323950ff8f3fb9b3",
+      "risk": "high_structural_rewrite",
+      "submission_status": "not_submitted_credential_blocked"
+    }
+  ],
+  "kaggle_blocker": {
+    "active": true,
+    "error": "PermissionError reading C:\\Users\\cc\\.kaggle\\access_token under the current sandbox.",
+    "prepared_packages_root": "F:\\kaggle\\neurogolf-2026\\work\\e_round_20260715_isolate_v1"
+  },
+  "generated_cleanup": {
+    "user_files_deleted": false,
+    "details": "Teammate scan scripts removed only generated non-improving or checker-rejected temporary ONNX candidates. Accepted candidates, source models, reports, and baseline files were retained."
+  }
+}

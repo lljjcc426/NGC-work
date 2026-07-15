@@ -1,0 +1,6 @@
+kernel,use_bias,status,cost,validation
+5,,channel2_conflict,,
+7,False,lp_infeasible,,
+7,True,lp_infeasible,,
+9,False,lp_infeasible,,
+9,True,accepted,820,265/265

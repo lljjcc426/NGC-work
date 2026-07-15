@@ -31,13 +31,17 @@ CURRENT_BEST_ONNX_DIR = (
     / "onnx"
 )
 CURRENT_SCOREBOARD = KAGGLEGOLF_ROOT / "data" / "neurogolf_task_table" / "task_scoreboard.csv"
-OFFICIAL_UTILS = (
-    KAGGLEGOLF_ROOT
-    / "data"
-    / "raw"
-    / "neurogolf-2026"
-    / "neurogolf_utils"
-    / "neurogolf_utils.py"
+OFFICIAL_DATA_ROOT = Path(
+    os.environ.get(
+        "NEUROGOLF_DATA_ROOT",
+        KAGGLEGOLF_ROOT / "data" / "raw" / "neurogolf-2026",
+    )
+)
+OFFICIAL_UTILS = Path(
+    os.environ.get(
+        "NEUROGOLF_UTILS_PATH",
+        OFFICIAL_DATA_ROOT / "neurogolf_utils" / "neurogolf_utils.py",
+    )
 )
 
 P0_P1_PRIORITY = [
@@ -171,7 +175,7 @@ def load_official_utils():
         raise RuntimeError(f"could not load official utils from {OFFICIAL_UTILS}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    module._NEUROGOLF_DIR = str((KAGGLEGOLF_ROOT / "data" / "raw" / "neurogolf-2026").resolve()).replace("\\", "/") + "/"
+    module._NEUROGOLF_DIR = str(OFFICIAL_DATA_ROOT.resolve()).replace("\\", "/") + "/"
     return module
 
 

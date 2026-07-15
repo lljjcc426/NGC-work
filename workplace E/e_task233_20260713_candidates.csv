@@ -1,0 +1,13 @@
+candidate,status,base_memory,base_params,base_cost,memory,params,cost,delta_cost,points,delta_points,arc_agi_pass,arc_agi_fail,arc_gen_pass,arc_gen_fail,nodes,initializers,first_error
+topk_uint8_unsupported,rejected_score_error,29965,419,30384,,,,,,,0,4,0,262,224,48,session: NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for TopK(11) node with name 'safe_name_54'
+axis_min,accepted,29965,419,30384,29125,419,29544,840,14.706364043,0.028035477,4,0,262,0,225,48,
+codegolf_direct_scan,rejected_wrong,29965,419,30384,26712,419,27131,3253,14.791567735,0.113239169,4,0,260,2,106,47,arc-gen[83] mismatch_elements=18
+codegolf_direct_scan_no_valid_mask,rejected_wrong,29965,419,30384,25378,381,25759,4625,14.843460640,0.165132073,4,0,260,2,100,43,arc-gen[83] mismatch_elements=18
+codegolf_conflict_scan,accepted,29965,419,30384,27192,446,27638,2746,14.773053084,0.094724517,4,0,262,0,131,50,
+codegolf_conflict_scan_no_valid_mask,accepted,29965,419,30384,25858,408,26266,4118,14.823969394,0.145640827,4,0,262,0,125,46,
+codegolf_conflict_nonzero_keys,rejected_score_error,29965,419,30384,,,,,,,4,0,262,0,128,49,
+codegolf_compact,accepted,29965,419,30384,25728,408,26136,4248,14.828931047,0.150602480,4,0,262,0,130,46,
+codegolf_compact_drop_special_36,rejected_wrong,29965,419,30384,25392,331,25723,4661,14.844859188,0.166530621,3,1,262,0,125,43,train[0] mismatch_elements=72
+codegolf_compact_drop_special_9,rejected_wrong,29965,419,30384,25626,385,26011,4373,14.833725196,0.155396629,3,1,262,0,124,43,train[1] mismatch_elements=18
+codegolf_compact_drop_special_27,rejected_wrong,29965,419,30384,25446,349,25795,4589,14.842064046,0.163735479,3,1,262,0,124,43,test[0] mismatch_elements=54
+codegolf_compact_drop_all_specials,rejected_wrong,29965,419,30384,25008,249,25257,5127,14.863141376,0.184812809,1,3,262,0,113,37,train[0] mismatch_elements=72
