@@ -1,0 +1,15 @@
+{
+  "competition": "neurogolf-2026",
+  "submission_ref": 54732385,
+  "status": "COMPLETE",
+  "public_score": 7369.57,
+  "local_projected_score": 7388.021658364004,
+  "diagnosis": {
+    "rejected_task": 344,
+    "baseline_task_points": 18.460414044382333,
+    "safe_other_gain": 0.8825498988924139,
+    "expected_failed_score": 7369.57213585451,
+    "conclusion": "task344 failed hidden generated examples; the other nine rewrites account for the remaining score"
+  },
+  "action": "Restore baseline task344 and continue from the nine-task safe package."
+}

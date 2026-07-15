@@ -448,15 +448,14 @@ Folder: `20260715_b_submission4_original_batch1_v1`
 
 The team-provided `submission (4).zip` validates `400/400` and scores
 `7386.993113` locally. Ten B-only models were independently rewritten: tasks
-018, 023, 076, 101, 209, 270, 280, 285, 328, and 344. Their combined reliable
-gain is `+1.028545`, producing a locally verified `7388.021658` package.
+018, 023, 076, 101, 209, 270, 280, 285, 328, and 344. The local package gained
+`+1.028545`, but task344 was rejected by the hidden distribution.
 
-The largest gains are task018 (`+0.378792`), task344 (`+0.145995`), task101
-(`+0.141002`), and task209 (`+0.138929`). Task344 is a new joint rank-2 spatial
-and color-factor rewrite followed by full-dataset hard-negative refinement; it
-passes all 266 official examples at cost 598 instead of 692.
+The accepted safe9 gain is `+0.882550`, with task018 (`+0.378792`), task101
+(`+0.141002`), and task209 (`+0.138929`) leading. Task344's jointly trained
+rank-2 model passed all 266 local examples but failed hidden generated cases.
 
-An online submission was attempted because the batch crossed `+1.0`, but the
-runtime cannot reach Kaggle's signed `www.googleapis.com` upload endpoint. No
-submission record was created, so the score remains local-only. The complete
-400-model ZIP and its SHA256 are archived in the folder for direct verification.
+Kaggle ref `54732385` completed at `7369.57`. The score exactly matches the
+nine safe gains plus a complete loss of baseline task344 points, so task344 is
+restored and archived under `rejected/`. The safe9 package needs another
+`+0.117450` before the next direct submission.

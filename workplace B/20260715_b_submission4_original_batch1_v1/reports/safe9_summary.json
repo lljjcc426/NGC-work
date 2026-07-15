@@ -1,0 +1,8 @@
+{
+  "accepted_tasks": [18, 23, 76, 101, 209, 270, 280, 285, 328],
+  "rejected_tasks": [344],
+  "local_gain": 0.8825498988924139,
+  "projected_local_points": 7387.875663162337,
+  "gain_needed_for_next_submit": 0.11745010110758614,
+  "submission_sha256": "914ABBF367A25EF62120C9E8408558D5E4AA56E3C051F710A217B329770B557F"
+}

@@ -1,6 +1,6 @@
 # B-only original rewrite batch on team submission 4
 
-This folder records ten independently derived B-task rewrites on the
+This folder records nine accepted and one rejected independently derived B-task rewrite on the
 team-provided `submission (4).zip`. No public submission package was blended
 into this batch, and no non-B task was changed.
 
@@ -24,49 +24,51 @@ into this batch, and no non-B task was changed.
 | `task280` | int8 coordinate geometry | `4588 -> 4335` | `+0.056723` |
 | `task285` | compact legacy diagonal routing | `18189 -> 17025` | `+0.066134` |
 | `task328` | compact dynamic tail | `5189 -> 5153` | `+0.006962` |
-| `task344` | jointly trained rank-2 spatial basis with hard-negative refinement | `692 -> 598` | `+0.145995` |
+Combined accepted local gain: `+0.882549898892`.
 
-Combined local gain: `+1.028545100559`.
-
-Candidate local score: `7388.021658364004`.
+Safe candidate local score: `7387.875663162337`.
 
 ## Task344 Method
 
 The original single-Einsum model uses a `10 x 10 x 3` spatial tensor. A plain
 rank-2 SVD failed because its third slice carries boundary/background state.
-The accepted rewrite jointly optimizes the rank-2 spatial basis and the
+The rejected rewrite jointly optimizes the rank-2 spatial basis and the
 existing `U/G/A` color factors against all official examples. Average margin
 training reduced the residual to 15 bits; full-dataset top-k hard-negative
-refinement then reached zero errors. The final ONNX remains one Einsum, has no
-scored intermediate memory, and cuts parameters from 692 to 598.
+refinement then reached zero local errors. It failed hidden generated examples
+at Kaggle ref `54732385`, zeroing all task344 points. The baseline task344 is
+restored in the safe package; the failed model is retained under `rejected/`.
 
 ## Validation
 
-- Every changed task passes its complete train, test, and ARC-GEN set.
+- Every accepted changed task passes its complete train, test, and ARC-GEN set.
 - The merged directory contains exactly 400 models.
 - The ZIP contains `task001.onnx` through `task400.onnx` at archive root.
-- Submission ZIP SHA256:
-  `738E1CFC91A4BB9306E58D133BC6C30148964E7026B10EC3C74EBB6DC14FF7AB`.
+- Safe9 ZIP SHA256:
+  `914ABBF367A25EF62120C9E8408558D5E4AA56E3C051F710A217B329770B557F`.
 
 ## Kaggle Status
 
-The package crossed the direct-submit threshold, but no Kaggle submission was
-created from this runtime. Authentication and submission-list APIs work; the
-signed upload endpoint is hosted by `www.googleapis.com`, which is unreachable
-from the current environment and times out before any bytes are transferred.
-Therefore `7388.021658` is locally verified, not an online score.
+The ten-task package was submitted as ref `54732385` and completed at
+`7369.57`. The exact score identity
+`7387.15 + 0.882549899 - 18.460414044 = 7369.5721` isolates task344 as the
+hidden failure. The remaining nine-task package is locally verified but remains
+below the next `+1.0` direct-submit threshold by `0.117450101`.
 
 ## Contents
 
-- `models/`: ten accepted B-task overrides.
+- `models/`: nine accepted B-task overrides.
+- `rejected/`: the hidden-unsafe task344 rank-2 model.
 - `scripts/`: reproducible rewrites plus task344 training and diagnostics.
 - `reports/baseline_full_scores.json`: official local score of all baseline tasks.
 - `reports/summary.json`: exact per-task gains and package hashes.
-- `submission/submission.zip`: the complete 400-model verification package.
+- `submission/submission_online_failed_54732385.zip`: the failed online package.
+- `submission/submission_safe9_unsubmitted.zip`: task344 restored to baseline.
 
 ## Resume Point
 
-Resume from this exact package for further work on the same provided baseline.
-Do not reapply these ten overrides. The repository has newer whole-team Kaggle
+Resume from `submission_safe9_unsubmitted.zip` for further work on the same
+provided baseline. Do not reapply the nine accepted overrides or task344 rank-2
+rewrite. The repository has newer whole-team Kaggle
 submissions, but they are intentionally not blended here because this round was
 requested as an isolated B-only rewrite pass.
