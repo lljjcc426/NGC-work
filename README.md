@@ -1,58 +1,65 @@
 # NGC-work
 
-Shared workspace for The 2026 NeuroGolf Championship.
+The 2026 NeuroGolf Championship 团队共享仓库，现已进入赛后归档状态。
 
-Current assignment files:
+## 最终结果
 
-- assignments/task_assignment_400.csv: 400 unique tasks plus 2 shared_review slots, with owner, priority, cost, points, and structure features.
-- assignments/task_assignment_summary.md: member summary and top-priority tasks.
+截至 Kaggle 公开榜单 `2026-07-16 08:26:45` 快照：
 
-Each of the six members has exactly 67 assignment slots. The unique task count is still 400 because task233 and task366 are duplicated as shared_review tasks.
+| 项目 | 结果 |
+| --- | ---: |
+| Team | `Blacklions.` |
+| Public / Private score | `7420.93 / 7420.93` |
+| Rank | `249 / 3061` |
+| 最终最高提交 | ref `54736568` |
+| Kaggle 记录的提交数 | `1975` |
 
-Record source, validation evidence, and Kaggle A/B results for all adopted changes. File deletions must be explicitly documented.
+榜单可能因赛后资格审核变化；这里保存的是可复核的赛后首日快照，不声称是永久定榜。
 
-Workspace C artifacts are under [`workplace C/`](workplace%20C/).
+## 快速入口
 
-The complete downloaded NeuroGolf task mirror is under
-[`neurogolf_400_tasks/`](neurogolf_400_tasks/). It contains `task001.json`
-through `task400.json`, a task index, and a local browser viewer.
+- [团队赛后复盘](docs/postmortem/2026-neurogolf-retrospective.md)
+- [赛后证据快照](docs/evidence/final-results-20260716.json)
+- [仓库结构与归档规则](docs/repository-guide.md)
+- [协作与实验记录规范](CONTRIBUTING.md)
+- [400 task 分工表](assignments/task_assignment_400.csv)
+- [分工摘要](assignments/task_assignment_summary.md)
+- [完整 task 数据镜像](neurogolf_400_tasks/)
 
-具体分配如下，来源是 [task_assignment_400.csv](F:/kaggle/NGC-work/assignments/task_assignment_400.csv)。每人 67 个任务槽；E/F 各有 1 个 `shared_review` 协作任务。
+## 工作区
 
-凌成：
+六个工作区保留比赛期间的原始路径，避免破坏提交记录和文档链接。
 
-**A**
-`task004, task005, task014, task016, task017, task053, task058, task086, task100, task102, task103, task111, task120, task122, task124, task126, task139, task148, task149, task168, task169, task176, task177, task187, task188, task196, task197, task202, task206, task207, task210, task211, task213, task214, task215, task218, task220, task222, task223, task233, task258, task260, task262, task281, task288, task297, task303, task316, task319, task322, task330, task338, task340, task345, task346, task348, task365, task366, task367, task371, task374, task375, task376, task379, task380, task393, task398`
+| 工作区 | 比赛职责 | 主要入口 |
+| --- | --- | --- |
+| A | shape relayout / high-cost tasks | [workplace A](workplace%20A/readme.md) |
+| B | same-shape rule rewrites | [workplace B](workplace%20B/readme.md) |
+| C | ONNX equivalent compression / integration | [workplace C](workplace%20C/readme.md) |
+| D | rule mining / candidate scanning | [workplace D](workplace%20D/readme.md) |
+| E | public-source A/B / hidden-set isolation | [workplace E](workplace%20E/readme.md) |
+| F | tail validation / packaging lessons | [workplace F](workplace%20F/readme.md) |
 
-周湘江：
+任务归属以 `assignments/task_assignment_400.csv` 为唯一事实来源，不在 README 中维护第二份任务清单。
 
-**B**
-`task001, task008, task018, task019, task023, task024, task056, task057, task063, task068, task076, task083, task088, task090, task097, task101, task104, task123, task125, task128, task131, task134, task140, task143, task151, task161, task163, task170, task172, task175, task181, task185, task205, task208, task209, task212, task228, task242, task244, task245, task247, task255, task261, task266, task270, task277, task280, task285, task289, task291, task293, task295, task300, task308, task312, task313, task317, task318, task320, task328, task344, task350, task360, task368, task369, task377, task395`
+## 目录约定
 
-赵奕程：
+```text
+assignments/          任务分配和优先级快照
+docs/                 赛后复盘、证据和仓库规范
+neurogolf_400_tasks/  400 个公开 task 及本地查看器
+tools/                不依赖私有数据的仓库维护工具
+workplace A..F/       各成员比赛期间的源码、实验和记录
+.github/workflows/    ONNX 安全检查与仓库结构检查
+```
 
-**C**
-`task009, task015, task046, task052, task054, task061, task065, task069, task072, task075, task077, task081, task091, task094, task096, task108, task113, task121, task132, task141, task142, task144, task146, task158, task159, task165, task178, task180, task190, task193, task194, task201, task203, task221, task224, task225, task230, task237, task252, task276, task278, task284, task286, task298, task301, task302, task304, task307, task311, task315, task332, task335, task347, task349, task351, task356, task362, task364, task372, task373, task378, task381, task382, task383, task388, task391, task392`
+历史工作区是只增不改的比赛档案。新实验采用
+`tasks/taskNNN/{README.md,builder.py,result.json}` 三件套；生成的 ONNX、ZIP、外部数据和凭据不进入 Git。
 
-肖铭俊：
+## 本地检查
 
-**D**
-`task002, task010, task020, task028, task029, task030, task032, task036, task041, task045, task047, task055, task073, task074, task082, task087, task089, task095, task099, task105, task106, task107, task114, task115, task127, task133, task137, task145, task147, task153, task154, task155, task157, task160, task164, task166, task167, task173, task182, task200, task217, task219, task226, task229, task232, task236, task243, task246, task251, task256, task263, task264, task282, task287, task292, task296, task314, task331, task353, task357, task358, task359, task363, task384, task386, task390, task400`
+```powershell
+python tools/repository_audit.py
+pytest -q "workplace C/neurogolf-2026-work/tests"
+```
 
-李珈辰：
-
-**E**
-主任务：
-`task003, task007, task011, task012, task013, task031, task033, task035, task038, task039, task040, task042, task043, task044, task049, task050, task051, task060, task064, task078, task084, task085, task092, task093, task098, task110, task118, task129, task130, task135, task138, task150, task162, task174, task192, task195, task198, task216, task227, task235, task240, task248, task250, task254, task257, task259, task267, task268, task271, task273, task275, task294, task299, task305, task321, task324, task329, task333, task336, task343, task354, task355, task370, task385, task394, task396`
-
-协作复核：
-`task233`
-
-陈耀洋：
-
-**F**
-主任务：
-`task006, task021, task022, task025, task026, task027, task034, task037, task048, task059, task062, task066, task067, task070, task071, task079, task080, task109, task112, task116, task117, task119, task136, task152, task156, task171, task179, task183, task184, task186, task189, task191, task199, task204, task231, task234, task238, task239, task241, task249, task253, task265, task269, task272, task274, task279, task283, task290, task306, task309, task310, task323, task325, task326, task327, task334, task337, task339, task341, task342, task352, task361, task387, task389, task397, task399`
-
-协作复核：
-`task366`
+仓库审计会检查任务分工、必需入口、UTF-8 文档和相对 Markdown 链接。删除文件必须在提交说明或工作日志中列出完整路径和原因。

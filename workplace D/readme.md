@@ -1,2 +1,16 @@
-D
-task002, task010, task020, task028, task029, task030, task032, task036, task041, task045, task047, task055, task073, task074, task082, task087, task089, task095, task099, task105, task106, task107, task114, task115, task127, task133, task137, task145, task147, task153, task154, task155, task157, task160, task164, task166, task167, task173, task182, task200, task217, task219, task226, task229, task232, task236, task243, task246, task251, task256, task263, task264, task282, task287, task292, task296, task314, task331, task353, task357, task358, task359, task363, task384, task386, task390, task400
+# Workplace D
+
+- Track: `mid_low_score_rule_mining`
+- Assignment: owner `D`, 67 primary tasks
+- Source of truth: [`../assignments/task_assignment_400.csv`](../assignments/task_assignment_400.csv)
+- Competition status: archived
+
+## Main records
+
+- [`worklog.md`](./worklog.md): accepted scan summary and cumulative local deltas.
+- [`d_deep_scan_report_20260709.md`](./d_deep_scan_report_20260709.md): deep candidate scan.
+- [`d_next_opportunities_20260709.md`](./d_next_opportunities_20260709.md): remaining opportunities at the time.
+- `d_*_candidate_scan_20260709.csv`: machine-readable scan outputs.
+- `single_task/`: task-local experiment snapshots.
+
+Local acceptance does not imply isolated Kaggle confirmation unless the record includes a submission ref. New work follows [`../docs/repository-guide.md`](../docs/repository-guide.md).

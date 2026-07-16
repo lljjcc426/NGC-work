@@ -9,6 +9,19 @@ kaggle.json
 *.pyc
 __pycache__/
 .pytest_cache/
+.env
+.env.*
+!.env.example
+credentials*.json
+secrets*.json
+*.pem
+*.key
+*.p12
+*.pfx
+.ipynb_checkpoints/
+.cache/
+tmp/
+temp/
 workplace C/artifacts/
 workplace C/neurogolf-2026-work/logs/
 workplace C/neurogolf-2026-work/data/external/

@@ -1,0 +1,56 @@
+{
+  "competition": "neurogolf-2026",
+  "competitionEnded": "2026-07-15",
+  "snapshotGeneratedAt": "2026-07-16T08:26:45",
+  "source": "Kaggle CLI 2.2.2 public leaderboard download",
+  "sourceUrl": "https://www.kaggle.com/competitions/neurogolf-2026/leaderboard",
+  "leaderboardRows": 3061,
+  "ourTeam": {
+    "rank": 249,
+    "teamId": 16252365,
+    "teamName": "Blacklions.",
+    "score": 7420.93,
+    "submissionCount": 1975,
+    "teamMemberUserNames": [
+      "blacklions",
+      "llccqq624",
+      "llllllc666",
+      "muelsyse111",
+      "xiangjiangzhou"
+    ],
+    "bestObservedSubmission": {
+      "ref": 54736568,
+      "date": "2026-07-15T18:12:25.283000",
+      "publicScore": 7420.93,
+      "privateScore": 7420.93,
+      "description": "submission5 all400 GitHub audit safe11 +1.025027 sha bcef5a06"
+    }
+  },
+  "top20": [
+    {"rank": 1, "team": "Kaggle Agent", "score": 8314.03},
+    {"rank": 2, "team": "neurogolf team", "score": 8243.89},
+    {"rank": 3, "team": "The Final Ensemble", "score": 8221.27},
+    {"rank": 4, "team": "WeLuvEleven", "score": 8168.59},
+    {"rank": 5, "team": "M & H & M & N & M", "score": 8142.02},
+    {"rank": 6, "team": "claudex", "score": 8118.97},
+    {"rank": 7, "team": "Slow and Steady", "score": 8067.63},
+    {"rank": 8, "team": "kluges clueless", "score": 8048.16},
+    {"rank": 9, "team": "Pavel & CroDoc", "score": 8038.62},
+    {"rank": 10, "team": "Timeout exceeded : (", "score": 8028.25},
+    {"rank": 11, "team": "Kimura@SeSDA & OverfitOracle", "score": 8025.82},
+    {"rank": 12, "team": "Carlos, Egor, Rubempre & Bill", "score": 8022.05},
+    {"rank": 13, "team": "Sol", "score": 8015.02},
+    {"rank": 14, "team": "Santa Neuro Club 10000", "score": 8013.53},
+    {"rank": 15, "team": "rook", "score": 8012.12},
+    {"rank": 16, "team": "carbonapi", "score": 8000.10},
+    {"rank": 17, "team": "nmdcddwzml", "score": 7998.91},
+    {"rank": 18, "team": "Fususu", "score": 7994.76},
+    {"rank": 19, "team": "where did my tokens go?", "score": 7975.84},
+    {"rank": 20, "team": "Token is my sugar daddy!", "score": 7960.75}
+  ],
+  "limitations": [
+    "This is a public-leaderboard snapshot taken the day after the deadline.",
+    "Ranks and medal eligibility may change after host review or disqualification.",
+    "Kaggle lists five team member usernames although the GitHub work allocation used six work slots."
+  ]
+}

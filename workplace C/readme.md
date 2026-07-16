@@ -1,5 +1,7 @@
 # Workplace C
 
+Competition archive navigation: [team postmortem](../docs/postmortem/2026-neurogolf-retrospective.md) | [repository guide](../docs/repository-guide.md).
+
 Owner track: `onnx_equiv_compression`
 
 This is the canonical C-group workspace. The earlier duplicate

@@ -1,0 +1,7 @@
+owner,track,slots,entry,status,primary_records
+A,shape_relayout_high_cost,67,workplace A/readme.md,archived,workplace A/single_task
+B,same_shape_rules_fill,67,workplace B/readme.md,archived,workplace B/readme.md
+C,onnx_equiv_compression,67,workplace C/readme.md,archived,workplace C/score_docs
+D,mid_low_score_rule_mining,67,workplace D/readme.md,archived,workplace D/worklog.md
+E,public_source_ab_testing,67,workplace E/readme.md,archived,workplace E/TEAM_HANDOFF_20260715.md
+F,tail_validation_packaging,67,workplace F/readme.md,archived,workplace F/optimization_lessons_20260712.md

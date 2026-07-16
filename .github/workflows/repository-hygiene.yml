@@ -1,0 +1,45 @@
+name: Repository hygiene
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - ".editorconfig"
+      - ".gitattributes"
+      - ".gitignore"
+      - "assignments/**"
+      - "docs/**"
+      - "tools/repository_audit.py"
+      - "workplace A/readme.md"
+      - "workplace B/readme.md"
+      - "workplace C/readme.md"
+      - "workplace D/readme.md"
+      - "workplace E/readme.md"
+      - "workplace F/readme.md"
+  pull_request:
+    paths:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - ".editorconfig"
+      - ".gitattributes"
+      - ".gitignore"
+      - "assignments/**"
+      - "docs/**"
+      - "tools/repository_audit.py"
+      - "workplace A/readme.md"
+      - "workplace B/readme.md"
+      - "workplace C/readme.md"
+      - "workplace D/readme.md"
+      - "workplace E/readme.md"
+      - "workplace F/readme.md"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python tools/repository_audit.py

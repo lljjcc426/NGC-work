@@ -1,5 +1,7 @@
 # Workplace B
 
+Competition archive navigation: [team postmortem](../docs/postmortem/2026-neurogolf-retrospective.md) | [repository guide](../docs/repository-guide.md).
+
 Owner scope: B task only.
 
 Tasks:
